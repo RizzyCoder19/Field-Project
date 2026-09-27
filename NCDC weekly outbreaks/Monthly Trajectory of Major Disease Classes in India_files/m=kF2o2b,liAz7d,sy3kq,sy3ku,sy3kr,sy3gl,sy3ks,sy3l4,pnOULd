@@ -1,0 +1,26 @@
+loaded_h_0(function(_){var window=this;
+_.v("kF2o2b");
+_.ag(_.Y0a,class extends _.yo{constructor(){super();this.ka=_.DR({xEa:""})}updateMagiStateParams(a){this.ka.value=a}JOc(a){this.ka.subscribe(b=>{a.gcd(b)})}});
+_.x();
+_.v("liAz7d");
+_.TLs=new _.Vf(_.Z0a);
+_.x();
+_.VAh=!!(_.Gi[94]>>23&1);_.WAh=!!(_.Gi[94]>>24&1);_.XAh=!!(_.Gi[94]>>25&1);_.YAh=!!(_.Gi[94]>>26&1);_.ZAh=!!(_.Gi[94]>>27&1);_.$Ah=!!(_.Gi[94]>>28&1);_.aBh=!!(_.Gi[94]>>29&1);_.bBh=!!(_.Gi[95]&1);_.cBh=!!(_.Gi[95]&2);_.dBh=!!(_.Gi[95]&4);_.eBh=!!(_.Gi[95]&32);
+_.iBh={Wxe:"appbar",aQe:"ee",P4e:"mode",FTe:"fb",xaf:"rhs",p1e:"lhs",nef:"sge",Eye:"atvcap",Fdf:"stb",Xdf:"dark",klf:"uib",z7e:"osrp_st_tabs",yNe:"dthm",p3e:"mgq",AMe:"ctor",Djf:"taw",KCe:"cq",Ltd:"emb",yQe:"emb_cb",ZYe:"imlt",Q8e:"pff_map",Dxe:"aic",Hhf:"ssp",q1e:"lb"};_.jBh=Object.values(_.iBh);
+_.fBh=function(){return _.Km("center_col")};
+var xah,vah,wah;
+_.yah=function(){var a=_.Ri?_.Jm("center_col"):_.Jm("rcnt");if(a===null)return[];var b=new Set;for(var c of vah){var d=Array.prototype.slice.call(a.querySelectorAll(c[0]),0);for(var e of d)if(c.length===2&&c[1]==="PARENT")d=e.parentElement,d!==null&&b.add(d);else if(c.length===2&&c[1]==="DESCENDANTS"){if(d=e.childNodes,d!==null)for(var f of d)b.add(f)}else b.add(e)}a=Array.from(b);b=[];for(c=0;c<a.length;c++){if(!(a[c]instanceof HTMLElement))continue;e=a[c];f=!0;d=e.getBoundingClientRect();if(e.offsetParent===
+null||d.width===0||d.height===0)f=!1;if(f)for(d=0;d<a.length;d++)if(c!==d&&_.Vg(a[d],e)){f=!1;break}if(f)for(let g of wah){if(g.length===2&&g[1]==="ANCESTORS")e.querySelector(g[0])!==null&&(f=!1);else if(g.length===2&&g[1]==="DESCENDANTS")for(d=e.parentElement;d;){if(d.matches(g[0])){f=!1;break}d=d.parentElement}else if(g.length===2&&g[1]==="PARENT"){if(d=e.childNodes,d!==null)for(let h of d)if(h.matches(g[0])){f=!1;break}}else if(e.matches(g[0])){f=!1;break}if(!f)break}f&&b.push(e)}return xah(b)};
+xah=function(a){var b=[..._.Lm("*")];return a.sort((c,d)=>b.indexOf(c)-b.indexOf(d))};
+vah=[["#rso > div:not(.ULSxyf):not([jsname='TlEBqd']):not(.MjjYud):not(.hlcw0c)[class]"],["#rso div.ULSxyf:not(:only-of-type):not(:last-of-type)"],["#rso div.MjjYud:not(:only-of-type):not(:last-of-type):not(:has(div.grvXqb))"],["#rso div.hlcw0c:not(:only-of-type):not(:last-of-type)"],["#rso div.ULSxyf:not(:only-of-type):last-of-type:not(:nth-of-type(2))"],["#rso div.MjjYud:not(:only-of-type):last-of-type:not(:nth-of-type(2)):not(:has(div.grvXqb))"],["#rso div.hlcw0c:not(:only-of-type):last-of-type:not(:nth-of-type(2))"],
+["#bres"],["[jsname='xQjRM']"],[".g-blk"],["[jsname='GDPwke'] div.MjjYud"],[".e6hL7d","DESCENDANTS"],[".kkCXT"],[".cu-container"],["#tvcap"],["#bottomads"],["[jsname='Ypkwb']"],[".yCYahc"]];wah=[];
+_.gBh=function(){return _.OJa("rcnt")};_.hBh=function(){return _.gBh()||_.fBh()};
+var UCh,SCh;_.TCh=function(){return document.querySelector("[jsname=xcvsnc]")?document.querySelector("[jsname=xcvsnc]"):_.n$a?document.querySelector("[data-st-tgt=fb"):_.Jm(SCh)};_.VCh=function(a,b){var c=_.TCh();c?UCh(c,a,b):_.gBh()&&_.Ia(_.Nm("rfiSsc"),d=>{UCh(d,a,b,!0)})};
+UCh=function(a,b,c,d=!1){a=_.Lm("A",a);for(let f of a){if(d&&(f.classList.contains("zItAnd")&&!f.classList.contains("FOU1zf")||f.classList.contains("nPDzT")&&!f.classList.contains("LatpMc")))break;if(a=f.getAttribute("href"))if(a.startsWith("/url")&&b==="q"){var e=_.ad(a,"q");if(!e)continue;e=_.bd(e,b,c);f.setAttribute("href",_.bd(a,"q",e))}else f.setAttribute("href",_.bd(a,b,c))}};SCh=_.gBh()?"pTwnEc":"hdtb-sc";
+_.v("pnOULd");
+_.ag(_.$0a,class extends _.yo{static Qa(){return{service:{navigation:_.cC,pab:_.TLs}}}constructor(a){super();this.Wb=a.service.navigation;this.pab=a.service.pab}updateLinks(a){_.VCh("q",a)}navigateTo(a,b=!1){this.Wb.navigateTo(a,b)}hideMobileModeSelector(){if(!_.gBh()){var a=_.TCh();a&&(a.style.display="none")}}showMobileModeSelector(){if(!_.gBh()){var a=_.TCh();a&&(a.style.display="")}}updateSrpSuggestionGroup(){}updateMagiStateParams(a){this.pab.updateMagiStateParams({xEa:a})}fetch(a,b){return _.PTc(a,
+{urlParams:b})}});
+
+_.x();
+});
+// Google Inc.

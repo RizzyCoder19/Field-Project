@@ -1,0 +1,61 @@
+DATA PREVIEW...
+
+year	week	outbreak_starting_date	reporting_date	state	district_as_per_source	district_as_per_lgd	district_lgd_code	disease_illness_name	status	cases	deaths	units	notes
+2026	13	29-03-2026	29-03-2026	Karnataka	Bengaluru Rural	Bengaluru Rural	526	Acute Gastroenteritis	Under Surveillance	49	0	cases in absolute number, deaths in absolute number	
+2026	13	29-03-2026	29-03-2026	Tamil Nadu	Perambalur	Perambalur	581	Leptospirosis	Under Surveillance	20	0	cases in absolute number, deaths in absolute number	
+2026	13	28-03-2026	28-03-2026	Andhra Pradesh	Ntr	NTR	749	Acute Gastroenteritis	Under Surveillance	19	0	cases in absolute number, deaths in absolute number	
+2026	13	28-03-2026	28-03-2026	Andhra Pradesh	Chittoor	Chittoor	503	Dysentery	Under Surveillance	16	0	cases in absolute number, deaths in absolute number	
+2026	13	28-03-2026	29-03-2026	West Bengal	Darjeeling	Darjeeling	309	Suspected Food Poisoning	Under Surveillance	13	0	cases in absolute number, deaths in absolute number	
+2026	13	27-03-2026	27-03-2026	Gujarat	Ahmadabad	Ahmedabad	438	Crimean-Congo Haemandrhagic Fever (CCHF)	Under Surveillance	1	1	cases in absolute number, deaths in absolute number	
+2026	13	27-03-2026	28-03-2026	Maharashtra	Amravati	Amravati	468	Dengue	Under Surveillance	11	0	cases in absolute number, deaths in absolute number	
+2026	13	26-03-2026	26-03-2026	Tamil Nadu	Dharmapuri	Dharmapuri	571	Chickenpox	Under Surveillance	18	0	cases in absolute number, deaths in absolute number	
+2026	13	26-03-2026	26-03-2026	Tamil Nadu	Sivaganga	Sivaganga	585	Chickenpox	Under Surveillance	6	0	cases in absolute number, deaths in absolute number	
+2026	13	26-03-2026	26-03-2026	Maharashtra	Gondia	Gondia	476	Suspected Food Poisoning	Under Surveillance	52	0	cases in absolute number, deaths in absolute number	
+
+METADATA..
+Number of Rows
+35538
+Number of Columns
+14
+Time Period
+2009 to 2026
+Sectors
+Health and Family Welfare
+Organisation
+Ministry of Health and Family Welfare
+Sources
+Integrated Disease Surveillance Programme (IDSP)
+
+Update Frequency
+Weekly
+Last Updated
+16 September 2026
+Granularity
+State, District, Disease, Year, Week
+Time Saved
+6 hours
+Units
+cases in absolute number
+
+deaths in absolute number
+
+COLOUMNS...
+Column	Type	Distinct	Count
+year	Int64	18	35538
+week	Int64	53	35538
+outbreak_starting_date	Date	5823	35531
+reporting_date	Date	5320	25480
+state	String	39	35496
+district_as_per_source	String	953	35469
+district_as_per_lgd	String	753	35305
+district_lgd_code	Int64	747	35294
+disease_illness_name	String	244	35537
+status	String	11	35538
+cases	Int64	690	35528
+deaths	Int64	102	35529
+units	String	1	35538
+notes	String	42	43
+
+
+CITATION...
+Ministry of Health and Family Welfare. (2026). Master Data: State, District and Disease-wise Cases and Death reported due to Outbreak of Diseases as per Weekly reports under IDSP [Data set]. Dataful. https://dataful.in/datasets/18514
