@@ -1,0 +1,37 @@
+{
+  "year": 2025,
+  "week": 43,
+  "pdf": "week43_1788951058.pdf",
+  "pages": 29,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2025-W43-001",
+      "source_year": 2025,
+      "source_week": 43,
+      "source_pdf": "NCDC weekly outbreaks/2025/week43_1788951058.pdf",
+      "source_page": 18,
+      "internal_week_raw": "43",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Bhandara",
+      "district_normalized": "Bhandara",
+      "disease_raw": "Scrub Typhus",
+      "disease_normalized": "Scrub_Typhus",
+      "cases": 12,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "20-10-2025",
+      "outbreak_starting_date": "2025-10-20",
+      "reporting_date_raw": "20-10-2025",
+      "reporting_date": "2025-10-20",
+      "week_start_date": "2025-10-20",
+      "week_end_date": "2025-10-26",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/BHA/2025/43/1943"
+    }
+  ]
+}

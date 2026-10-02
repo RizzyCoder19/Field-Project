@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 27,
+  "pdf": "week27.pdf",
+  "pages": 10,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W27-001",
+      "source_year": 2022,
+      "source_week": 27,
+      "source_pdf": "NCDC weekly outbreaks/2022/week27.pdf",
+      "source_page": 5,
+      "internal_week_raw": "27",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Chandrapur",
+      "district_normalized": "Chandrapur",
+      "disease_raw": "Acute Diarrheal Disease",
+      "disease_normalized": "Acute_Diarrheal_Disease",
+      "cases": 45,
+      "deaths": 0,
+      "status_raw": "Completed",
+      "outbreak_starting_date_raw": "04-07-2022",
+      "outbreak_starting_date": "2022-07-04",
+      "reporting_date_raw": "05-07-2022",
+      "reporting_date": "2022-07-05",
+      "week_start_date": "2022-07-04",
+      "week_end_date": "2022-07-10",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/CND/2022/27/522"
+    }
+  ]
+}

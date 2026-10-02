@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "week": 27,
+  "pdf": "week27_1788856919.pdf",
+  "pages": 25,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2026-W27-001",
+      "source_year": 2026,
+      "source_week": 27,
+      "source_pdf": "NCDC weekly outbreaks/2026/week27_1788856919.pdf",
+      "source_page": 19,
+      "internal_week_raw": "27",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Parbhani",
+      "district_normalized": "Parbhani",
+      "disease_raw": "Suspected Food Poisoning",
+      "disease_normalized": "Food_Poisoning",
+      "cases": 20,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "26-06-2026",
+      "outbreak_starting_date": "2026-06-26",
+      "reporting_date_raw": "29-06-2026",
+      "reporting_date": "2026-06-29",
+      "week_start_date": "2026-06-29",
+      "week_end_date": "2026-07-05",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/PAR/2026/27/1092"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "year": 2025,
+  "week": 52,
+  "pdf": "week52_1788951185.pdf",
+  "pages": 14,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2025-W52-001",
+      "source_year": 2025,
+      "source_week": 52,
+      "source_pdf": "NCDC weekly outbreaks/2025/week52_1788951185.pdf",
+      "source_page": 9,
+      "internal_week_raw": "52",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Nagpur",
+      "district_normalized": "Nagpur",
+      "disease_raw": "Acute Encephalitic Syndrome",
+      "disease_normalized": "Acute Encephalitic Syndrome",
+      "cases": 10,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "24-12-2025",
+      "outbreak_starting_date": "2025-12-24",
+      "reporting_date_raw": "24-12-2025",
+      "reporting_date": "2025-12-24",
+      "week_start_date": "2025-12-22",
+      "week_end_date": "2025-12-28",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/NAG/2025/52/2278"
+    }
+  ]
+}

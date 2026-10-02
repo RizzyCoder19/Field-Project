@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "week": 24,
+  "pdf": "week24_1788856872.pdf",
+  "pages": 25,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2026-W24-001",
+      "source_year": 2026,
+      "source_week": 24,
+      "source_pdf": "NCDC weekly outbreaks/2026/week24_1788856872.pdf",
+      "source_page": 19,
+      "internal_week_raw": "24",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Kolhapur",
+      "district_normalized": "Kolhapur",
+      "disease_raw": "Hepatitis A & E",
+      "disease_normalized": "Hepatitis",
+      "cases": 23,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "10-06-2026",
+      "outbreak_starting_date": "2026-06-10",
+      "reporting_date_raw": "10-06-2026",
+      "reporting_date": "2026-06-10",
+      "week_start_date": "2026-06-08",
+      "week_end_date": "2026-06-14",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/KOL/2026/24/965"
+    }
+  ]
+}

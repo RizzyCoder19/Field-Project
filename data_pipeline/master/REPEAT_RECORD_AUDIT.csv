@@ -1,0 +1,357 @@
+record_id_a,record_id_b,year_a,week_a,year_b,week_b,district_raw,disease_raw,cases_a,cases_b,deaths_a,deaths_b,repeat_classification,evidence
+MAHA-2022-W25-001,MAHA-2022-W26-002,2022,25,2022,26,Pune,Dengue,7,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W26-001,MAHA-2022-W28-001,2022,26,2022,28,Chandrapur,Malaria,2,4,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W32-001,MAHA-2022-W32-002,2022,32,2022,32,Chandrapur,Acute Diarrheal Disease,37,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W40-001,MAHA-2022-W41-001,2022,40,2022,41,Pune,Dengue,20,16,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W40-001,MAHA-2022-W42-002,2022,40,2022,42,Pune,Dengue,20,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W40-001,MAHA-2022-W42-004,2022,40,2022,42,Pune,Dengue,20,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W41-001,MAHA-2022-W42-002,2022,41,2022,42,Pune,Dengue,16,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W41-001,MAHA-2022-W42-004,2022,41,2022,42,Pune,Dengue,16,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W41-001,MAHA-2022-W44-001,2022,41,2022,44,Pune,Dengue,16,7,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W42-002,MAHA-2022-W42-004,2022,42,2022,42,Pune,Dengue,10,10,0,0,SAME_OUTBREAK_REPEATED,"Exact match of cases, deaths, and outbreak starting date across reporting weeks"
+MAHA-2022-W42-002,MAHA-2022-W44-001,2022,42,2022,44,Pune,Dengue,10,7,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W42-004,MAHA-2022-W44-001,2022,42,2022,44,Pune,Dengue,10,7,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W46-006,MAHA-2022-W46-007,2022,46,2022,46,Nashik,Cholera,58,52,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W47-002,MAHA-2022-W49-002,2022,47,2022,49,Kolhapur,Dengue,5,32,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W51-002,MAHA-2022-W51-003,2022,51,2022,51,Kolhapur,Acute Diarrheal Disease,16,50,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W51-002,MAHA-2022-W52-001,2022,51,2022,52,Kolhapur,Acute Diarrheal Disease,16,44,0,2,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2022-W51-003,MAHA-2022-W52-001,2022,51,2022,52,Kolhapur,Acute Diarrheal Disease,50,44,0,2,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W02-001,MAHA-2023-W02-002,2023,2,2023,2,Mumbai,Measles,3,3,0,0,SAME_OUTBREAK_REPEATED,"Exact match of cases, deaths, and outbreak starting date across reporting weeks"
+MAHA-2023-W02-001,MAHA-2023-W02-003,2023,2,2023,2,Mumbai,Measles,3,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W02-001,MAHA-2023-W02-004,2023,2,2023,2,Mumbai,Measles,3,8,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W02-002,MAHA-2023-W02-003,2023,2,2023,2,Mumbai,Measles,3,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W02-002,MAHA-2023-W02-004,2023,2,2023,2,Mumbai,Measles,3,8,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W02-003,MAHA-2023-W02-004,2023,2,2023,2,Mumbai,Measles,3,8,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-001,MAHA-2023-W22-003,2023,22,2023,22,Gadchiroli,Malaria,19,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-001,MAHA-2023-W22-004,2023,22,2023,22,Gadchiroli,Malaria,19,21,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-001,MAHA-2023-W25-001,2023,22,2023,25,Gadchiroli,Malaria,19,37,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-003,MAHA-2023-W22-004,2023,22,2023,22,Gadchiroli,Malaria,6,21,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-003,MAHA-2023-W25-001,2023,22,2023,25,Gadchiroli,Malaria,6,37,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W22-004,MAHA-2023-W25-001,2023,22,2023,25,Gadchiroli,Malaria,21,37,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W25-003,MAHA-2023-W25-004,2023,25,2023,25,Kolhapur,Dengue,79,34,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W25-003,MAHA-2023-W27-003,2023,25,2023,27,Kolhapur,Dengue,79,44,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W25-004,MAHA-2023-W27-003,2023,25,2023,27,Kolhapur,Dengue,34,44,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W25-006,MAHA-2023-W26-004,2023,25,2023,26,Pune,Dengue,9,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W25-006,MAHA-2023-W26-006,2023,25,2023,26,Pune,Dengue,9,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W25-006,MAHA-2023-W27-008,2023,25,2023,27,Pune,Dengue,9,10,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W26-004,MAHA-2023-W26-006,2023,26,2023,26,Pune,Dengue,5,5,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W26-004,MAHA-2023-W27-008,2023,26,2023,27,Pune,Dengue,5,10,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W26-006,MAHA-2023-W27-008,2023,26,2023,27,Pune,Satara Dengue,5,10,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W29-002,MAHA-2023-W30-005,2023,29,2023,30,Osmanabad,Dengue,7,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W30-003,MAHA-2023-W30-007,2023,30,2023,30,Bhandara,Dengue,30,33,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W31-001,MAHA-2023-W33-006,2023,31,2023,33,Aurangabad,Dengue,11,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W31-001,MAHA-2023-W34-001,2023,31,2023,34,Aurangabad,Dengue,11,19,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W33-001,MAHA-2023-W33-002,2023,33,2023,33,Beed,Suspected Dengue Fever,17,7,1,1,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W33-001,MAHA-2023-W35-005,2023,33,2023,35,Beed,Suspected Dengue Fever,17,10,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W33-001,MAHA-2023-W35-006,2023,33,2023,35,Beed,Suspected Dengue Fever,17,18,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W33-002,MAHA-2023-W35-005,2023,33,2023,35,Beed,Suspected Dengue Fever,7,10,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W33-002,MAHA-2023-W35-006,2023,33,2023,35,Beed,Suspected Dengue Fever,7,18,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W33-004,MAHA-2023-W33-005,2023,33,2023,33,Gadchiroli,Dengue,34,11,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W33-006,MAHA-2023-W34-001,2023,33,2023,34,Aurangabad,Suspected Dengue Fever,5,19,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W34-001,MAHA-2023-W37-012,2023,34,2023,37,Aurangabad,Dengue,19,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W34-004,MAHA-2023-W35-003,2023,34,2023,35,Kolhapur,Dengue,43,56,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W34-004,MAHA-2023-W36-003,2023,34,2023,36,Kolhapur,Dengue,43,22,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-003,MAHA-2023-W36-003,2023,35,2023,36,Kolhapur,Dengue,56,22,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-005,MAHA-2023-W35-006,2023,35,2023,35,Beed,Dengue,10,18,1,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W35-005,MAHA-2023-W37-004,2023,35,2023,37,Beed,Dengue,10,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-005,MAHA-2023-W38-001,2023,35,2023,38,Beed,Dengue,10,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-006,MAHA-2023-W37-004,2023,35,2023,37,Beed,Dengue,18,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-006,MAHA-2023-W38-001,2023,35,2023,38,Beed,Dengue,18,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-007,MAHA-2023-W37-009,2023,35,2023,37,Raigad,Dengue,10,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W35-013,MAHA-2023-W35-014,2023,35,2023,35,Akola,Washim Fever,5,6,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W37-002,MAHA-2023-W40-001,2023,37,2023,40,Amravati,Dengue,10,26,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-004,MAHA-2023-W38-001,2023,37,2023,38,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-004,MAHA-2023-W39-002,2023,37,2023,39,Beed,Dengue,5,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-004,MAHA-2023-W40-002,2023,37,2023,40,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-006,MAHA-2023-W38-005,2023,37,2023,38,Parbhani,Dengue,24,13,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-006,MAHA-2023-W38-006,2023,37,2023,38,Parbhani,Dengue,24,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-007,MAHA-2023-W40-009,2023,37,2023,40,Pune,Chikungunya,9,13,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-009,MAHA-2023-W40-004,2023,37,2023,40,Raigad,Dengue,3,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W37-012,MAHA-2023-W39-001,2023,37,2023,39,Aurangabad,Dengue,6,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-001,MAHA-2023-W39-002,2023,38,2023,39,Beed,Dengue,5,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-001,MAHA-2023-W40-002,2023,38,2023,40,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-005,MAHA-2023-W38-006,2023,38,2023,38,Parbhani,Dengue,13,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-007,MAHA-2023-W38-008,2023,38,2023,38,Thane,Dengue,7,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-007,MAHA-2023-W39-004,2023,38,2023,39,Thane,Dengue,7,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-007,MAHA-2023-W40-006,2023,38,2023,40,Thane,Dengue,7,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-007,MAHA-2023-W40-007,2023,38,2023,40,Thane,Dengue,7,7,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-008,MAHA-2023-W39-004,2023,38,2023,39,Thane,Dengue,5,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-008,MAHA-2023-W40-006,2023,38,2023,40,Thane,Dengue,5,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W38-008,MAHA-2023-W40-007,2023,38,2023,40,Thane,Dengue,5,7,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-001,MAHA-2023-W41-001,2023,39,2023,41,Aurangabad,Dengue,3,4,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-001,MAHA-2023-W42-001,2023,39,2023,42,Aurangabad,Dengue,3,5,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-002,MAHA-2023-W40-002,2023,39,2023,40,Beed,Dengue,10,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-002,MAHA-2023-W42-002,2023,39,2023,42,Beed,Dengue,10,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-002,MAHA-2023-W42-003,2023,39,2023,42,Beed,Dengue,10,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-004,MAHA-2023-W40-006,2023,39,2023,40,Thane,Dengue,6,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-004,MAHA-2023-W40-007,2023,39,2023,40,Thane,Dengue,6,7,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-004,MAHA-2023-W42-013,2023,39,2023,42,Thane,Dengue,6,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W39-004,MAHA-2023-W42-017,2023,39,2023,42,Thane,Dengue,6,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-001,MAHA-2023-W43-003,2023,40,2023,43,Amravati,Dengue,26,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-002,MAHA-2023-W42-002,2023,40,2023,42,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-002,MAHA-2023-W42-003,2023,40,2023,42,Beed,Dengue,5,5,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-002,MAHA-2023-W43-005,2023,40,2023,43,Beed,Dengue,5,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-002,MAHA-2023-W43-006,2023,40,2023,43,Beed,Dengue,5,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-003,MAHA-2023-W42-008,2023,40,2023,42,Nagpur,Dengue,89,9,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-006,MAHA-2023-W40-007,2023,40,2023,40,Thane,Dengue,3,7,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-006,MAHA-2023-W42-013,2023,40,2023,42,Thane,Dengue,3,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-006,MAHA-2023-W42-017,2023,40,2023,42,Thane,Dengue,3,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-007,MAHA-2023-W42-013,2023,40,2023,42,Thane,Dengue,7,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-007,MAHA-2023-W42-017,2023,40,2023,42,Thane,Dengue,7,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W40-009,MAHA-2023-W43-009,2023,40,2023,43,Pune,Satara Chikungunya,13,6,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W41-001,MAHA-2023-W42-001,2023,41,2023,42,Aurangabad,Dengue,4,5,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W41-001,MAHA-2023-W43-004,2023,41,2023,43,Aurangabad,Dengue,4,17,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W41-005,MAHA-2023-W43-010,2023,41,2023,43,Yavatmal,Acute Diarrheal Disease,27,43,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-001,MAHA-2023-W43-004,2023,42,2023,43,Aurangabad,Dengue,5,17,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-002,MAHA-2023-W42-003,2023,42,2023,42,Beed,Dengue,5,5,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-002,MAHA-2023-W43-005,2023,42,2023,43,Beed,Dengue,5,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-002,MAHA-2023-W43-006,2023,42,2023,43,Beed,Dengue,5,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-002,MAHA-2023-W45-002,2023,42,2023,45,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-002,MAHA-2023-W45-008,2023,42,2023,45,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-003,MAHA-2023-W43-005,2023,42,2023,43,Beed,Dengue,5,3,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-003,MAHA-2023-W43-006,2023,42,2023,43,Beed,Dengue,5,1,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-003,MAHA-2023-W45-002,2023,42,2023,45,Beed,Dengue,5,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-003,MAHA-2023-W45-008,2023,42,2023,45,Beed,Dengue,5,5,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-004,MAHA-2023-W42-005,2023,42,2023,42,Dhule,Dengue,12,18,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-009,MAHA-2023-W42-010,2023,42,2023,42,Nanded,Dengue,8,6,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W42-009,MAHA-2023-W42-014,2023,42,2023,42,Nanded,Dengue,8,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-009,MAHA-2023-W42-015,2023,42,2023,42,Nanded,Dengue,8,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-009,MAHA-2023-W45-004,2023,42,2023,45,Nanded,Dengue,8,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-009,MAHA-2023-W45-009,2023,42,2023,45,Nanded,Dengue,8,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-009,MAHA-2023-W45-010,2023,42,2023,45,Nanded,Dengue,8,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-010,MAHA-2023-W42-014,2023,42,2023,42,Nanded,Dengue,6,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-010,MAHA-2023-W42-015,2023,42,2023,42,Nanded,Dengue,6,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-010,MAHA-2023-W45-004,2023,42,2023,45,Nanded,Dengue,6,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-010,MAHA-2023-W45-009,2023,42,2023,45,Nanded,Dengue,6,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-010,MAHA-2023-W45-010,2023,42,2023,45,Nanded,Dengue,6,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-013,MAHA-2023-W42-017,2023,42,2023,42,Thane,Dengue,1,10,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-013,MAHA-2023-W44-004,2023,42,2023,44,Thane,Dengue,1,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-014,MAHA-2023-W42-015,2023,42,2023,42,Nanded,Dengue,11,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-014,MAHA-2023-W45-004,2023,42,2023,45,Nanded,Dengue,11,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-014,MAHA-2023-W45-009,2023,42,2023,45,Nanded,Dengue,11,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-014,MAHA-2023-W45-010,2023,42,2023,45,Nanded,Dengue,11,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-015,MAHA-2023-W45-004,2023,42,2023,45,Nanded,Dengue,12,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-015,MAHA-2023-W45-009,2023,42,2023,45,Nanded,Dengue,12,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-015,MAHA-2023-W45-010,2023,42,2023,45,Nanded,Dengue,12,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-016,MAHA-2023-W45-003,2023,42,2023,45,Nagpur,Scrub Typhus,10,3,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W42-017,MAHA-2023-W44-004,2023,42,2023,44,Thane,Dengue,10,3,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-001,MAHA-2023-W43-002,2023,43,2023,43,Akola,Dengue,8,9,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-005,MAHA-2023-W43-006,2023,43,2023,43,Beed,Dengue,3,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-005,MAHA-2023-W45-002,2023,43,2023,45,Beed,Dengue,3,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-005,MAHA-2023-W45-008,2023,43,2023,45,Beed,Dengue,3,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-006,MAHA-2023-W45-002,2023,43,2023,45,Beed,Dengue,1,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-006,MAHA-2023-W45-008,2023,43,2023,45,Beed,Dengue,1,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W43-008,MAHA-2023-W45-005,2023,43,2023,45,Osmanabad,Dengue,6,31,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W44-003,MAHA-2023-W44-005,2023,44,2023,44,Nandurbar,Dengue,11,16,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W45-002,MAHA-2023-W45-008,2023,45,2023,45,Beed,Dengue,5,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W45-004,MAHA-2023-W45-009,2023,45,2023,45,Nanded,Dengue,10,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W45-004,MAHA-2023-W45-010,2023,45,2023,45,Nanded,Dengue,10,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W45-009,MAHA-2023-W45-010,2023,45,2023,45,Nanded,Dengue,6,12,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W47-002,MAHA-2023-W47-003,2023,47,2023,47,Akola,Dengue and Chikungunya,16,20,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2023-W48-001,MAHA-2023-W49-001,2023,48,2023,49,Gadchiroli,Malaria,4,10,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2023-W49-003,MAHA-2023-W49-005,2023,49,2023,49,Pune,Dengue,7,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W01-004,MAHA-2024-W02-001,2024,1,2024,2,Kolhapur,Hepatitis-A,9,42,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W02-001,MAHA-2024-W05-001,2024,2,2024,5,Kolhapur,Hepatitis A,42,101,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W03-001,MAHA-2024-W03-003,2024,3,2024,3,Thane,Dengue,5,13,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W06-004,MAHA-2024-W06-005,2024,6,2024,6,Parbhani,Food Poisoning,19,629,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W06-004,MAHA-2024-W06-006,2024,6,2024,6,Parbhani,Food Poisoning,19,335,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W06-005,MAHA-2024-W06-006,2024,6,2024,6,Parbhani,Food Poisoning,629,335,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W08-002,MAHA-2024-W10-005,2024,8,2024,10,Nandurbar,Acute Diarrheal Disease,193,18,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W08-002,MAHA-2024-W10-006,2024,8,2024,10,Nandurbar,Acute Diarrheal Disease,193,76,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W10-005,MAHA-2024-W10-006,2024,10,2024,10,Nandurbar,Acute Diarrheal Disease,18,76,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W11-003,MAHA-2024-W11-004,2024,11,2024,11,Gadchiroli,Malaria,34,249,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W11-008,MAHA-2024-W11-009,2024,11,2024,11,Nagpur,Acute Diarrheal Disease,22,13,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W11-011,MAHA-2024-W12-003,2024,11,2024,12,Osmanabad,Chikungunya & Dengue,7,6,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W12-004,MAHA-2024-W15-005,2024,12,2024,15,Beed,Dengue & Chikungunya,15,22,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W14-001,MAHA-2024-W17-005,2024,14,2024,17,Raigad,Dengue,5,8,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W15-006,MAHA-2024-W18-005,2024,15,2024,18,Pune,Acute Diarrheal Disease,24,20,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W15-009,MAHA-2024-W18-006,2024,15,2024,18,Pune,Satara Dengue,5,10,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W16-003,MAHA-2024-W16-004,2024,16,2024,16,Kolhapur,Hepatitis A,12,48,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W16-003,MAHA-2024-W18-003,2024,16,2024,18,Kolhapur,Hepatitis A,12,24,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W16-004,MAHA-2024-W18-003,2024,16,2024,18,Kolhapur,Hepatitis A,48,24,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W17-004,MAHA-2024-W20-002,2024,17,2024,20,Nanded,Dengue,6,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W17-005,MAHA-2024-W20-004,2024,17,2024,20,Raigad,Dengue,8,24,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W17-006,MAHA-2024-W18-001,2024,17,2024,18,Akola,Dengue,11,22,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W17-006,MAHA-2024-W20-006,2024,17,2024,20,Akola,Dengue,11,6,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W18-001,MAHA-2024-W20-006,2024,18,2024,20,Akola,Dengue,22,6,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W18-006,MAHA-2024-W20-005,2024,18,2024,20,Pune,Satara Dengue,10,16,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W20-002,MAHA-2024-W22-002,2024,20,2024,22,Nanded,Dengue,7,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W20-005,MAHA-2024-W22-003,2024,20,2024,22,Pune,Satara Dengue,16,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W22-002,MAHA-2024-W24-004,2024,22,2024,24,Nanded,Dengue,12,13,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W22-004,MAHA-2024-W24-006,2024,22,2024,24,Pune,Cholera,5,81,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W23-001,MAHA-2024-W24-002,2024,23,2024,24,Gadchiroli,Malaria,8,5,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W25-002,MAHA-2024-W26-006,2024,25,2024,26,Kolhapur,Dengue,24,1,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W27-004,2024,26,2024,27,Pune,Zika Virus,8,8,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W28-007,2024,26,2024,28,Pune,Zika Virus,8,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W28-008,2024,26,2024,28,Pune,Zika Virus,8,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W28-016,2024,26,2024,28,Pune,Zika Virus,8,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W29-009,2024,26,2024,29,Pune,Zika Virus,8,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-008,MAHA-2024-W29-010,2024,26,2024,29,Pune,Zika Virus,8,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-011,MAHA-2024-W28-009,2024,26,2024,28,Mumbai,Dengue,2,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-013,MAHA-2024-W29-011,2024,26,2024,29,Satara,Dengue,7,17,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W26-018,MAHA-2024-W27-005,2024,26,2024,27,Raigad,Dengue,84,13,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-001,MAHA-2024-W30-010,2024,27,2024,30,Akola,Cholera,18,8,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-004,MAHA-2024-W28-007,2024,27,2024,28,Pune,Zika Virus,8,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-004,MAHA-2024-W28-008,2024,27,2024,28,Pune,Zika Virus,8,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-004,MAHA-2024-W28-016,2024,27,2024,28,Pune,Zika Virus,8,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-004,MAHA-2024-W29-009,2024,27,2024,29,Pune,Zika Virus,8,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W27-004,MAHA-2024-W29-010,2024,27,2024,29,Pune,Zika Virus,8,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-001,MAHA-2024-W29-002,2024,28,2024,29,Akola,Acute Diarrheal Disease,93,23,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-003,MAHA-2024-W30-003,2024,28,2024,30,Gadchiroli,Malaria,3,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-003,MAHA-2024-W30-004,2024,28,2024,30,Gadchiroli,Malaria,3,2,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W28-008,2024,28,2024,28,Pune,Zika Virus,2,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W28-016,2024,28,2024,28,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W29-009,2024,28,2024,29,Pune,Zika Virus,2,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W29-010,2024,28,2024,29,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W31-007,2024,28,2024,31,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W31-009,2024,28,2024,31,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W31-011,2024,28,2024,31,Pune,Zika Virus,2,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W31-012,2024,28,2024,31,Pune,Zika Virus,2,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-007,MAHA-2024-W31-013,2024,28,2024,31,Pune,Zika Virus,2,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W28-016,2024,28,2024,28,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W29-009,2024,28,2024,29,Pune,Zika Virus,3,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W29-010,2024,28,2024,29,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W31-007,2024,28,2024,31,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W31-009,2024,28,2024,31,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W31-011,2024,28,2024,31,Pune,Zika Virus,3,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W31-012,2024,28,2024,31,Pune,Zika Virus,3,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-008,MAHA-2024-W31-013,2024,28,2024,31,Pune,Zika Virus,3,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-014,MAHA-2024-W28-015,2024,28,2024,28,Yavatmal,Cholera,7,30,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W29-009,2024,28,2024,29,Pune,Zika Virus,1,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W29-010,2024,28,2024,29,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W31-007,2024,28,2024,31,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W31-009,2024,28,2024,31,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W31-011,2024,28,2024,31,Pune,Zika Virus,1,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W31-012,2024,28,2024,31,Pune,Zika Virus,1,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W28-016,MAHA-2024-W31-013,2024,28,2024,31,Pune,Zika Virus,1,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-003,MAHA-2024-W29-004,2024,29,2024,29,Amravati,Acute Diarrheal Disease,89,70,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-003,MAHA-2024-W30-002,2024,29,2024,30,Amravati,Acute Diarrheal Disease,89,47,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-003,MAHA-2024-W31-001,2024,29,2024,31,Amravati,Acute Diarrheal Disease,89,25,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-004,MAHA-2024-W30-002,2024,29,2024,30,Amravati,Acute Diarrheal Disease,70,47,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-004,MAHA-2024-W31-001,2024,29,2024,31,Amravati,Acute Diarrheal Disease,70,25,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-005,MAHA-2024-W30-005,2024,29,2024,30,Chandrapur,Malaria,30,4,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-005,MAHA-2024-W31-002,2024,29,2024,31,Chandrapur,Malaria,30,2,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W29-010,2024,29,2024,29,Pune,Zika Virus,11,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W31-007,2024,29,2024,31,Pune,Zika Virus,11,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W31-009,2024,29,2024,31,Pune,Zika Virus,11,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W31-011,2024,29,2024,31,Pune,Zika Virus,11,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W31-012,2024,29,2024,31,Pune,Zika Virus,11,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W31-013,2024,29,2024,31,Pune,Zika Virus,11,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W32-005,2024,29,2024,32,Pune,Zika Virus,11,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W32-006,2024,29,2024,32,Pune,Zika Virus,11,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W32-007,2024,29,2024,32,Pune,Zika Virus,11,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-009,MAHA-2024-W32-008,2024,29,2024,32,Pune,Zika Virus,11,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W31-007,2024,29,2024,31,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W31-009,2024,29,2024,31,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W31-011,2024,29,2024,31,Pune,Zika Virus,1,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W31-012,2024,29,2024,31,Pune,Zika Virus,1,5,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W29-010,MAHA-2024-W31-013,2024,29,2024,31,Pune,Zika Virus,1,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W32-005,2024,29,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W32-006,2024,29,2024,32,Pune,Zika Virus,1,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W32-007,2024,29,2024,32,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W29-010,MAHA-2024-W32-008,2024,29,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W30-002,MAHA-2024-W31-001,2024,30,2024,31,Amravati,Acute Diarrheal Disease,47,25,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W30-002,MAHA-2024-W33-002,2024,30,2024,33,Amravati,Acute Diarrheal Disease,47,87,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W30-003,MAHA-2024-W30-004,2024,30,2024,30,Gadchiroli,Malaria,6,2,1,1,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W30-005,MAHA-2024-W31-002,2024,30,2024,31,Chandrapur,Malaria,4,2,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W30-007,MAHA-2024-W30-008,2024,30,2024,30,Nashik,Dengue,3,1,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-001,MAHA-2024-W33-002,2024,31,2024,33,Amravati,Acute Diarrheal Disease,25,87,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-003,MAHA-2024-W31-004,2024,31,2024,31,Dhule,Dengue,15,22,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W31-007,MAHA-2024-W31-009,2024,31,2024,31,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W31-011,2024,31,2024,31,Pune,Zika Virus,1,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W31-012,2024,31,2024,31,Pune,Zika Virus,1,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W31-013,2024,31,2024,31,Pune,Zika Virus,1,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W32-005,2024,31,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W32-006,2024,31,2024,32,Pune,Zika Virus,1,3,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2024-W31-007,MAHA-2024-W32-007,2024,31,2024,32,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W32-008,2024,31,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W33-004,2024,31,2024,33,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-007,MAHA-2024-W34-004,2024,31,2024,34,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W31-011,2024,31,2024,31,Pune,Zika Virus,1,9,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W31-012,2024,31,2024,31,Pune,Zika Virus,1,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W31-013,2024,31,2024,31,Pune,Zika Virus,1,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W32-005,2024,31,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W32-006,2024,31,2024,32,Pune,Zika Virus,1,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W32-007,2024,31,2024,32,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W32-008,2024,31,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W33-004,2024,31,2024,33,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-009,MAHA-2024-W34-004,2024,31,2024,34,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W31-012,2024,31,2024,31,Pune,Zika Virus,9,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W31-013,2024,31,2024,31,Pune,Zika Virus,9,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W32-005,2024,31,2024,32,Pune,Zika Virus,9,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W32-006,2024,31,2024,32,Pune,Zika Virus,9,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W32-007,2024,31,2024,32,Pune,Zika Virus,9,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W32-008,2024,31,2024,32,Pune,Zika Virus,9,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W33-004,2024,31,2024,33,Pune,Zika Virus,9,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-011,MAHA-2024-W34-004,2024,31,2024,34,Pune,Zika Virus,9,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W31-013,2024,31,2024,31,Pune,Zika Virus,5,7,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W32-005,2024,31,2024,32,Pune,Zika Virus,5,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W32-006,2024,31,2024,32,Pune,Zika Virus,5,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W32-007,2024,31,2024,32,Pune,Zika Virus,5,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W32-008,2024,31,2024,32,Pune,Zika Virus,5,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W33-004,2024,31,2024,33,Pune,Zika Virus,5,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-012,MAHA-2024-W34-004,2024,31,2024,34,Pune,Zika Virus,5,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W32-005,2024,31,2024,32,Pune,Zika Virus,7,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W32-006,2024,31,2024,32,Pune,Zika Virus,7,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W32-007,2024,31,2024,32,Pune,Zika Virus,7,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W32-008,2024,31,2024,32,Pune,Zika Virus,7,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W33-004,2024,31,2024,33,Pune,Zika Virus,7,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W31-013,MAHA-2024-W34-004,2024,31,2024,34,Pune,Zika Virus,7,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-005,MAHA-2024-W32-006,2024,32,2024,32,Pune,Zika Virus,1,3,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-005,MAHA-2024-W32-007,2024,32,2024,32,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-005,MAHA-2024-W32-008,2024,32,2024,32,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-005,MAHA-2024-W33-004,2024,32,2024,33,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-005,MAHA-2024-W34-004,2024,32,2024,34,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-006,MAHA-2024-W32-007,2024,32,2024,32,Pune,Zika Virus,3,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-006,MAHA-2024-W32-008,2024,32,2024,32,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-006,MAHA-2024-W33-004,2024,32,2024,33,Pune,Zika Virus,3,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-006,MAHA-2024-W34-004,2024,32,2024,34,Pune,Zika Virus,3,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-007,MAHA-2024-W32-008,2024,32,2024,32,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-007,MAHA-2024-W33-004,2024,32,2024,33,Pune,Zika Virus,2,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-007,MAHA-2024-W34-004,2024,32,2024,34,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-008,MAHA-2024-W33-004,2024,32,2024,33,Pune,Zika Virus,1,2,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W32-008,MAHA-2024-W34-004,2024,32,2024,34,Pune,Zika Virus,1,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W33-004,MAHA-2024-W34-004,2024,33,2024,34,Pune,Zika Virus,2,1,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W35-004,MAHA-2024-W38-004,2024,35,2024,38,Pune,Dengue,37,6,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W36-002,MAHA-2024-W39-003,2024,36,2024,39,Kolhapur,Hepatitis A,48,12,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W36-005,MAHA-2024-W36-007,2024,36,2024,36,Thane,Malaria,1,4,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W39-006,MAHA-2024-W39-007,2024,39,2024,39,Thane,Cholera,7,18,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W42-004,MAHA-2024-W42-006,2024,42,2024,42,Nanded,Chikungunya,7,6,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W42-005,MAHA-2024-W43-002,2024,42,2024,43,Nashik,Acute Diarrheal Disease,10,171,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W42-005,MAHA-2024-W44-003,2024,42,2024,44,Nashik,Acute Diarrheal Disease,10,18,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W42-008,MAHA-2024-W43-003,2024,42,2024,43,Mumbai,Thane Hepatitis A,6,37,1,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W43-002,MAHA-2024-W44-003,2024,43,2024,44,Nashik,Acute Diarrheal Disease,171,18,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W43-002,MAHA-2024-W46-001,2024,43,2024,46,Nashik,Acute Diarrheal Disease,171,21,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W44-003,MAHA-2024-W46-001,2024,44,2024,46,Nashik,Acute Diarrheal Disease,18,21,0,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2024-W46-002,MAHA-2024-W48-004,2024,46,2024,48,Nanded,Parbhani Chikungunya,14,14,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W04-001,MAHA-2025-W07-008,2025,4,2025,7,Nanded,Food Poisoning,54,77,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W04-004,MAHA-2025-W05-002,2025,4,2025,5,Sangli,Food Poisoning,29,34,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W06-002,MAHA-2025-W09-002,2025,6,2025,9,Kolhapur,Food Poisoning,651,24,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W07-007,MAHA-2025-W10-002,2025,7,2025,10,Nagpur,Acute Diarrheal Disease,51,109,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W07-007,MAHA-2025-W10-003,2025,7,2025,10,Nagpur,Acute Diarrheal Disease,51,61,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W08-002,MAHA-2025-W09-004,2025,8,2025,9,Sangli,Acute Hepatitis A,12,34,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W10-002,MAHA-2025-W10-003,2025,10,2025,10,Nagpur,Acute Diarrheal Disease,109,61,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W21-002,MAHA-2025-W22-001,2025,21,2025,22,Jalgaon,Dengue,22,16,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W24-002,MAHA-2025-W26-006,2025,24,2025,26,Gadchiroli,Malaria (P.falciparum ),3,4,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W24-002,MAHA-2025-W27-002,2025,24,2025,27,Gadchiroli,Malaria (P.falciparum ),3,2,1,2,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W24-002,MAHA-2025-W27-003,2025,24,2025,27,Gadchiroli,Malaria (P.falciparum ),3,9,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W26-006,MAHA-2025-W27-002,2025,26,2025,27,Gadchiroli,Malaria (P.falciparu m & P.vivax),4,2,1,2,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W26-006,MAHA-2025-W27-003,2025,26,2025,27,Gadchiroli,Malaria (P.falciparu m & P.vivax),4,9,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W26-006,MAHA-2025-W28-005,2025,26,2025,28,Gadchiroli,Malaria (P.falciparu m & P.vivax),4,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W27-002,MAHA-2025-W27-003,2025,27,2025,27,Gadchiroli,Complicate d Malaria (Plasmodiu m falciparum),2,9,2,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W27-002,MAHA-2025-W28-005,2025,27,2025,28,Gadchiroli,Complicate d Malaria (Plasmodiu m falciparum),2,6,2,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W27-003,MAHA-2025-W28-005,2025,27,2025,28,Gadchiroli,Mixed Malaria (Plasmodiu m falciparum & Plasmodiu m vivax),9,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W28-004,MAHA-2025-W28-006,2025,28,2025,28,Chandrapur,Malaria (P.falciparum),4,6,1,1,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W29-001,MAHA-2025-W32-005,2025,29,2025,32,Kolhapur,Hepatitis A,8,83,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W30-001,MAHA-2025-W32-006,2025,30,2025,32,Jalgaon,Measles,67,20,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W32-005,MAHA-2025-W34-003,2025,32,2025,34,Kolhapur,Hepatitis A,83,33,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W35-003,MAHA-2025-W35-004,2025,35,2025,35,Jalgaon,Dengue,48,47,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W40-002,MAHA-2025-W42-001,2025,40,2025,42,Buldhana,Acute Diarrhoeal Disease,19,25,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W46-001,MAHA-2025-W49-003,2025,46,2025,49,Kolhapur,Acute Diarrhoeal Disease,29,2,0,25,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W46-001,MAHA-2025-W49-004,2025,46,2025,49,Kolhapur,Acute Diarrhoeal Disease,29,2,0,25,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2025-W49-003,MAHA-2025-W49-004,2025,49,2025,49,Kolhapur,Acute Diarrhoeal Disease 98 0 04/12/,2,2,25,25,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2026-W07-002,MAHA-2026-W07-003,2026,7,2026,7,Mumbai,Measles,10,5,0,0,UPDATED_OUTBREAK,Identical start date with updated surveillance case/death counts
+MAHA-2026-W10-002,MAHA-2026-W10-003,2026,10,2026,10,Latur,Measles,9,5,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2026-W10-002,MAHA-2026-W12-002,2026,10,2026,12,Latur,Measles,9,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2026-W10-003,MAHA-2026-W12-002,2026,10,2026,12,Latur,Measles,5,11,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks
+MAHA-2026-W28-003,MAHA-2026-W31-002,2026,28,2026,31,Nagpur,Acute Diarrhoeal Disease,25,21,0,0,SEPARATE_OUTBREAK,Separate outbreak episodes in proximate surveillance weeks

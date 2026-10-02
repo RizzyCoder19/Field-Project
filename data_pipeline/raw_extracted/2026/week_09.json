@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "week": 9,
+  "pdf": "week9_1788856576.pdf",
+  "pages": 36,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2026-W09-001",
+      "source_year": 2026,
+      "source_week": 9,
+      "source_pdf": "NCDC weekly outbreaks/2026/week9_1788856576.pdf",
+      "source_page": 35,
+      "internal_week_raw": "9",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Aurangabad",
+      "district_normalized": "Aurangabad",
+      "disease_raw": "a Chhatrapati Sambhajinaga r Measles",
+      "disease_normalized": "Measles",
+      "cases": 15,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "18-02-2026",
+      "outbreak_starting_date": "2026-02-18",
+      "reporting_date_raw": "24-01-2026",
+      "reporting_date": "2026-01-24",
+      "week_start_date": "2026-02-23",
+      "week_end_date": "2026-03-01",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/CHH/2026/9/368"
+    }
+  ]
+}

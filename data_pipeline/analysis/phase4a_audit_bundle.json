@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "test": "Row count equality (Master vs Clean)",
+      "expected": 809,
+      "actual": 809,
+      "pass": true
+    },
+    {
+      "test": "Record IDs preserved (no loss)",
+      "expected": 809,
+      "actual": 809,
+      "pass": true
+    },
+    {
+      "test": "Official IDSP unique IDs extracted",
+      "expected": 809,
+      "actual": 809,
+      "pass": true
+    },
+    {
+      "test": "Cases values byte-identical to master",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "Deaths values byte-identical to master",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "PDF and page provenance byte-identical",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "Raw disease strings unchanged",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "Raw district strings unchanged",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "Raw date strings unchanged",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "test": "No synthetic records created",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "test": "Zero NIL rows inserted into outbreak table",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    }
+  ],
+  "stats": {
+    "masterRowsCount": 809,
+    "cleanRowsCount": 809,
+    "calendarWeeksCount": 237,
+    "outbreakWeeksCount": 203,
+    "nilWeeksCount": 34,
+    "districtTransformCount": 55,
+    "diseaseTransformCount": 187,
+    "modernDistrictCount": 11,
+    "dateAnomalyCount": 39,
+    "repeatDistribution": {
+      "SAME_OUTBREAK_REPEATED": 4,
+      "UPDATED_OUTBREAK": 31,
+      "SEPARATE_OUTBREAK": 224,
+      "NOT_FLAGGED": 550
+    },
+    "observationDistribution": {
+      "COMPLETE_YEAR": 531,
+      "PARTIAL_YEAR": 278
+    }
+  }
+}

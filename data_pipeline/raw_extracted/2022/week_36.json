@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 36,
+  "pdf": "week36.pdf",
+  "pages": 8,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W36-001",
+      "source_year": 2022,
+      "source_week": 36,
+      "source_pdf": "NCDC weekly outbreaks/2022/week36.pdf",
+      "source_page": 5,
+      "internal_week_raw": "36",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Nagpur",
+      "district_normalized": "Nagpur",
+      "disease_raw": "Yavatmal Acute Diarrheal Disease",
+      "disease_normalized": "Acute_Diarrheal_Disease",
+      "cases": 64,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "08/09/22",
+      "outbreak_starting_date": "2022-09-08",
+      "reporting_date_raw": "09/09/22",
+      "reporting_date": "2022-09-09",
+      "week_start_date": "2022-09-05",
+      "week_end_date": "2022-09-11",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/YVT/2022/36/716"
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+[
+  {
+    "year": "2022",
+    "file": "week36.pdf",
+    "textLen": 9588,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/YVT/2022/36/716 Maharashtra Yavatmal"
+  },
+  {
+    "year": "2024",
+    "file": "week34_1788951861.pdf",
+    "textLen": 52985,
+    "hasMaha": true,
+    "mahaLineCount": 5,
+    "firstMahaLine": "MH/AMR/2024/34/2074 Maharashtra Amravati Food"
+  },
+  {
+    "year": "2024",
+    "file": "week35_1788951873.pdf",
+    "textLen": 39443,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/BED/2024/35/2153 Maharashtra Beed Hepatitis A 9 0 28-08-2024 29-08-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week37_1788951903.pdf",
+    "textLen": 36148,
+    "hasMaha": true,
+    "mahaLineCount": 5,
+    "firstMahaLine": "MH/AMR/2024/37/2284 Maharashtra Amravati"
+  },
+  {
+    "year": "2024",
+    "file": "week38_1788951915.pdf",
+    "textLen": 34811,
+    "hasMaha": true,
+    "mahaLineCount": 4,
+    "firstMahaLine": "MH/GDC/2024/38/2337 Maharashtra Gadchiroli Scrub"
+  },
+  {
+    "year": "2024",
+    "file": "week39_1788951925.pdf",
+    "textLen": 27492,
+    "hasMaha": true,
+    "mahaLineCount": 7,
+    "firstMahaLine": "MH/BED/2024/39/2393 Maharashtra Beed Hepatitis A 10 0 21-09-2024 23-09-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week40_1788951939.pdf",
+    "textLen": 36993,
+    "hasMaha": true,
+    "mahaLineCount": 6,
+    "firstMahaLine": "MH/AMR/2024/40/2450 Maharashtra Amravati Food"
+  },
+  {
+    "year": "2024",
+    "file": "week41_1788951950.pdf",
+    "textLen": 22878,
+    "hasMaha": true,
+    "mahaLineCount": 4,
+    "firstMahaLine": "H/BUL/2024/41/2491 Maharashtra Buldhana"
+  },
+  {
+    "year": "2024",
+    "file": "week42_1788951961.pdf",
+    "textLen": 54334,
+    "hasMaha": true,
+    "mahaLineCount": 9,
+    "firstMahaLine": "MH/AMN/2024/42/2562 Maharashtra Ahmednagar Cholera 8 0 14-10-2024 14-10-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week43_1788951974.pdf",
+    "textLen": 29396,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/AHM/2024/43/2618 Maharashtra Ahmednagar"
+  },
+  {
+    "year": "2024",
+    "file": "week44_1788951993.pdf",
+    "textLen": 30277,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/PLG/2024/44/2659 Maharashtra Palghar Dengue 22 1 29-10-2024 30-10-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week45_1788952004.pdf",
+    "textLen": 24740,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/AHM/2024/45/2701 Maharashtra Ahmednagar Dengue 23 0 06-11-2024 07-11-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week46_1788952017.pdf",
+    "textLen": 32152,
+    "hasMaha": true,
+    "mahaLineCount": 4,
+    "firstMahaLine": "MH/NSH/2024/46/2749 Maharashtra Nashik"
+  },
+  {
+    "year": "2024",
+    "file": "week47_1788952028.pdf",
+    "textLen": 32319,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/WHD/2024/47/2809 Maharashtra Wardha Dengue 5 1 21-11-2024 22-11-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week48_1788952041.pdf",
+    "textLen": 32139,
+    "hasMaha": true,
+    "mahaLineCount": 8,
+    "firstMahaLine": "MH/AMR/2024/48/2847 Maharashtra Amravati Chikungunya 12 0 25-11-2024 26-11-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week49_1788952055.pdf",
+    "textLen": 20757,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/SAN/2024/49/2887 Maharashtra Sangli Hepatitis A 9 0 05-12-2024 06-12-2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week50_1788952068.pdf",
+    "textLen": 28470,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/GDC/2024/50/2935 Maharashtra Gadchiroli Malaria 2 1 09/12/2024 09/12/2024 Under"
+  },
+  {
+    "year": "2024",
+    "file": "week52_1788952090.pdf",
+    "textLen": 23867,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/BUL/2024/52/3007 Maharashtra Buldhana Food"
+  },
+  {
+    "year": "2025",
+    "file": "week10_1788950298.pdf",
+    "textLen": 35738,
+    "hasMaha": true,
+    "mahaLineCount": 4,
+    "firstMahaLine": "MH/LAT/2025/10/431 Maharashtra Latur Chickenpox 22 0 07-03-2025 07-03-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week11_1788950540.pdf",
+    "textLen": 27280,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/BHN/2025/11/481 Maharashtra Bhandara"
+  },
+  {
+    "year": "2025",
+    "file": "week12_1788950562.pdf",
+    "textLen": 30001,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/KOL/2025/12/528 Maharashtra Kolhapur Hepatitis A 15 1 17-03-2025 17-03-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week15_1788950605.pdf",
+    "textLen": 23947,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/AMR/2025/15/643 Maharashtra Amravati"
+  },
+  {
+    "year": "2025",
+    "file": "week16_1788950618.pdf",
+    "textLen": 25613,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/DHR/2025/16/690 Maharashtra Dharashiv Food"
+  },
+  {
+    "year": "2025",
+    "file": "week1_1788948201.pdf",
+    "textLen": 17893,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/AMR/2025/01/15 Maharashtra Amravati"
+  },
+  {
+    "year": "2025",
+    "file": "week21_1788950729.pdf",
+    "textLen": 25728,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/JAL/2025/21/914 Maharashtra Jalgaon Dengue 22 0 23-04-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week2_1788950093.pdf",
+    "textLen": 23680,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/RAI/2025/02/25 Maharashtra Raigad Leptospirosis 15 1 31-12-2024 06-01-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week31_1788950885.pdf",
+    "textLen": 35846,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week32_1788950897.pdf",
+    "textLen": 37477,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week34_1788950927.pdf",
+    "textLen": 44568,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week35_1788950942.pdf",
+    "textLen": 34853,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/JAL/2025/35/1635 Maharashtra Jalgaon Dengue 47 0 25-07-2025 Under Surveillance Cases were reported from Village Ambehoi &"
+  },
+  {
+    "year": "2025",
+    "file": "week38_1788950998.pdf",
+    "textLen": 40174,
+    "hasMaha": true,
+    "mahaLineCount": 5,
+    "firstMahaLine": "MH/GAD/2025/38/1770 Maharashtra Gadchiroli Acute"
+  },
+  {
+    "year": "2025",
+    "file": "week39_1788951010.pdf",
+    "textLen": 31219,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week3_1788950195.pdf",
+    "textLen": 19051,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/AMR/2025/03/79 Maharashtra Amravati Food"
+  },
+  {
+    "year": "2025",
+    "file": "week40_1788951022.pdf",
+    "textLen": 19964,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/CHH/2025/40/1847 Maharashtra Chhatrapati"
+  },
+  {
+    "year": "2025",
+    "file": "week41_1788951032.pdf",
+    "textLen": 21729,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/JAL/2025/41/1865 Maharashtra Jalgaon Measles 23 0 01-10-"
+  },
+  {
+    "year": "2025",
+    "file": "week42_1788951043.pdf",
+    "textLen": 38534,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week43_1788951058.pdf",
+    "textLen": 26143,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week46_1788951104.pdf",
+    "textLen": 32638,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week48_1788951132.pdf",
+    "textLen": 32515,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/THA/2025/48/2158 Maharashtra Thane Dengue 10 0 01-11-"
+  },
+  {
+    "year": "2025",
+    "file": "week49_1788951145.pdf",
+    "textLen": 30256,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2025",
+    "file": "week52_1788951185.pdf",
+    "textLen": 16950,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/NAG/2025/52/2278 Maharashtra Nagpur Acute"
+  },
+  {
+    "year": "2025",
+    "file": "week5_1788950221.pdf",
+    "textLen": 29159,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/PNE/2025/05/171 Maharashtra Pune Food"
+  },
+  {
+    "year": "2025",
+    "file": "week7_1789017204.pdf",
+    "textLen": 30296,
+    "hasMaha": true,
+    "mahaLineCount": 8,
+    "firstMahaLine": "MH/AKL/2025/07/265 Maharashtra Akola Typhoid 30 0 14-02-2025 14-02-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week8_1788950267.pdf",
+    "textLen": 37692,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/KOL/2025/08/329 Maharashtra Kolhapur Hepatitis A 25 0 19-02-2025 19-02-2025 Under"
+  },
+  {
+    "year": "2025",
+    "file": "week9_1788950284.pdf",
+    "textLen": 31705,
+    "hasMaha": true,
+    "mahaLineCount": 5,
+    "firstMahaLine": "MH/JAL/2025/09/386 Maharashtra Jalgaon Jaundice 12 0 26-02-2025 01-03-2025 Under"
+  },
+  {
+    "year": "2026",
+    "file": "week11_1788856616.pdf",
+    "textLen": 30071,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week12_1788856634.pdf",
+    "textLen": 25636,
+    "hasMaha": true,
+    "mahaLineCount": 1,
+    "firstMahaLine": "MH/NAS/2026/12/486 Maharashtra Nashik Fever with"
+  },
+  {
+    "year": "2026",
+    "file": "week15_1788856683.pdf",
+    "textLen": 38979,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week16_1788856701.pdf",
+    "textLen": 26096,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week1_1788853592.pdf",
+    "textLen": 23541,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week21_1788856793.pdf",
+    "textLen": 34843,
+    "hasMaha": true,
+    "mahaLineCount": 2,
+    "firstMahaLine": "MH/CHH/2026/21/859 Maharashtra Chhatrapati"
+  },
+  {
+    "year": "2026",
+    "file": "week22_1788856809.pdf",
+    "textLen": 25542,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week27_1788856919.pdf",
+    "textLen": 34196,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week31_1790077762.pdf",
+    "textLen": 32517,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/CHA/2026/31/1272 Maharashtra Chandrapur Acute"
+  },
+  {
+    "year": "2026",
+    "file": "week32_1790680151.pdf",
+    "textLen": 35820,
+    "hasMaha": true,
+    "mahaLineCount": 3,
+    "firstMahaLine": "MH/BHA/2026/32/1324 Maharashtra Bhandara Acute"
+  },
+  {
+    "year": "2026",
+    "file": "week5_1788856507.pdf",
+    "textLen": 28977,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week6_1788856531.pdf",
+    "textLen": 30264,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week7_1788856546.pdf",
+    "textLen": 31494,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  },
+  {
+    "year": "2026",
+    "file": "week9_1788856576.pdf",
+    "textLen": 50720,
+    "hasMaha": false,
+    "mahaLineCount": 0,
+    "firstMahaLine": null
+  }
+]

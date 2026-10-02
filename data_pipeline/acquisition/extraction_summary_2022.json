@@ -1,0 +1,174 @@
+{
+  "weekSummary": [
+    {
+      "week": 1,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 3,
+      "textLen": 2875
+    },
+    {
+      "week": 2,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 3,
+      "textLen": 2808
+    },
+    {
+      "week": 3,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 5,
+      "textLen": 6143
+    },
+    {
+      "week": 4,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 4,
+      "textLen": 3558
+    },
+    {
+      "week": 5,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 4,
+      "textLen": 5123
+    },
+    {
+      "week": 6,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 4,
+      "textLen": 3988
+    },
+    {
+      "week": 7,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 5,
+      "textLen": 6381
+    },
+    {
+      "week": 8,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 5,
+      "textLen": 6333
+    },
+    {
+      "week": 9,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 7,
+      "textLen": 9908
+    },
+    {
+      "week": 10,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 7,
+      "textLen": 11691
+    },
+    {
+      "week": 11,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 7,
+      "textLen": 9930
+    },
+    {
+      "week": 12,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 8,
+      "textLen": 11360
+    },
+    {
+      "week": 13,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 11,
+      "textLen": 16781
+    },
+    {
+      "week": 14,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 5,
+      "textLen": 6308
+    },
+    {
+      "week": 15,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 7,
+      "textLen": 9931
+    },
+    {
+      "week": 16,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 10,
+      "textLen": 15207
+    },
+    {
+      "week": 17,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 10,
+      "textLen": 16205
+    },
+    {
+      "week": 18,
+      "status": "NIL_MAHARASHTRA",
+      "rows": 0,
+      "pages": 13,
+      "textLen": 21621
+    },
+    {
+      "week": 19,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 17,
+      "textLen": 29471
+    },
+    {
+      "week": 20,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 12,
+      "textLen": 19287
+    },
+    {
+      "week": 21,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 15,
+      "textLen": 27026
+    },
+    {
+      "week": 22,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 16,
+      "textLen": 29769
+    },
+    {
+      "week": 23,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 16,
+      "textLen": 29395
+    },
+    {
+      "week": 24,
+      "status": "MH_PRESENT_NO_ROWS",
+      "rows": 0,
+      "pages": 10,
+      "textLen": 16780
+    }
+  ],
+  "totalRows": 0,
+  "rows": []
+}

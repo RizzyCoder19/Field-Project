@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 39,
+  "pdf": "week39.pdf",
+  "pages": 7,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W39-001",
+      "source_year": 2022,
+      "source_week": 39,
+      "source_pdf": "NCDC weekly outbreaks/2022/week39.pdf",
+      "source_page": 5,
+      "internal_week_raw": "39",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Aurangabad",
+      "district_normalized": "Aurangabad",
+      "disease_raw": "Food Poisoning",
+      "disease_normalized": "Food_Poisoning",
+      "cases": 7,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "27-09-22",
+      "outbreak_starting_date": "2022-09-27",
+      "reporting_date_raw": "27-09-22",
+      "reporting_date": "2022-09-27",
+      "week_start_date": "2022-09-26",
+      "week_end_date": "2022-10-02",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/AGB/2022/39/790"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "week": 6,
+  "pdf": "week6_1788856531.pdf",
+  "pages": 23,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2026-W06-001",
+      "source_year": 2026,
+      "source_week": 6,
+      "source_pdf": "NCDC weekly outbreaks/2026/week6_1788856531.pdf",
+      "source_page": 15,
+      "internal_week_raw": "6",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Nanded",
+      "district_normalized": "Nanded",
+      "disease_raw": "Hepatitis A",
+      "disease_normalized": "Hepatitis",
+      "cases": 12,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "03-02-2026",
+      "outbreak_starting_date": "2026-02-03",
+      "reporting_date_raw": "03-02-2026",
+      "reporting_date": "2026-02-03",
+      "week_start_date": "2026-02-02",
+      "week_end_date": "2026-02-08",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/NAN/2026/6/191"
+    }
+  ]
+}

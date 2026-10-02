@@ -1,0 +1,37 @@
+{
+  "year": 2024,
+  "week": 14,
+  "pdf": "week14_1788951433.pdf",
+  "pages": 17,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2024-W14-001",
+      "source_year": 2024,
+      "source_week": 14,
+      "source_pdf": "NCDC weekly outbreaks/2024/week14_1788951433.pdf",
+      "source_page": 12,
+      "internal_week_raw": "14",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Raigad",
+      "district_normalized": "Raigad",
+      "disease_raw": "Dengue",
+      "disease_normalized": "Dengue",
+      "cases": 5,
+      "deaths": 1,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "03-04-2024",
+      "outbreak_starting_date": "2024-04-03",
+      "reporting_date_raw": "05-04-2024",
+      "reporting_date": "2024-04-05",
+      "week_start_date": "2024-04-01",
+      "week_end_date": "2024-04-07",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/RGD/2024/14/582"
+    }
+  ]
+}

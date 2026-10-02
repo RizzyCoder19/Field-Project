@@ -1,0 +1,37 @@
+{
+  "year": 2024,
+  "week": 49,
+  "pdf": "week49_1788952055.pdf",
+  "pages": 12,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2024-W49-001",
+      "source_year": 2024,
+      "source_week": 49,
+      "source_pdf": "NCDC weekly outbreaks/2024/week49_1788952055.pdf",
+      "source_page": 8,
+      "internal_week_raw": "49",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Sangli",
+      "district_normalized": "Sangli",
+      "disease_raw": "Hepatitis A",
+      "disease_normalized": "Hepatitis",
+      "cases": 9,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "05-12-2024",
+      "outbreak_starting_date": "2024-12-05",
+      "reporting_date_raw": "06-12-2024",
+      "reporting_date": "2024-12-06",
+      "week_start_date": "2024-12-02",
+      "week_end_date": "2024-12-08",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/SAN/2024/49/2887"
+    }
+  ]
+}

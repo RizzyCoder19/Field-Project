@@ -1,0 +1,37 @@
+{
+  "year": 2026,
+  "week": 4,
+  "pdf": "week4_1788856484.pdf",
+  "pages": 23,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2026-W04-001",
+      "source_year": 2026,
+      "source_week": 4,
+      "source_pdf": "NCDC weekly outbreaks/2026/week4_1788856484.pdf",
+      "source_page": 14,
+      "internal_week_raw": "4",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Thane",
+      "district_normalized": "Thane",
+      "disease_raw": "Suspected Food Poisoning",
+      "disease_normalized": "Food_Poisoning",
+      "cases": 80,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "19-01-2026",
+      "outbreak_starting_date": "2026-01-19",
+      "reporting_date_raw": "23-01-2026",
+      "reporting_date": "2026-01-23",
+      "week_start_date": "2026-01-19",
+      "week_end_date": "2026-01-25",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/THA/2026/4/105"
+    }
+  ]
+}

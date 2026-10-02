@@ -1,0 +1,37 @@
+{
+  "year": 2023,
+  "week": 8,
+  "pdf": "week8.pdf",
+  "pages": 12,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2023-W08-001",
+      "source_year": 2023,
+      "source_week": 8,
+      "source_pdf": "NCDC weekly outbreaks/2023/week8.pdf",
+      "source_page": 11,
+      "internal_week_raw": "08",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Pune",
+      "district_normalized": "Pune",
+      "disease_raw": "Acute Diarrheal Disease",
+      "disease_normalized": "Acute_Diarrheal_Disease",
+      "cases": 49,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "09-02-2023",
+      "outbreak_starting_date": "2023-02-09",
+      "reporting_date_raw": "10-02-2023",
+      "reporting_date": "2023-02-10",
+      "week_start_date": "2023-02-20",
+      "week_end_date": "2023-02-26",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/PNE/2023/08/182"
+    }
+  ]
+}

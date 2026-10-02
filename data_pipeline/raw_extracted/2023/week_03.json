@@ -1,0 +1,37 @@
+{
+  "year": 2023,
+  "week": 3,
+  "pdf": "week3.pdf",
+  "pages": 7,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2023-W03-001",
+      "source_year": 2023,
+      "source_week": 3,
+      "source_pdf": "NCDC weekly outbreaks/2023/week3.pdf",
+      "source_page": 6,
+      "internal_week_raw": "03",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Aurangabad",
+      "district_normalized": "Aurangabad",
+      "disease_raw": "Measles",
+      "disease_normalized": "Measles",
+      "cases": 14,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "30-12-22",
+      "outbreak_starting_date": "2022-12-30",
+      "reporting_date_raw": "01-01-23",
+      "reporting_date": "2023-01-01",
+      "week_start_date": "2023-01-16",
+      "week_end_date": "2023-01-22",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/AGB/2023/03/65"
+    }
+  ]
+}

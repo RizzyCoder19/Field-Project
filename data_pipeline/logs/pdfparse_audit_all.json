@@ -1,0 +1,1919 @@
+[
+  {
+    "year": "2022",
+    "file": "week25.pdf",
+    "size": 602320,
+    "totalPages": 9,
+    "textLength": 15398,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week26.pdf",
+    "size": 594553,
+    "totalPages": 8,
+    "textLength": 14190,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week27.pdf",
+    "size": 727890,
+    "totalPages": 10,
+    "textLength": 16560,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week28.pdf",
+    "size": 692916,
+    "totalPages": 7,
+    "textLength": 11124,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week29.pdf",
+    "size": 708983,
+    "totalPages": 9,
+    "textLength": 14108,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week30.pdf",
+    "size": 727693,
+    "totalPages": 11,
+    "textLength": 18148,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week31.pdf",
+    "size": 577995,
+    "totalPages": 9,
+    "textLength": 14006,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week32.pdf",
+    "size": 541728,
+    "totalPages": 7,
+    "textLength": 9675,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week33.pdf",
+    "size": 554305,
+    "totalPages": 8,
+    "textLength": 10244,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week34.pdf",
+    "size": 772149,
+    "totalPages": 10,
+    "textLength": 17534,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week35.pdf",
+    "size": 610188,
+    "totalPages": 10,
+    "textLength": 15578,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week36.pdf",
+    "size": 762129,
+    "totalPages": 8,
+    "textLength": 9588,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week37.pdf",
+    "size": 709492,
+    "totalPages": 9,
+    "textLength": 13704,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week38.pdf",
+    "size": 761630,
+    "totalPages": 12,
+    "textLength": 19842,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week39.pdf",
+    "size": 575968,
+    "totalPages": 7,
+    "textLength": 11128,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week40.pdf",
+    "size": 507428,
+    "totalPages": 5,
+    "textLength": 6370,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week41.pdf",
+    "size": 700560,
+    "totalPages": 9,
+    "textLength": 12708,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week42.pdf",
+    "size": 643714,
+    "totalPages": 7,
+    "textLength": 8882,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week43.pdf",
+    "size": 667778,
+    "totalPages": 7,
+    "textLength": 10120,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week44.pdf",
+    "size": 563304,
+    "totalPages": 9,
+    "textLength": 12051,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week45.pdf",
+    "size": 692311,
+    "totalPages": 10,
+    "textLength": 13439,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week46.pdf",
+    "size": 620621,
+    "totalPages": 11,
+    "textLength": 18266,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week47.pdf",
+    "size": 662211,
+    "totalPages": 8,
+    "textLength": 11559,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week48.pdf",
+    "size": 692517,
+    "totalPages": 10,
+    "textLength": 13180,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week49.pdf",
+    "size": 733441,
+    "totalPages": 11,
+    "textLength": 17416,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week50.pdf",
+    "size": 532785,
+    "totalPages": 6,
+    "textLength": 7552,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week51.pdf",
+    "size": 589863,
+    "totalPages": 9,
+    "textLength": 12930,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2022",
+    "file": "week52.pdf",
+    "size": 636880,
+    "totalPages": 6,
+    "textLength": 7281,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week1.pdf",
+    "size": 752120,
+    "totalPages": 13,
+    "textLength": 18842,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week10.pdf",
+    "size": 788360,
+    "totalPages": 8,
+    "textLength": 11199,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week11.pdf",
+    "size": 580905,
+    "totalPages": 9,
+    "textLength": 13685,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week12.pdf",
+    "size": 692863,
+    "totalPages": 10,
+    "textLength": 14453,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week13.pdf",
+    "size": 569538,
+    "totalPages": 8,
+    "textLength": 11772,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week14.pdf",
+    "size": 726035,
+    "totalPages": 11,
+    "textLength": 16776,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week16.pdf",
+    "size": 711221,
+    "totalPages": 10,
+    "textLength": 16016,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week17.pdf",
+    "size": 690913,
+    "totalPages": 11,
+    "textLength": 15179,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week18.pdf",
+    "size": 750115,
+    "totalPages": 13,
+    "textLength": 21992,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week19.pdf",
+    "size": 701263,
+    "totalPages": 11,
+    "textLength": 16411,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week2.pdf",
+    "size": 674024,
+    "totalPages": 9,
+    "textLength": 12848,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week20.pdf",
+    "size": 588832,
+    "totalPages": 12,
+    "textLength": 15695,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week21.pdf",
+    "size": 623632,
+    "totalPages": 14,
+    "textLength": 19396,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week22.pdf",
+    "size": 707818,
+    "totalPages": 18,
+    "textLength": 27539,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week23.pdf",
+    "size": 733034,
+    "totalPages": 14,
+    "textLength": 20999,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week24.pdf",
+    "size": 633515,
+    "totalPages": 15,
+    "textLength": 18958,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week25.pdf",
+    "size": 942537,
+    "totalPages": 26,
+    "textLength": 44755,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week26.pdf",
+    "size": 917768,
+    "totalPages": 20,
+    "textLength": 36670,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week27.pdf",
+    "size": 864450,
+    "totalPages": 20,
+    "textLength": 33420,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week28.pdf",
+    "size": 877260,
+    "totalPages": 18,
+    "textLength": 29284,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week29.pdf",
+    "size": 755578,
+    "totalPages": 22,
+    "textLength": 35908,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week3.pdf",
+    "size": 564808,
+    "totalPages": 7,
+    "textLength": 10783,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week30.pdf",
+    "size": 726902,
+    "totalPages": 17,
+    "textLength": 30084,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week31.pdf",
+    "size": 851745,
+    "totalPages": 19,
+    "textLength": 33489,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week32.pdf",
+    "size": 689392,
+    "totalPages": 15,
+    "textLength": 25083,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week33.pdf",
+    "size": 1023997,
+    "totalPages": 25,
+    "textLength": 44701,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week34.pdf",
+    "size": 781924,
+    "totalPages": 20,
+    "textLength": 35963,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week35.pdf",
+    "size": 1213292,
+    "totalPages": 31,
+    "textLength": 52992,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week36.pdf",
+    "size": 849288,
+    "totalPages": 18,
+    "textLength": 31411,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week37.pdf",
+    "size": 905740,
+    "totalPages": 24,
+    "textLength": 40310,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week38.pdf",
+    "size": 850439,
+    "totalPages": 20,
+    "textLength": 34419,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week39.pdf",
+    "size": 848129,
+    "totalPages": 21,
+    "textLength": 36917,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week4.pdf",
+    "size": 543549,
+    "totalPages": 7,
+    "textLength": 8713,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week40.pdf",
+    "size": 843243,
+    "totalPages": 19,
+    "textLength": 33284,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week41.pdf",
+    "size": 718021,
+    "totalPages": 16,
+    "textLength": 27573,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week42.pdf",
+    "size": 928783,
+    "totalPages": 28,
+    "textLength": 47926,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week43.pdf",
+    "size": 789286,
+    "totalPages": 18,
+    "textLength": 27986,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week44.pdf",
+    "size": 704274,
+    "totalPages": 16,
+    "textLength": 26511,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week45.pdf",
+    "size": 718310,
+    "totalPages": 18,
+    "textLength": 29707,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week46.pdf",
+    "size": 611714,
+    "totalPages": 10,
+    "textLength": 15423,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week47.pdf",
+    "size": 849432,
+    "totalPages": 21,
+    "textLength": 34360,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week48.pdf",
+    "size": 615141,
+    "totalPages": 12,
+    "textLength": 18744,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week49.pdf",
+    "size": 794600,
+    "totalPages": 16,
+    "textLength": 27181,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week5.pdf",
+    "size": 653250,
+    "totalPages": 12,
+    "textLength": 19921,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week50_1788952212.pdf",
+    "size": 666846,
+    "totalPages": 14,
+    "textLength": 22544,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week6.pdf",
+    "size": 724717,
+    "totalPages": 10,
+    "textLength": 15691,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week7.pdf",
+    "size": 715956,
+    "totalPages": 11,
+    "textLength": 17765,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week8.pdf",
+    "size": 723525,
+    "totalPages": 12,
+    "textLength": 17995,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2023",
+    "file": "week9.pdf",
+    "size": 554693,
+    "totalPages": 7,
+    "textLength": 9889,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week10_1788951380.pdf",
+    "size": 691389,
+    "totalPages": 15,
+    "textLength": 25929,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week11_1788951396.pdf",
+    "size": 978519,
+    "totalPages": 28,
+    "textLength": 51292,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week12_1788951408.pdf",
+    "size": 788273,
+    "totalPages": 21,
+    "textLength": 35689,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week13_1788951420.pdf",
+    "size": 782509,
+    "totalPages": 15,
+    "textLength": 23891,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week14_1788951433.pdf",
+    "size": 755766,
+    "totalPages": 17,
+    "textLength": 29144,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week15_1788951443.pdf",
+    "size": 911568,
+    "totalPages": 22,
+    "textLength": 37295,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week16_1788951454.pdf",
+    "size": 797905,
+    "totalPages": 22,
+    "textLength": 36996,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week17_1788951485.pdf",
+    "size": 920362,
+    "totalPages": 28,
+    "textLength": 49287,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week18_1788951496.pdf",
+    "size": 866989,
+    "totalPages": 25,
+    "textLength": 43050,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week19_1788951508.pdf",
+    "size": 963998,
+    "totalPages": 17,
+    "textLength": 28823,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week1_1788951246.pdf",
+    "size": 961723,
+    "totalPages": 12,
+    "textLength": 19278,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week20_1788951522.pdf",
+    "size": 962411,
+    "totalPages": 24,
+    "textLength": 42608,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week21_1788951532.pdf",
+    "size": 936534,
+    "totalPages": 22,
+    "textLength": 38950,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week22_1788951544.pdf",
+    "size": 888674,
+    "totalPages": 26,
+    "textLength": 46073,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week23_1788951559.pdf",
+    "size": 804402,
+    "totalPages": 21,
+    "textLength": 36334,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week24_1788951570.pdf",
+    "size": 903573,
+    "totalPages": 29,
+    "textLength": 50327,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week25_1788951582.pdf",
+    "size": 890037,
+    "totalPages": 20,
+    "textLength": 35530,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week26_1788951715.pdf",
+    "size": 1406461,
+    "totalPages": 27,
+    "textLength": 47379,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week27_1788951732.pdf",
+    "size": 1184244,
+    "totalPages": 21,
+    "textLength": 37725,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week28_1788951744.pdf",
+    "size": 1708162,
+    "totalPages": 37,
+    "textLength": 66838,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week29_1788951764.pdf",
+    "size": 1189800,
+    "totalPages": 30,
+    "textLength": 51851,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week2_1788951271.pdf",
+    "size": 859437,
+    "totalPages": 12,
+    "textLength": 17904,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week30_1788951797.pdf",
+    "size": 1023592,
+    "totalPages": 48,
+    "textLength": 85515,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week31_1788951810.pdf",
+    "size": 1220521,
+    "totalPages": 29,
+    "textLength": 53373,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week32_1788951820.pdf",
+    "size": 1318615,
+    "totalPages": 39,
+    "textLength": 70718,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week33_1788951845.pdf",
+    "size": 1077366,
+    "totalPages": 27,
+    "textLength": 45042,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week34_1788951861.pdf",
+    "size": 1181485,
+    "totalPages": 29,
+    "textLength": 52985,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week35_1788951873.pdf",
+    "size": 784127,
+    "totalPages": 21,
+    "textLength": 39443,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week36_1788951892.pdf",
+    "size": 750123,
+    "totalPages": 24,
+    "textLength": 42108,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week37_1788951903.pdf",
+    "size": 740803,
+    "totalPages": 21,
+    "textLength": 36148,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week38_1788951915.pdf",
+    "size": 838695,
+    "totalPages": 20,
+    "textLength": 34811,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week39_1788951925.pdf",
+    "size": 767154,
+    "totalPages": 16,
+    "textLength": 27492,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week3_1788951287.pdf",
+    "size": 660226,
+    "totalPages": 15,
+    "textLength": 23787,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week40_1788951939.pdf",
+    "size": 769703,
+    "totalPages": 21,
+    "textLength": 36993,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week41_1788951950.pdf",
+    "size": 662220,
+    "totalPages": 14,
+    "textLength": 22878,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week42_1788951961.pdf",
+    "size": 855072,
+    "totalPages": 31,
+    "textLength": 54334,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week43_1788951974.pdf",
+    "size": 717757,
+    "totalPages": 16,
+    "textLength": 29396,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week44_1788951993.pdf",
+    "size": 829143,
+    "totalPages": 18,
+    "textLength": 30277,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week45_1788952004.pdf",
+    "size": 693325,
+    "totalPages": 14,
+    "textLength": 24740,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week46_1788952017.pdf",
+    "size": 823696,
+    "totalPages": 19,
+    "textLength": 32152,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week47_1788952028.pdf",
+    "size": 724069,
+    "totalPages": 18,
+    "textLength": 32319,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week48_1788952041.pdf",
+    "size": 817602,
+    "totalPages": 19,
+    "textLength": 32139,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week49_1788952055.pdf",
+    "size": 617541,
+    "totalPages": 12,
+    "textLength": 20757,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week4_1788951299.pdf",
+    "size": 740809,
+    "totalPages": 12,
+    "textLength": 19735,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week50_1788952068.pdf",
+    "size": 804646,
+    "totalPages": 18,
+    "textLength": 28470,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week51_1788952079.pdf",
+    "size": 638261,
+    "totalPages": 14,
+    "textLength": 24282,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week52_1788952090.pdf",
+    "size": 632353,
+    "totalPages": 14,
+    "textLength": 23867,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week5_1788951308.pdf",
+    "size": 740512,
+    "totalPages": 19,
+    "textLength": 31918,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week6_1788951327.pdf",
+    "size": 690248,
+    "totalPages": 15,
+    "textLength": 26231,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week7_1788951339.pdf",
+    "size": 832525,
+    "totalPages": 19,
+    "textLength": 29545,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week8_1788951359.pdf",
+    "size": 736802,
+    "totalPages": 17,
+    "textLength": 28884,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2024",
+    "file": "week9_1788951370.pdf",
+    "size": 790156,
+    "totalPages": 22,
+    "textLength": 40097,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week10_1788950298.pdf",
+    "size": 744093,
+    "totalPages": 20,
+    "textLength": 35738,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week11_1788950540.pdf",
+    "size": 770712,
+    "totalPages": 16,
+    "textLength": 27280,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week12_1788950562.pdf",
+    "size": 681302,
+    "totalPages": 18,
+    "textLength": 30001,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week13_1788950576.pdf",
+    "size": 667476,
+    "totalPages": 15,
+    "textLength": 25262,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week14_1788950590.pdf",
+    "size": 988445,
+    "totalPages": 15,
+    "textLength": 25035,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week15_1788950605.pdf",
+    "size": 882129,
+    "totalPages": 15,
+    "textLength": 23947,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week16_1788950618.pdf",
+    "size": 896886,
+    "totalPages": 16,
+    "textLength": 25613,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week17_1788950632.pdf",
+    "size": 929891,
+    "totalPages": 15,
+    "textLength": 24195,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week18_1788950653.pdf",
+    "size": 1319187,
+    "totalPages": 22,
+    "textLength": 33238,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week19_1788950700.pdf",
+    "size": 894208,
+    "totalPages": 16,
+    "textLength": 24833,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week1_1788948201.pdf",
+    "size": 594238,
+    "totalPages": 11,
+    "textLength": 17893,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week20_1788950712.pdf",
+    "size": 1171492,
+    "totalPages": 18,
+    "textLength": 31910,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week21_1788950729.pdf",
+    "size": 870302,
+    "totalPages": 19,
+    "textLength": 25728,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week22_1788950742.pdf",
+    "size": 705076,
+    "totalPages": 18,
+    "textLength": 28873,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week23_1788950756.pdf",
+    "size": 911930,
+    "totalPages": 16,
+    "textLength": 24741,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week24_1788950775.pdf",
+    "size": 1168222,
+    "totalPages": 30,
+    "textLength": 49691,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week25_1788950790.pdf",
+    "size": 928787,
+    "totalPages": 18,
+    "textLength": 27646,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week26_1788950806.pdf",
+    "size": 1184306,
+    "totalPages": 32,
+    "textLength": 50985,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week27_1788950821.pdf",
+    "size": 916070,
+    "totalPages": 18,
+    "textLength": 26196,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week28_1788950832.pdf",
+    "size": 1191667,
+    "totalPages": 35,
+    "textLength": 50449,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week29_1788950846.pdf",
+    "size": 1005795,
+    "totalPages": 33,
+    "textLength": 34832,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week2_1788950093.pdf",
+    "size": 762392,
+    "totalPages": 15,
+    "textLength": 23680,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week30_1788950862.pdf",
+    "size": 1116177,
+    "totalPages": 35,
+    "textLength": 43392,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week31_1788950885.pdf",
+    "size": 1120751,
+    "totalPages": 32,
+    "textLength": 35846,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week32_1788950897.pdf",
+    "size": 996016,
+    "totalPages": 36,
+    "textLength": 37477,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week33_1788950912.pdf",
+    "size": 1094850,
+    "totalPages": 31,
+    "textLength": 35086,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week34_1788950927.pdf",
+    "size": 1141060,
+    "totalPages": 34,
+    "textLength": 44568,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week35_1788950942.pdf",
+    "size": 1053583,
+    "totalPages": 22,
+    "textLength": 34853,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week36_1788950955.pdf",
+    "size": 952867,
+    "totalPages": 22,
+    "textLength": 32855,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week37_1788950985.pdf",
+    "size": 1139999,
+    "totalPages": 35,
+    "textLength": 43170,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week38_1788950998.pdf",
+    "size": 1160541,
+    "totalPages": 51,
+    "textLength": 40174,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week39_1788951010.pdf",
+    "size": 974167,
+    "totalPages": 42,
+    "textLength": 31219,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week3_1788950195.pdf",
+    "size": 709659,
+    "totalPages": 12,
+    "textLength": 19051,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week40_1788951022.pdf",
+    "size": 989166,
+    "totalPages": 21,
+    "textLength": 19964,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week41_1788951032.pdf",
+    "size": 884254,
+    "totalPages": 22,
+    "textLength": 21729,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week42_1788951043.pdf",
+    "size": 1009666,
+    "totalPages": 49,
+    "textLength": 38534,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week43_1788951058.pdf",
+    "size": 1011965,
+    "totalPages": 29,
+    "textLength": 26143,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week44_1788951072.pdf",
+    "size": 1062668,
+    "totalPages": 37,
+    "textLength": 32650,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week45_1788951083.pdf",
+    "size": 1067516,
+    "totalPages": 31,
+    "textLength": 35170,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week46_1788951104.pdf",
+    "size": 1042248,
+    "totalPages": 40,
+    "textLength": 32638,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week47_1788951120.pdf",
+    "size": 1020903,
+    "totalPages": 36,
+    "textLength": 31064,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week48_1788951132.pdf",
+    "size": 1016364,
+    "totalPages": 23,
+    "textLength": 32515,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week49_1788951145.pdf",
+    "size": 903306,
+    "totalPages": 23,
+    "textLength": 30256,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week4_1788950209.pdf",
+    "size": 1145826,
+    "totalPages": 21,
+    "textLength": 32229,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week50_1788951159.pdf",
+    "size": 1034212,
+    "totalPages": 22,
+    "textLength": 30497,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week51_1788951172.pdf",
+    "size": 928759,
+    "totalPages": 18,
+    "textLength": 19958,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week52_1788951185.pdf",
+    "size": 915158,
+    "totalPages": 14,
+    "textLength": 16950,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week5_1788950221.pdf",
+    "size": 691274,
+    "totalPages": 18,
+    "textLength": 29159,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week6_1788950233.pdf",
+    "size": 557146,
+    "totalPages": 18,
+    "textLength": 29934,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week7_1789017204.pdf",
+    "size": 690176,
+    "totalPages": 17,
+    "textLength": 30296,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week8_1788950267.pdf",
+    "size": 741733,
+    "totalPages": 22,
+    "textLength": 37692,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2025",
+    "file": "week9_1788950284.pdf",
+    "size": 728832,
+    "totalPages": 19,
+    "textLength": 31705,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week10_1788856598.pdf",
+    "size": 1024987,
+    "totalPages": 26,
+    "textLength": 31377,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week11_1788856616.pdf",
+    "size": 1235858,
+    "totalPages": 25,
+    "textLength": 30071,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week12_1788856634.pdf",
+    "size": 1145261,
+    "totalPages": 21,
+    "textLength": 25636,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week13_1788856653.pdf",
+    "size": 1259770,
+    "totalPages": 20,
+    "textLength": 31651,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week14_1788856669.pdf",
+    "size": 1256991,
+    "totalPages": 23,
+    "textLength": 30399,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week15_1788856683.pdf",
+    "size": 1327508,
+    "totalPages": 30,
+    "textLength": 38979,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week16_1788856701.pdf",
+    "size": 1166378,
+    "totalPages": 20,
+    "textLength": 26096,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week17_1788856716.pdf",
+    "size": 1220132,
+    "totalPages": 22,
+    "textLength": 26686,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week18_1788856733.pdf",
+    "size": 1398949,
+    "totalPages": 22,
+    "textLength": 25869,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week19_1788856754.pdf",
+    "size": 1089580,
+    "totalPages": 21,
+    "textLength": 29318,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week1_1788853592.pdf",
+    "size": 956018,
+    "totalPages": 19,
+    "textLength": 23541,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week20_1788856772.pdf",
+    "size": 1305340,
+    "totalPages": 26,
+    "textLength": 42338,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week21_1788856793.pdf",
+    "size": 1227373,
+    "totalPages": 24,
+    "textLength": 34843,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week22_1788856809.pdf",
+    "size": 1220597,
+    "totalPages": 20,
+    "textLength": 25542,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week23_1788856825.pdf",
+    "size": 1109574,
+    "totalPages": 18,
+    "textLength": 25569,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week24_1788856872.pdf",
+    "size": 1266495,
+    "totalPages": 25,
+    "textLength": 34923,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week25_1788856887.pdf",
+    "size": 805474,
+    "totalPages": 22,
+    "textLength": 29802,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week26_1788856902.pdf",
+    "size": 1162643,
+    "totalPages": 23,
+    "textLength": 31876,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week27_1788856919.pdf",
+    "size": 1291966,
+    "totalPages": 25,
+    "textLength": 34196,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week28_1788942657.pdf",
+    "size": 1215898,
+    "totalPages": 19,
+    "textLength": 29895,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week29_1789533489.pdf",
+    "size": 1497406,
+    "totalPages": 26,
+    "textLength": 36584,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week2_1788856445.pdf",
+    "size": 898140,
+    "totalPages": 17,
+    "textLength": 22101,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week30_1789731731.pdf",
+    "size": 1425637,
+    "totalPages": 26,
+    "textLength": 38055,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week31_1790077762.pdf",
+    "size": 1177764,
+    "totalPages": 22,
+    "textLength": 32517,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week32_1790680151.pdf",
+    "size": 1187647,
+    "totalPages": 24,
+    "textLength": 35820,
+    "hasMaharashtra": true,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week3_1788857181.pdf",
+    "size": 624290,
+    "totalPages": 17,
+    "textLength": 22067,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week4_1788856484.pdf",
+    "size": 1001159,
+    "totalPages": 23,
+    "textLength": 29959,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week5_1788856507.pdf",
+    "size": 1092404,
+    "totalPages": 21,
+    "textLength": 28977,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week6_1788856531.pdf",
+    "size": 1041128,
+    "totalPages": 23,
+    "textLength": 30264,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week7_1788856546.pdf",
+    "size": 1042817,
+    "totalPages": 27,
+    "textLength": 31494,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week8_1788856560.pdf",
+    "size": 1109394,
+    "totalPages": 29,
+    "textLength": 42238,
+    "hasMaharashtra": false,
+    "error": null
+  },
+  {
+    "year": "2026",
+    "file": "week9_1788856576.pdf",
+    "size": 1132965,
+    "totalPages": 36,
+    "textLength": 50720,
+    "hasMaharashtra": false,
+    "error": null
+  }
+]

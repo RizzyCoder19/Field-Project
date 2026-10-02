@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 40,
+  "pdf": "week40.pdf",
+  "pages": 5,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W40-001",
+      "source_year": 2022,
+      "source_week": 40,
+      "source_pdf": "NCDC weekly outbreaks/2022/week40.pdf",
+      "source_page": 4,
+      "internal_week_raw": "40",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Pune",
+      "district_normalized": "Pune",
+      "disease_raw": "Dengue",
+      "disease_normalized": "Dengue",
+      "cases": 20,
+      "deaths": 1,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "17-09-22",
+      "outbreak_starting_date": "2022-09-17",
+      "reporting_date_raw": "07-10-22",
+      "reporting_date": "2022-10-07",
+      "week_start_date": "2022-10-03",
+      "week_end_date": "2022-10-09",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/PNE/2022/40/803"
+    }
+  ]
+}

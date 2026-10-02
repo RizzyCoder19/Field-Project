@@ -1,0 +1,37 @@
+{
+  "year": 2025,
+  "week": 46,
+  "pdf": "week46_1788951104.pdf",
+  "pages": 40,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2025-W46-001",
+      "source_year": 2025,
+      "source_week": 46,
+      "source_pdf": "NCDC weekly outbreaks/2025/week46_1788951104.pdf",
+      "source_page": 26,
+      "internal_week_raw": "46",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Kolhapur",
+      "district_normalized": "Kolhapur",
+      "disease_raw": "Acute Diarrhoeal Disease",
+      "disease_normalized": "Acute_Diarrheal_Disease",
+      "cases": 29,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "10-11-2025",
+      "outbreak_starting_date": "2025-11-10",
+      "reporting_date_raw": "10-11-2025",
+      "reporting_date": "2025-11-10",
+      "week_start_date": "2025-11-10",
+      "week_end_date": "2025-11-16",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/KOL/2025/46/2064"
+    }
+  ]
+}

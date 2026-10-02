@@ -1,0 +1,37 @@
+{
+  "year": 2023,
+  "week": 9,
+  "pdf": "week9.pdf",
+  "pages": 7,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2023-W09-001",
+      "source_year": 2023,
+      "source_week": 9,
+      "source_pdf": "NCDC weekly outbreaks/2023/week9.pdf",
+      "source_page": 4,
+      "internal_week_raw": "09",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Ahmednagar",
+      "district_normalized": "Ahmednagar",
+      "disease_raw": "Fever",
+      "disease_normalized": "Fever",
+      "cases": 120,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "24-02-2023",
+      "outbreak_starting_date": "2023-02-24",
+      "reporting_date_raw": "01-03-2023",
+      "reporting_date": "2023-03-01",
+      "week_start_date": "2023-02-27",
+      "week_end_date": "2023-03-05",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/AMN/2023/09/191"
+    }
+  ]
+}

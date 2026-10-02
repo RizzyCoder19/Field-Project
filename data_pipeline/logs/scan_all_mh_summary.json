@@ -1,0 +1,3002 @@
+[
+  {
+    "year": "2022",
+    "week": 25,
+    "file": "week25.pdf",
+    "pages": 9,
+    "textLen": 15398,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/WAS/2022/25/478",
+      "MH/WAS/2022/25/479"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 26,
+    "file": "week26.pdf",
+    "pages": 8,
+    "textLen": 14190,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2022/26/507",
+      "MH/SIN/2022/26/508"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 27,
+    "file": "week27.pdf",
+    "pages": 10,
+    "textLen": 16560,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2022/27/522"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 28,
+    "file": "week28.pdf",
+    "pages": 7,
+    "textLen": 11124,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2022/28/547",
+      "MH/PNE/2022/28/555"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 29,
+    "file": "week29.pdf",
+    "pages": 9,
+    "textLen": 14108,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2022",
+    "week": 30,
+    "file": "week30.pdf",
+    "pages": 11,
+    "textLen": 18148,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/WAS/2022/30/590"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 31,
+    "file": "week31.pdf",
+    "pages": 9,
+    "textLen": 14006,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2022/31/611"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 32,
+    "file": "week32.pdf",
+    "pages": 7,
+    "textLen": 9675,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/MED/2022/32/630",
+      "MH/MED/2022/32/631"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 33,
+    "file": "week33.pdf",
+    "pages": 8,
+    "textLen": 10244,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2022",
+    "week": 34,
+    "file": "week34.pdf",
+    "pages": 10,
+    "textLen": 17534,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAS/2022/34/669",
+      "MH/YVT/2022/34/670"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 35,
+    "file": "week35.pdf",
+    "pages": 10,
+    "textLen": 15578,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2022/35/707",
+      "MH/AMN/2022/35/708"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 36,
+    "file": "week36.pdf",
+    "pages": 8,
+    "textLen": 9588,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/YVT/2022/36/716"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 37,
+    "file": "week37.pdf",
+    "pages": 9,
+    "textLen": 13704,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2022",
+    "week": 38,
+    "file": "week38.pdf",
+    "pages": 12,
+    "textLen": 19842,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BNR/2022/38/766",
+      "MH/CND/2022/38/767",
+      "MH/CND/2022/38/768"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 39,
+    "file": "week39.pdf",
+    "pages": 7,
+    "textLen": 11128,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2022/39/790"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 40,
+    "file": "week40.pdf",
+    "pages": 5,
+    "textLen": 6370,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PNE/2022/40/803"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 41,
+    "file": "week41.pdf",
+    "pages": 9,
+    "textLen": 12708,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PNE/2022/41/825"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 42,
+    "file": "week42.pdf",
+    "pages": 7,
+    "textLen": 8882,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2022/42/833",
+      "MH/PNE/2022/42/834",
+      "MH/SGL/2022/42/835"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 43,
+    "file": "week43.pdf",
+    "pages": 7,
+    "textLen": 10120,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2022",
+    "week": 44,
+    "file": "week44.pdf",
+    "pages": 9,
+    "textLen": 12051,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NGP/2022/44/866",
+      "MH/NGP/2022/44/867"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 45,
+    "file": "week45.pdf",
+    "pages": 10,
+    "textLen": 13439,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BNR/2022/45/889"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 46,
+    "file": "week46.pdf",
+    "pages": 11,
+    "textLen": 18266,
+    "mhIdCount": 9,
+    "generalMhCount": 9,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/LTR/2022/46/903",
+      "MH/AGB/2022/46/912",
+      "MH/AGB/2022/46/913"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 47,
+    "file": "week47.pdf",
+    "pages": 8,
+    "textLen": 11559,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOP/2022/47/927",
+      "MH/KOP/2022/47/935"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 48,
+    "file": "week48.pdf",
+    "pages": 10,
+    "textLen": 13180,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2022",
+    "week": 49,
+    "file": "week49.pdf",
+    "pages": 11,
+    "textLen": 17416,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2022/49/980",
+      "MH/KOP/2022/49/984",
+      "MH/LTR/2022/49/985"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 50,
+    "file": "week50.pdf",
+    "pages": 6,
+    "textLen": 7552,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KAJ/2022/50/995"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 51,
+    "file": "week51.pdf",
+    "pages": 9,
+    "textLen": 12930,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2022/51/1003",
+      "MH/KOP/2022/51/1014",
+      "MH/KOP/2022/51/1015"
+    ]
+  },
+  {
+    "year": "2022",
+    "week": 52,
+    "file": "week52.pdf",
+    "pages": 6,
+    "textLen": 7281,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOP/2022/52/1025"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 1,
+    "file": "week1.pdf",
+    "pages": 13,
+    "textLen": 18842,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2023/01/10",
+      "MH/THN/2023/01/26",
+      "MH/AMR/2023/01/27"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 2,
+    "file": "week2.pdf",
+    "pages": 9,
+    "textLen": 12848,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAN/2023/02/45",
+      "MH/NAN/2023/02/46",
+      "MH/NAN/2023/02/47"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 3,
+    "file": "week3.pdf",
+    "pages": 7,
+    "textLen": 10783,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/03/65"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 4,
+    "file": "week4.pdf",
+    "pages": 7,
+    "textLen": 8713,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 5,
+    "file": "week5.pdf",
+    "pages": 12,
+    "textLen": 19921,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/LTR/2023/05/106",
+      "MH/SGL/2023/05/107",
+      "MH/AMN/2023/05/116"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 6,
+    "file": "week6.pdf",
+    "pages": 10,
+    "textLen": 15691,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 7,
+    "file": "week7.pdf",
+    "pages": 11,
+    "textLen": 17765,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/OSM/2023/07/147",
+      "MH/SHO/2023/07/157"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 8,
+    "file": "week8.pdf",
+    "pages": 12,
+    "textLen": 17995,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PNE/2023/08/182"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 9,
+    "file": "week9.pdf",
+    "pages": 7,
+    "textLen": 9889,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2023/09/191"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 10,
+    "file": "week10.pdf",
+    "pages": 8,
+    "textLen": 11199,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 11,
+    "file": "week11.pdf",
+    "pages": 9,
+    "textLen": 13685,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 12,
+    "file": "week12.pdf",
+    "pages": 10,
+    "textLen": 14453,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 13,
+    "file": "week13.pdf",
+    "pages": 8,
+    "textLen": 11772,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PNE/2023/13/262",
+      "MH/PNE/2023/13/263",
+      "MH/RGD/2023/13/264"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 14,
+    "file": "week14.pdf",
+    "pages": 11,
+    "textLen": 16776,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 16,
+    "file": "week16.pdf",
+    "pages": 10,
+    "textLen": 16016,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 17,
+    "file": "week17.pdf",
+    "pages": 11,
+    "textLen": 15179,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAN/2023/17/338"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 18,
+    "file": "week18.pdf",
+    "pages": 13,
+    "textLen": 21992,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": true,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 19,
+    "file": "week19.pdf",
+    "pages": 11,
+    "textLen": 16411,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 20,
+    "file": "week20.pdf",
+    "pages": 12,
+    "textLen": 15695,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/YVT/2023/20/408"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 21,
+    "file": "week21.pdf",
+    "pages": 14,
+    "textLen": 19396,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 22,
+    "file": "week22.pdf",
+    "pages": 18,
+    "textLen": 27539,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/22/461",
+      "MH/STA/2023/22/462",
+      "MH/GAD/2023/22/485"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 23,
+    "file": "week23.pdf",
+    "pages": 14,
+    "textLen": 20999,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/YVT/2023/23/506"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 24,
+    "file": "week24.pdf",
+    "pages": 15,
+    "textLen": 18958,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/OSM/2023/24/530",
+      "MH/SAT/2023/24/531",
+      "MH/WAS/2023/24/532"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 25,
+    "file": "week25.pdf",
+    "pages": 26,
+    "textLen": 44755,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/25/587",
+      "MH/HIN/2023/25/588",
+      "MH/KOP/2023/25/589"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 26,
+    "file": "week26.pdf",
+    "pages": 20,
+    "textLen": 36670,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2023/26/648",
+      "MH/JGA/2023/26/649",
+      "MH/PRB/2023/26/650"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 27,
+    "file": "week27.pdf",
+    "pages": 20,
+    "textLen": 33420,
+    "mhIdCount": 8,
+    "generalMhCount": 8,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2023/27/695",
+      "MH/AMR/2023/27/696",
+      "MH/KOP/2023/27/697"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 28,
+    "file": "week28.pdf",
+    "pages": 18,
+    "textLen": 29284,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JLN/2023/28/741",
+      "MH/PLR/2023/28/742",
+      "MH/SIN/2023/28/743"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 29,
+    "file": "week29.pdf",
+    "pages": 22,
+    "textLen": 35908,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/29/795",
+      "MH/OSM/2023/29/796",
+      "MH/TNE/2023/29/797"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 30,
+    "file": "week30.pdf",
+    "pages": 17,
+    "textLen": 30084,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2023/30/833",
+      "MH/AMR/2023/30/834",
+      "MH/BNR/2023/30/835"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 31,
+    "file": "week31.pdf",
+    "pages": 19,
+    "textLen": 33489,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/31/884",
+      "MH/AGB/2023/31/885",
+      "MH/KOP/2023/31/886"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 32,
+    "file": "week32.pdf",
+    "pages": 15,
+    "textLen": 25083,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GOD/2023/32/945",
+      "MH/STA/2023/32/946",
+      "MH/YVT/2023/32/947"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 33,
+    "file": "week33.pdf",
+    "pages": 25,
+    "textLen": 44701,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BED/2023/33/984",
+      "MH/BED/2023/33/985",
+      "MH/GAD/2023/33/986"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 34,
+    "file": "week34.pdf",
+    "pages": 20,
+    "textLen": 35963,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/34/1038",
+      "MH/BNR/2023/34/1039",
+      "MH/BNR/2023/34/1040"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 35,
+    "file": "week35.pdf",
+    "pages": 31,
+    "textLen": 52992,
+    "mhIdCount": 14,
+    "generalMhCount": 14,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/35/1112",
+      "MH/KOP/2023/35/1113",
+      "MH/KOP/2023/35/1114"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 36,
+    "file": "week36.pdf",
+    "pages": 18,
+    "textLen": 31411,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2023/36/1178",
+      "MH/KOP/2023/36/1179",
+      "MH/KOP/2023/36/1180"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 37,
+    "file": "week37.pdf",
+    "pages": 24,
+    "textLen": 40310,
+    "mhIdCount": 11,
+    "generalMhCount": 12,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2023/37/1229",
+      "MH/BED/2023/37/1230",
+      "MH/BED/2023/37/1231"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 38,
+    "file": "week38.pdf",
+    "pages": 20,
+    "textLen": 34419,
+    "mhIdCount": 10,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BED/2023/37/1285",
+      "MH/CND/2023/37/1286",
+      "MH/CND/2023/37/1287"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 39,
+    "file": "week39.pdf",
+    "pages": 21,
+    "textLen": 36917,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/39/1336",
+      "MH/BED/2023/39/1337",
+      "MH/NAN/2023/39/1338"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 40,
+    "file": "week40.pdf",
+    "pages": 19,
+    "textLen": 33284,
+    "mhIdCount": 10,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2023/40/1380",
+      "MH/BED/2023/40/1381",
+      "MH/NAG/2023/40/1382"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 41,
+    "file": "week41.pdf",
+    "pages": 16,
+    "textLen": 27573,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/41/1429",
+      "MH/BUL/2023/41/1430",
+      "MH/PNE/2023/41/1431"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 42,
+    "file": "week42.pdf",
+    "pages": 28,
+    "textLen": 47926,
+    "mhIdCount": 17,
+    "generalMhCount": 17,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AGB/2023/42/1476",
+      "MH/BED/2023/42/1477",
+      "MH/BED/2023/42/1478"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 43,
+    "file": "week43.pdf",
+    "pages": 18,
+    "textLen": 27986,
+    "mhIdCount": 10,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2023/43/1533",
+      "MH/AKL/2023/43/1534",
+      "MH/AMR/2023/43/1535"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 44,
+    "file": "week44.pdf",
+    "pages": 16,
+    "textLen": 26511,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2023/44/1573",
+      "MH/KOP/2023/44/1574",
+      "MH/NDB/2023/44/1575"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 45,
+    "file": "week45.pdf",
+    "pages": 18,
+    "textLen": 29707,
+    "mhIdCount": 10,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2023/45/1612",
+      "MH/BED/2023/45/1613",
+      "MH/NAG/2023/45/1614"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 46,
+    "file": "week46.pdf",
+    "pages": 10,
+    "textLen": 15423,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2023",
+    "week": 47,
+    "file": "week47.pdf",
+    "pages": 21,
+    "textLen": 34360,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/RGD/2023/47/1683",
+      "MH/WAS/2023/47/1684",
+      "MH/WAS/2023/47/1685"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 48,
+    "file": "week48.pdf",
+    "pages": 12,
+    "textLen": 18744,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/48/1729"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 49,
+    "file": "week49.pdf",
+    "pages": 16,
+    "textLen": 27181,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2023/49/1753",
+      "MH/NAN/2023/49/1754",
+      "MH/PNE/2023/49/1755"
+    ]
+  },
+  {
+    "year": "2023",
+    "week": 50,
+    "file": "week50_1788952212.pdf",
+    "pages": 14,
+    "textLen": 22544,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2023/50/1789",
+      "MH/AGB/2023/50/1790",
+      "MH/GAD/2023/50/1791"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 1,
+    "file": "week1_1788951246.pdf",
+    "pages": 12,
+    "textLen": 19278,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2024/01/15",
+      "MH/GAD/2024/01/16",
+      "MH/GOD/2024/01/17"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 2,
+    "file": "week2_1788951271.pdf",
+    "pages": 12,
+    "textLen": 17904,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOP/2024/02/45"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 3,
+    "file": "week3_1788951287.pdf",
+    "pages": 15,
+    "textLen": 23787,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/THN/2024/03/0568",
+      "MH/BNR/2024/03/081",
+      "MH/THN/2024/03/082"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 4,
+    "file": "week4_1788951299.pdf",
+    "pages": 12,
+    "textLen": 19735,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2024/04/098",
+      "MH/PLR/2024/04/099"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 5,
+    "file": "week5_1788951308.pdf",
+    "pages": 19,
+    "textLen": 31918,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOP/2024/05/135",
+      "MH/THN/2024/05/136"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 6,
+    "file": "week6_1788951327.pdf",
+    "pages": 15,
+    "textLen": 26231,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAN/2024/06/183",
+      "MH/OSM/2024/06/184",
+      "MH/OSM/2024/06/185"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 7,
+    "file": "week7_1788951339.pdf",
+    "pages": 19,
+    "textLen": 29545,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/OSM/2024/07/226",
+      "MH/RGD/2024/07/227",
+      "MH/THN/2024/07/228"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 8,
+    "file": "week8_1788951359.pdf",
+    "pages": 17,
+    "textLen": 28884,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2024/08/262",
+      "MH/NDB/2024/08/263",
+      "MH/YVT/2024/08/264"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 9,
+    "file": "week9_1788951370.pdf",
+    "pages": 22,
+    "textLen": 40097,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2024/09/326",
+      "MH/AKL/2024/09/327",
+      "MH/PLR/2024/09/328"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 10,
+    "file": "week10_1788951380.pdf",
+    "pages": 15,
+    "textLen": 25929,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHL/2024/10/360",
+      "MH/HIN/2024/10/361",
+      "MH/KOP/2024/10/362"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 11,
+    "file": "week11_1788951396.pdf",
+    "pages": 28,
+    "textLen": 51292,
+    "mhIdCount": 11,
+    "generalMhCount": 11,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/11/426",
+      "MH/DHL/2024/11/427",
+      "MH/GAD/2024/11/428"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 12,
+    "file": "week12_1788951408.pdf",
+    "pages": 21,
+    "textLen": 35689,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2024/12/492",
+      "MH/AMR/2024/12/493",
+      "MH/OSM/2024/12/494"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 13,
+    "file": "week13_1788951420.pdf",
+    "pages": 15,
+    "textLen": 23891,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2024/12/539",
+      "MH/PNE/2024/12/551"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 14,
+    "file": "week14_1788951433.pdf",
+    "pages": 17,
+    "textLen": 29144,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/RGD/2024/14/582"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 15,
+    "file": "week15_1788951443.pdf",
+    "pages": 22,
+    "textLen": 37295,
+    "mhIdCount": 9,
+    "generalMhCount": 9,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2024/15/635",
+      "MH/CND/2024/15/636",
+      "MH/JLN/2024/15/637"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 16,
+    "file": "week16_1788951454.pdf",
+    "pages": 22,
+    "textLen": 36996,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2024/16/691",
+      "MH/BNR/2024/16/693",
+      "MH/KOP/2024/16/694"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 17,
+    "file": "week17_1788951485.pdf",
+    "pages": 28,
+    "textLen": 49287,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CND/2024/17/664",
+      "MH/KOP/2024/17/765",
+      "MH/NGP/2024/17/766"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 18,
+    "file": "week18_1788951496.pdf",
+    "pages": 25,
+    "textLen": 43050,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2024/18/836",
+      "MH/CND/2024/18/837",
+      "MH/KOP/2024/18/838"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 19,
+    "file": "week19_1788951508.pdf",
+    "pages": 17,
+    "textLen": 28823,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2024/19/891",
+      "MH/WDH/2024/19/904"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 20,
+    "file": "week20_1788951522.pdf",
+    "pages": 24,
+    "textLen": 42608,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOP/2024/20/955",
+      "MH/NAN/2024/20/956",
+      "MH/NAN/2024/20/957"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 21,
+    "file": "week21_1788951532.pdf",
+    "pages": 22,
+    "textLen": 38950,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2024/21/1013",
+      "MH/JGA/2024/21/1014",
+      "MH/NAG/2024/21/1015"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 22,
+    "file": "week22_1788951544.pdf",
+    "pages": 26,
+    "textLen": 46073,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2024/22/1087",
+      "MH/NAN/2024/22/1088",
+      "MH/PNE/2024/22/1089"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 23,
+    "file": "week23_1788951559.pdf",
+    "pages": 21,
+    "textLen": 36334,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2024/23/1139",
+      "MH/KOP/2024/23/1140",
+      "MH/NAG/2024/23/1141"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 24,
+    "file": "week24_1788951570.pdf",
+    "pages": 29,
+    "textLen": 50327,
+    "mhIdCount": 9,
+    "generalMhCount": 9,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BNR/2024/24/1214",
+      "MH/GAG/2024/24/1215",
+      "MH/NAG/2024/24/1216"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 25,
+    "file": "week25_1788951582.pdf",
+    "pages": 20,
+    "textLen": 35530,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JGA/2024/25/1286",
+      "MH/KOP/2024/25/1287",
+      "MH/KOP/2024/25/1288"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 26,
+    "file": "week26_1788951715.pdf",
+    "pages": 27,
+    "textLen": 47379,
+    "mhIdCount": 18,
+    "generalMhCount": 18,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GOD/2024/26/1335",
+      "MH/GOD/2024/26/1336",
+      "MH/JLN/2024/26/1337"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 27,
+    "file": "week27_1788951732.pdf",
+    "pages": 21,
+    "textLen": 37725,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2024/27/1423",
+      "MH/CND/2024/27/1424",
+      "MH/GAD/2024/27/1425"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 28,
+    "file": "week28_1788951744.pdf",
+    "pages": 37,
+    "textLen": 66838,
+    "mhIdCount": 16,
+    "generalMhCount": 16,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKO/2024/28/1498",
+      "MH/CDP/2024/28/1499",
+      "MH/GAD/2024/28/1500"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 29,
+    "file": "week29_1788951764.pdf",
+    "pages": 30,
+    "textLen": 51851,
+    "mhIdCount": 11,
+    "generalMhCount": 11,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AHM/2024/29/1604",
+      "MH/AKL/2024/29/1605",
+      "MH/AMV/2024/29/1606"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 30,
+    "file": "week30_1788951797.pdf",
+    "pages": 48,
+    "textLen": 85515,
+    "mhIdCount": 10,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2024/30/1723",
+      "MH/AVT/2024/30/1724",
+      "MH/GDC/2024/30/1725"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 31,
+    "file": "week31_1788951810.pdf",
+    "pages": 29,
+    "textLen": 53373,
+    "mhIdCount": 13,
+    "generalMhCount": 13,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/31/1816",
+      "MH/CDP/2024/31/1817",
+      "MH/DHL/2024/31/1818"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 32,
+    "file": "week32_1788951820.pdf",
+    "pages": 39,
+    "textLen": 70718,
+    "mhIdCount": 8,
+    "generalMhCount": 8,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AHM/2024/32/1925",
+      "MH/AMT/2024/32/1926",
+      "MH/BND/2024/32/1927"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 33,
+    "file": "week33_1788951845.pdf",
+    "pages": 27,
+    "textLen": 45042,
+    "mhIdCount": 3,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/33/2013",
+      "MH/STA/2024/33/2014",
+      "MH/PNE/2024/33/2040"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 34,
+    "file": "week34_1788951861.pdf",
+    "pages": 29,
+    "textLen": 52985,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/34/2074",
+      "MH/ARG/2024/34/2075",
+      "MH/PLG/2024/34/2076"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 35,
+    "file": "week35_1788951873.pdf",
+    "pages": 21,
+    "textLen": 39443,
+    "mhIdCount": 3,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BED/2024/35/2153",
+      "MH/PLG/2024/35/2154",
+      "MH/PNE/2024/35/2182"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 36,
+    "file": "week36_1788951892.pdf",
+    "pages": 24,
+    "textLen": 42108,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/HNG/2024/36/2221",
+      "MH/KOP/2024/36/2222",
+      "MH/NAN/2024/36/2223"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 37,
+    "file": "week37_1788951903.pdf",
+    "pages": 21,
+    "textLen": 36148,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/37/2284",
+      "MH/BHD/2024/37/2285",
+      "MH/BUL/2024/37/2286"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 38,
+    "file": "week38_1788951915.pdf",
+    "pages": 20,
+    "textLen": 34811,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GDC/2024/38/2337",
+      "MH/LAT/2024/38/2338",
+      "MH/PNE/2024/38/2339"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 39,
+    "file": "week39_1788951925.pdf",
+    "pages": 16,
+    "textLen": 27492,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BED/2024/39/2393",
+      "MH/BND/2024/39/2394",
+      "MH/KOP/2024/39/2395"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 40,
+    "file": "week40_1788951939.pdf",
+    "pages": 21,
+    "textLen": 36993,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/40/2450",
+      "MH/GOG/2024/40/2451",
+      "MH/LAT/2024/40/2452"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 41,
+    "file": "week41_1788951950.pdf",
+    "pages": 14,
+    "textLen": 22878,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAG/2024/41/2492",
+      "MH/PRB/2024/41/2493",
+      "MH/PNE/2024/41/2494"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 42,
+    "file": "week42_1788951961.pdf",
+    "pages": 31,
+    "textLen": 54334,
+    "mhIdCount": 9,
+    "generalMhCount": 10,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMN/2024/42/2562",
+      "MH/DHL/2024/42/2563",
+      "MH/KOP/2024/42/2564"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 43,
+    "file": "week43_1788951974.pdf",
+    "pages": 16,
+    "textLen": 29396,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AHM/2024/43/2618",
+      "MH/NAS/2024/43/2632",
+      "MH/RIG/2024/43/2633"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 44,
+    "file": "week44_1788951993.pdf",
+    "pages": 18,
+    "textLen": 30277,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PLG/2024/44/2659",
+      "MH/THN/2024/44/2660",
+      "MH/NAS/2024/44/2679"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 45,
+    "file": "week45_1788952004.pdf",
+    "pages": 14,
+    "textLen": 24740,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AHM/2024/45/2701",
+      "MH/CHN/2024/45/2702"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 46,
+    "file": "week46_1788952017.pdf",
+    "pages": 19,
+    "textLen": 32152,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NSH/2024/46/2749",
+      "MH/PRB/2024/46/2750",
+      "MH/RIG/2024/46/2751"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 47,
+    "file": "week47_1788952028.pdf",
+    "pages": 18,
+    "textLen": 32319,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/WHD/2024/47/2809"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 48,
+    "file": "week48_1788952041.pdf",
+    "pages": 19,
+    "textLen": 32139,
+    "mhIdCount": 8,
+    "generalMhCount": 8,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2024/48/2847",
+      "MH/KOH/2024/48/2848",
+      "MH/KOH/2024/48/2849"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 49,
+    "file": "week49_1788952055.pdf",
+    "pages": 12,
+    "textLen": 20757,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/SAN/2024/49/2887"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 50,
+    "file": "week50_1788952068.pdf",
+    "pages": 18,
+    "textLen": 28470,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GDC/2024/50/2935",
+      "MH/THE/2024/50/2936",
+      "MH/WRD/2024/50/2937"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 51,
+    "file": "week51_1788952079.pdf",
+    "pages": 14,
+    "textLen": 24282,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHN/2024/51/2975",
+      "MH/NAN/2024/51/2976",
+      "MH/SNG/2024/51/2977"
+    ]
+  },
+  {
+    "year": "2024",
+    "week": 52,
+    "file": "week52_1788952090.pdf",
+    "pages": 14,
+    "textLen": 23867,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2024/52/3007",
+      "MH/OSM/2024/52/3008",
+      "MH/THE/2024/52/3019"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 1,
+    "file": "week1_1788948201.pdf",
+    "pages": 11,
+    "textLen": 17893,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/01/15",
+      "MH/RIG/2025/01/16",
+      "MH/STR/2025/01/17"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 2,
+    "file": "week2_1788950093.pdf",
+    "pages": 15,
+    "textLen": 23680,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/RAI/2025/02/25"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 3,
+    "file": "week3_1788950195.pdf",
+    "pages": 12,
+    "textLen": 19051,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/03/79",
+      "MH/BLD/2025/03/80"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 4,
+    "file": "week4_1788950209.pdf",
+    "pages": 21,
+    "textLen": 32229,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAN/2025/04/121",
+      "MH/OSM/2025/04/122",
+      "MH/PAL/2025/04/123"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 5,
+    "file": "week5_1788950221.pdf",
+    "pages": 18,
+    "textLen": 29159,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PNE/2025/05/171",
+      "MH/SNG/2025/05/172"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 6,
+    "file": "week6_1788950233.pdf",
+    "pages": 18,
+    "textLen": 29934,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/06/222",
+      "MH/KOL/2025/06/223",
+      "MH/THN/2025/06/224"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 7,
+    "file": "week7_1789017204.pdf",
+    "pages": 17,
+    "textLen": 30296,
+    "mhIdCount": 8,
+    "generalMhCount": 9,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKL/2025/07/265",
+      "MH/AMR/2025/07/266",
+      "MH/AUR/2025/07/267"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 8,
+    "file": "week8_1788950267.pdf",
+    "pages": 22,
+    "textLen": 37692,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOL/2025/08/329",
+      "MH/SAN/2025/08/330"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 9,
+    "file": "week9_1788950284.pdf",
+    "pages": 19,
+    "textLen": 31705,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JAL/2025/09/386",
+      "MH/KLP/2025/09/387",
+      "MH/PLG/2025/09/388"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 10,
+    "file": "week10_1788950298.pdf",
+    "pages": 20,
+    "textLen": 35738,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/LAT/2025/10/431",
+      "MH/NAG/2025/10/432",
+      "MH/NAG/2025/10/433"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 11,
+    "file": "week11_1788950540.pdf",
+    "pages": 16,
+    "textLen": 27280,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHN/2025/11/481",
+      "MH/BHN/2025/11/482",
+      "MH/JAL/2025/11/483"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 12,
+    "file": "week12_1788950562.pdf",
+    "pages": 18,
+    "textLen": 30001,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOL/2025/12/528"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 13,
+    "file": "week13_1788950576.pdf",
+    "pages": 15,
+    "textLen": 25262,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2025",
+    "week": 14,
+    "file": "week14_1788950590.pdf",
+    "pages": 15,
+    "textLen": 25035,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2025",
+    "week": 15,
+    "file": "week15_1788950605.pdf",
+    "pages": 15,
+    "textLen": 23947,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/15/643",
+      "MH/DHR/2025/15/644",
+      "MH/GON/2025/15/645"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 16,
+    "file": "week16_1788950618.pdf",
+    "pages": 16,
+    "textLen": 25613,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHR/2025/16/690",
+      "MH/MBS/2025/16/691",
+      "MH/NAN/2025/16/692"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 17,
+    "file": "week17_1788950632.pdf",
+    "pages": 15,
+    "textLen": 24195,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2025/17/723"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 18,
+    "file": "week18_1788950653.pdf",
+    "pages": 22,
+    "textLen": 33238,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHH/2025/18/768",
+      "MH/KOL/2025/18/769"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 19,
+    "file": "week19_1788950700.pdf",
+    "pages": 16,
+    "textLen": 24833,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BEE/2025/19/808",
+      "MH/RAI/2025/19/809"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 20,
+    "file": "week20_1788950712.pdf",
+    "pages": 18,
+    "textLen": 31910,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/SAT/2025/20/855",
+      "MH/SAT/2025/20/856"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 21,
+    "file": "week21_1788950729.pdf",
+    "pages": 19,
+    "textLen": 25728,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/RAI/2025/21/903",
+      "MH/JAL/2025/21/914"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 22,
+    "file": "week22_1788950742.pdf",
+    "pages": 18,
+    "textLen": 28873,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JAL/2025/22/940",
+      "MH/NAN/2025/22/941",
+      "MH/THA/2025/22/942"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 23,
+    "file": "week23_1788950756.pdf",
+    "pages": 16,
+    "textLen": 24741,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2025/23/979",
+      "MH/CHA/2025/23/980",
+      "MH/DHA/2025/23/981"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 24,
+    "file": "week24_1788950775.pdf",
+    "pages": 30,
+    "textLen": 49691,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/24/1031",
+      "MH/GAD/2025/24/1032",
+      "MH/KOL/2025/24/1033"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 25,
+    "file": "week25_1788950790.pdf",
+    "pages": 18,
+    "textLen": 27646,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHA/2025/25/1096"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 26,
+    "file": "week26_1788950806.pdf",
+    "pages": 32,
+    "textLen": 50985,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AKO/2025/26/1156",
+      "MH/CHA/2025/26/1157",
+      "MH/DHA/2025/26/1158"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 27,
+    "file": "week27_1788950821.pdf",
+    "pages": 18,
+    "textLen": 26196,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHA/2025/27/1205",
+      "MH/GAD/2025/27/1206",
+      "MH/GAD/2025/27/1207"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 28,
+    "file": "week28_1788950832.pdf",
+    "pages": 35,
+    "textLen": 50449,
+    "mhIdCount": 8,
+    "generalMhCount": 8,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2025/28/1266",
+      "MH/DHA/2025/28/1267",
+      "MH/GAD/2025/28/1268"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 29,
+    "file": "week29_1788950846.pdf",
+    "pages": 33,
+    "textLen": 34832,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOL/2025/29/1325",
+      "MH/THA/2025/29/1326",
+      "MH/RAI/2025/29/1346"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 30,
+    "file": "week30_1788950862.pdf",
+    "pages": 35,
+    "textLen": 43392,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JAL/2025/30/1377"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 31,
+    "file": "week31_1788950885.pdf",
+    "pages": 32,
+    "textLen": 35846,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/31/1424",
+      "MH/RAI/2025/31/1425"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 32,
+    "file": "week32_1788950897.pdf",
+    "pages": 36,
+    "textLen": 37477,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2025/32/1475",
+      "MH/CHA/2025/32/1476",
+      "MH/DHA/2025/32/1477"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 33,
+    "file": "week33_1788950912.pdf",
+    "pages": 31,
+    "textLen": 35086,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2025/33/1520",
+      "MH/GAD/2025/33/1521",
+      "MH/GAD/2025/33/1522"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 34,
+    "file": "week34_1788950927.pdf",
+    "pages": 34,
+    "textLen": 44568,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AKO/2025/34/1575",
+      "MH/DHA/2025/34/1576",
+      "MH/KOL/2025/34/1577"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 35,
+    "file": "week35_1788950942.pdf",
+    "pages": 22,
+    "textLen": 34853,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHA/2025/35/1621",
+      "MH/DHA/2025/35/1622",
+      "MH/JAL/2025/35/1623"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 36,
+    "file": "week36_1788950955.pdf",
+    "pages": 22,
+    "textLen": 32855,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2025",
+    "week": 37,
+    "file": "week37_1788950985.pdf",
+    "pages": 35,
+    "textLen": 43170,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHU/2025/37/1714",
+      "MH/PAR/2025/37/1715",
+      "MH/YAV/2025/37/1716"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 38,
+    "file": "week38_1788950998.pdf",
+    "pages": 51,
+    "textLen": 40174,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2025/38/1770",
+      "MH/NAG/2025/38/1771",
+      "MH/RAI/2025/38/1772"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 39,
+    "file": "week39_1788951010.pdf",
+    "pages": 42,
+    "textLen": 31219,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHA/2025/39/1810",
+      "MH/DHA/2025/39/1811",
+      "MH/NAN/2025/39/1812"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 40,
+    "file": "week40_1788951022.pdf",
+    "pages": 21,
+    "textLen": 19964,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AKO/2025/40/1840",
+      "MH/BUL/2025/40/1841",
+      "MH/DHA/2025/40/1842"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 41,
+    "file": "week41_1788951032.pdf",
+    "pages": 22,
+    "textLen": 21729,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/JAL/2025/41/1865",
+      "MH/KOL/2025/41/1866"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 42,
+    "file": "week42_1788951043.pdf",
+    "pages": 49,
+    "textLen": 38534,
+    "mhIdCount": 4,
+    "generalMhCount": 5,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2025/42/1903",
+      "MH/GAD/2025/42/1904",
+      "MH/NAN/2025/42/1905"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 43,
+    "file": "week43_1788951058.pdf",
+    "pages": 29,
+    "textLen": 26143,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2025/43/1943"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 44,
+    "file": "week44_1788951072.pdf",
+    "pages": 37,
+    "textLen": 32650,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/44/1977",
+      "MH/BHA/2025/44/1978",
+      "MH/DHA/2025/44/1979"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 45,
+    "file": "week45_1788951083.pdf",
+    "pages": 31,
+    "textLen": 35170,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AKO/2025/45/2020",
+      "MH/JAL/2025/45/2021",
+      "MH/PUN/2025/45/2022"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 46,
+    "file": "week46_1788951104.pdf",
+    "pages": 40,
+    "textLen": 32638,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/KOL/2025/46/2064"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 47,
+    "file": "week47_1788951120.pdf",
+    "pages": 36,
+    "textLen": 31064,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2025/47/2104",
+      "MH/THA/2025/47/2105"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 48,
+    "file": "week48_1788951132.pdf",
+    "pages": 23,
+    "textLen": 32515,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2025/48/2148",
+      "MH/NAN/2025/48/2149",
+      "MH/RAI/2025/48/2150"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 49,
+    "file": "week49_1788951145.pdf",
+    "pages": 23,
+    "textLen": 30256,
+    "mhIdCount": 6,
+    "generalMhCount": 6,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHA/2025/49/2181",
+      "MH/DHA/2025/49/2182",
+      "MH/KOL/2025/49/2183"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 50,
+    "file": "week50_1788951159.pdf",
+    "pages": 22,
+    "textLen": 30497,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/DHU/2025/50/2225",
+      "MH/NAG/2025/50/2226"
+    ]
+  },
+  {
+    "year": "2025",
+    "week": 51,
+    "file": "week51_1788951172.pdf",
+    "pages": 18,
+    "textLen": 19958,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2025",
+    "week": 52,
+    "file": "week52_1788951185.pdf",
+    "pages": 14,
+    "textLen": 16950,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAG/2025/52/2278"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 1,
+    "file": "week1_1788853592.pdf",
+    "pages": 19,
+    "textLen": 23541,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/JAL/2026/01/19",
+      "MH/PAR/2026/01/20"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 2,
+    "file": "week2_1788856445.pdf",
+    "pages": 17,
+    "textLen": 22101,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/NAG/2026/2/46",
+      "MH/SAT/2026/2/47"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 3,
+    "file": "week3_1788857181.pdf",
+    "pages": 17,
+    "textLen": 22067,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHA/2026/3/70",
+      "MH/NAN/2026/3/71"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 4,
+    "file": "week4_1788856484.pdf",
+    "pages": 23,
+    "textLen": 29959,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/THA/2026/4/105"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 5,
+    "file": "week5_1788856507.pdf",
+    "pages": 21,
+    "textLen": 28977,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/DHA/2026/5/148",
+      "MH/GAD/2026/5/149"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 6,
+    "file": "week6_1788856531.pdf",
+    "pages": 23,
+    "textLen": 30264,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/NAN/2026/6/191"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 7,
+    "file": "week7_1788856546.pdf",
+    "pages": 27,
+    "textLen": 31494,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/LAT/2026/7/232",
+      "MH/PAR/2026/7/233",
+      "MH/PAR/2026/7/234"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 8,
+    "file": "week8_1788856560.pdf",
+    "pages": 29,
+    "textLen": 42238,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAG/2026/8/274",
+      "MH/NAG/2026/8/275",
+      "MH/SAN/2026/8/276"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 9,
+    "file": "week9_1788856576.pdf",
+    "pages": 36,
+    "textLen": 50720,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHH/2026/9/368"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 10,
+    "file": "week10_1788856598.pdf",
+    "pages": 26,
+    "textLen": 31377,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/GAD/2026/10/390",
+      "MH/LAT/2026/10/391",
+      "MH/LAT/2026/10/392"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 11,
+    "file": "week11_1788856616.pdf",
+    "pages": 25,
+    "textLen": 30071,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2026",
+    "week": 12,
+    "file": "week12_1788856634.pdf",
+    "pages": 21,
+    "textLen": 25636,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOL/2026/12/467",
+      "MH/LAT/2026/12/468",
+      "MH/PUN/2026/12/469"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 13,
+    "file": "week13_1788856653.pdf",
+    "pages": 20,
+    "textLen": 31651,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2026/13/510",
+      "MH/GON/2026/13/511"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 14,
+    "file": "week14_1788856669.pdf",
+    "pages": 23,
+    "textLen": 30399,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/RAI/2026/14/550",
+      "MH/SIN/2026/14/551"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 15,
+    "file": "week15_1788856683.pdf",
+    "pages": 30,
+    "textLen": 38979,
+    "mhIdCount": 5,
+    "generalMhCount": 5,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/DHA/2026/15/601",
+      "MH/NAG/2026/15/602",
+      "MH/NAN/2026/15/603"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 16,
+    "file": "week16_1788856701.pdf",
+    "pages": 20,
+    "textLen": 26096,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AMR/2026/16/640",
+      "MH/SAT/2026/16/641"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 17,
+    "file": "week17_1788856716.pdf",
+    "pages": 22,
+    "textLen": 26686,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/CHH/2026/17/675",
+      "MH/DHU/2026/17/676"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 18,
+    "file": "week18_1788856733.pdf",
+    "pages": 22,
+    "textLen": 25869,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2026",
+    "week": 19,
+    "file": "week19_1788856754.pdf",
+    "pages": 21,
+    "textLen": 29318,
+    "mhIdCount": 0,
+    "generalMhCount": 0,
+    "hasMahaWord": false,
+    "sampleIds": []
+  },
+  {
+    "year": "2026",
+    "week": 20,
+    "file": "week20_1788856772.pdf",
+    "pages": 26,
+    "textLen": 42338,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAG/2026/20/801",
+      "MH/SIN/2026/20/802"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 21,
+    "file": "week21_1788856793.pdf",
+    "pages": 24,
+    "textLen": 34843,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BUL/2026/21/843",
+      "MH/CHH/2026/21/859",
+      "MH/SAT/2026/21/860"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 22,
+    "file": "week22_1788856809.pdf",
+    "pages": 20,
+    "textLen": 25542,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AMR/2026/22/879",
+      "MH/PAR/2026/22/881",
+      "MH/THA/2026/22/882"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 23,
+    "file": "week23_1788856825.pdf",
+    "pages": 18,
+    "textLen": 25569,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2026/23/919",
+      "MH/KOL/2026/23/920",
+      "MH/NAS/2026/23/921"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 24,
+    "file": "week24_1788856872.pdf",
+    "pages": 25,
+    "textLen": 34923,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/KOL/2026/24/965"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 25,
+    "file": "week25_1788856887.pdf",
+    "pages": 22,
+    "textLen": 29802,
+    "mhIdCount": 2,
+    "generalMhCount": 2,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PAR/2026/25/1003",
+      "MH/SAT/2026/25/1004"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 26,
+    "file": "week26_1788856902.pdf",
+    "pages": 23,
+    "textLen": 31876,
+    "mhIdCount": 7,
+    "generalMhCount": 7,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/NAS/2026/26/1039",
+      "MH/PUN/2026/26/1040",
+      "MH/RAI/2026/26/1041"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 27,
+    "file": "week27_1788856919.pdf",
+    "pages": 25,
+    "textLen": 34196,
+    "mhIdCount": 1,
+    "generalMhCount": 1,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/PAR/2026/27/1092"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 28,
+    "file": "week28_1788942657.pdf",
+    "pages": 19,
+    "textLen": 29895,
+    "mhIdCount": 4,
+    "generalMhCount": 4,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/AMR/2026/28/1126",
+      "MH/JAL/2026/28/1127",
+      "MH/NAG/2026/28/1128"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 29,
+    "file": "week29_1789533489.pdf",
+    "pages": 26,
+    "textLen": 36584,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/BHA/2026/29/1176",
+      "MH/NAN/2026/29/1177",
+      "MH/RAI/2026/29/1178"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 30,
+    "file": "week30_1789731731.pdf",
+    "pages": 26,
+    "textLen": 38055,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": false,
+    "sampleIds": [
+      "MH/AMR/2026/30/1225",
+      "MH/PAL/2026/30/1226",
+      "MH/SAT/2026/30/1227"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 31,
+    "file": "week31_1790077762.pdf",
+    "pages": 22,
+    "textLen": 32517,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/CHA/2026/31/1272",
+      "MH/NAG/2026/31/1273",
+      "MH/GON/2026/31/1289"
+    ]
+  },
+  {
+    "year": "2026",
+    "week": 32,
+    "file": "week32_1790680151.pdf",
+    "pages": 24,
+    "textLen": 35820,
+    "mhIdCount": 3,
+    "generalMhCount": 3,
+    "hasMahaWord": true,
+    "sampleIds": [
+      "MH/BHA/2026/32/1324",
+      "MH/GON/2026/32/1325",
+      "MH/NAN/2026/32/1326"
+    ]
+  }
+]

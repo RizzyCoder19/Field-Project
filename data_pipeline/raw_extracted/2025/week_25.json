@@ -1,0 +1,37 @@
+{
+  "year": 2025,
+  "week": 25,
+  "pdf": "week25_1788950790.pdf",
+  "pages": 18,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2025-W25-001",
+      "source_year": 2025,
+      "source_week": 25,
+      "source_pdf": "NCDC weekly outbreaks/2025/week25_1788950790.pdf",
+      "source_page": 14,
+      "internal_week_raw": "25",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Chandrapur",
+      "district_normalized": "Chandrapur",
+      "disease_raw": "a Chandrapu r Acute Diarrheal Disease",
+      "disease_normalized": "Acute_Diarrheal_Disease",
+      "cases": 48,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "14-06-2025",
+      "outbreak_starting_date": "2025-06-14",
+      "reporting_date_raw": "17-06-2025",
+      "reporting_date": "2025-06-17",
+      "week_start_date": "2025-06-16",
+      "week_end_date": "2025-06-22",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/CHA/2025/25/1096"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "year": 2023,
+  "week": 48,
+  "pdf": "week48.pdf",
+  "pages": 12,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2023-W48-001",
+      "source_year": 2023,
+      "source_week": 48,
+      "source_pdf": "NCDC weekly outbreaks/2023/week48.pdf",
+      "source_page": 11,
+      "internal_week_raw": "48",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Gadchiroli",
+      "district_normalized": "Gadchiroli",
+      "disease_raw": "Malaria",
+      "disease_normalized": "Malaria",
+      "cases": 4,
+      "deaths": 1,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "11-11-23",
+      "outbreak_starting_date": "2023-11-11",
+      "reporting_date_raw": "10-11-23",
+      "reporting_date": "2023-11-10",
+      "week_start_date": "2023-11-27",
+      "week_end_date": "2023-12-03",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/GAD/2023/48/1729"
+    }
+  ]
+}

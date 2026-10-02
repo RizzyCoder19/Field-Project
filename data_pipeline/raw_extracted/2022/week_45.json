@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 45,
+  "pdf": "week45.pdf",
+  "pages": 10,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W45-001",
+      "source_year": 2022,
+      "source_week": 45,
+      "source_pdf": "NCDC weekly outbreaks/2022/week45.pdf",
+      "source_page": 8,
+      "internal_week_raw": "45",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Bhandara",
+      "district_normalized": "Bhandara",
+      "disease_raw": "Scrub Typhus",
+      "disease_normalized": "Scrub_Typhus",
+      "cases": 8,
+      "deaths": 1,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "06-11-22",
+      "outbreak_starting_date": "2022-11-06",
+      "reporting_date_raw": "10-11-22",
+      "reporting_date": "2022-11-10",
+      "week_start_date": "2022-11-07",
+      "week_end_date": "2022-11-13",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/BNR/2022/45/889"
+    }
+  ]
+}

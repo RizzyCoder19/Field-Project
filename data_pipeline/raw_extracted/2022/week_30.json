@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 30,
+  "pdf": "week30.pdf",
+  "pages": 11,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W30-001",
+      "source_year": 2022,
+      "source_week": 30,
+      "source_pdf": "NCDC weekly outbreaks/2022/week30.pdf",
+      "source_page": 6,
+      "internal_week_raw": "30",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Washim",
+      "district_normalized": "Washim",
+      "disease_raw": "Cholera",
+      "disease_normalized": "Cholera",
+      "cases": 2,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "26-07-22",
+      "outbreak_starting_date": "2022-07-26",
+      "reporting_date_raw": "28-07-22",
+      "reporting_date": "2022-07-28",
+      "week_start_date": "2022-07-25",
+      "week_end_date": "2022-07-31",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/WAS/2022/30/590"
+    }
+  ]
+}

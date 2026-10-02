@@ -1,0 +1,37 @@
+{
+  "year": 2022,
+  "week": 31,
+  "pdf": "week31.pdf",
+  "pages": 9,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2022-W31-001",
+      "source_year": 2022,
+      "source_week": 31,
+      "source_pdf": "NCDC weekly outbreaks/2022/week31.pdf",
+      "source_page": 4,
+      "internal_week_raw": "31",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Akola",
+      "district_normalized": "Akola",
+      "disease_raw": "Malaria and Dengue",
+      "disease_normalized": "Dengue",
+      "cases": 4,
+      "deaths": 0,
+      "status_raw": "Under Control",
+      "outbreak_starting_date_raw": "01-08-22",
+      "outbreak_starting_date": "2022-08-01",
+      "reporting_date_raw": "01-08-22",
+      "reporting_date": "2022-08-01",
+      "week_start_date": "2022-08-01",
+      "week_end_date": "2022-08-07",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/AKL/2022/31/611"
+    }
+  ]
+}

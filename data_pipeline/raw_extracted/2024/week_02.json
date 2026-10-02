@@ -1,0 +1,37 @@
+{
+  "year": 2024,
+  "week": 2,
+  "pdf": "week2_1788951271.pdf",
+  "pages": 12,
+  "recordCount": 1,
+  "records": [
+    {
+      "record_id": "MAHA-2024-W02-001",
+      "source_year": 2024,
+      "source_week": 2,
+      "source_pdf": "NCDC weekly outbreaks/2024/week2_1788951271.pdf",
+      "source_page": 9,
+      "internal_week_raw": "02",
+      "week_verification_status": "MATCH",
+      "state": "Maharashtra",
+      "district_raw": "Kolhapur",
+      "district_normalized": "Kolhapur",
+      "disease_raw": "Hepatitis A",
+      "disease_normalized": "Hepatitis",
+      "cases": 42,
+      "deaths": 0,
+      "status_raw": "Under Surveillance",
+      "outbreak_starting_date_raw": "12-01-2024",
+      "outbreak_starting_date": "2024-01-12",
+      "reporting_date_raw": "12-01-2024",
+      "reporting_date": "2024-01-12",
+      "week_start_date": "2024-01-08",
+      "week_end_date": "2024-01-14",
+      "extraction_method": "TEXT",
+      "extraction_confidence": "HIGH",
+      "ocr_raw_text": "",
+      "validation_status": "UNVALIDATED",
+      "notes": "Official IDSP unique ID: MH/KOP/2024/02/45"
+    }
+  ]
+}
