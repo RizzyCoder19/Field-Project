@@ -12,7 +12,7 @@
 
 ## 1. Academic Origin & Context
 
-This document establishes formal alignment between the completed data pipeline analysis (Phases 1 through 5C) and the authoritative academic research framework established in the project proposal and draft report (`Field_Project_Report_Draft_Seasonal_Disease_Patterns.docx`).
+This document establishes formal alignment between the completed data pipeline analysis (Phases 1 through 5C) and the authoritative academic research framework established in the project proposal. The earlier preliminary draft report (EpiClim / 2011–2019 methodology) has been formally removed from the repository as obsolete; all relevant research questions and objectives from that earlier draft are fully superseded by and codified within this document.
 
 As documented in the forensic project audits (Phases 1–4), the initial academic concept originally proposed analyzing a secondary data compilation (EpiClim) spanning 2011–2019. However, rigorous data science forensic auditing revealed that the secondary compilation suffered from severe extraction errors, duplicate inflation, and unverified data provenance. Consequently, the research was rebuilt from primary, authoritative National Centre for Disease Control (NCDC) Integrated Disease Surveillance Programme (IDSP) weekly outbreak reports covering the modern 2022–2026 surveillance era.
 

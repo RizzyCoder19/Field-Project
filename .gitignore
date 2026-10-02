@@ -1,0 +1,46 @@
+# ==============================================================================
+# .gitignore — Field Project: Analysis of Seasonal Disease Patterns
+# ==============================================================================
+
+# Node / JavaScript dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python runtime & virtual environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Temporary / Scratch development workspaces
+scratch/
+temp/
+tmp/
+.tempmediaStorage/
+
+# Editor & IDE configurations
+.vscode/
+.idea/
+.kilo/
+*.swp
+*.swo
+*~
+
+# Operating System artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Local logs & environment variables
+*.log
+.env
+.env.local

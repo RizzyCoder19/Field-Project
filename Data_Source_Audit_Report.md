@@ -28,7 +28,7 @@ After a deep analysis of your GitHub repository (`RizzyCoder19/Field-Project`) a
 | **Vector-borne context (LinkedIn article)** | `NCDC weekly outbreaks/vector-borne report.txt` | ✅ VERIFIED | Secondary; cites NCVBDC 2024 figures — **not primary source** |
 | **Seasonal overview** | `NCDC weekly outbreaks/water-borne.txt` | ✅ VERIFIED | Secondary blog (MrMed) — **not primary source** |
 | **IDSP 2012 weekly PDF** | `NCDC weekly outbreaks/week46_2012.pdf` | ✅ VERIFIED | Sample historical IDSP weekly report |
-| **Pre-existing draft report** | `Field_Project_Report_Draft_Seasonal_Disease_Patterns.docx` | ✅ EXISTS | Draft (not evaluated for correctness yet) |
+| **Pre-existing draft report** | `Field_Project_Report_Draft_Seasonal_Disease_Patterns.docx` | ~~✅ EXISTS~~ **REMOVED Oct 2, 2026** | Obsolete EpiClim/2011–2019 draft. Existed at Phase 1 audit time; formally removed from repository. All research questions codified in Phase 5D `08_RESEARCH_ALIGNMENT.md`. |
 | **Existing visualizations** | `raw dataset/*.png` | ✅ VERIFIED | 7 charts already generated (cases timeseries, deaths, 3D, heatmap, map, pie) |
 
 ### Critical Gap Identified
