@@ -1,0 +1,117 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Disease profile // 10"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "10 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Dengue — strong mid-year concentration"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Monthly outbreak-event records · baseline 2022–2025 · scale 0–40"
+    },
+    "readoutIdle": {
+      "type": "text",
+      "content": "Hover a month"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "windowLabel": {
+      "type": "text",
+      "content": "Jun–Oct share of baseline events"
+    },
+    "windowValue": {
+      "type": "text",
+      "content": "82.8%"
+    },
+    "windowCaption": {
+      "type": "text",
+      "content": "Five consecutive calendar months hold most of the baseline event records."
+    },
+    "interpretation": {
+      "type": "text",
+      "content": "The baseline shows a pronounced June–October concentration, with October producing the highest monthly event count and case total."
+    },
+    "boundary": {
+      "type": "text",
+      "content": "Descriptive timing only · no causal, climate or transmission claim · reported outbreak-event records, not incidence"
+    },
+    "kpis": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "k1",
+          "value": "204",
+          "label": "Baseline records"
+        },
+        {
+          "id": "k2",
+          "value": "3,144",
+          "label": "Reported cases"
+        },
+        {
+          "id": "k3",
+          "value": "93",
+          "label": "Reported deaths"
+        },
+        {
+          "id": "k4",
+          "value": "31",
+          "label": "Districts"
+        }
+      ]
+    },
+    "facts": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        },
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "f1",
+          "label": "October",
+          "value": "40 events · 566 reported cases"
+        },
+        {
+          "id": "f2",
+          "label": "Weekly peak",
+          "value": "W42 — 17 events / 156 cases"
+        },
+        {
+          "id": "f3",
+          "label": "Exploratory stability",
+          "value": "Kendall W = 0.405 · p = 0.086"
+        }
+      ]
+    }
+  }
+}

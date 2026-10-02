@@ -1,0 +1,145 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Stability // 14"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "14 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "How stable are the seasonal profiles?"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Kendall W concordance of monthly profiles, 2022–2025"
+    },
+    "axisLabel": {
+      "type": "text",
+      "content": "Kendall W — 0 to 1"
+    },
+    "conceptLabel": {
+      "type": "text",
+      "content": "Schematic — not data"
+    },
+    "conceptNote": {
+      "type": "text",
+      "content": "Illustration only: concordance asks how similarly the four completed years rank the calendar months"
+    },
+    "footnote": {
+      "type": "text",
+      "content": "Kendall W is used here as an exploratory measure of concordance in monthly profiles across the four completed baseline years (2022–2025). The small number of completed years limits inferential strength, and these p-values must not be read as causal or predictive conclusions."
+    },
+    "tags": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Tag",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "g1",
+          "text": "Exploratory"
+        },
+        {
+          "id": "g2",
+          "text": "4 completed baseline years"
+        }
+      ]
+    },
+    "stability": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "disease",
+          "title": "Disease",
+          "type": "text"
+        },
+        {
+          "key": "kendall",
+          "title": "Kendall W",
+          "type": "text"
+        },
+        {
+          "key": "pvalue",
+          "title": "p-value",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "disease": "Dengue",
+          "kendall": "0.405",
+          "pvalue": "0.086"
+        },
+        {
+          "id": "s2",
+          "disease": "Acute Diarrheal Disease",
+          "kendall": "0.530",
+          "pvalue": "0.016"
+        },
+        {
+          "id": "s3",
+          "disease": "Malaria",
+          "kendall": "0.319",
+          "pvalue": "0.229"
+        },
+        {
+          "id": "s4",
+          "disease": "Food Poisoning",
+          "kendall": "0.386",
+          "pvalue": "0.108"
+        },
+        {
+          "id": "s5",
+          "disease": "Chikungunya",
+          "kendall": "0.150",
+          "pvalue": "0.832"
+        }
+      ]
+    },
+    "years": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "year",
+          "title": "Year",
+          "type": "text"
+        },
+        {
+          "key": "shape",
+          "title": "Shape",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "y1",
+          "year": "2022",
+          "shape": "2,1,2,3,4,7,8,6,8,10,4,1"
+        },
+        {
+          "id": "y2",
+          "year": "2023",
+          "shape": "1,2,2,4,5,8,7,7,9,10,3,2"
+        },
+        {
+          "id": "y3",
+          "year": "2024",
+          "shape": "2,2,3,4,6,8,8,6,9,10,5,2"
+        },
+        {
+          "id": "y4",
+          "year": "2025",
+          "shape": "1,1,3,5,5,7,9,7,8,10,4,1"
+        }
+      ]
+    }
+  }
+}

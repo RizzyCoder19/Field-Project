@@ -1,0 +1,104 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Boundaries // 17"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "17 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Evidence boundaries"
+    },
+    "supportLabel": {
+      "type": "text",
+      "content": "What the data support"
+    },
+    "limitLabel": {
+      "type": "text",
+      "content": "What the data do not support"
+    },
+    "quote": {
+      "type": "text",
+      "content": "Strong analysis is not only about what the data show. It is also about knowing what the data cannot show."
+    },
+    "supported": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Item",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "text": "Descriptive timing of reported outbreak events"
+        },
+        {
+          "id": "s2",
+          "text": "Reported case-volume patterns"
+        },
+        {
+          "id": "s3",
+          "text": "Cross-disease seasonal comparison"
+        },
+        {
+          "id": "s4",
+          "text": "District reporting coverage"
+        },
+        {
+          "id": "s5",
+          "text": "Reproducible surveillance summaries"
+        },
+        {
+          "id": "s6",
+          "text": "Sensitivity to large reported-case outliers"
+        }
+      ]
+    },
+    "unsupported": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Item",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "u1",
+          "text": "Population incidence estimates"
+        },
+        {
+          "id": "u2",
+          "text": "Population prevalence estimates"
+        },
+        {
+          "id": "u3",
+          "text": "Causal attribution"
+        },
+        {
+          "id": "u4",
+          "text": "Unobserved community burden"
+        },
+        {
+          "id": "u5",
+          "text": "Full-year 2026 forecast"
+        },
+        {
+          "id": "u6",
+          "text": "Environmental or climate causation"
+        },
+        {
+          "id": "u7",
+          "text": "Claims about why reporting changed"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "showTierBands": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

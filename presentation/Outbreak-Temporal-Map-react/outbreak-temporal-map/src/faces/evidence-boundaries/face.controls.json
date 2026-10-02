@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "showClosingQuote": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

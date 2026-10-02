@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-charcoal: #171A18;
+    --color-ivory: #F1EBDD;
+    --color-petrol: #174A4A;
+    --color-olive: #AEBB55;
+    --color-terracotta: #C84B2F;
+    --color-gold: #B89B5E;
+    
+    --bg-base: #F1EBDD;
+    --text-primary: #171A18;
+    --text-muted: #565C58;
+    --border-color: #D8D1C5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-charcoal);
+    color: var(--color-ivory);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif), Georgia, Cambria, serif;
+    letter-spacing: -0.015em;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono), monospace;
+  }
+}
+
+/* Custom Minimal Presentation Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171A18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B89B5E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AEBB55;
+}
+
+/* Subtle Film Grain Texture Overlay for Cinematic Aesthetic */
+.editorial-grain {
+  background-image: radial-gradient(rgba(241, 235, 221, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Gold Accent Rule */
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #B89B5E, transparent);
+}

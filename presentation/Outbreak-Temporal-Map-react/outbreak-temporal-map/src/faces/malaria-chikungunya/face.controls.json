@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "chartScale": {
+      "type": "selector",
+      "options": [
+        "Shared",
+        "Independent"
+      ],
+      "value": "Shared"
+    }
+  }
+}

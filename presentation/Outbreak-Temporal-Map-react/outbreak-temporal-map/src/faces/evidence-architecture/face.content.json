@@ -1,0 +1,142 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Method // 04"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "04 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "From official reports to analytical evidence"
+    },
+    "lead": {
+      "type": "text",
+      "content": "Each analytical record remains traceable to its source PDF and page, so every figure in this presentation can be walked back to a published weekly report."
+    },
+    "layersLabel": {
+      "type": "text",
+      "content": "Four separated label layers"
+    },
+    "provenanceNote": {
+      "type": "text",
+      "content": "Provenance retained: PDF file · page number · published week · district · reported cases · reported deaths"
+    },
+    "tierLabels": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Tier",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "label": "Source"
+        },
+        {
+          "id": "t2",
+          "label": "Transformation"
+        },
+        {
+          "id": "t3",
+          "label": "Evidence"
+        }
+      ]
+    },
+    "layers": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Layer",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "l1",
+          "text": "Raw surveillance labels"
+        },
+        {
+          "id": "l2",
+          "text": "Cleaned analytical labels"
+        },
+        {
+          "id": "l3",
+          "text": "Derived disease families"
+        },
+        {
+          "id": "l4",
+          "text": "Final primary-study cohort"
+        }
+      ]
+    },
+    "pipeline": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "icon",
+          "title": "Icon",
+          "type": "icon"
+        },
+        {
+          "key": "stage",
+          "title": "Stage",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "s1",
+          "icon": "file-text",
+          "stage": "Official NCDC / IDSP weekly outbreak PDFs"
+        },
+        {
+          "id": "s2",
+          "icon": "scan-line",
+          "stage": "Structured extraction"
+        },
+        {
+          "id": "s3",
+          "icon": "bookmark",
+          "stage": "PDF + page provenance"
+        },
+        {
+          "id": "s4",
+          "icon": "filter",
+          "stage": "Source-label screening"
+        },
+        {
+          "id": "s5",
+          "icon": "layers",
+          "stage": "Primary-five disease cohort"
+        },
+        {
+          "id": "s6",
+          "icon": "calendar-range",
+          "stage": "Monthly / weekly / annual aggregation"
+        },
+        {
+          "id": "s7",
+          "icon": "activity",
+          "stage": "Seasonal concentration"
+        },
+        {
+          "id": "s8",
+          "icon": "scale",
+          "stage": "Stability + district + outlier analysis"
+        },
+        {
+          "id": "s9",
+          "icon": "check-check",
+          "stage": "Evidence-based interpretation"
+        }
+      ]
+    }
+  }
+}

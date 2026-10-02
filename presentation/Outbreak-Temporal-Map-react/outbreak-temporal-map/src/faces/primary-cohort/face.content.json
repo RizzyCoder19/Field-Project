@@ -1,0 +1,169 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Cohort // 07"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "07 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "The five-disease baseline cohort"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Reported cases, baseline 2022–2025"
+    },
+    "chartNote": {
+      "type": "text",
+      "content": "Shared linear scale · 0 to 9,050 reported cases"
+    },
+    "caution": {
+      "type": "text",
+      "content": "These diseases are compared as surveillance-report families. They should not be interpreted as biologically equivalent measures."
+    },
+    "totals": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "t0",
+          "value": "2022–2025",
+          "label": "Baseline period"
+        },
+        {
+          "id": "t1",
+          "value": "539",
+          "label": "Records"
+        },
+        {
+          "id": "t2",
+          "value": "21,955",
+          "label": "Reported cases"
+        },
+        {
+          "id": "t3",
+          "value": "266",
+          "label": "Reported deaths"
+        }
+      ]
+    },
+    "headers": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Header",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "h1",
+          "text": "Disease family"
+        },
+        {
+          "id": "h2",
+          "text": "Records"
+        },
+        {
+          "id": "h3",
+          "text": "Cases"
+        },
+        {
+          "id": "h4",
+          "text": "Deaths"
+        },
+        {
+          "id": "h5",
+          "text": "Districts"
+        }
+      ]
+    },
+    "cohort": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "disease",
+          "title": "Disease",
+          "type": "text"
+        },
+        {
+          "key": "records",
+          "title": "Records",
+          "type": "text"
+        },
+        {
+          "key": "cases",
+          "title": "Cases",
+          "type": "text"
+        },
+        {
+          "key": "deaths",
+          "title": "Deaths",
+          "type": "text"
+        },
+        {
+          "key": "districts",
+          "title": "Districts",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "disease": "Dengue",
+          "records": "204",
+          "cases": "3,144",
+          "deaths": "93",
+          "districts": "31"
+        },
+        {
+          "id": "r2",
+          "disease": "Acute Diarrheal Disease",
+          "records": "153",
+          "cases": "9,050",
+          "deaths": "93",
+          "districts": "33"
+        },
+        {
+          "id": "r3",
+          "disease": "Malaria",
+          "records": "70",
+          "cases": "2,133",
+          "deaths": "51",
+          "districts": "15"
+        },
+        {
+          "id": "r4",
+          "disease": "Food Poisoning",
+          "records": "69",
+          "cases": "5,927",
+          "deaths": "29",
+          "districts": "27"
+        },
+        {
+          "id": "r5",
+          "disease": "Chikungunya",
+          "records": "43",
+          "cases": "701",
+          "deaths": "0",
+          "districts": "15"
+        }
+      ]
+    }
+  }
+}

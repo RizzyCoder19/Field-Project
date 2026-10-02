@@ -1,0 +1,145 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Sensitivity // 13"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "13 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Food Poisoning — concentration sensitive to large reports"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Monthly outbreak-event records · baseline 2022–2025 · scale 0–11"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "contributorsLabel": {
+      "type": "text",
+      "content": "Three February records · 1,615 reported cases"
+    },
+    "contributorsNote": {
+      "type": "text",
+      "content": "February case-volume peak = 2,162 reported cases, of which 1,615 came from these three records. No cause for these reports is inferred."
+    },
+    "sensitivityLabel": {
+      "type": "text",
+      "content": "Aggregate case-peak sensitivity"
+    },
+    "beforeLabel": {
+      "type": "text",
+      "content": "All records"
+    },
+    "beforeValue": {
+      "type": "text",
+      "content": "February"
+    },
+    "afterLabel": {
+      "type": "text",
+      "content": "Three removed"
+    },
+    "afterValue": {
+      "type": "text",
+      "content": "April"
+    },
+    "boundary": {
+      "type": "text",
+      "content": "This is an analytical sensitivity result, not a claim about why the outbreaks occurred."
+    },
+    "kpis": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "k1",
+          "value": "69",
+          "label": "Baseline records"
+        },
+        {
+          "id": "k2",
+          "value": "5,927",
+          "label": "Reported cases"
+        },
+        {
+          "id": "k3",
+          "value": "29",
+          "label": "Reported deaths"
+        },
+        {
+          "id": "k4",
+          "value": "27",
+          "label": "Districts"
+        }
+      ]
+    },
+    "legend": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Legend",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "g1",
+          "text": "■ Jan–Feb 26.1% · Apr–May 29.0% of events"
+        },
+        {
+          "id": "g2",
+          "text": "■ Aggregate case-volume peak month"
+        }
+      ]
+    },
+    "contributors": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "district",
+          "title": "District",
+          "type": "text"
+        },
+        {
+          "key": "cases",
+          "title": "Cases",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "p1",
+          "district": "Kolhapur",
+          "cases": "651"
+        },
+        {
+          "id": "p2",
+          "district": "Parbhani",
+          "cases": "629"
+        },
+        {
+          "id": "p3",
+          "district": "Solapur",
+          "cases": "335"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+1. “My study analyzes reported outbreak surveillance records, not population incidence.”
+
+2. “I used 2022–2025 as the completed baseline and kept 2026 W01–W32 separate because 2026 is a partial year.”
+
+3. “The final analytical dataset contains 809 curated Maharashtra outbreak records.”
+
+4. “The primary analytical cohort contains 539 records across five selected disease families.”
+
+5. “The five families were selected using record frequency, multi-year persistence and analytical suitability.”
+
+6. “I distinguish outbreak-event frequency from case volume because a small number of large outbreaks can dominate case totals.”
+
+7. “Food Poisoning demonstrates this particularly clearly because three records account for 1,615 February cases.”
+
+8. “The seasonal analysis identifies calendar-month concentration; it does not establish biological or climatic causation.”
+
+9. “The field-work component is designed to provide ground-level context and is kept separate from the secondary surveillance evidence.”
+
+10. “I preserved source provenance so that analytical records can be traced back to the original weekly report and page.”

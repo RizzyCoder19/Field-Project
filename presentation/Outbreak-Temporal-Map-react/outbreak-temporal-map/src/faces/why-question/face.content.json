@@ -1,0 +1,104 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Framing // 02"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "02 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Why study seasonal disease patterns?"
+    },
+    "lead": {
+      "type": "text",
+      "content": "Disease surveillance produces repeated observations across weeks, months and districts. Aggregating those observations makes temporal structure visible."
+    },
+    "boundary": {
+      "type": "text",
+      "content": "This project studies reported surveillance events and reported cases. It does not estimate population incidence or prevalence."
+    },
+    "points": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Point",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "p1",
+          "text": "When outbreak reports appear more frequently"
+        },
+        {
+          "id": "p2",
+          "text": "When reported case volume becomes concentrated"
+        },
+        {
+          "id": "p3",
+          "text": "Whether different diseases show different temporal profiles"
+        },
+        {
+          "id": "p4",
+          "text": "How reporting patterns vary geographically"
+        }
+      ]
+    },
+    "flow": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "icon",
+          "title": "Icon",
+          "type": "icon"
+        },
+        {
+          "key": "stage",
+          "title": "Stage",
+          "type": "text"
+        },
+        {
+          "key": "detail",
+          "title": "Detail",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "f1",
+          "icon": "file-text",
+          "stage": "Weekly surveillance reports",
+          "detail": "NCDC / IDSP published weeks"
+        },
+        {
+          "id": "f2",
+          "icon": "calendar",
+          "stage": "Monthly aggregation",
+          "detail": "Records grouped by calendar month"
+        },
+        {
+          "id": "f3",
+          "icon": "activity",
+          "stage": "Seasonal pattern",
+          "detail": "Month-level concentration"
+        },
+        {
+          "id": "f4",
+          "icon": "git-compare",
+          "stage": "Cross-disease comparison",
+          "detail": "Five primary families, shared scale"
+        },
+        {
+          "id": "f5",
+          "icon": "search",
+          "stage": "Surveillance interpretation",
+          "detail": "Descriptive, bounded conclusions"
+        }
+      ]
+    }
+  }
+}

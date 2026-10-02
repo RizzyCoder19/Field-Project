@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "outlierState": {
+      "type": "selector",
+      "options": [
+        "All records",
+        "Three records removed"
+      ],
+      "value": "All records"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "faces": [
+    {
+      "id": "cover",
+      "name": "Cover"
+    },
+    {
+      "id": "why-question",
+      "name": "Why This Question"
+    },
+    {
+      "id": "research-question",
+      "name": "Research Question & Objectives"
+    },
+    {
+      "id": "evidence-architecture",
+      "name": "Evidence Architecture"
+    },
+    {
+      "id": "coverage-audit",
+      "name": "Data Coverage Audit"
+    },
+    {
+      "id": "data-engineering",
+      "name": "Data Engineering"
+    },
+    {
+      "id": "primary-cohort",
+      "name": "Primary Disease Cohort"
+    },
+    {
+      "id": "seasonality-framework",
+      "name": "Seasonal Analysis Framework"
+    },
+    {
+      "id": "face-efoeql",
+      "name": "Five Temporal Signatures",
+      "hidden": false
+    },
+    {
+      "id": "dengue",
+      "name": "Dengue"
+    },
+    {
+      "id": "add-disease",
+      "name": "Acute Diarrheal Disease"
+    },
+    {
+      "id": "malaria-chikungunya",
+      "name": "Malaria vs Chikungunya"
+    },
+    {
+      "id": "food-poisoning",
+      "name": "Food Poisoning Sensitivity"
+    },
+    {
+      "id": "stability",
+      "name": "Cross-Disease Stability",
+      "hidden": false
+    },
+    {
+      "id": "district-variation",
+      "name": "District Variation"
+    },
+    {
+      "id": "partial-2026",
+      "name": "2026 Matched Window",
+      "hidden": false
+    },
+    {
+      "id": "evidence-boundaries",
+      "name": "Evidence Boundaries"
+    },
+    {
+      "id": "references-closing",
+      "name": "References &amp; Closing",
+      "hidden": false
+    }
+  ]
+}

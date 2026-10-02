@@ -1,0 +1,153 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Audit // 05"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "05 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Data coverage: 2022–2026"
+    },
+    "legendOutbreak": {
+      "type": "text",
+      "content": "■ Outbreak weeks"
+    },
+    "legendNil": {
+      "type": "text",
+      "content": "NIL weeks ■"
+    },
+    "axisNote": {
+      "type": "text",
+      "content": "Weeks per year — bar scale 0 to 52"
+    },
+    "recordsHeader": {
+      "type": "text",
+      "content": "Records"
+    },
+    "noteMissing": {
+      "type": "text",
+      "content": "2023 missing published weeks: W15, W51, W52. W50 is present in the source set."
+    },
+    "noteNil": {
+      "type": "text",
+      "content": "NIL means no outbreak report was published for that week. It does not mean zero disease."
+    },
+    "auditNote": {
+      "type": "text",
+      "content": "Document coverage ≠ disease burden."
+    },
+    "totals": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "t1",
+          "value": "237",
+          "label": "Surveillance weeks"
+        },
+        {
+          "id": "t2",
+          "value": "203",
+          "label": "Outbreak weeks"
+        },
+        {
+          "id": "t3",
+          "value": "34",
+          "label": "NIL weeks"
+        },
+        {
+          "id": "t4",
+          "value": "809",
+          "label": "Analytical records"
+        }
+      ]
+    },
+    "coverage": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "year",
+          "title": "Year",
+          "type": "text"
+        },
+        {
+          "key": "weeks",
+          "title": "Weeks",
+          "type": "text"
+        },
+        {
+          "key": "outbreak",
+          "title": "Outbreak weeks",
+          "type": "text"
+        },
+        {
+          "key": "nil",
+          "title": "NIL weeks",
+          "type": "text"
+        },
+        {
+          "key": "records",
+          "title": "Records",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "y22",
+          "year": "2022",
+          "weeks": "52",
+          "outbreak": "36",
+          "nil": "16",
+          "records": "79"
+        },
+        {
+          "id": "y23",
+          "year": "2023",
+          "weeks": "49",
+          "outbreak": "38",
+          "nil": "11",
+          "records": "202"
+        },
+        {
+          "id": "y24",
+          "year": "2024",
+          "weeks": "52",
+          "outbreak": "52",
+          "nil": "0",
+          "records": "287"
+        },
+        {
+          "id": "y25",
+          "year": "2025",
+          "weeks": "52",
+          "outbreak": "48",
+          "nil": "4",
+          "records": "165"
+        },
+        {
+          "id": "y26",
+          "year": "2026 W01–W32",
+          "weeks": "32",
+          "outbreak": "29",
+          "nil": "3",
+          "records": "76"
+        }
+      ]
+    }
+  }
+}

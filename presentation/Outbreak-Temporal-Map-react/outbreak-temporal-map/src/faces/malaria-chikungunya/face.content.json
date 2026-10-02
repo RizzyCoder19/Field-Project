@@ -1,0 +1,134 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Comparison // 12"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "12 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Contrasting profiles: Malaria vs Chikungunya"
+    },
+    "scaleNoteShared": {
+      "type": "text",
+      "content": "Monthly outbreak-event records · baseline 2022–2025 · shared scale 0–15"
+    },
+    "scaleNoteOwn": {
+      "type": "text",
+      "content": "Monthly outbreak-event records · baseline 2022–2025 · independent per-panel scales"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "malariaName": {
+      "type": "text",
+      "content": "Malaria — May–Jul concentration, 51.4%"
+    },
+    "chikName": {
+      "type": "text",
+      "content": "Chikungunya — diffuse profile"
+    },
+    "malariaConcLabel": {
+      "type": "text",
+      "content": "District reporting concentration"
+    },
+    "malariaConcValue": {
+      "type": "text",
+      "content": "61.4%"
+    },
+    "malariaConcDetail": {
+      "type": "text",
+      "content": "43 of 70 malaria events were recorded in Gadchiroli and Chandrapur."
+    },
+    "chikNoteLabel": {
+      "type": "text",
+      "content": "Peak event months"
+    },
+    "chikNoteValue": {
+      "type": "text",
+      "content": "May = 6 and June = 6, but no stable recurring calendar-month concentration across the baseline years. June also records the Malaria monthly event peak at 15 events."
+    },
+    "boundary": {
+      "type": "text",
+      "content": "The district figure is a reporting-footprint observation. No ecological, tribal, environmental or causal explanation is inferred."
+    },
+    "malariaKpis": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "m1",
+          "value": "70",
+          "label": "Records"
+        },
+        {
+          "id": "m2",
+          "value": "2,133",
+          "label": "Cases"
+        },
+        {
+          "id": "m3",
+          "value": "51",
+          "label": "Deaths"
+        },
+        {
+          "id": "m4",
+          "value": "15",
+          "label": "Districts"
+        }
+      ]
+    },
+    "chikKpis": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "value": "43",
+          "label": "Records"
+        },
+        {
+          "id": "c2",
+          "value": "701",
+          "label": "Cases"
+        },
+        {
+          "id": "c3",
+          "value": "0",
+          "label": "Deaths"
+        },
+        {
+          "id": "c4",
+          "value": "15",
+          "label": "Districts"
+        }
+      ]
+    }
+  }
+}

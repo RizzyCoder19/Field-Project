@@ -1,0 +1,57 @@
+{
+  "blocks": {
+    "kicker": {
+      "type": "text",
+      "content": "B.Sc. Data Science Field Project // Surveillance Data Analysis"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "01 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Analysis of Seasonal Disease Patterns Using Government Health Data"
+    },
+    "subtitle": {
+      "type": "text",
+      "content": "A data-driven study of reported disease outbreak patterns in Maharashtra, using official NCDC / IDSP weekly outbreak reports."
+    },
+    "credentials": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        },
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "label": "Submitted by",
+          "value": "Khan Umar"
+        },
+        {
+          "id": "c2",
+          "label": "Guided by",
+          "value": "Prof. Angelin"
+        },
+        {
+          "id": "c3",
+          "label": "Institute",
+          "value": "RP Institute — Affiliated to University of Mumbai"
+        },
+        {
+          "id": "c4",
+          "label": "Academic year",
+          "value": "2026 — Semester III Field Project"
+        }
+      ]
+    }
+  }
+}

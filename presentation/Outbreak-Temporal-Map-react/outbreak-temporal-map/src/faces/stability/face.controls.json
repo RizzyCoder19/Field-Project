@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "showSignificanceMark": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

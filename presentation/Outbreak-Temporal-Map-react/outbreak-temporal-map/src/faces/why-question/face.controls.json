@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "flowStyle": {
+      "type": "selector",
+      "options": [
+        "Numbered",
+        "Stepped"
+      ],
+      "value": "Numbered"
+    }
+  }
+}

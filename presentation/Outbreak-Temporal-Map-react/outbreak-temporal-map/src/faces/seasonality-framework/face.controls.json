@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "show2026Rule": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

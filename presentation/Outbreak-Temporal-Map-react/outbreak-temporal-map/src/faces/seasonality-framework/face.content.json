@@ -1,0 +1,60 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Framework // 08"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "08 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "How was \"seasonality\" measured?"
+    },
+    "lead": {
+      "type": "text",
+      "content": "The analysis uses calendar-month concentration, and keeps two quantities strictly separate throughout."
+    },
+    "eventTitle": {
+      "type": "text",
+      "content": "Outbreak event frequency"
+    },
+    "eventSub": {
+      "type": "text",
+      "content": "How often reports occur"
+    },
+    "eventBody": {
+      "type": "text",
+      "content": "The number of outbreak-report records falling in a calendar month."
+    },
+    "eventEncoding": {
+      "type": "text",
+      "content": "Encoding: stacked record units"
+    },
+    "caseTitle": {
+      "type": "text",
+      "content": "Reported case volume"
+    },
+    "caseSub": {
+      "type": "text",
+      "content": "How many cases those reports contain"
+    },
+    "caseBody": {
+      "type": "text",
+      "content": "Total cases reported within those records. One large report can contribute many cases without creating many separate events."
+    },
+    "caseEncoding": {
+      "type": "text",
+      "content": "Encoding: continuous column height"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "rule2026": {
+      "type": "text",
+      "content": "2026 comparison rule: only W01–W32 is compared against the matched historical window. No full-year extrapolation or forecast is produced."
+    }
+  }
+}

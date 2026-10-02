@@ -1,0 +1,114 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Geography // 15"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "15 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Geographic coverage: where were reports recorded?"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Distinct districts appearing in baseline records, 2022–2025"
+    },
+    "axisNote": {
+      "type": "text",
+      "content": "Bar scale 0 to 36 districts"
+    },
+    "concLabel": {
+      "type": "text",
+      "content": "Malaria reporting concentration"
+    },
+    "concValue": {
+      "type": "text",
+      "content": "61.4%"
+    },
+    "concDetail": {
+      "type": "text",
+      "content": "43 of 70 baseline malaria events were recorded in Gadchiroli and Chandrapur."
+    },
+    "notLabel": {
+      "type": "text",
+      "content": "District coverage is not"
+    },
+    "boundary": {
+      "type": "text",
+      "content": "District coverage describes the reporting footprint in this dataset. No district-level rate is computed or implied."
+    },
+    "coverage": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "disease",
+          "title": "Disease",
+          "type": "text"
+        },
+        {
+          "key": "districts",
+          "title": "Districts",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "disease": "Acute Diarrheal Disease",
+          "districts": "33"
+        },
+        {
+          "id": "c2",
+          "disease": "Dengue",
+          "districts": "31"
+        },
+        {
+          "id": "c3",
+          "disease": "Food Poisoning",
+          "districts": "27"
+        },
+        {
+          "id": "c4",
+          "disease": "Malaria",
+          "districts": "15"
+        },
+        {
+          "id": "c5",
+          "disease": "Chikungunya",
+          "districts": "15"
+        }
+      ]
+    },
+    "notList": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Item",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "n1",
+          "text": "A population-rate map"
+        },
+        {
+          "id": "n2",
+          "text": "Incidence"
+        },
+        {
+          "id": "n3",
+          "text": "Prevalence"
+        },
+        {
+          "id": "n4",
+          "text": "A risk ranking"
+        }
+      ]
+    }
+  }
+}

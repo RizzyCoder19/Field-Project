@@ -1,0 +1,137 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Disease profile // 11"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "11 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Acute Diarrheal Disease — seasonal pattern and case-volume divergence"
+    },
+    "chartLabel": {
+      "type": "text",
+      "content": "Monthly outbreak-event records · baseline 2022–2025 · scale 0–25"
+    },
+    "readoutIdle": {
+      "type": "text",
+      "content": "Hover a month"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "divergenceLabel": {
+      "type": "text",
+      "content": "February — case-volume peak"
+    },
+    "divergenceValue": {
+      "type": "text",
+      "content": "1,582"
+    },
+    "divergenceCaption": {
+      "type": "text",
+      "content": "Reported cases in February. This is a case-volume peak, not the event-count peak."
+    },
+    "boundary": {
+      "type": "text",
+      "content": "Treat this as exploratory evidence from four completed baseline years, not causal proof. Event frequency and case volume are reported separately and must not be conflated."
+    },
+    "kpis": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "k1",
+          "value": "153",
+          "label": "Baseline records"
+        },
+        {
+          "id": "k2",
+          "value": "9,050",
+          "label": "Reported cases"
+        },
+        {
+          "id": "k3",
+          "value": "93",
+          "label": "Reported deaths"
+        },
+        {
+          "id": "k4",
+          "value": "33",
+          "label": "Districts"
+        }
+      ]
+    },
+    "legend": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Legend",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "g1",
+          "text": "■ Jun–Aug event concentration — 43.1% (66 of 153)"
+        },
+        {
+          "id": "g2",
+          "text": "■ October event peak — 25 events"
+        },
+        {
+          "id": "g3",
+          "text": "■ February case-volume peak"
+        }
+      ]
+    },
+    "facts": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        },
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "f1",
+          "label": "October",
+          "value": "25 events · 1,383 reported cases"
+        },
+        {
+          "id": "f2",
+          "label": "Weekly peak",
+          "value": "W28 — 9 events / 456 cases"
+        },
+        {
+          "id": "f3",
+          "label": "Exploratory stability",
+          "value": "Kendall W = 0.530 · p = 0.016"
+        }
+      ]
+    }
+  }
+}

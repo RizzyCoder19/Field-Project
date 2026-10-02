@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap");
+
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #0A0A0B;
+  --muted: #FAFAFA;
+  --muted-foreground: #52525B;
+  --border: #D4D4D8;
+  --input: #D4D4D8;
+  --card: #FFFFFF;
+  --card-foreground: #0A0A0B;
+  --card-border: #D4D4D8;
+  --primary: #191919;
+  --primary-foreground: #FAFAFA;
+  --secondary: #D4D4D8;
+  --secondary-foreground: #27272A;
+  --accent: #000000;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FAFAFA;
+  --chart-1: #2E2E30;
+  --chart-2: #52525B;
+  --chart-3: #7C7C86;
+  --chart-4: #A1A1AA;
+  --chart-5: #D4D4D8;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #0A0A0B;
+  --foreground: #FAFAFA;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA;
+  --border: #27272A;
+  --input: #27272A;
+  --card: #0A0A0B;
+  --card-foreground: #FAFAFA;
+  --card-border: #27272A;
+  --primary: #FAFAFA;
+  --primary-foreground: #191919;
+  --secondary: #18181B;
+  --secondary-foreground: #FAFAFA;
+  --accent: #FFFFFF;
+  --accent-foreground: #000000;
+  --destructive: #7F1D1D;
+  --destructive-foreground: #FAFAFA;
+  --chart-1: #2E2E30;
+  --chart-2: #52525B;
+  --chart-3: #7C7C86;
+  --chart-4: #A1A1AA;
+  --chart-5: #D4D4D8;
+  --radius: 0.5rem;
+}
+
+:root {
+  --bone: #F1EBDD;
+  --ink: #171A18;
+  --petrol: #174A4A;
+  --ember: #C84B2F;
+  --gold: #B49A5A;
+  --chartreuse: #B6C43A;
+  --rule: #171A1826;
+  --rule-strong: #171A1859;
+  --bone-deep: #E6DEC9;
+  --font-editorial: "Spectral", sans-serif;
+  --font-body: "Archivo", sans-serif;
+  --font-mono: "IBM Plex Mono", sans-serif;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body, "Inter"), sans-serif;
+    background-color: black !important;
+  }
+
+  
+  .font-body {
+    font-family: var(--font-body, "Inter"), sans-serif;
+  }
+
+  .font-heading {
+    font-family: var(--font-heading, "Inter"), sans-serif;
+  }
+
+}
+
+
+.scroll-container {
+  position: relative;
+  overflow: visible;
+  height: auto;
+  min-height: 100dvh;
+  background-color: transparent;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  width: auto;
+  overflow: visible;
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.faces-container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+/* Slide wrapper styles */
+.slide-face-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+
+
+/* Preview mode: stack slides and use visibility to hide inactive ones */
+/* opacity: 0 prevents face children from overriding visibility: hidden */
+.slides-preview-content .slide-face-wrapper {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slides-preview-content .slide-face-wrapper [data-face-root][data-face-visible="false"]:not([data-face-webgl="true"]) {
+  content-visibility: hidden;
+}
+
+.slides-preview-content .slide-face-wrapper[data-active="true"] {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide-face-wrapper[data-allow-scroll="true"] {
+  overflow: auto;
+}
+
+/* On touch devices, keep vertical pans on the page scroll path so selecting
+   one slide does not trap gestures inside the selected slide's subtree. */
+@media (hover: none) and (pointer: coarse) {
+  body:not([data-preview-mode]) .scroll-container {
+    touch-action: pan-y;
+  }
+
+  body:not([data-preview-mode]) .slide-face-wrapper,
+  body:not([data-preview-mode]) .slide-face-wrapper [data-face-root],
+  body:not([data-preview-mode]) .slide-face-wrapper [data-face-root] * {
+    touch-action: pan-y;
+  }
+}
+
+.slides-preview-content .slide-face-wrapper[data-allow-scroll="true"] {
+  scrollbar-width: none;
+}
+
+.slides-preview-content .slide-face-wrapper[data-allow-scroll="true"]::-webkit-scrollbar {
+  display: none;
+}
+
+/* Face content container - always full width for slides-only */
+[data-face-content-container] {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+/* Slides preview container - fullscreen with black background */
+.slides-preview-container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  overflow: hidden;
+}
+
+.slides-preview-content {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Subtle dark outline so slide boundaries remain visible against the
+   black container background even when the face itself is black. */
+.slides-preview-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fullscreen desktop slideshow: edge-to-edge slide with no rounded corners
+   or outline. The container keeps its black background so the viewport
+   letterboxes with black bars whenever the aspect ratio doesn't match. */
+.slides-preview-content[data-slides-display="fullscreen"] {
+  border-radius: 0;
+}
+
+.slides-preview-content[data-slides-display="fullscreen"]::after {
+  display: none;
+}
+
+.slides-preview-content[data-slides-display="cards"]::after {
+  border: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 2px rgba(15, 23, 42, 0.06);
+}
+
+.slides-preview-content[data-slides-display="cards"] {
+  box-shadow: none;
+}
+
+.slides-preview-content[data-slides-display="cards"][data-cards-corners="square"] {
+  border-radius: 0;
+}
+
+.mobile-slideshow-slide-area .slides-preview-content[data-cards-corners="square"],
+.mobile-slideshow-layout[data-slides-display="cards"] .slides-preview-content[data-cards-corners="square"] {
+  border-radius: 0;
+}
+
+.stacked-slides-container[data-slides-display="cards"][data-cards-corners="square"]
+  .stacked-slide-wrapper,
+.stacked-mobile-slides-container[data-slides-display="cards"][data-cards-corners="square"]
+  .stacked-slide-wrapper {
+  border-radius: 0;
+}
+
+
+
+/* Hover zone around the dots (proximity dimming is tracked at the window level) */
+.slides-dots-hover-zone {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+  padding: 16px 24px 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Stack: dots pill and the collapsed handle share one cell so the rail can
+   smoothly shrink down into the handle (and grow back) instead of swapping. */
+.slides-dots-stack {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+}
+
+.slides-dots-stack > * {
+  grid-area: 1 / 1;
+}
+
+/* Dots indicator - white rounded container; opacity ramps up with proximity */
+.slides-dots-indicator {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background: #f3f3f3;
+  border: 1.5px solid #dddddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0.2;
+  transform-origin: bottom center;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slides-dots-stack[data-collapsed="true"] .slides-dots-indicator {
+  transform: scale(0.5);
+  pointer-events: none;
+}
+
+/* Segmented control: a fixed-width viewport that clips a scrollable timeline
+   of numbered cells, with a draggable sliding thumb. */
+.slides-seg-viewport {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+}
+
+.slides-seg-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 20px;
+  width: max-content;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Each slide gets a 32x20 cell; only its number shows, the box is invisible */
+.slides-seg-cell {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  flex: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #a6a6a6;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  font-variant-numeric: tabular-nums;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.slides-seg-cell[data-active="true"] {
+  color: #070707;
+  cursor: grab;
+}
+
+.slides-seg-cell[data-active="true"]:active {
+  cursor: grabbing;
+}
+
+/* White thumb with a 1.5px outline sits behind the numbers; turns glassy
+   while being dragged */
+.slides-seg-thumb {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  box-sizing: border-box;
+  height: 20px;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1.5px solid #dddddd;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.slides-seg-thumb[data-dragging="true"] {
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(7px) saturate(1.5);
+  backdrop-filter: blur(7px) saturate(1.5);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Edge fades over the secondary background; hovering scrolls the timeline */
+.slides-seg-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 28px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.slides-seg-fade-left {
+  left: 0;
+  background: linear-gradient(to right, #f3f3f3 35%, rgba(243, 243, 243, 0));
+}
+
+.slides-seg-fade-right {
+  right: 0;
+  background: linear-gradient(to left, #f3f3f3 35%, rgba(243, 243, 243, 0));
+}
+
+.slides-bottom-indicator-handle {
+  background: rgba(15, 23, 42, 0.72);
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: bottom center;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slides-dots-stack[data-collapsed="true"] .slides-bottom-indicator-handle {
+  transform: scale(1);
+}
+
+/* Edge arrows for navigation */
+.slides-edge-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 16px;
+  background: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  z-index: 9997;
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+}
+
+.slides-edge-arrow[data-visible="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Top indicator - collapsed state */
+.slides-top-indicator {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: top center;
+  background: rgba(15, 23, 42, 0.72);
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    0 2px 6px rgba(0, 0, 0, 0.28);
+  z-index: 9998;
+  opacity: 0.2;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stacked slides container - full width vertical scroll (default) */
+.stacked-slides-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+}
+
+.stacked-slide-wrapper {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* Inline dimensions let the browser skip offscreen slides without shifting
+     scroll geometry; the pptx-export page overrides this back to visible */
+  content-visibility: auto;
+}
+
+.stacked-slide-wrapper .slide-face-wrapper {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Horizontal orientation */
+.stacked-slides-container[data-orientation="horizontal"] {
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 100dvh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Card display mode (vertical): black backdrop with gutters between slides
+   and rounded corners on each slide, mirroring slideshow cards mode. */
+.stacked-slides-container[data-slides-display="cards"] {
+  background: #000;
+  padding: 32px;
+  gap: 32px;
+  min-height: 100dvh;
+}
+
+.stacked-slides-container[data-slides-display="cards"][data-orientation="horizontal"] {
+  min-height: 0;
+  padding: 32px;
+  gap: 32px;
+}
+
+.stacked-slides-container[data-slides-display="cards"] .stacked-slide-wrapper {
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.stacked-slides-container[data-slides-display="cards"]
+  .stacked-slide-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 2px rgba(15, 23, 42, 0.06);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile stacked variants */
+.stacked-mobile-slides-container[data-orientation="horizontal"] {
+  flex-direction: row;
+  width: 100vw;
+  height: 100dvh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.stacked-mobile-slides-container[data-slides-display="cards"] {
+  background: #000;
+  padding: 8px;
+  gap: 8px;
+  min-height: 100dvh;
+}
+
+.stacked-mobile-slides-container[data-slides-display="cards"][data-orientation="horizontal"] {
+  min-height: 0;
+  padding: 8px;
+  gap: 8px;
+}
+
+.stacked-mobile-slides-container[data-slides-display="cards"]
+  .stacked-slide-wrapper {
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+.stacked-mobile-slides-container[data-slides-display="cards"]
+  .stacked-slide-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 2px rgba(15, 23, 42, 0.06);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Mobile slideshow layout: the slide fills the entire viewport at its
+   natural scale (cards or fullscreen) and a bottom sheet overlays the
+   bottom edge with navigation controls. The sheet auto-opens on slide
+   change, auto-closes after a delay, and can be toggled by tapping its
+   drag handle. */
+.mobile-slideshow-layout {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.mobile-slideshow-slide-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(16px + env(safe-area-inset-top)) calc(8px + env(safe-area-inset-right)) calc(55px + 16px + env(safe-area-inset-bottom)) calc(8px + env(safe-area-inset-left));
+}
+
+.mobile-slideshow-layout[data-slides-display="fullscreen"] .mobile-slideshow-slide-area {
+  padding: 0 0 calc(16px + env(safe-area-inset-bottom)) 0;
+}
+
+/* Only the active slide is visible; inactive ones stay mounted to
+   preserve state (map positions, form input, etc.) but are hidden. */
+.mobile-slideshow-slide-area .mobile-slide-item {
+  display: none;
+}
+.mobile-slideshow-slide-area .mobile-slide-item[data-active="true"] {
+  display: flex;
+}
+
+.mobile-slideshow-slide-area .slides-preview-content {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mobile-slideshow-slide-area .slides-preview-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mobile-slideshow-layout[data-slides-display="fullscreen"] .slides-preview-content {
+  border-radius: 0;
+}
+.mobile-slideshow-layout[data-slides-display="fullscreen"] .slides-preview-content::after {
+  display: none;
+}
+
+.mobile-slideshow-layout[data-slides-display="cards"] .slides-preview-content::after {
+  border: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    inset 0 0 0 2px rgba(15, 23, 42, 0.06);
+}
+
+.mobile-slideshow-layout[data-slides-display="cards"] .slides-preview-content {
+  box-shadow: none;
+}
+
+/* Bottom sheet — anchored to the viewport bottom, always visible with the
+   slide navigation controls. */
+.mobile-slideshow-sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  height: calc(55px + env(safe-area-inset-bottom));
+  padding: 12px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow:
+    0 -8px 24px 0 rgba(0, 0, 0, 0.08),
+    0 -2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.mobile-slideshow-sheet[data-safari-ios="true"] {
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+}
+
+.mobile-slideshow-sheet-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 100%;
+}
+
+.mobile-slideshow-sheet-content > .slides-dots-indicator {
+  flex: 0 0 auto;
+}
+
+.mobile-slideshow-sheet-content[data-stepper-fill="true"]
+  > .slides-dots-indicator {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.slides-seg-viewport[data-fill="true"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+}
+
+/* Native horizontal touch scrolling (mobile) instead of edge-hover paging */
+.slides-seg-viewport[data-scroll="native"] {
+  overflow-x: auto;
+  scrollbar-width: none;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides-seg-viewport[data-scroll="native"]::-webkit-scrollbar {
+  display: none;
+}
+
+.slides-seg-viewport[data-scroll="native"] .slides-seg-track {
+  touch-action: pan-x;
+}
+
+.slides-seg-viewport[data-scroll="native"] .slides-seg-cell[data-active="true"] {
+  cursor: pointer;
+}
+
+/* Matches the @perhaps/ui Button "secondary" variant: chunky offset
+   shadow that halves on hover and collapses on press, with a 1.5px
+   border. The button also reserves a 4px bottom margin so pressing it
+   down doesn't shift neighbouring elements. */
+.mobile-slideshow-sheet-arrow {
+  all: unset;
+  box-sizing: border-box;
+  width: 31px;
+  height: 31px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #070707;
+  border: 1.5px solid #dddddd;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 0 0 #ededed;
+  transform: translate3d(0, 0, 0);
+  will-change: opacity, transform;
+  transition:
+    background 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease,
+    opacity 0.15s ease;
+}
+
+@media (hover: hover) {
+  .mobile-slideshow-sheet-arrow:hover:not(:disabled) {
+    transform: translate3d(0, 1px, 0);
+    box-shadow: 0 1px 0 0 #ededed;
+  }
+}
+
+.mobile-slideshow-sheet-arrow:active:not(:disabled) {
+  transform: translate3d(0, 2px, 0);
+  box-shadow: 0 0 0 0 #ededed;
+}
+
+.mobile-slideshow-sheet-arrow:disabled {
+  cursor: default;
+}
+
+.mobile-slideshow-sheet-arrow:disabled > * {
+  opacity: 0.35;
+}
+
+/* Mobile slides vertical scroll container */
+.mobile-slides-container {
+  min-height: 100dvh;
+  width: 100%;
+  background: #000;
+  padding: calc(16px + env(safe-area-inset-top)) calc(16px + env(safe-area-inset-right)) calc(100px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  /* Reserve vertical swipes for page scrolling so drags/swipes over
+     interactive face content still let the user scroll between slides.
+     Taps still dispatch click events. */
+  touch-action: pan-y;
+}
+
+/* Fullscreen display: edge-to-edge slides, no cards styling */
+.mobile-slides-container[data-slides-display="fullscreen"] {
+  background: transparent;
+  padding: 0;
+  gap: 0;
+}
+
+.mobile-slides-container[data-slides-display="fullscreen"] .slides-preview-content {
+  border-radius: 0;
+}
+
+.mobile-slides-container[data-slides-display="fullscreen"] .slides-preview-content::after {
+  display: none;
+}
+
+.mobile-slide-item {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  touch-action: pan-y;
+}
+
+/* Force vertical-pan scrolling to win over any touch handlers set by
+   face content (drag/swipe widgets, canvases, etc.). Elements that
+   genuinely need to capture gestures can opt out with
+   touch-action: none at a deeper level. */
+.mobile-slide-item [data-face-root],
+.mobile-slide-item [data-face-root] * {
+  touch-action: pan-y;
+}
+
+/* Pause CSS animations on off-screen Faces (flag set by FaceShell) */
+[data-face-root][data-face-visible="false"],
+[data-face-root][data-face-visible="false"] * {
+  animation-play-state: paused !important;
+}
+
+/* Stacked mobile slides container - full width, no margins, no snap */
+.stacked-mobile-slides-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+}
+
+
+

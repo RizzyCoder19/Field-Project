@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "barOrder": {
+      "type": "selector",
+      "options": [
+        "Descending",
+        "Cohort order"
+      ],
+      "value": "Descending"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "showIntegrityChecks": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

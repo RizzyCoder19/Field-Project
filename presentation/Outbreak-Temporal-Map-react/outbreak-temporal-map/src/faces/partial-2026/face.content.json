@@ -1,0 +1,161 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Partial year // 16"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "16 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "2026: partial-year matched-window comparison"
+    },
+    "partialTag": {
+      "type": "text",
+      "content": "Partial year · matched window W01–W32"
+    },
+    "chartLabelRecords": {
+      "type": "text",
+      "content": "Primary-cohort records, W01–W32 of each year"
+    },
+    "chartLabelCases": {
+      "type": "text",
+      "content": "Reported cases shown as labels · bar height remains record count"
+    },
+    "axisNote": {
+      "type": "text",
+      "content": "Bar height = primary-cohort record count within W01–W32 · hatched bars = matched-window totals not yet extracted"
+    },
+    "rulesLabel": {
+      "type": "text",
+      "content": "What this comparison does not do"
+    },
+    "boundary": {
+      "type": "text",
+      "content": "2026 is compared only against the equivalent historical window. Any statement about the rest of the year lies outside what this dataset can support."
+    },
+    "kpis2026": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        },
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "k0",
+          "value": "W01–W32",
+          "label": "2026 window"
+        },
+        {
+          "id": "k1",
+          "value": "45",
+          "label": "Primary-cohort records"
+        },
+        {
+          "id": "k2",
+          "value": "1,118",
+          "label": "Reported cases"
+        },
+        {
+          "id": "k3",
+          "value": "0",
+          "label": "Reported deaths"
+        }
+      ]
+    },
+    "window": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "year",
+          "title": "Year",
+          "type": "text"
+        },
+        {
+          "key": "records",
+          "title": "Records",
+          "type": "text"
+        },
+        {
+          "key": "cases",
+          "title": "Cases",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "w22",
+          "year": "2022 W01–W32",
+          "records": "—",
+          "cases": "—"
+        },
+        {
+          "id": "w23",
+          "year": "2023 W01–W32",
+          "records": "—",
+          "cases": "—"
+        },
+        {
+          "id": "w24",
+          "year": "2024 W01–W32",
+          "records": "—",
+          "cases": "—"
+        },
+        {
+          "id": "w25",
+          "year": "2025 W01–W32",
+          "records": "—",
+          "cases": "—"
+        },
+        {
+          "id": "w26",
+          "year": "2026 W01–W32",
+          "records": "45",
+          "cases": "1,118"
+        }
+      ]
+    },
+    "rules": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Rule",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Extrapolate to December"
+        },
+        {
+          "id": "r2",
+          "text": "Forecast the full year"
+        },
+        {
+          "id": "r3",
+          "text": "Call the result a decline"
+        },
+        {
+          "id": "r4",
+          "text": "Call it eradication"
+        },
+        {
+          "id": "r5",
+          "text": "Infer reporting bias without evidence"
+        }
+      ]
+    }
+  }
+}

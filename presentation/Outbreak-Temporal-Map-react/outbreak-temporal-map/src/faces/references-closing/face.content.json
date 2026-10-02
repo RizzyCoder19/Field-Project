@@ -1,0 +1,115 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "References & closing // 18"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "18 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "References & closing"
+    },
+    "closing": {
+      "type": "text",
+      "content": "The analysis identifies distinct temporal signatures in reported outbreak surveillance across the selected disease families. The strongest patterns are descriptive: Dengue shows a pronounced June–October concentration; ADD combines seasonal event concentration with case-volume divergence; Malaria shows a May–July event concentration and district reporting concentration; Food Poisoning is sensitive to large individual reports; Chikungunya shows a more diffuse profile. The findings are useful for understanding surveillance patterns, but they should not be interpreted as population incidence or causal disease-risk estimates."
+    },
+    "finalLine": {
+      "type": "text",
+      "content": "From Data to the Ground."
+    },
+    "thanks": {
+      "type": "text",
+      "content": "Thank you"
+    },
+    "questions": {
+      "type": "text",
+      "content": "Questions?"
+    },
+    "backCta": {
+      "type": "text",
+      "content": "Back to cover"
+    },
+    "references": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Label",
+          "type": "text"
+        },
+        {
+          "key": "value",
+          "title": "Value",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "label": "Primary source",
+          "value": "National Centre for Disease Control (NCDC) — Integrated Disease Surveillance Programme (IDSP), Weekly Outbreak Reports"
+        },
+        {
+          "id": "r2",
+          "label": "Secondary / project source",
+          "value": "University of Mumbai — B.Sc. Data Science Semester III Field Project syllabus"
+        },
+        {
+          "id": "r3",
+          "label": "Analytical source",
+          "value": "NCDC_Maharashtra_CLEAN_ANALYTICAL.csv — with source PDF / page provenance and validation records"
+        },
+        {
+          "id": "r4",
+          "label": "Fieldwork status",
+          "value": "Planned fieldwork instruments prepared (questionnaire, interview guide, observation checklist, ethics and language framework). No respondent or observation data has been collected."
+        },
+        {
+          "id": "r5",
+          "label": "Submitted by",
+          "value": "Khan Umar · Guided by Prof. Angelin · RP Institute, affiliated to University of Mumbai · 2026"
+        }
+      ]
+    },
+    "chain": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "icon",
+          "title": "Icon",
+          "type": "icon"
+        },
+        {
+          "key": "text",
+          "title": "Stage",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "icon": "file-text",
+          "text": "Official reports"
+        },
+        {
+          "id": "c2",
+          "icon": "database",
+          "text": "Cleaned data"
+        },
+        {
+          "id": "c3",
+          "icon": "activity",
+          "text": "Seasonal analysis"
+        },
+        {
+          "id": "c4",
+          "icon": "map-pin",
+          "text": "Planned fieldwork"
+        }
+      ]
+    }
+  }
+}

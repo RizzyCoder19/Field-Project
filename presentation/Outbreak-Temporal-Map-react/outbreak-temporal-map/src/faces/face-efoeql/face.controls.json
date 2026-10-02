@@ -1,0 +1,16 @@
+{
+  "controls": {
+    "profileStyle": {
+      "type": "selector",
+      "options": [
+        "Ridge",
+        "Silhouette"
+      ],
+      "value": "Ridge"
+    },
+    "showAnnotations": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

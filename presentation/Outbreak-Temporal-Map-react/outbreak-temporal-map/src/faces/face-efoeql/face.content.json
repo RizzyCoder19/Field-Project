@@ -1,0 +1,228 @@
+{
+  "blocks": {
+    "kicker": {
+      "type": "text",
+      "content": "Signatures // 09 — Core seasonal pattern analysis, baseline 2022–2025"
+    },
+    "title": {
+      "type": "text",
+      "content": "Five diseases.<br>Five temporal profiles."
+    },
+    "subtitle": {
+      "type": "text",
+      "content": "Observed monthly distribution of reported outbreak-event records across Maharashtra, 2022–2025."
+    },
+    "metaRegion": {
+      "type": "text",
+      "content": "Maharashtra · 09 / 18"
+    },
+    "metaN": {
+      "type": "text",
+      "content": "N = 539 primary-cohort records"
+    },
+    "metaSource": {
+      "type": "text",
+      "content": "NCDC / IDSP"
+    },
+    "scaleLabel": {
+      "type": "text",
+      "content": "Common scale · 0 — 40 event records · Jan → Dec"
+    },
+    "readoutIdle": {
+      "type": "text",
+      "content": "Hover a month to read values · click a disease to isolate"
+    },
+    "monthAxis": {
+      "type": "text",
+      "content": "JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC"
+    },
+    "insightLead": {
+      "type": "text",
+      "content": "Temporal concentration differs across disease families."
+    },
+    "insightBody": {
+      "type": "text",
+      "content": "Dengue: Jun–Oct contains 82.8% of baseline events. ADD: Jun–Aug contains 43.1%, with an October elevation. Malaria: May–Jul contains 51.4%. Food Poisoning: Jan–Feb 26.1% and Apr–May 29.0%. Chikungunya: no stable recurring calendar-month concentration."
+    },
+    "footerLeft": {
+      "type": "text",
+      "content": "Reported outbreak-event records — not population incidence"
+    },
+    "footerRight": {
+      "type": "text",
+      "content": "Values plotted on a shared scale; series are not independently normalized"
+    },
+    "series": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "name",
+          "title": "Disease",
+          "type": "text"
+        },
+        {
+          "key": "jan",
+          "title": "Jan",
+          "type": "text"
+        },
+        {
+          "key": "feb",
+          "title": "Feb",
+          "type": "text"
+        },
+        {
+          "key": "mar",
+          "title": "Mar",
+          "type": "text"
+        },
+        {
+          "key": "apr",
+          "title": "Apr",
+          "type": "text"
+        },
+        {
+          "key": "may",
+          "title": "May",
+          "type": "text"
+        },
+        {
+          "key": "jun",
+          "title": "Jun",
+          "type": "text"
+        },
+        {
+          "key": "jul",
+          "title": "Jul",
+          "type": "text"
+        },
+        {
+          "key": "aug",
+          "title": "Aug",
+          "type": "text"
+        },
+        {
+          "key": "sep",
+          "title": "Sep",
+          "type": "text"
+        },
+        {
+          "key": "oct",
+          "title": "Oct",
+          "type": "text"
+        },
+        {
+          "key": "nov",
+          "title": "Nov",
+          "type": "text"
+        },
+        {
+          "key": "dec",
+          "title": "Dec",
+          "type": "text"
+        },
+        {
+          "key": "peaks",
+          "title": "Annotated peaks",
+          "type": "text"
+        },
+        {
+          "key": "note",
+          "title": "Note",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "dng",
+          "name": "Dengue",
+          "jan": "4",
+          "feb": "2",
+          "mar": "5",
+          "apr": "12",
+          "may": "15",
+          "jun": "27",
+          "jul": "26",
+          "aug": "20",
+          "sep": "36",
+          "oct": "40",
+          "nov": "15",
+          "dec": "2",
+          "peaks": "OCT",
+          "note": "post-monsoon peak"
+        },
+        {
+          "id": "add",
+          "name": "Acute Diarrheal Disease",
+          "jan": "3",
+          "feb": "9",
+          "mar": "14",
+          "apr": "6",
+          "may": "5",
+          "jun": "19",
+          "jul": "22",
+          "aug": "16",
+          "sep": "13",
+          "oct": "25",
+          "nov": "7",
+          "dec": "14",
+          "peaks": "JUL",
+          "note": "monsoon core, October elevation"
+        },
+        {
+          "id": "mal",
+          "name": "Malaria",
+          "jan": "2",
+          "feb": "3",
+          "mar": "3",
+          "apr": "1",
+          "may": "7",
+          "jun": "15",
+          "jul": "14",
+          "aug": "7",
+          "sep": "7",
+          "oct": "3",
+          "nov": "2",
+          "dec": "6",
+          "peaks": "JUN",
+          "note": "narrow May–July window"
+        },
+        {
+          "id": "fp",
+          "name": "Food Poisoning",
+          "jan": "7",
+          "feb": "11",
+          "mar": "4",
+          "apr": "9",
+          "may": "11",
+          "jun": "5",
+          "jul": "2",
+          "aug": "4",
+          "sep": "7",
+          "oct": "4",
+          "nov": "0",
+          "dec": "5",
+          "peaks": "FEB, MAY",
+          "note": "two elevated windows"
+        },
+        {
+          "id": "chk",
+          "name": "Chikungunya",
+          "jan": "1",
+          "feb": "1",
+          "mar": "5",
+          "apr": "2",
+          "may": "6",
+          "jun": "6",
+          "jul": "4",
+          "aug": "3",
+          "sep": "5",
+          "oct": "4",
+          "nov": "5",
+          "dec": "1",
+          "peaks": "",
+          "note": "no dominant single month"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Data engineering // 06"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "06 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "From fragmented labels to a comparable cohort"
+    },
+    "funnelNote": {
+      "type": "text",
+      "content": "Node counts: 116 → 56 → 30 → 5"
+    },
+    "primaryLabel": {
+      "type": "text",
+      "content": "Primary five families"
+    },
+    "harmonisationNote": {
+      "type": "text",
+      "content": "Source labels and provenance remain traceable. Harmonisation is this project's analytical framework, not an official NCDC taxonomy."
+    },
+    "checksLabel": {
+      "type": "text",
+      "content": "Integrity checks"
+    },
+    "funnel": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "title": "Stage",
+          "type": "text"
+        },
+        {
+          "key": "count",
+          "title": "Count",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "g1",
+          "label": "Raw source strings",
+          "count": "116"
+        },
+        {
+          "id": "g2",
+          "label": "Cleaned analytical labels",
+          "count": "56"
+        },
+        {
+          "id": "g3",
+          "label": "Derived disease families",
+          "count": "30"
+        },
+        {
+          "id": "g4",
+          "label": "Primary study families",
+          "count": "5"
+        }
+      ]
+    },
+    "primaryFive": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "name",
+          "title": "Disease",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "d1",
+          "name": "Dengue"
+        },
+        {
+          "id": "d2",
+          "name": "Acute Diarrheal Disease (ADD)"
+        },
+        {
+          "id": "d3",
+          "name": "Malaria"
+        },
+        {
+          "id": "d4",
+          "name": "Food Poisoning"
+        },
+        {
+          "id": "d5",
+          "name": "Chikungunya"
+        }
+      ]
+    },
+    "checks": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Check",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "c1",
+          "text": "Unique analytical IDs"
+        },
+        {
+          "id": "c2",
+          "text": "Exact reported cases"
+        },
+        {
+          "id": "c3",
+          "text": "Exact reported deaths"
+        },
+        {
+          "id": "c4",
+          "text": "Source PDF / page linkage"
+        },
+        {
+          "id": "c5",
+          "text": "Temporal identity"
+        },
+        {
+          "id": "c6",
+          "text": "NIL weeks kept separate"
+        }
+      ]
+    }
+  }
+}

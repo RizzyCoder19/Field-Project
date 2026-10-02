@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "metric": {
+      "type": "selector",
+      "options": [
+        "Records",
+        "Cases"
+      ],
+      "value": "Records"
+    }
+  }
+}

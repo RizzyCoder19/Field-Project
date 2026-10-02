@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "highlightWindow": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

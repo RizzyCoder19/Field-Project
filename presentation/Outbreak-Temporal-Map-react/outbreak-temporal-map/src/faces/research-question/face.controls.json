@@ -1,0 +1,12 @@
+{
+  "controls": {
+    "objectiveColumns": {
+      "type": "selector",
+      "options": [
+        "One",
+        "Two"
+      ],
+      "value": "Two"
+    }
+  }
+}

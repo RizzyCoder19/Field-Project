@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "emphasizeFullYear": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}

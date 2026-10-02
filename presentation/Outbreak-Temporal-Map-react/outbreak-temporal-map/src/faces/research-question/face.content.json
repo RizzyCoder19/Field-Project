@@ -1,0 +1,80 @@
+{
+  "blocks": {
+    "sectionLabel": {
+      "type": "text",
+      "content": "Scope // 03"
+    },
+    "slideNo": {
+      "type": "text",
+      "content": "03 / 18"
+    },
+    "title": {
+      "type": "text",
+      "content": "Research question & objectives"
+    },
+    "rqLabel": {
+      "type": "text",
+      "content": "Research question"
+    },
+    "researchQuestion": {
+      "type": "text",
+      "content": "What seasonal patterns are evident in selected disease outbreak reports in Maharashtra, and how do these patterns vary across diseases and seasons?"
+    },
+    "objectivesLabel": {
+      "type": "text",
+      "content": "Eight analytical objectives"
+    },
+    "footerLeft": {
+      "type": "text",
+      "content": "Baseline 2022–2025 · 2026 limited to W01–W32"
+    },
+    "footerRight": {
+      "type": "text",
+      "content": "Reported outbreak-event records — not population incidence"
+    },
+    "objectives": {
+      "type": "table",
+      "columns": [
+        {
+          "key": "text",
+          "title": "Objective",
+          "type": "text"
+        }
+      ],
+      "rows": [
+        {
+          "id": "o1",
+          "text": "Clean and organize district-level weekly disease-outbreak data."
+        },
+        {
+          "id": "o2",
+          "text": "Analyze monthly and annual distributions during the completed baseline period."
+        },
+        {
+          "id": "o3",
+          "text": "Identify months with higher concentrations of reported outbreak records and cases."
+        },
+        {
+          "id": "o4",
+          "text": "Compare seasonal profiles across selected diseases."
+        },
+        {
+          "id": "o5",
+          "text": "Examine district reporting coverage and geographic variation."
+        },
+        {
+          "id": "o6",
+          "text": "Test sensitivity to large reported-case outliers."
+        },
+        {
+          "id": "o7",
+          "text": "Compare 2026 partial-year reporting with the matched historical window."
+        },
+        {
+          "id": "o8",
+          "text": "Produce evidence-based surveillance conclusions while clearly stating limitations."
+        }
+      ]
+    }
+  }
+}

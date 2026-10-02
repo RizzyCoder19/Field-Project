@@ -1,0 +1,8 @@
+{
+  "controls": {
+    "showProcessChain": {
+      "type": "switch",
+      "value": true
+    }
+  }
+}
