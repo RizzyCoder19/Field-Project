@@ -1,0 +1,61 @@
+disease_family,month,month_name,outbreak_records,total_cases,total_deaths
+Dengue,1,Jan,4,71,2
+Dengue,2,Feb,2,15,1
+Dengue,3,Mar,5,112,1
+Dengue,4,Apr,12,147,2
+Dengue,5,May,15,199,2
+Dengue,6,Jun,27,507,9
+Dengue,7,Jul,26,497,12
+Dengue,8,Aug,20,461,9
+Dengue,9,Sep,36,392,22
+Dengue,10,Oct,40,566,26
+Dengue,11,Nov,15,157,6
+Dengue,12,Dec,2,20,1
+Acute Diarrheal Disease,1,Jan,3,151,1
+Acute Diarrheal Disease,2,Feb,9,1582,0
+Acute Diarrheal Disease,3,Mar,14,635,0
+Acute Diarrheal Disease,4,Apr,6,180,0
+Acute Diarrheal Disease,5,May,5,289,0
+Acute Diarrheal Disease,6,Jun,19,846,2
+Acute Diarrheal Disease,7,Jul,22,1040,3
+Acute Diarrheal Disease,8,Aug,16,1300,5
+Acute Diarrheal Disease,9,Sep,13,633,2
+Acute Diarrheal Disease,10,Oct,25,1383,1
+Acute Diarrheal Disease,11,Nov,7,493,1
+Acute Diarrheal Disease,12,Dec,14,518,78
+Malaria,1,Jan,2,198,3
+Malaria,2,Feb,3,15,2
+Malaria,3,Mar,3,347,2
+Malaria,4,Apr,1,25,0
+Malaria,5,May,7,374,5
+Malaria,6,Jun,15,227,10
+Malaria,7,Jul,14,190,12
+Malaria,8,Aug,7,108,4
+Malaria,9,Sep,7,139,7
+Malaria,10,Oct,3,55,0
+Malaria,11,Nov,2,7,2
+Malaria,12,Dec,6,448,4
+Food Poisoning,1,Jan,7,410,0
+Food Poisoning,2,Feb,11,2162,0
+Food Poisoning,3,Mar,4,199,0
+Food Poisoning,4,Apr,9,899,2
+Food Poisoning,5,May,11,894,1
+Food Poisoning,6,Jun,5,236,0
+Food Poisoning,7,Jul,2,47,0
+Food Poisoning,8,Aug,4,255,1
+Food Poisoning,9,Sep,7,182,0
+Food Poisoning,10,Oct,4,399,0
+Food Poisoning,11,Nov,0,0,0
+Food Poisoning,12,Dec,5,244,25
+Chikungunya,1,Jan,1,17,0
+Chikungunya,2,Feb,1,15,0
+Chikungunya,3,Mar,5,38,0
+Chikungunya,4,Apr,2,17,0
+Chikungunya,5,May,6,60,0
+Chikungunya,6,Jun,6,76,0
+Chikungunya,7,Jul,4,57,0
+Chikungunya,8,Aug,3,48,0
+Chikungunya,9,Sep,5,126,0
+Chikungunya,10,Oct,4,164,0
+Chikungunya,11,Nov,5,78,0
+Chikungunya,12,Dec,1,5,0

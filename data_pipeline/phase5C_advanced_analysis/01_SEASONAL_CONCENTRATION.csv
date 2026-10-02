@@ -1,0 +1,6 @@
+disease_family,baseline_records,baseline_cases,event_cv,case_cv,event_cr3,case_cr3,event_entropy_norm,case_entropy_norm,event_gini,case_gini,concentration_tier,primary_concentration_driver
+Dengue,204,3144,0.7355,0.7561,0.5049,0.4994,0.8824,0.8714,0.4142,0.4227,High Concentration,Strong multi-month peak clustering (over 50% in top 3 months)
+Acute Diarrheal Disease,153,9050,0.5243,0.6090,0.4314,0.4713,0.9420,0.9223,0.2979,0.3441,Moderate Concentration,Broad multi-month reported-event distribution across the year
+Malaria,70,2133,0.7532,0.8015,0.5143,0.5481,0.8943,0.8580,0.3952,0.4500,High Concentration,Strong multi-month peak clustering (over 50% in top 3 months)
+Food Poisoning,69,5927,0.5641,1.1596,0.4493,0.6673,0.9231,0.7888,0.3152,0.5341,Moderate Concentration,Moderate event concentration but extreme case concentration (CR3=66.7%) due to mass exposures
+Chikungunya,43,701,0.5153,0.7830,0.3953,0.5250,0.9388,0.8803,0.2888,0.4214,Low / Diffuse,Relatively uniform or sparse distribution across all months

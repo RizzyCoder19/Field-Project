@@ -1,0 +1,6 @@
+disease_family,events_2022_w01_w32,events_2023_w01_w32,events_2024_w01_w32,events_2025_w01_w32,historical_mean_w01_w32,historical_std_w01_w32,events_2026_w01_w32,diff_from_historical_mean,pct_diff_from_historical_mean,historical_share_in_w01_w32_pct,surveillance_artifact_note
+Dengue,6,26,53,6,22.75,22.26,6,-16.75,-73.6%,44.6%,Severe W01-W32 truncation: Dengue historically sees only 44.6% of events in W01-W32. Later reporting weeks (W33-W52) have not yet been observed in the 2026 partial dataset.
+Acute Diarrheal Disease,8,11,45,23,21.75,16.80,18,-3.75,-17.2%,56.9%,"Surveillance reporting shift: 100% of 2026 records reported as British spelling ""Diarrhoeal"". Volume (18 events) is near the historical mean (21.8 events)."
+Malaria,10,7,17,14,12.00,4.40,1,-11.00,-91.7%,68.6%,Marked surveillance deficit (1 event vs mean 12.0 events); focal event in Gadchiroli in 2026 W01-W32.
+Food Poisoning,5,7,16,23,12.75,8.34,19,+6.25,+49.0%,73.9%,"Surveillance prefix shift: 100% of 2026 records reported under prefix ""Suspected Food Poisoning"". Activity (19 events) exceeds 4-year mean (12.8 events); label change and reporting growth both possible factors."
+Chikungunya,6,3,12,4,6.25,4.03,1,-5.25,-84.0%,58.1%,Low event registration (1 event in Pune vs mean 6.3 events); later reporting weeks (W33-W52) not yet observed in the 2026 partial dataset.

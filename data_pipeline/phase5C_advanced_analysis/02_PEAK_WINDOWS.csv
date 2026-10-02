@@ -1,0 +1,6 @@
+disease_family,event_peak_month,event_peak_index,top_3_event_months,is_contiguous_window,peak_window_months,window_event_count,window_event_share_pct,case_peak_month,case_peak_index,top_3_case_months,window_case_count,window_case_share_pct,window_classification
+Dengue,Sep,1.97,"Oct, Sep, Jun",FALSE,"Oct, Sep, Jun (discrete high-activity months)",103,50.5%,Aug,2.10,"Oct, Jun, Jul",1465,46.6%,"Discrete high-activity reported-event months (Jun, Sep, Oct)"
+Acute Diarrheal Disease,Jun,1.88,"Oct, Jul, Jun",TRUE,Jun-Aug (Contiguous high-activity reported-event window),66,43.1%,Oct,1.70,"Feb, Oct, Aug",3269,36.1%,Contiguous Jun-Aug reported-event window
+Malaria,Jun,2.69,"Jun, Jul, May",TRUE,May-Jul (Contiguous high-activity reported-event window),36,51.4%,May,2.86,"Dec, May, Mar",791,37.1%,Contiguous May-Jul reported-event window
+Food Poisoning,May,2.51,"Feb, May, Apr",FALSE,"Discontinuous: May, Feb, Jan (discrete high-activity months)",31,44.9%,May,3.52,"Feb, Apr, May",3955,66.7%,Discontinuous high-activity reported-event months (Jan/Feb and May)
+Chikungunya,May,1.69,"May, Jun, Mar",FALSE,"May, Jul, Aug (discrete high-activity reported-event months)",17,39.5%,Sep,2.63,"Oct, Sep, Nov",174,24.8%,Diffuse reported-event activity (no contiguous high-activity window)

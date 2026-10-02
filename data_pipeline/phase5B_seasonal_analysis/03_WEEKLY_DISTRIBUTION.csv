@@ -1,0 +1,261 @@
+disease_family,epi_week,outbreak_records,total_cases,total_deaths
+Dengue,1,1,3,1
+Dengue,2,0,0,0
+Dengue,3,2,18,1
+Dengue,4,1,16,0
+Dengue,5,1,2,1
+Dengue,6,1,9,0
+Dengue,7,1,6,1
+Dengue,8,0,0,0
+Dengue,9,0,0,0
+Dengue,10,0,0,0
+Dengue,11,1,5,0
+Dengue,12,4,107,1
+Dengue,13,0,0,0
+Dengue,14,1,5,1
+Dengue,15,2,41,1
+Dengue,16,0,0,0
+Dengue,17,6,58,0
+Dengue,18,2,32,0
+Dengue,19,2,18,1
+Dengue,20,7,106,0
+Dengue,21,2,38,1
+Dengue,22,5,89,0
+Dengue,23,1,24,0
+Dengue,24,6,93,3
+Dengue,25,6,167,0
+Dengue,26,11,169,5
+Dengue,27,6,113,1
+Dengue,28,7,40,6
+Dengue,29,3,68,0
+Dengue,30,7,178,4
+Dengue,31,4,65,0
+Dengue,32,1,5,0
+Dengue,33,7,158,7
+Dengue,34,3,65,1
+Dengue,35,9,283,2
+Dengue,36,6,93,3
+Dengue,37,8,81,5
+Dengue,38,9,108,7
+Dengue,39,4,33,2
+Dengue,40,8,173,7
+Dengue,41,4,103,2
+Dengue,42,17,156,7
+Dengue,43,7,49,5
+Dengue,44,7,121,5
+Dengue,45,11,136,4
+Dengue,46,3,7,3
+Dengue,47,3,23,3
+Dengue,48,2,19,0
+Dengue,49,4,54,1
+Dengue,50,1,7,1
+Dengue,51,0,0,0
+Dengue,52,0,0,0
+Acute Diarrheal Disease,1,3,126,0
+Acute Diarrheal Disease,2,0,0,0
+Acute Diarrheal Disease,3,2,41,1
+Acute Diarrheal Disease,4,0,0,0
+Acute Diarrheal Disease,5,1,110,0
+Acute Diarrheal Disease,6,2,1027,0
+Acute Diarrheal Disease,7,2,72,0
+Acute Diarrheal Disease,8,2,242,0
+Acute Diarrheal Disease,9,4,170,0
+Acute Diarrheal Disease,10,6,431,0
+Acute Diarrheal Disease,11,6,251,0
+Acute Diarrheal Disease,12,0,0,0
+Acute Diarrheal Disease,13,0,0,0
+Acute Diarrheal Disease,14,0,0,0
+Acute Diarrheal Disease,15,4,128,0
+Acute Diarrheal Disease,16,2,56,0
+Acute Diarrheal Disease,17,0,0,0
+Acute Diarrheal Disease,18,2,73,0
+Acute Diarrheal Disease,19,0,0,0
+Acute Diarrheal Disease,20,2,116,0
+Acute Diarrheal Disease,21,1,23,0
+Acute Diarrheal Disease,22,2,138,0
+Acute Diarrheal Disease,23,2,128,0
+Acute Diarrheal Disease,24,4,207,1
+Acute Diarrheal Disease,25,4,310,0
+Acute Diarrheal Disease,26,6,107,1
+Acute Diarrheal Disease,27,3,98,0
+Acute Diarrheal Disease,28,9,456,1
+Acute Diarrheal Disease,29,7,330,1
+Acute Diarrheal Disease,30,3,168,0
+Acute Diarrheal Disease,31,2,41,1
+Acute Diarrheal Disease,32,6,455,2
+Acute Diarrheal Disease,33,4,247,0
+Acute Diarrheal Disease,34,3,108,0
+Acute Diarrheal Disease,35,3,490,3
+Acute Diarrheal Disease,36,3,207,0
+Acute Diarrheal Disease,37,5,204,2
+Acute Diarrheal Disease,38,1,56,0
+Acute Diarrheal Disease,39,3,91,0
+Acute Diarrheal Disease,40,4,156,0
+Acute Diarrheal Disease,41,5,253,0
+Acute Diarrheal Disease,42,9,483,1
+Acute Diarrheal Disease,43,3,343,0
+Acute Diarrheal Disease,44,5,223,0
+Acute Diarrheal Disease,45,3,264,0
+Acute Diarrheal Disease,46,2,50,1
+Acute Diarrheal Disease,47,1,14,0
+Acute Diarrheal Disease,48,1,165,0
+Acute Diarrheal Disease,49,4,67,75
+Acute Diarrheal Disease,50,3,166,1
+Acute Diarrheal Disease,51,3,115,0
+Acute Diarrheal Disease,52,1,44,2
+Malaria,1,3,604,2
+Malaria,2,1,7,2
+Malaria,3,0,0,0
+Malaria,4,0,0,0
+Malaria,5,0,0,0
+Malaria,6,1,1,1
+Malaria,7,2,14,1
+Malaria,8,0,0,0
+Malaria,9,0,0,0
+Malaria,10,0,0,0
+Malaria,11,3,347,2
+Malaria,12,0,0,0
+Malaria,13,0,0,0
+Malaria,14,0,0,0
+Malaria,15,1,25,0
+Malaria,16,0,0,0
+Malaria,17,0,0,0
+Malaria,18,0,0,0
+Malaria,19,1,5,0
+Malaria,20,0,0,0
+Malaria,21,1,13,1
+Malaria,22,5,356,4
+Malaria,23,3,16,3
+Malaria,24,5,86,3
+Malaria,25,1,37,1
+Malaria,26,5,79,2
+Malaria,27,3,57,3
+Malaria,28,6,34,4
+Malaria,29,1,30,1
+Malaria,30,3,12,3
+Malaria,31,1,2,1
+Malaria,32,2,85,1
+Malaria,33,1,2,1
+Malaria,34,2,25,2
+Malaria,35,2,56,0
+Malaria,36,2,5,2
+Malaria,37,3,12,4
+Malaria,38,3,126,2
+Malaria,39,0,0,0
+Malaria,40,1,12,0
+Malaria,41,1,30,0
+Malaria,42,0,0,0
+Malaria,43,0,0,0
+Malaria,44,1,13,0
+Malaria,45,0,0,0
+Malaria,46,0,0,0
+Malaria,47,1,3,1
+Malaria,48,1,4,1
+Malaria,49,1,10,1
+Malaria,50,3,25,2
+Malaria,51,0,0,0
+Malaria,52,0,0,0
+Food Poisoning,1,2,194,0
+Food Poisoning,2,0,0,0
+Food Poisoning,3,1,133,0
+Food Poisoning,4,2,83,0
+Food Poisoning,5,3,88,0
+Food Poisoning,6,4,1634,0
+Food Poisoning,7,4,185,0
+Food Poisoning,8,2,276,0
+Food Poisoning,9,3,193,0
+Food Poisoning,10,2,73,0
+Food Poisoning,11,0,0,0
+Food Poisoning,12,0,0,0
+Food Poisoning,13,0,0,0
+Food Poisoning,14,0,0,0
+Food Poisoning,15,2,318,1
+Food Poisoning,16,4,264,0
+Food Poisoning,17,2,62,0
+Food Poisoning,18,2,277,1
+Food Poisoning,19,2,258,0
+Food Poisoning,20,3,68,1
+Food Poisoning,21,3,436,0
+Food Poisoning,22,2,110,0
+Food Poisoning,23,2,89,0
+Food Poisoning,24,2,93,0
+Food Poisoning,25,0,0,0
+Food Poisoning,26,1,54,0
+Food Poisoning,27,2,47,0
+Food Poisoning,28,0,0,0
+Food Poisoning,29,0,0,0
+Food Poisoning,30,0,0,0
+Food Poisoning,31,0,0,0
+Food Poisoning,32,1,27,0
+Food Poisoning,33,1,41,0
+Food Poisoning,34,2,187,1
+Food Poisoning,35,0,0,0
+Food Poisoning,36,0,0,0
+Food Poisoning,37,2,34,0
+Food Poisoning,38,1,40,0
+Food Poisoning,39,4,108,0
+Food Poisoning,40,3,311,0
+Food Poisoning,41,0,0,0
+Food Poisoning,42,1,88,0
+Food Poisoning,43,0,0,0
+Food Poisoning,44,0,0,0
+Food Poisoning,45,0,0,0
+Food Poisoning,46,0,0,0
+Food Poisoning,47,0,0,0
+Food Poisoning,48,0,0,0
+Food Poisoning,49,1,2,25
+Food Poisoning,50,1,39,0
+Food Poisoning,51,1,22,0
+Food Poisoning,52,1,93,0
+Chikungunya,1,1,17,0
+Chikungunya,2,0,0,0
+Chikungunya,3,0,0,0
+Chikungunya,4,0,0,0
+Chikungunya,5,0,0,0
+Chikungunya,6,1,15,0
+Chikungunya,7,0,0,0
+Chikungunya,8,0,0,0
+Chikungunya,9,0,0,0
+Chikungunya,10,1,7,0
+Chikungunya,11,2,19,0
+Chikungunya,12,0,0,0
+Chikungunya,13,2,12,0
+Chikungunya,14,0,0,0
+Chikungunya,15,2,17,0
+Chikungunya,16,0,0,0
+Chikungunya,17,0,0,0
+Chikungunya,18,1,11,0
+Chikungunya,19,2,17,0
+Chikungunya,20,0,0,0
+Chikungunya,21,1,18,0
+Chikungunya,22,1,5,0
+Chikungunya,23,2,14,0
+Chikungunya,24,2,46,0
+Chikungunya,25,1,6,0
+Chikungunya,26,2,19,0
+Chikungunya,27,2,15,0
+Chikungunya,28,0,0,0
+Chikungunya,29,0,0,0
+Chikungunya,30,0,0,0
+Chikungunya,31,2,42,0
+Chikungunya,32,0,0,0
+Chikungunya,33,2,38,0
+Chikungunya,34,1,10,0
+Chikungunya,35,0,0,0
+Chikungunya,36,0,0,0
+Chikungunya,37,1,9,0
+Chikungunya,38,0,0,0
+Chikungunya,39,1,9,0
+Chikungunya,40,2,32,0
+Chikungunya,41,0,0,0
+Chikungunya,42,3,158,0
+Chikungunya,43,1,6,0
+Chikungunya,44,0,0,0
+Chikungunya,45,1,11,0
+Chikungunya,46,3,117,0
+Chikungunya,47,0,0,0
+Chikungunya,48,2,26,0
+Chikungunya,49,0,0,0
+Chikungunya,50,0,0,0
+Chikungunya,51,0,0,0
+Chikungunya,52,1,5,0

@@ -1,0 +1,15 @@
+disease_family,district,qualifying_records,statewide_records,district_state_share_pct,district_peak_month,statewide_peak_month,peak_alignment_status,monsoon_share_pct,geographic_interpretation
+Dengue,Pune,26,204,12.7%,Sep,Oct,Displaced Peak (Sep vs Oct),57.7%,Leading reported Dengue outbreak district in the surveillance record (12.7% of state total); peak reported-event month: October.
+Dengue,Thane,19,204,9.3%,Sep,Oct,Displaced Peak (Sep vs Oct),52.6%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Beed,15,204,7.4%,Oct,Oct,Aligned with State,53.3%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Raigad,13,204,6.4%,Jun,Oct,Displaced Peak (Jun vs Oct),46.2%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Kolhapur,13,204,6.4%,Jun,Oct,Displaced Peak (Jun vs Oct),76.9%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Nanded,13,204,6.4%,Sep,Oct,Displaced Peak (Sep vs Oct),38.5%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Aurangabad,10,204,4.9%,Aug,Oct,Displaced Peak (Aug vs Oct),60.0%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Dengue,Akola,10,204,4.9%,May,Oct,Displaced Peak (May vs Oct),30.0%,Major surveillance reporting centre meeting the academic sample size threshold (N >= 10).
+Acute Diarrheal Disease,Nagpur,12,153,7.8%,Mar,Oct,Displaced Peak (Mar vs Oct),50.0%,High-volume district showing multi-month reported ADD events with elevated Jun-Aug concentration.
+Acute Diarrheal Disease,Amravati,11,153,7.2%,Jul,Oct,Displaced Peak (Jul vs Oct),63.6%,High-volume district showing multi-month reported ADD events with elevated Jun-Aug concentration.
+Acute Diarrheal Disease,Kolhapur,10,153,6.5%,Dec,Oct,Displaced Peak (Dec vs Oct),0.0%,High-volume district showing multi-month reported ADD events with elevated Jun-Aug concentration.
+Malaria,Gadchiroli,27,70,38.6%,Jun,Jun,Aligned with State,51.9%,Primary focus of Maharashtra reported Malaria events (38.6% of state total); peak reported-event month: June.
+Malaria,Chandrapur,16,70,22.9%,Jul,Jun,Displaced Peak (Jul vs Jun),75.0%,Contiguous Eastern Vidarbha district (22.9% of state total); together with Gadchiroli accounts for 61.4% of all baseline reported Malaria events.
+Chikungunya,Pune,11,43,25.6%,Sep,May,Displaced Peak (Sep vs May),63.6%,Dominant district for reported Chikungunya outbreaks (25.6% of state total); geographic concentration in Pune in the surveillance record.
