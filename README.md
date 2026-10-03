@@ -252,7 +252,7 @@ Field-Project/
 
 ## 📈 Key Findings Summary
 
-Based on analysis of **809 verified outbreak records** from 2009–2026:
+Based on analysis of **809 verified outbreak records** from 2022–2026:
 
 ### Maharashtra Disease Seasonality
 
