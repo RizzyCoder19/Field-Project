@@ -10,9 +10,9 @@
 
 ## 1. EXECUTIVE SUMMARY
 
-### What You Actually Have (As Found in Your Folder)
+### What I Actually Have 
 
-After a deep analysis of your GitHub repository (`RizzyCoder19/Field-Project`) and local folder `c:\Users\ADMIN\OneDrive\Desktop\Field Project`, here is a precise inventory of your actual research assets:
+After a deep analysis of my GitHub repository (`RizzyCoder19/Field-Project`) and local folder `c:\Users\ADMIN\OneDrive\Desktop\Field Project`, here is a precise inventory of my actual research assets:
 
 | Asset | File | Status | Value |
 |---|---|---|---|
