@@ -34,7 +34,7 @@ After a deep analysis of my GitHub repository (`RizzyCoder19/Field-Project`) and
 ### Critical Gap Identified
 
 > [!CAUTION]
-> Your `Final_data.csv` **ends in mid-2022** (Week 24, June 2022 for Maharashtra). It covers **2009–2022 only**.  
+> My `Final_data.csv` **ends in mid-2022** (Week 24, June 2022 for Maharashtra). It covers **2009–2022 only**.  
 > The full IDSP dataset (2009–2026, 35,538 rows) is available at **https://dataful.in/datasets/18514** and must be downloaded to cover the 2022–2026 period required for your project title.
 
 ---
@@ -54,13 +54,13 @@ After a deep analysis of my GitHub repository (`RizzyCoder19/Field-Project`) and
 - **L-Form:** Laboratory-confirmed cases — filled by lab staff
 - Weekly outbreak reports: state + district + disease + cases + deaths
 
-**As confirmed from your IDSP report.pdf (NCDC official page, scraped 27 Sept 2026):**
+**As confirmed from my IDSP report.pdf (NCDC official page, scraped 27 Sept 2026):**
 - Total outbreaks reported: 554 (2020), 728 (2021), 1027 (2022), 1862 (2023), 3020 (2024), 2285 (2025)
 - As of Week 10 of 2026: 411 outbreaks already reported
 - 184,895 Reporting Units nationwide under S-form surveillance
 - Average 40 outbreaks per week reported to Central Surveillance Unit
 
-**Your actual IDSP data (from Final_data.csv — VERIFIED):**
+**My actual IDSP data (from Final_data.csv — VERIFIED):**
 - Source: dataful.in/datasets/18514 (Ministry of Health and Family Welfare via IDSP)
 - Rows: 8,985 (your downloaded subset, 2009–2022)
 - Full dataset: 35,538 rows (2009–2026, updated September 16, 2026)
@@ -74,7 +74,7 @@ After a deep analysis of my GitHub repository (`RizzyCoder19/Field-Project`) and
 - Seasonal Influenza (H1N1) state-wise table — **VERIFIED in your repo** (d223cdfb file)
 - Disease-specific annual reports
 
-**From your d223cdfb PDF (NCDC official, dated 31.10.2025, As on 30.09.2025):**
+**From my d223cdfb PDF (NCDC official, dated 31.10.2025, As on 30.09.2025):**
 Maharashtra H1N1 data confirmed: 2287 cases (2019), 121 (2020), 387 (2021), 3714 (2022), 1231 (2023), 2072 (2024), 392 (2025 partial)
 
 ### 2.3 NCVBDC — National Centre for Vector Borne Diseases Control
