@@ -113,7 +113,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
       {/* Skip button */}
       <button
         onClick={() => setSkip(true)}
-        className="fixed bottom-6 right-6 z-[10000] text-[10px] font-mono uppercase tracking-[0.2em] text-[#EEE8DA]/30 hover:text-[#EEE8DA]/70 transition-colors px-3 py-1.5 border border-[#EEE8DA]/10 hover:border-[#EEE8DA]/30 rounded"
+        className="fixed bottom-6 right-6 z-[10000] text-[10px] font-mono uppercase tracking-[0.2em] text-[#EEE8DA]/30 hover:text-[#EEE8DA]/70 transition-colors px-3 py-1.5 border border-[#EEE8DA]/10"
       >
         Skip Intro
       </button>
@@ -145,7 +145,9 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
                 letterSpacing: "0.25em",
                 transform: `rotate(${rot}deg)`
               }}
-            >{t}</span>
+            >
+              {t}
+            </span>
           );
         })}
       </div>
@@ -166,8 +168,10 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
             <table className="w-full text-[11px] font-mono">
               <thead>
                 <tr className="border-b border-[#111411]/15 bg-[#EEE8DA]/80">
-                  {["YEAR", "WEEK", "DISTRICT", "DISEASE", "CASES", "DEATHS"].map(h => (
-                    <th key={h} className="px-3 py-2 text-left font-bold tracking-widest text-[8px] uppercase text-[#111411]/60">{h}</th>
+                  {["YEAR", "WEEK", "DISTRICT", "DISEASE", "CASES", "DEATHS"].map((h) => (
+                    <th key={h} className="px-3 py-2 text-left font-bold tracking-widest text-[8px] uppercase text-[#111411]/60">
+                      {h}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -258,7 +262,9 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
             key={i}
             className="raw-label font-mono px-3 py-1.5 border border-[#EEE8DA]/15 text-[#EEE8DA]/70 text-sm rounded-sm"
             style={{ opacity: 0, transform: "translateY(10px)" }}
-          >{l}</span>
+          >
+            {l}
+          </span>
         ))}
       </div>
 
@@ -271,9 +277,9 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
         <div className="flex flex-col items-center gap-4">
           {[
             { n: "116", l: "Raw Strings" },
-            { n: "56",  l: "Clean Labels" },
-            { n: "30",  l: "Derived Families" },
-            { n: "5",   l: "Primary Cohorts", gold: true },
+            { n: "56", l: "Clean Labels" },
+            { n: "30", l: "Derived Families" },
+            { n: "5", l: "Primary Cohorts", gold: true },
           ].map(({ n, l, gold }, i) => (
             <div
               key={i}
@@ -310,13 +316,30 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
 
         <div
           ref={finalRef}
-          className="mt-14 flex flex-col items-center gap-2"
+          className="mt-16 flex flex-col items-center gap-4"
           style={{ opacity: 0 }}
         >
-          <div className="final-line font-serif text-2xl text-[#EEE8DA] font-bold" style={{ opacity: 0, transform: "translateY(10px)" }}>Khan Umar</div>
-          <div className="final-line font-mono text-[9px] tracking-[0.22em] text-[#B5B0A4] uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>B.Sc. Data Science · Semester III</div>
-          <div className="final-line font-mono text-[9px] tracking-[0.2em] text-[#B5B0A4] uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>RP Institute · University of Mumbai</div>
-          <div className="final-line font-mono text-[9px] tracking-[0.2em] text-[#B5B0A4]/60 uppercase mt-1" style={{ opacity: 0, transform: "translateY(8px)" }}>Project Guide: Prof.Angelin</div>
+          <div className="final-line w-24 h-px bg-gradient-to-r from-transparent via-[#C7A75B] to-transparent mb-2" style={{ opacity: 0, transform: "translateY(10px)" }} />
+
+          <div className="final-line font-serif text-[clamp(2.5rem,7vw,4rem)] text-[#C7A75B] font-bold tracking-[0.08em] leading-tight drop-shadow-[0_0_18px_rgba(199,167,91,0.28)]" style={{ opacity: 0, transform: "translateY(10px)" }}>
+            Khan Umar
+          </div>
+
+          <div className="final-line font-serif text-[14px] text-[#EEE8DA] font-semibold tracking-[0.08em]" style={{ opacity: 0, transform: "translateY(8px)" }}>
+            B.Sc. Data Science · Semester III
+          </div>
+
+          <div className="final-line font-mono text-[10px] tracking-[0.2em] text-[#C7A75B]/80 uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>
+            RP Institute
+          </div>
+          <div className="final-line font-mono text-[9px] tracking-[0.15em] text-[#B5B0A4]/70" style={{ opacity: 0, transform: "translateY(8px)" }}>
+            University of Mumbai
+          </div>
+
+          <div className="final-line w-32 h-px bg-[#B5B0A4]/20 my-3" style={{ opacity: 0, transform: "translateY(8px)" }} />
+          <div className="final-line font-mono text-[8px] tracking-[0.15em] text-[#B5B0A4]/60 uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>
+            Project Guide: Prof. Angelin
+          </div>
         </div>
       </div>
     </div>
