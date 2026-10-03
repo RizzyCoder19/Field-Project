@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Field Project Website
 
-## Getting Started
+This is the public-facing presentation layer for the Maharashtra seasonal disease project.
 
-First, run the development server:
+## Live site
+https://fieldprojects.vercel.app
 
+## Purpose
+The website transforms the research findings into an interactive, accessible experience for:
+- disease pattern exploration
+- methodology explanation
+- evidence transparency
+- seasonal comparison and visual storytelling
+
+## Stack
+- Next.js
+- TypeScript
+- React
+- D3.js
+- Tailwind CSS
+- Vercel
+
+## Run locally
 ```bash
+cd website
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open:
+```text
+http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project context
+This website is connected to the main project repository and represents the presentation layer of the broader analysis pipeline in:
+- `data_pipeline/`
+- `field_work/`
+- `NCDC weekly outbreaks/`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Repository
+https://github.com/RizzyCoder19/Field-Project

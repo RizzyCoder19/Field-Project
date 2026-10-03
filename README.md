@@ -2,443 +2,291 @@
 
 <div align="center">
 
-![Academic Research](https://img.shields.io/badge/Research-Academic%20Project-0B6E4F?style=for-the-badge&logo=github-academic)
-![Live Website](https://img.shields.io/badge/Website-Live%20Now-FF6B35?style=for-the-badge&logo=vercel)
-![Data Science](https://img.shields.io/badge/Field-Data%20Science%20%26%20Public%20Health-6C63FF?style=for-the-badge&logo=python)
-![Dataset](https://img.shields.io/badge/Dataset-Government%20Sourced-FF6B9D?style=for-the-badge&logo=database)
-![Status](https://img.shields.io/badge/Status-Complete%20%26%20Audited-27AE60?style=for-the-badge&logo=checkmark)
-
----
-
-### 📊 **Analyzing Seasonal Disease Patterns Using Official Government Surveillance Data**
-
-A comprehensive research project examining how seasonal weather patterns influence disease outbreaks across Maharashtra, India. This repository contains the complete research pipeline, validated datasets, field-work documentation, and an interactive web showcase.
-
-[🔗 **Explore the Live Website**](https://fieldprojects.vercel.app) • [📄 **View Final Report**](https://github.com/RizzyCoder19/Field-Project/blob/master/Data_Source_Audit_Report.md) • [📁 **Browse Repository**](https://github.com/RizzyCoder19/Field-Project/)  • [🧬 **Explore the Raw Data**](https://github.com/RizzyCoder19/Field-Project/tree/master/NCDC%20weekly%20outbreaks)
+![Research](https://img.shields.io/badge/Research-Field%20Project-0B6E4F?style=for-the-badge)
+![Study%20Period](https://img.shields.io/badge/Study%20Period-2022--2026-6C63FF?style=for-the-badge)
+![Website](https://img.shields.io/badge/Website-Live-FF6B35?style=for-the-badge)
+![Data%20Source](https://img.shields.io/badge/Data-Government%20Surveillance-FF6B9D?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Complete-27AE60?style=for-the-badge)
 
 </div>
 
+## 📊 What This Project Is
+
+A research study analyzing seasonal patterns in disease outbreaks across Maharashtra, India using official government surveillance data from the National Centre for Disease Control (NCDC) and the Integrated Disease Surveillance Programme (IDSP).
+
+The project examines outbreak records spanning **2022–2026**, studying five disease families to understand how seasonal weather patterns influence disease occurrence. This is not a population-wide incidence study, but rather an analysis of government-reported outbreak clusters and their temporal patterns.
+
+**Live Website:** https://fieldprojects.vercel.app
+
 ---
 
-## 🎯 Project Overview
+## 🎯 Research Focus
 
-**What this project is:**
-A data science research study that uses officially published government outbreak surveillance reports to understand and quantify seasonal disease patterns in Maharashtra, India.
+### Five Disease Families Analyzed
+- **Dengue** — vector-borne, post-monsoon peak
+- **Acute Diarrheal Disease (ADD)** — water-borne, monsoon onset peak
+- **Malaria** — vector-borne, early monsoon peak
+- **Food Poisoning** — foodborne, year-round variable pattern
+- **Chikungunya** — vector-borne, post-monsoon delayed peak
 
-**Research Focus:**
-- 🦟 **Dengue** | 💧 **Acute Diarrheal Disease** | 🩺 **Malaria** | 🍲 **Food Poisoning** | 🦗 **Chikungunya**
+### Study Geography
+Maharashtra state, India (all districts, 2022–2026)
 
-**Study Period:** 2022–2026 (IDSP outbreak surveillance data)
+### Data Source
+Official NCDC/IDSP weekly outbreak surveillance reports — government-notified disease clusters meeting epidemic threshold criteria
 
-**Primary Data Source:** National Centre for Disease Control (NCDC) / Integrated Disease Surveillance Programme (IDSP)
+### Academic Context
+B.Sc. Data Science Field Project, Semester III | RP Institute, University of Mumbai | Candidate: Khan Umar
 
-**Academic Program:** B.Sc. Data Science, Semester III | RP Institute, University of Mumbai
+---
 
-**Candidate:** Khan Umar
+## 🏗️ Repository Architecture
+
+The repository is organized as a complete research pipeline with four major components:
+
+### 1. **Source Archive** — `NCDC weekly outbreaks/`
+Official weekly outbreak PDFs published by NCDC for 2022–2026, organized by year. These are the primary source documents that anchor all downstream analysis.
+
+[📂 Browse source archive](NCDC%20weekly%20outbreaks/)
+
+### 2. **Data Pipeline** — `data_pipeline/`
+The complete analytical workflow from raw extraction through interpretation:
+
+- **`acquisition/`** — 2022 gap recovery and forensic verification
+- **`master/`** — Raw extracted dataset (`NCDC_Maharashtra_MASTER_RAW.csv`, 809 records)
+- **`analysis/`** — Clean validated dataset (`NCDC_Maharashtra_CLEAN_ANALYTICAL.csv`) with data quality reports
+- **`validation/`** — Row-level validation records (100% audit trail)
+- **`phase5A_disease_audit/`** — Disease label normalization and family selection
+- **`phase5B_seasonal_analysis/`** — Monthly distributions, seasonal indices, weekly curves
+- **`phase5C_advanced_analysis/`** — Concentration metrics, peak windows, statistical tests (Kendall's W, Kruskal-Wallis)
+- **`phase5D_interpretation_validation/`** — Evidence synthesis, strength tiers (A/B/C/D), limitations, conclusions
+- **`REPOSITORY_MANIFEST.md`** — Complete architecture map and asset guide
+
+[📊 Explore data pipeline](data_pipeline/)
+
+### 3. **Field Work Archive** — `field_work/`
+Structured research methodology documentation including:
+- Questionnaires (full and short versions)
+- Interview guidance and observation checklists
+- Methodology framework and ethics documentation
+- Response templates and evidence register
+- Interactive local archive (run with `node server.mjs`)
+
+[🧪 Explore field work](field_work/)
+
+### 4. **Website** — `website/`
+Public-facing Next.js application presenting the research findings interactively:
+- Disease-specific profiles with seasonal visualizations
+- Research methodology and evidence transparency
+- Field work documentation and ethics framework
+- Interactive seasonal analysis explorer
+
+[🌐 Visit live website](https://fieldprojects.vercel.app) | [📄 Website README](website/README.md)
+
+---
+
+## 📈 Key Findings at a Glance
+
+Based on analysis of **809 verified outbreak records** (2022–2026):
+
+| Disease | Peak Month(s) | Season Pattern | Evidence |
+|---------|--------------|-----------------|----------|
+| **Dengue** | August–October | Post-monsoon clustering | Strong seasonal signal (19.8% September) |
+| **Malaria** | July | Early monsoon onset | Rapid ramp (21.5% July) |
+| **Chikungunya** | October | Delayed post-monsoon | Distinct late-season peak (24.8% October) |
+| **Acute Diarrhea** | June | Monsoon arrival | Early monsoon correlation (22.4% June) |
+| **Food Poisoning** | Year-round | Low seasonality | Dispersed, variable pattern |
+
+For detailed findings, analysis outputs, and statistical evidence, see [`data_pipeline/phase5B_seasonal_analysis/`](data_pipeline/phase5B_seasonal_analysis/) through [`data_pipeline/phase5D_interpretation_validation/`](data_pipeline/phase5D_interpretation_validation/).
+
+---
+
+## 📚 Core Documentation
+
+| Document | Purpose | Location |
+|----------|---------|----------|
+| **Data Source Audit** | Complete provenance and data ecosystem documentation | [`Data_Source_Audit_Report.md`](Data_Source_Audit_Report.md) |
+| **Repository Manifest** | Architecture map, phase descriptions, asset inventory | [`data_pipeline/REPOSITORY_MANIFEST.md`](data_pipeline/REPOSITORY_MANIFEST.md) |
+| **Final Report** | Academic project deliverable with findings and interpretation | [`Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf`](Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf) |
+| **Field Work Report** | Field research methodology and findings ("From Data to the Ground") | [`From Data to the Ground _ Seasonal Disease Patterns in Maharashtra.pdf`](From%20Data%20to%20the%20Ground%20_%20Seasonal%20Disease%20Patterns%20in%20Maharashtra.pdf) |
+
+---
+
+## 🔬 Methodology Overview
+
+### Research Pipeline (5 Phases)
+
+**Phases 1–4 (Rebuild & Validation)**
+Extracted 809 outbreak records from official NCDC PDFs with 100% validation against source documents. Established master dataset with complete provenance tracing and schema documentation.
+
+**Phase 5A — Disease Audit**
+Standardized 49 raw disease labels into 30 families. Selected 5 primary disease families for analysis based on data availability and public health relevance.
+
+**Phase 5B — Seasonal Analysis**
+Generated monthly case distributions, seasonal indices, and 52-week outbreak curves for each disease. Computed year-over-year patterns and identified peak outbreak windows.
+
+**Phase 5C — Advanced Analysis**
+Applied rigorous statistical methods:
+- Concentration metrics (Coefficient of Variation, Gini index, Shannon entropy)
+- Peak window modeling (3-month outbreak windows)
+- Kendall's W concordance testing for inter-annual stability
+- Formal hypothesis testing (Kruskal-Wallis, permutation tests) with Bonferroni correction
+
+**Phase 5D — Interpretation & Validation**
+Synthesized findings into evidence strength tiers (A = Strong, B = Moderate, C = Variable, D = Insufficient). Documented 11 structural limitations. Identified 9 unsupported claims explicitly.
+
+### What This Analysis Is and Is Not
+
+**✓ What it analyzes:**
+- Government-notified outbreak surveillance records
+- Seasonal clustering patterns in reported disease events
+- Temporal dynamics and inter-annual trends
+- Comparative epidemiology across disease families
+
+**✗ What it does not estimate:**
+- Population-wide incidence rates (no denominator data)
+- Individual patient-level analysis
+- Disease prevalence in the community
+- Predictive forecasting models
+
+For detailed limitations discussion, see [`data_pipeline/phase5D_interpretation_validation/06_LIMITATIONS_SYNTHESIS.md`](data_pipeline/phase5D_interpretation_validation/06_LIMITATIONS_SYNTHESIS.md).
 
 ---
 
 ## 🚀 Quick Start
 
-### 🌐 Live Website
+### Explore the Website
+Visit https://fieldprojects.vercel.app for interactive visualization of seasonal patterns and research methodology.
 
-Visit the interactive web project now:
-
-```
-https://fieldprojects.vercel.app
-```
-
-The website includes:
-- Interactive seasonal disease visualizations
-- Disease-by-disease analysis
-- Field research documentation
-- Methodology explanation
-- Evidence transparency
-
-### 📥 Run Locally
-
-**Website (Next.js):**
+### Run the Website Locally
 ```bash
 cd website
 npm install
 npm run dev
-# Open http://localhost:3000
 ```
+Opens at http://localhost:3000
 
-**Field-Work Archive (Node.js):**
+### Run the Field Archive Locally
 ```bash
 cd field_work
 node server.mjs
-# Open http://127.0.0.1:8000
 ```
+Opens at http://127.0.0.1:8000
+
+Interactive archive with research methodology, questionnaires, interview guides, and fieldwork documentation.
 
 ---
 
-## 📊 Core Datasets
+## 📊 Dataset Access
 
-### Primary Research Dataset
-- **File:** `data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv`
-- **Rows:** 809 verified outbreak records
-- **Time Period:** 2009–2026
-- **Diseases:** 5 primary families (Dengue, Malaria, Chikungunya, ADD, Food Poisoning)
-- **Geography:** Maharashtra state, all districts
-- **Data Quality:** 100% row-level validation audited
+### Primary Analytical Dataset
+- **File:** [`data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv`](data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv)
+- **Records:** 809 verified outbreak records
+- **Period:** 2022–2026 (NCDC weekly reports)
+- **Diseases:** 5 primary families + supporting data
+- **Quality:** 100% row-level validation audited
 
 ### Master Raw Dataset
-- **File:** `data_pipeline/master/NCDC_Maharashtra_MASTER_RAW.csv`
-- **Purpose:** Complete extraction with full provenance trail
-- **Status:** Forensically verified against original PDFs
+- **File:** [`data_pipeline/master/NCDC_Maharashtra_MASTER_RAW.csv`](data_pipeline/master/NCDC_Maharashtra_MASTER_RAW.csv)
+- **Purpose:** Complete extraction with full provenance trail against source PDFs
 
-### Supporting Validation Files
-- `data_pipeline/validation/FINAL_ROW_LEVEL_VALIDATION.csv` — 809-row audit trail
-- `data_pipeline/master/WEEK_STATUS_REGISTER.csv` — epidemiological week tracking
-- `data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md` — technical schema
-
----
-
-## 🔬 Research Methodology
-
-### Analytical Pipeline (5 Phases)
-
-**Phase 5A — Disease Audit**
-- Standardized 49 raw disease labels into 30 families
-- Selected 5 primary disease families for analysis
-- 2026 reporting bias assessment
-
-**Phase 5B — Seasonal Analysis**
-- Monthly case distribution analysis
-- Seasonal indices and peak identification
-- 52-week outbreak curves per disease
-- Year-over-year trend analysis
-
-**Phase 5C — Advanced Statistical Analysis**
-- Concentration metrics (CV, Gini, Shannon Entropy)
-- Peak window modeling
-- Kendall's τ concordance testing
-- Outlier sensitivity analysis
-- Formal hypothesis testing (Kruskal-Wallis, permutation tests)
-
-**Phase 5D — Interpretation & Validation**
-- Evidence strength tiers (A/B/C/D)
-- Structural limitations synthesis
-- 9 unsupported claims identification
-- Viva defense framework
-
-**Phase 5E — Presentation Synthesis**
-- Slide content and visualization register
-- Speaker notes and presentation strategy
-- Public-facing narrative development
-
-### Key Outputs
-
-All phase outputs are stored in `data_pipeline/`:
-
-```text
-data_pipeline/
-├── phase5A_disease_audit/
-│   └── 07_PHASE5A_SELECTION_REPORT.md
-├── phase5B_seasonal_analysis/
-│   ├── 01_MONTHLY_DISTRIBUTION.csv
-│   ├── 02_SEASONAL_INDICES.csv
-│   ├── 03_WEEKLY_DISTRIBUTION.csv
-│   └── 06_PHASE5B_ANALYSIS_REPORT.md
-├── phase5C_advanced_analysis/
-│   ├── 01_SEASONAL_CONCENTRATION.csv
-│   ├── 02_PEAK_WINDOWS.csv
-│   ├── 03_SEASONAL_STABILITY.csv
-│   ├── 09_STATISTICAL_ANALYSIS.csv
-│   └── 10_PHASE5C_ANALYSIS_REPORT.md
-└── phase5D_interpretation_validation/
-    ├── 02_EVIDENCE_STRENGTH_MATRIX.csv
-    ├── 09_FINAL_ANALYTICAL_CONCLUSIONS.md
-    ├── 10_UNSUPPORTED_CLAIMS.md
-    └── 12_PHASE5D_ANALYSIS_REPORT.md
-```
+### Schema & Documentation
+- **Schema:** [`data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md`](data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md)
+- **Validation Report:** [`data_pipeline/validation/FINAL_ROW_LEVEL_VALIDATION_REPORT.md`](data_pipeline/validation/FINAL_ROW_LEVEL_VALIDATION_REPORT.md)
+- **Data Quality:** [`data_pipeline/analysis/CLEAN_DATASET_DATA_QUALITY_REPORT.md`](data_pipeline/analysis/CLEAN_DATASET_DATA_QUALITY_REPORT.md)
 
 ---
 
-## 📁 Repository Structure
+## 🧪 Field Research Component
 
-```text
-Field-Project/
-├── 📄 README.md                                    ← You are here
-├── 📊 Data_Source_Audit_Report.md                 ← Data provenance & authority documentation
-├── 📋 Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf
-├── 📋 From Data to the Ground _ Seasonal Disease Patterns in Maharashtra.pdf
-├── 🎞️ reference storyboard.png
-│
-├── 📂 NCDC weekly outbreaks/                       ← PRIMARY SOURCE ARCHIVE
-│   ├── 2022/ through 2026/                        ← Official weekly PDF reports (2022–2026)
-│   ├── master_data_IDSP.txt                       ← Government data manifest
-│   ├── Research papers (Dengue Gondia, Seasonality India, etc.)
-│   └── Supporting reference documents
-│
-├── 📂 data_pipeline/                              ← ANALYTICAL WORKFLOW (CORE)
-│   ├── acquisition/                               ← 2022 gap recovery logs
-│   ├── analysis/
-│   │   ├── NCDC_Maharashtra_CLEAN_ANALYTICAL.csv  ← PRIMARY ANALYTICAL DATASET
-│   │   ├── CLEAN_DATASET_DATA_QUALITY_REPORT.md
-│   │   └── CLEAN_DATASET_VALIDATION.md
-│   ├── master/
-│   │   ├── NCDC_Maharashtra_MASTER_RAW.csv        ← Raw extraction
-│   │   ├── NCDC_Maharashtra_MASTER_schema.md
-│   │   ├── EXTRACTION_VALIDATION_REPORT.md
-│   │   └── WEEK_STATUS_REGISTER.csv
-│   ├── validation/
-│   │   ├── FINAL_ROW_LEVEL_VALIDATION.csv
-│   │   └── FINAL_ROW_LEVEL_VALIDATION_REPORT.md
-│   ├── phase5A_disease_audit/                     ← Disease label audit
-│   ├── phase5B_seasonal_analysis/                 ← Monthly & seasonal curves
-│   ├── phase5C_advanced_analysis/                 ← Statistical modeling
-│   ├── phase5D_interpretation_validation/         ← Evidence synthesis
-│   ├── phase5E_presentation_synthesis/            ← Presentation layer
-│   ├── REPOSITORY_MANIFEST.md                     ← Architecture map
-│   ├── REPOSITORY_CLEANUP_REPORT.md
-│   └── verify_2022_forensic.js
-│
-├── 📂 field_work/                                 ← FIELD RESEARCH ARCHIVE
-│   ├── README.md
-│   ├── index.html                                 ← Standalone field archive
-│   ├── app.js
-│   ├── server.mjs
-│   ├── styles.css
-│   ├── 01_FIELD_WORK_QUESTIONNAIRE_FULL.md
-│   ├── 02_FIELD_WORK_QUESTIONNAIRE_SHORT.md
-│   ├── 03_FIELD_INTERVIEW_GUIDE.md
-│   ├── 04_FIELD_OBSERVATION_CHECKLIST.md
-│   ├── 05_FIELD_WORK_METHODOLOGY.md
-│   ├── 06_FIELD_RESPONSE_TEMPLATE.csv
-│   ├── 07_FIELD_EVIDENCE_REGISTER.csv
-│   ├── 08_REFERENCE_FIELD_MATERIAL.md
-│   ├── 09_FIELD_FINDINGS_FRAMEWORK.md
-│   ├── 10_FIELD_TO_DATA_LINKAGE.md
-│   ├── 11_FIELD_WORK_PRESENTATION_PLAN.md
-│   ├── 12_FIELD_WORK_WEBSITE_CONTENT_PLAN.md
-│   ├── 13_FIELD_ETHICS_AND_PRIVACY.md
-│   ├── 14_FIELD_WORK_LANGUAGE_GUIDE.md
-│   └── images/
-│
-├── 📂 website/                                    ← LIVE WEB APP (Next.js)
-│   ├── app/
-│   ├── src/components/
-│   ├── public/
-│   │   ├── charts/                                ← Generated visualization assets
-│   │   ├── data/maharashtra-districts.json
-│   │   └── fieldwork/
-│   ├── package.json
-│   ├── next.config.ts
-│   ├── tsconfig.json
-│   └── README.md
-│
-├── 📂 presentation/                               ← PRESENTATION ASSETS
-│   ├── build/                                     ← PowerPoint and slide exports
-│   ├── charts/                                    ← Chart generation scripts
-│   ├── components/
-│   ├── slides/                                    ← Individual slide definitions
-│   ├── data/
-│   └── build_presentation.js
-│
-├── 📂 raw dataset/                                ← ARCHIVAL (2009–2022 EpiClim)
-│   ├── Final_data.csv                             ← Historical exploratory dataset
-│   └── *.png                                      ← Early-stage visualizations
-│
-├── 📂 Professor's Instructions/                   ← ACADEMIC REQUIREMENTS
-│   └── *.jpg                                      ← Official project guidance scans
-│
-└── .gitignore
-```
+The project includes structured field methodology and research instruments:
+
+- **Questionnaires:** Full and short versions for structured data collection
+- **Interview Guide:** Structured questions for health worker interviews
+- **Observation Checklist:** Environmental and facility observation framework
+- **Methodology Document:** Detailed field research protocol
+- **Ethics & Privacy:** Comprehensive privacy and ethical guardrails
+
+The field work archive distinguishes between:
+- **Reference materials** — Published guidelines and standards
+- **Planned instruments** — Designed questionnaires and protocols
+- **Collected evidence** — Actual field-collected responses (documented separately in register)
+
+[📂 Browse field work materials](field_work/)
 
 ---
 
-## 📈 Key Findings Summary
-
-Based on analysis of **809 verified outbreak records** from 2022–2026:
-
-### Maharashtra Disease Seasonality
-
-| Disease | Peak Month(s) | Season | Key Pattern |
-|---------|--------------|--------|-------------|
-| **Dengue** | Aug–Oct | Post-monsoon | Peaks after rain | **19.8% Sept** |
-| **Malaria** | Jul | Early monsoon | Rapid onset | **21.5% Jul** |
-| **Chikungunya** | Oct | Post-monsoon | Delayed peak | **24.8% Oct** |
-| **Acute Diarrhea** | Jun | Monsoon onset | Early monsoon | **22.4% Jun** |
-| **Food Poisoning** | Year-round | Variable | Low seasonal signal |
-
-### Major Observations
-
-✅ **Clear seasonal clustering:** Vector-borne diseases show strong post-monsoon peaks
-✅ **Water-borne seasonality:** Diarrheal diseases peak during monsoon arrival
-✅ **District variation:** 34 districts have distinct seasonal patterns
-✅ **Temporal stability:** Seasonal patterns consistent across years (Kendall W analysis)
-✅ **2026 tracking:** Partial-year data follows expected seasonal trends
-
----
-
-## 🧪 Evidence & Transparency
-
-This project emphasizes methodological rigor and honest reporting of limitations.
-
-### What This Analysis Is:
-- ✅ Government-notified outbreak surveillance data analysis
-- ✅ Seasonal pattern identification using temporal aggregation
-- ✅ Comparative disease epidemiology
-- ✅ Evidence-based interpretation with strength tiers
-
-### What This Analysis Is NOT:
-- ❌ Population incidence estimation (no denominator data)
-- ❌ Individual patient-level analysis
-- ❌ Predictive forecasting model
-- ❌ Private or health facility-specific data
+## 📋 Evidence & Transparency
 
 ### Data Quality Assurance
-- 100% row-level validation against source PDFs
-- Disease label normalization through systematic audit
-- Meteorological data cross-validation
-- 2026 partial-year bias assessment
-- Outlier sensitivity testing
+✓ 100% row-level validation against source PDFs  
+✓ Disease label normalization through systematic audit  
+✓ Meteorological data cross-validation  
+✓ 2026 partial-year bias assessment  
+✓ Outlier sensitivity testing  
 
 ### Documented Limitations
-See `data_pipeline/phase5D_interpretation_validation/06_LIMITATIONS_SYNTHESIS.md` for full discussion:
+This project is transparent about structural constraints:
 - Outbreak reporting varies by year and state
-- Disease classification standardization required
+- Disease classification standardization required through audit
 - 2020–2021 COVID-19 surveillance disruption
-- Seasonal peaks may reflect reporting cycles, not epidemiological reality
+- Seasonal patterns may reflect reporting cycles, not epidemiological reality alone
+- Small case counts for some diseases in specific months
+
+Full limitations discussion: [`data_pipeline/phase5D_interpretation_validation/06_LIMITATIONS_SYNTHESIS.md`](data_pipeline/phase5D_interpretation_validation/06_LIMITATIONS_SYNTHESIS.md)
+
+### Unsupported Claims Framework
+The project explicitly documents 9 claims that are **not** supported by the surveillance data, establishing clear epistemological boundaries.
+
+See [`data_pipeline/phase5D_interpretation_validation/10_UNSUPPORTED_CLAIMS.md`](data_pipeline/phase5D_interpretation_validation/10_UNSUPPORTED_CLAIMS.md).
 
 ---
 
-## 🎓 Academic Rigor
+## 🛠️ Technology Stack
 
-### Primary Research Questions
-1. What seasonal patterns characterize 5 major disease families in Maharashtra (2009–2026)?
-2. Which months represent peak outbreak risk for each disease?
-3. How stable are seasonal patterns across years (inter-annual concordance)?
-4. How does Maharashtra compare with national disease seasonality?
-5. What is the relationship between rainfall and disease case clustering?
-
-### Statistical Methods
-- Monthly aggregation & seasonal indexing
-- Kendall's W concordance (multi-year stability)
-- Kruskal-Wallis hypothesis testing
-- Monte Carlo permutation tests
-- Coefficient of Variation (seasonality strength)
-- Gini concentration indices
-- Shannon entropy (distribution diversity)
-
-### Field Work Component
-- Environmental observation documentation
-- Structured questionnaire with field respondents
-- Health facility observation protocol
-- ASHA/ANM worker interviews
-- Ethics and privacy guardrails in place
+- **Data Analysis:** Python (pandas, numpy, scipy)
+- **Validation & Extraction:** JavaScript/Node.js
+- **Frontend:** Next.js, React, TypeScript
+- **Visualization:** D3.js, GSAP
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel (website), GitHub (repository)
 
 ---
 
-## 📚 Research Deliverables
-
-| Deliverable | File | Type | Status |
-|---|---|---|---|
-| **Final Report** | `Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf` | PDF | ✅ Complete |
-| **Field Work Report** | `From Data to the Ground...pdf` | PDF | ✅ Complete |
-| **Data Audit Report** | `Data_Source_Audit_Report.md` | Markdown | ✅ Complete |
-| **Repository Manifest** | `data_pipeline/REPOSITORY_MANIFEST.md` | Markdown | ✅ Complete |
-| **Phase 5A Report** | `data_pipeline/phase5A_disease_audit/07_PHASE5A_SELECTION_REPORT.md` | Markdown | ✅ Complete |
-| **Phase 5B Report** | `data_pipeline/phase5B_seasonal_analysis/06_PHASE5B_ANALYSIS_REPORT.md` | Markdown | ✅ Complete |
-| **Phase 5C Report** | `data_pipeline/phase5C_advanced_analysis/10_PHASE5C_ANALYSIS_REPORT.md` | Markdown | ✅ Complete |
-| **Phase 5D Report** | `data_pipeline/phase5D_interpretation_validation/12_PHASE5D_ANALYSIS_REPORT.md` | Markdown | ✅ Complete |
-| **Analytical Dataset** | `data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv` | CSV | ✅ Validated |
-| **Live Website** | https://fieldprojects.vercel.app | Interactive | ✅ Deployed |
-
----
-
-## 🔍 How to Use This Repository
+## 🔍 How to Navigate This Repository
 
 ### For Academic Review
-1. Start with `README.md` (this file) for project overview
-2. Read `Data_Source_Audit_Report.md` for data provenance and methodology
-3. Review `data_pipeline/REPOSITORY_MANIFEST.md` for architecture
-4. Examine the Phase 5 analysis reports in sequence (A → B → C → D)
-5. Check `data_pipeline/analysis/` for validated datasets
-6. See field work in `field_work/README.md`
+1. Start here (README) for overview
+2. [`Data_Source_Audit_Report.md`](Data_Source_Audit_Report.md) — data provenance and authority
+3. [`data_pipeline/REPOSITORY_MANIFEST.md`](data_pipeline/REPOSITORY_MANIFEST.md) — architecture and scope
+4. Phase 5 analysis reports in sequence (A → B → C → D)
+5. [`data_pipeline/analysis/`](data_pipeline/analysis/) — validated datasets
 
 ### For Data Analysis
-1. Use `data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv` as primary dataset
-2. Reference the schema in `data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md`
-3. Consult validation logs in `data_pipeline/validation/`
-4. Review Phase 5B outputs for seasonal distributions
-5. Check Phase 5C for statistical test results
+1. [`data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv`](data_pipeline/analysis/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv) — primary dataset
+2. [`data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md`](data_pipeline/master/NCDC_Maharashtra_MASTER_schema.md) — column definitions
+3. [`data_pipeline/validation/`](data_pipeline/validation/) — audit trail
+4. [`data_pipeline/phase5B_seasonal_analysis/`](data_pipeline/phase5B_seasonal_analysis/) — seasonal distributions
+5. [`data_pipeline/phase5C_advanced_analysis/`](data_pipeline/phase5C_advanced_analysis/) — statistical outputs
 
 ### For Public Engagement
-1. Visit https://fieldprojects.vercel.app for interactive exploration
-2. Read disease-specific summaries on the website
-3. Explore field methodology via `field_work/README.md`
-4. Check the presentation materials in `presentation/`
+1. Visit https://fieldprojects.vercel.app
+2. Explore disease-specific summaries
+3. Read field methodology in [`field_work/README.md`](field_work/README.md)
+4. Check presentation materials in [`presentation/`](presentation/)
 
 ### For Reproducibility
-1. Clone this repository
-2. Review `data_pipeline/master/build_master_dataset.js` for extraction logic
-3. Check Phase 5 scripts in `data_pipeline/phase5*/` folders
-4. Run validation scripts to verify data integrity
-5. Generate your own seasonal indices using provided CSV files
+1. Clone repository
+2. Review extraction logic in [`data_pipeline/master/`](data_pipeline/master/)
+3. Check validation scripts in [`data_pipeline/validation/`](data_pipeline/validation/)
+4. Use Phase 5 analysis code as reference
+5. Regenerate outputs from clean dataset (CSV provided)
 
 ---
 
-## 🌐 Website Features
+## 📜 Citation
 
-The live website at **https://fieldprojects.vercel.app** includes:
-
-### 📊 Data Exploration
-- Interactive seasonal disease charts
-- Monthly outbreak distribution views
-- Disease-specific profile pages
-- District-level analysis maps
-
-### 🔬 Research Documentation
-- Methodology explanation
-- Data source audit details
-- Field work framework
-- Evidence strength matrix
-
-### 🎓 Academic Resources
-- Research questions and objectives
-- Statistical analysis summaries
-- References and citations
-- Limitations and caveats
-
-### 🧭 Navigation
-- Home / project overview
-- Research question & scope
-- Data lineage stages
-- Five disease profiles
-- Field work documentation
-- Evidence transparency
-- Methodology & ethics
-- References & about
-
----
-
-## 🛠️ Tech Stack
-
-### Data Analysis & Pipeline
-- **Python** — pandas, numpy, scipy for data processing and statistics
-- **JavaScript/Node.js** — data extraction and validation scripts
-- **CSV/JSON** — structured data formats
-
-### Web Application
-- **Next.js 16+** — React framework for production deployment
-- **TypeScript** — type-safe component development
-- **Tailwind CSS** — modern responsive styling
-- **D3.js** — data visualization and interactive charts
-- **GSAP** — animation library for cinematic effects
-
-### Deployment
-- **Vercel** — serverless hosting for the website
-- **GitHub** — version control and repository management
-
----
-
-## 📖 Citation & Attribution
-
-If you use this project or its data in your own work, please cite:
+If you use this project or its data, cite as:
 
 ```bibtex
 @article{Khan2026FieldProject,
@@ -447,8 +295,7 @@ If you use this project or its data in your own work, please cite:
   school = {RP Institute, University of Mumbai},
   year = {2026},
   type = {B.Sc. Data Science Field Project},
-  url = {https://github.com/RizzyCoder19/Field-Project},
-  note = {Integrated Disease Surveillance Programme (IDSP) outbreak analysis, Maharashtra 2009-2026}
+  url = {https://github.com/RizzyCoder19/Field-Project}
 }
 ```
 
@@ -457,53 +304,39 @@ Ministry of Health and Family Welfare, Government of India. Integrated Disease S
 
 ---
 
-## 📋 Project Requirements & Compliance
+## ✅ Project Compliance
 
 This project fulfills the following academic requirements:
 
-✅ **Research Question:** Seasonality of disease outbreaks in Maharashtra
-✅ **Data Source:** Official government surveillance records (IDSP/NCDC)
-✅ **Data Pipeline:** Complete from acquisition through validation to analysis
-✅ **Field Component:** Structured methodology with questionnaires and observation
-✅ **Analytical Rigor:** Statistical testing and evidence strength assessment
-✅ **Public Presentation:** Live website and final report
-✅ **Documentation:** Full transparency on methods, limitations, and findings
-✅ **Ethics:** Privacy-respecting methodology and data handling
+✓ **Research Question** — Seasonality of major disease families in Maharashtra  
+✓ **Data Source** — Official government surveillance records (IDSP/NCDC)  
+✓ **Data Pipeline** — Complete extraction, validation, analysis, interpretation  
+✓ **Field Component** — Structured methodology with questionnaires and observation  
+✓ **Statistical Rigor** — Hypothesis testing, concordance analysis, sensitivity testing  
+✓ **Public Presentation** — Live website and final report  
+✓ **Documentation** — Full transparency on methods, limitations, and findings  
+✓ **Ethics** — Privacy-respecting methodology and data handling  
 
 ---
 
-## 🤝 Contributing & Feedback
+## 📖 Key Project Files at a Glance
 
-This is an academic research repository. For inquiries, feedback, or corrections:
-
-- 📧 GitHub Issues: [Open an issue](https://github.com/RizzyCoder19/Field-Project/issues)
-- 🌐 Website Feedback: Use contact form at https://fieldprojects.vercel.app
-- 📄 Data Questions: See `Data_Source_Audit_Report.md`
-
----
-
-## 📜 License & Availability
-
-- **Source Data:** Public government data from NCDC/MOHFW (public domain)
-- **Analysis Code:** Available in this repository for academic and research use
-- **Website:** Open access at https://fieldprojects.vercel.app
-- **Repository:** Public GitHub repository for transparency and reproducibility
-
----
-
-## 🎯 Project Status
-
-| Component | Status | Last Updated |
-|-----------|--------|--------------|
-| Data Acquisition & Validation | ✅ Complete | Sep 2026 |
-| Phase 5A Disease Audit | ✅ Complete | Sep 2026 |
-| Phase 5B Seasonal Analysis | ✅ Complete | Sep 2026 |
-| Phase 5C Statistical Analysis | ✅ Complete | Sep 2026 |
-| Phase 5D Interpretation | ✅ Complete | Oct 2026 |
-| Phase 5E Presentation | ✅ Complete | Oct 2026 |
-| Field Work Documentation | ✅ Complete | Oct 2026 |
-| Website Deployment | ✅ Live | Oct 2026 |
-| Final Report | ✅ Complete | Oct 2026 |
+```
+README.md (you are here)
+├── 📄 Final academic report: Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf
+├── 📄 Field work report: From Data to the Ground...pdf
+├── 📄 Data audit: Data_Source_Audit_Report.md
+├── 📂 Source archive: NCDC weekly outbreaks/
+├── 📂 Analysis pipeline: data_pipeline/
+│   ├── master/ (raw extraction)
+│   ├── analysis/ (clean dataset)
+│   ├── phase5A/ through phase5D/ (analysis outputs)
+│   └── REPOSITORY_MANIFEST.md (detailed architecture)
+├── 📂 Field work: field_work/
+│   └── README.md (archive guide)
+└── 🌐 Website: website/
+    └── (deploy to https://fieldprojects.vercel.app)
+```
 
 ---
 
@@ -511,14 +344,13 @@ This is an academic research repository. For inquiries, feedback, or corrections
 
 ## 🔗 Quick Links
 
-[🌐 **Live Website**](https://fieldprojects.vercel.app) — [📊 **View Data**](data_pipeline/analysis/) — [📄 **Read Report**](Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf) — [🔍 **Data Audit**](Data_Source_Audit_Report.md) — [🧪 **Field Work**](field_work/)
+[🌐 Live Website](https://fieldprojects.vercel.app) — [📊 Data Pipeline](data_pipeline/) — [📄 Final Report](Seasonal_Disease_Patterns_Maharashtra_FINAL.pdf) — [🔍 Data Audit](Data_Source_Audit_Report.md) — [🧪 Field Work](field_work/) — [📂 Source Archive](NCDC%20weekly%20outbreaks/)
 
 ---
 
-### Made with 📊 Data Science | 🩺 Public Health | 🌍 Government Data
+**B.Sc. Data Science Field Project** | RP Institute, University of Mumbai | 2025–26
 
-**B.Sc. Data Science Field Project** • RP Institute, University of Mumbai • Academic Year 2025–26
-
-For more information, visit [fieldprojects.vercel.app](https://fieldprojects.vercel.app)
+For questions or details, explore the linked documentation or visit https://fieldprojects.vercel.app
 
 </div>
+
