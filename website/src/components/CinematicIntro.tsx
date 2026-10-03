@@ -316,7 +316,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
           <div className="final-line font-serif text-2xl text-[#EEE8DA] font-bold" style={{ opacity: 0, transform: "translateY(10px)" }}>Khan Umar</div>
           <div className="final-line font-mono text-[9px] tracking-[0.22em] text-[#B5B0A4] uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>B.Sc. Data Science · Semester III</div>
           <div className="final-line font-mono text-[9px] tracking-[0.2em] text-[#B5B0A4] uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>RP Institute · University of Mumbai</div>
-          <div className="final-line font-mono text-[9px] tracking-[0.2em] text-[#B5B0A4]/60 uppercase mt-1" style={{ opacity: 0, transform: "translateY(8px)" }}>Project Guide: [Confirm before submission]</div>
+          <div className="final-line font-mono text-[9px] tracking-[0.2em] text-[#B5B0A4]/60 uppercase mt-1" style={{ opacity: 0, transform: "translateY(8px)" }}>Project Guide: Prof.Angelin</div>
         </div>
       </div>
     </div>
