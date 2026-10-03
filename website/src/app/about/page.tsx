@@ -75,6 +75,10 @@ export default function AboutPage() {
                 <span className="font-bold text-[#171A18]">University of Mumbai</span>
               </div>
               <div className="flex justify-between py-1.5">
+                <span>Professor / Guide</span>
+                <span className="font-bold text-[#171A18]">Prof. Angelin</span>
+              </div>
+              <div className="flex justify-between py-1.5">
                 <span>Curriculum Course</span>
                 <span className="font-bold text-[#171A18]">Field Project (USDS306)</span>
               </div>
@@ -96,7 +100,7 @@ export default function AboutPage() {
             Project Statement & Research Scope
           </h4>
           <p className="text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            This field project bridges macroeconomic public health data science with ground-level community healthcare realities. By scrutinizing four complete baseline years of weekly epidemic notifications across Maharashtra and conducting structured fieldwork at an urban health post in Nallasopara West, this study investigates when and why seasonal disease surges occur and how local clinical workflows interact with state reporting systems.
+            This field project bridges macroeconomic public health data science with ground-level community healthcare realities. By scrutinizing four complete baseline years of weekly epidemic notifications, environmental observations, and publicly documented disease trajectories, it reconstructs how seasonal disease patterns emerge and why surveillance reporting often understates community burden.
           </p>
         </div>
 
