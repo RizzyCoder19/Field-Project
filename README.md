@@ -14,7 +14,7 @@
 
 A comprehensive research project examining how seasonal weather patterns influence disease outbreaks across Maharashtra, India. This repository contains the complete research pipeline, validated datasets, field-work documentation, and an interactive web showcase.
 
-[🔗 **Explore the Live Website**](https://fieldprojects.vercel.app) • [📄 **View Final Report**](#research-deliverables) • [📁 **Browse Repository**](#repository-structure) • [🧬 **See the Data**](#core-datasets)
+[🔗 **Explore the Live Website**](https://fieldprojects.vercel.app) • [📄 **View Final Report**](#research-deliverables) • [📁 **Browse Repository**](https://github.com/RizzyCoder19/Field-Project/)  • [🧬 **See the Data**](#core-datasets)
 
 </div>
 
@@ -28,7 +28,7 @@ A data science research study that uses officially published government outbreak
 **Research Focus:**
 - 🦟 **Dengue** | 💧 **Acute Diarrheal Disease** | 🩺 **Malaria** | 🍲 **Food Poisoning** | 🦗 **Chikungunya**
 
-**Study Period:** 2009–2026 (IDSP outbreak surveillance data)
+**Study Period:** 2022–2026 (IDSP outbreak surveillance data)
 
 **Primary Data Source:** National Centre for Disease Control (NCDC) / Integrated Disease Surveillance Programme (IDSP)
 
