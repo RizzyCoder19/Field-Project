@@ -3,7 +3,7 @@
 ### B.Sc. Data Science, Semester III | University of Mumbai | Academic Year 2025–26
 
 > **IMPORTANT:** This is a **pre-report audit document**, not the final project report.  
-> All data findings below are derived from files **actually present** in your repository.  
+> All data findings below are derived from files **actually present** in my repository.  
 > Nothing has been invented or assumed. Where data is absent or uncertain, it is explicitly marked.
 
 ---
