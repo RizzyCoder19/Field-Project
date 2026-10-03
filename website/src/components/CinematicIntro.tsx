@@ -46,58 +46,59 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
 
   useEffect(() => {
     if (skip) {
-      gsap.to(containerRef.current, { opacity: 0, duration: 0.4, onComplete });
+      gsap.to(containerRef.current, { opacity: 0, duration: 0.35, onComplete });
       return;
     }
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         onComplete: () => {
-          gsap.to(containerRef.current, { opacity: 0, duration: 1, delay: 0.4, onComplete });
+          gsap.to(containerRef.current, { opacity: 0, duration: 0.8, delay: 0.2, onComplete });
         }
       });
 
-      // SCENE 01: Darkness / Subtle archival gold line (0–4s)
-      tl.to(lineRef.current, { scaleX: 1, duration: 2.2, ease: "power2.inOut" }, 0.8)
-        .to(lineRef.current, { opacity: 0, duration: 0.8 }, 3.2);
+      // SCENE 01: Darkness / Subtle archival gold line (0–3.2s)
+      tl.to(lineRef.current, { scaleX: 1, duration: 1.8, ease: "power2.inOut" }, 0.6)
+        .to(lineRef.current, { opacity: 0, duration: 0.6 }, 2.8);
 
-      // SCENE 02: Government report fragments (4–8s)
-      tl.to(scene1Ref.current, { opacity: 1, duration: 1.0 }, 4.0)
-        .to(scene1Ref.current, { opacity: 0, duration: 0.8 }, 7.2);
+      // SCENE 02: Government report fragments (3.2–6.8s)
+      tl.to(scene1Ref.current, { opacity: 1, duration: 0.8 }, 3.2)
+        .to(scene1Ref.current, { opacity: 0, duration: 0.6 }, 6.1);
 
-      // SCENE 03 & 04: PDF table & Extraction (8–12s)
-      tl.to(scene2Ref.current, { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }, 8.0)
-        .to(".focus-row", { backgroundColor: "rgba(199,167,91,0.4)", duration: 0.8 }, 9.2)
-        .to(".focus-row", { x: 80, opacity: 0, duration: 1.0, ease: "power2.in" }, 10.6)
-        .to(scene2Ref.current, { opacity: 0, duration: 0.6 }, 11.6);
+      // SCENE 03 & 04: PDF table & Extraction (6.8–10.8s)
+      tl.to(scene2Ref.current, { opacity: 1, y: 0, duration: 0.9, ease: "power2.out" }, 6.8)
+        .to(".focus-row", { backgroundColor: "rgba(199,167,91,0.4)", duration: 0.7 }, 7.8)
+        .to(".focus-row", { x: 80, opacity: 0, duration: 0.8, ease: "power2.in" }, 8.9)
+        .to(scene2Ref.current, { opacity: 0, duration: 0.5 }, 10.0);
 
-      // SCENE 05: Structured Records (12–16s)
-      tl.to(scene3Ref.current, { opacity: 1, duration: 0.8 }, 12.0)
-        .to(scene3Ref.current, { opacity: 0, duration: 0.6 }, 15.4);
+      // SCENE 05: Structured Records (10.8–13.8s)
+      tl.to(scene3Ref.current, { opacity: 1, duration: 0.7 }, 10.8)
+        .to(scene3Ref.current, { opacity: 0, duration: 0.5 }, 13.2);
 
-      // SCENE 06: Taxonomy 116 → 56 → 30 → 5 (16–20s)
-      tl.to(scene6Ref.current, { opacity: 1, duration: 0.8 }, 16.0);
+      // SCENE 06: Taxonomy 116 → 56 → 30 → 5 (13.8–17.2s)
+      tl.to(scene6Ref.current, { opacity: 1, duration: 0.7 }, 13.8);
       tl.to(".cascade-step", {
-        opacity: 1, y: 0, stagger: 0.45, duration: 0.8, ease: "power2.out"
-      }, 16.4);
-      tl.to(scene6Ref.current, { opacity: 0, duration: 0.7 }, 19.5);
+        opacity: 1, y: 0, stagger: 0.35, duration: 0.7, ease: "power2.out"
+      }, 14.2);
+      tl.to(scene6Ref.current, { opacity: 0, duration: 0.6 }, 16.7);
 
-      // SCENE 07: Analytical Visual Field / Key Metrics (20–24s)
-      tl.to(scene4Ref.current, { opacity: 1, duration: 0.8 }, 20.0);
-      tl.to(".metric-in", { opacity: 1, y: 0, stagger: 0.35, duration: 0.8, ease: "power2.out" }, 20.4);
-      tl.to(scene4Ref.current, { opacity: 0, duration: 0.7 }, 23.5);
+      // SCENE 07: Analytical Visual Field / Key Metrics (17.2–20.6s)
+      tl.to(scene4Ref.current, { opacity: 1, duration: 0.7 }, 17.2);
+      tl.to(".metric-in", { opacity: 1, y: 0, stagger: 0.25, duration: 0.7, ease: "power2.out" }, 17.5);
+      tl.to(scene4Ref.current, { opacity: 0, duration: 0.6 }, 20.1);
 
-      // SCENE 08: Main Title (24–28s)
-      tl.to(titleRef.current, { opacity: 1, duration: 1.0 }, 24.0);
+      // SCENE 08: Main Title (20.6–24.0s)
+      tl.to(titleRef.current, { opacity: 1, duration: 0.8 }, 20.6);
       tl.to(".title-line", {
-        opacity: 1, y: 0, stagger: 0.45, duration: 0.9, ease: "power3.out"
-      }, 24.4);
+        opacity: 1, y: 0, stagger: 0.35, duration: 0.7, ease: "power3.out"
+      }, 20.9);
 
-      // SCENE 09: Candidate & Institution Metadata (28–30s)
-      tl.to(finalRef.current, { opacity: 1, duration: 0.8 }, 27.5);
+      // SCENE 09: Candidate & Institution Metadata (24.0–30.0s)
+      tl.to(finalRef.current, { opacity: 1, duration: 0.6 }, 24.0);
       tl.to(".final-line", {
-        opacity: 1, y: 0, stagger: 0.3, duration: 0.7, ease: "power2.out"
-      }, 27.8);
+        opacity: 1, y: 0, stagger: 0.24, duration: 0.5, ease: "power2.out"
+      }, 24.3);
+      tl.to({}, { duration: 1.0 }, "+=1.0");
     }, containerRef);
 
     return () => ctx.revert();
@@ -337,8 +338,9 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
           </div>
 
           <div className="final-line w-32 h-px bg-[#B5B0A4]/20 my-3" style={{ opacity: 0, transform: "translateY(8px)" }} />
-          <div className="final-line font-mono text-[8px] tracking-[0.15em] text-[#B5B0A4]/60 uppercase" style={{ opacity: 0, transform: "translateY(8px)" }}>
-            Project Guide: Prof. Angelin
+          <div className="final-line flex flex-col items-center gap-1" style={{ opacity: 0, transform: "translateY(8px)" }}>
+            <span className="font-mono text-[8px] tracking-[0.18em] text-[#B5B0A4]/70 uppercase">Project Guide</span>
+            <span className="font-serif text-[clamp(1.2rem,2.5vw,1.8rem)] text-[#C7A75B] font-bold tracking-[0.08em]">Prof. Angelin</span>
           </div>
         </div>
       </div>
