@@ -2,17 +2,38 @@
 
 @layer base {
   :root {
-    --color-charcoal: #171A18;
-    --color-ivory: #F1EBDD;
-    --color-petrol: #174A4A;
-    --color-olive: #AEBB55;
-    --color-terracotta: #C84B2F;
-    --color-gold: #B89B5E;
-    
-    --bg-base: #F1EBDD;
-    --text-primary: #171A18;
-    --text-muted: #565C58;
-    --border-color: #D8D1C5;
+    /* ─── ARCHIVAL EDITORIAL + DATA LABORATORY PALETTE ─── */
+    --ink: #111411;
+    --deep-navy: #111A2B;
+    --royal-petrol: #173F3A;
+    --paper-ivory: #EEE8DA;
+    --warm-white: #F8F5EC;
+    --antique-gold: #C7A75B;
+    --oxide: #A94F3D;
+    --sage: #89947C;
+    --fog: #B5B0A4;
+    --tech-blue: #4F91B8;
+
+    /* Semantic aliases */
+    --color-charcoal: #111411;
+    --color-ivory: #EEE8DA;
+    --color-petrol: #173F3A;
+    --color-gold: #C7A75B;
+    --color-oxide: #A94F3D;
+    --color-sage: #89947C;
+    --color-fog: #B5B0A4;
+    --color-blue: #4F91B8;
+
+    /* Disease colour tokens */
+    --dengue: #4F91B8;
+    --add: #89947C;
+    --malaria: #C7A75B;
+    --food-poisoning: #A94F3D;
+    --chikungunya: #7A8BA0;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
   }
 
   html {
@@ -21,50 +42,225 @@
   }
 
   body {
-    background-color: var(--color-charcoal);
-    color: var(--color-ivory);
+    background-color: #111411;
+    color: #EEE8DA;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, .font-serif {
-    font-family: var(--font-serif), Georgia, Cambria, serif;
-    letter-spacing: -0.015em;
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
   }
 
-  .font-mono {
-    font-family: var(--font-mono), monospace;
+  .font-serif {
+    font-family: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-mono, code, pre {
+    font-family: var(--font-mono), 'JetBrains Mono', monospace;
   }
 }
 
-/* Custom Minimal Presentation Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #111411; }
+::-webkit-scrollbar-thumb { background: #C7A75B; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #EEE8DA; }
 
-::-webkit-scrollbar-track {
-  background: #171A18;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #B89B5E;
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #AEBB55;
-}
-
-/* Subtle Film Grain Texture Overlay for Cinematic Aesthetic */
+/* ─── UTILITIES ─── */
 .editorial-grain {
-  background-image: radial-gradient(rgba(241, 235, 221, 0.03) 1px, transparent 0);
-  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(238,232,218,0.025) 1px, transparent 0);
+  background-size: 28px 28px;
 }
 
-/* Gold Accent Rule */
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #B89B5E, transparent);
+  background: linear-gradient(90deg, transparent, #C7A75B 40%, transparent);
+}
+
+.thin-rule {
+  height: 1px;
+  background: rgba(238, 232, 218, 0.12);
+}
+
+/* ─── CINEMATIC INTRO OVERLAY ─── */
+#cinematic-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  pointer-events: all;
+}
+
+#cinematic-intro.dismissed {
+  pointer-events: none;
+}
+
+/* ─── DOCUMENT FRAGMENT TEXTURE ─── */
+.doc-fragment {
+  background: #F8F5EC;
+  color: #111411;
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  line-height: 1.5;
+  border: 1px solid rgba(17,26,43,0.18);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* ─── SECTION LABEL STYLE ─── */
+.section-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.section-label-muted {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-fog);
+}
+
+/* ─── METRIC NUMBERS ─── */
+.metric-number {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #EEE8DA;
+}
+
+.metric-number-gold {
+  color: #C7A75B;
+}
+
+/* ─── DISEASE COLOUR CLASSES ─── */
+.disease-dengue   { color: var(--dengue); }
+.disease-add      { color: var(--add); }
+.disease-malaria  { color: var(--malaria); }
+.disease-fp       { color: var(--food-poisoning); }
+.disease-chik     { color: var(--chikungunya); }
+
+.bg-dengue   { background-color: var(--dengue); }
+.bg-add      { background-color: var(--add); }
+.bg-malaria  { background-color: var(--malaria); }
+.bg-fp       { background-color: var(--food-poisoning); }
+.bg-chik     { background-color: var(--chikungunya); }
+
+/* ─── CINEMATIC TEXT ANIMATIONS ─── */
+.cinematic-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ─── STICKY SCROLL SCENE ─── */
+.scroll-scene {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ─── MAP SVG ─── */
+.district-path {
+  transition: fill 0.25s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.district-path:hover {
+  opacity: 0.85;
+}
+
+/* ─── PDF TABLE ROW HIGHLIGHT ─── */
+@keyframes rowExtract {
+  0%  { background: transparent; }
+  30% { background: rgba(199,167,91,0.35); }
+  70% { background: rgba(199,167,91,0.35); }
+  100%{ background: rgba(199,167,91,0.1); transform: translateX(20px); opacity: 0; }
+}
+
+.extracting-row {
+  animation: rowExtract 1.8s ease forwards;
+}
+
+/* ─── CLUSTER NODE ANIMATION ─── */
+@keyframes clusterPulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%       { transform: scale(1.06); opacity: 1; }
+}
+
+.cluster-node {
+  animation: clusterPulse 2.8s ease-in-out infinite;
+}
+
+/* ─── OUTLIER FLASH ─── */
+@keyframes outlierAlert {
+  0%   { box-shadow: 0 0 0 0 rgba(169,79,61,0); }
+  40%  { box-shadow: 0 0 0 12px rgba(169,79,61,0.4); }
+  100% { box-shadow: 0 0 0 0 rgba(169,79,61,0); }
+}
+
+.outlier-pulse {
+  animation: outlierAlert 2s ease-out infinite;
+}
+
+/* ─── REDUCED MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ─── PRINT & PDF EXPORT STYLES ─── */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.2cm;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+    color: #111411 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print\\:hidden,
+  #cinematic-intro,
+  header,
+  nav,
+  button:not(.print-allow) {
+    display: none !important;
+  }
+
+  .print\\:break-after-page {
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  /* Prevent split inside analytical cards */
+  figure, table, .p-6, .border {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }

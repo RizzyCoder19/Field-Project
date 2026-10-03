@@ -279,12 +279,16 @@ export const OUTLIER_SENSITIVITY_DATA = {
 };
 
 export const FIELDWORK_STATUS = {
-  stage: "PLANNED FIELDWORK INSTRUMENTS",
-  isCompleted: false,
-  actualCollectedResponses: 0,
-  actualCollectedInterviews: 0,
-  actualCollectedObservations: 0,
-  disclaimer: "All fieldwork materials present on this portal represent structured instruments, interview guides, and observation protocols prepared for field deployment. No fabricated respondent answers or simulated field results are included."
+  stage: "COMPLETED — PRIMARY QUALITATIVE FIELD EVIDENCE",
+  isCompleted: true,
+  visitDate: "02 October 2026",
+  visitTime: "10:30 AM – 11:45 AM",
+  facility: "PHC Nallasopara West — VVMC Health Post",
+  location: "Nallasopara West, Palghar, Maharashtra",
+  actualCollectedResponses: 0,          // No community survey or patient-level data
+  actualCollectedInterviews: 1,         // One key-informant interview — Medical Officer In-Charge
+  actualCollectedObservations: 10,      // Structured timed environmental observations (10:30–12:00)
+  disclaimer: "One local government health-facility visit was completed on 2 October 2026. The visit included structured environmental observation and one key-informant interview with a Medical Officer In-Charge. No community-wide survey or patient-level dataset was collected. All interview responses are paraphrased from field notes. No verbatim quotes are presented. The field evidence represents one facility-level perspective and cannot establish statewide prevalence, causal relationships, or statistical validation of surveillance data."
 };
 
 export const EVIDENCE_CATEGORIES = [

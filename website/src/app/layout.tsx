@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#171A18] text-[#F1EBDD] selection:bg-[#B89B5E] selection:text-[#171A18]">
+      <body className="min-h-full flex flex-col bg-[#111411] text-[#EEE8DA] selection:bg-[#C7A75B] selection:text-[#111411]">
         <PresentationNav />
         <main className="flex-1 w-full">{children}</main>
       </body>
