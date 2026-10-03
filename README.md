@@ -14,7 +14,7 @@
 
 A comprehensive research project examining how seasonal weather patterns influence disease outbreaks across Maharashtra, India. This repository contains the complete research pipeline, validated datasets, field-work documentation, and an interactive web showcase.
 
-[🔗 **Explore the Live Website**](https://fieldprojects.vercel.app) • [📄 **View Final Report**](#research-deliverables) • [📁 **Browse Repository**](https://github.com/RizzyCoder19/Field-Project/)  • [🧬 **See the Data**](#core-datasets)
+[🔗 **Explore the Live Website**](https://fieldprojects.vercel.app) • [📄 **View Final Report**](#Data_Source_Audit_Report.md) • [📁 **Browse Repository**](https://github.com/RizzyCoder19/Field-Project/)  • [🧬 **See the Data**](#core-datasets)
 
 </div>
 
