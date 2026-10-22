@@ -44,3 +44,7 @@ $RECYCLE.BIN/
 *.log
 .env
 .env.local
+
+# Local report archive (outdated drafts and backups)
+report_archive/
+*.bak
