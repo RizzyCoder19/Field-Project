@@ -239,7 +239,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
           {[
             { n: "237", l: "SURVEILLANCE WEEKS" },
             { n: "809", l: "ANALYTICAL RECORDS" },
-            { n: "21,955", l: "REPORTED CASES" },
+            { n: "20,955", l: "REPORTED CASES" },
           ].map(({ n, l }, i) => (
             <div key={i} className="metric-in" style={{ opacity: 0, transform: "translateY(24px)" }}>
               <div className="font-serif text-[clamp(4rem,12vw,9rem)] font-bold text-[#EEE8DA] leading-none tracking-tight">{n}</div>

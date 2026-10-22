@@ -4,14 +4,14 @@
  * Candidate: Khan Umar | B.Sc. Data Science | RP Institute, University of Mumbai
  * 
  * STRICT DATA INTEGRITY RULES APPLIED:
- * Baseline (2022–2025): 539 records, 21,955 cases, 266 deaths
+ * Baseline (2022–2025): 539 records, 20,955 cases, 266 deaths
  * Primary Cohort:
  * - Dengue: 204 records, 3,144 cases, 93 deaths, 31 districts
  * - ADD: 153 records, 9,050 cases, 93 deaths, 33 districts
  * - Malaria: 70 records, 2,133 cases, 51 deaths, 15 districts
  * - Food Poisoning: 69 records, 5,927 cases, 29 deaths, 27 districts
  * - Chikungunya: 43 records, 701 cases, 0 deaths, 15 districts
- * 2026 W01–W32: 45 primary records, 1,118 cases, 0 deaths
+ * 2026 W01–W32: 45 primary records, 2,126 cases, 0 deaths
  * Coverage: 237 surveillance weeks, 203 outbreak weeks, 34 NIL weeks, 809 analytical records
  */
 
@@ -55,7 +55,7 @@ export const RESEARCH_METRICS = {
   nilWeeks: 34,
   analyticalRecords: 809,
   primaryCohortRecords: 539,
-  reportedCases: 21955,
+  reportedCases: 20955,
   reportedDeaths: 266,
   districtsCovered: 36,
   baselineYears: "2022–2025",
@@ -131,7 +131,7 @@ export const PRIMARY_DISEASES: Record<string, DiseaseProfile> = {
     districts: 31,
     peakMonths: "September – October (Peak: October with 40 events)",
     cr3: 0.505,
-    cr3Window: "August – October (50.5%)",
+    cr3Window: "Jun, Sep, Oct (50.5%)",
     kendallW: 0.405,
     kendallP: 0.086,
     isSignificant: false,
@@ -139,9 +139,9 @@ export const PRIMARY_DISEASES: Record<string, DiseaseProfile> = {
     accentColor: "#0284C7",
     monthlyEvents: [4, 2, 5, 12, 15, 27, 26, 20, 36, 40, 15, 2],
     monthlyCases: [71, 15, 112, 147, 199, 507, 497, 461, 392, 566, 157, 20],
-    summary: "Dengue exhibits strong late-monsoon and post-monsoon concentration, with 82.8% of all baseline events occurring between June and October. Peak event frequency occurs in October (40 events, 566 cases).",
+    summary: "Dengue exhibits strong late-monsoon and post-monsoon concentration, with 73.0% of all baseline events occurring between June and October. Peak event frequency occurs in October (40 events, 566 cases).",
     keyInsights: [
-      "Concentration window: August–October captures 50.5% of all events.",
+      "Concentration window: The three peak months (June, September, October) capture 50.5% of all events (August–October captures 47.1%).",
       "High geographical footprint: Reported across 31 of Maharashtra's 36 administrative districts.",
       "Kendall's W = 0.405 (p = 0.086): High concentration, but annual peak month oscillates between September and October across individual years.",
       "2026 Truncation note: Historically, 55.4% of Dengue outbreaks occur after Week 32. Hence, 2026 W01–W32 (6 events) cannot be used as an annual comparison."
@@ -242,8 +242,8 @@ export const PRIMARY_DISEASES: Record<string, DiseaseProfile> = {
     deaths: 0,
     districts: 15,
     peakMonths: "Dispersed (Mild elevations in May, June, September)",
-    cr3: 0.419,
-    cr3Window: "May, June, September (41.9%)",
+    cr3: 0.395,
+    cr3Window: "March, May, June (39.5%)",
     kendallW: 0.150,
     kendallP: 0.832,
     isSignificant: false,
@@ -320,7 +320,7 @@ export const METHODOLOGY_STAGES = [
   { step: 2, title: "Structured Extraction", desc: "Extracted 809 raw outbreak rows specifically reported across Maharashtra's 36 administrative districts." },
   { step: 3, title: "Source Provenance Preservation", desc: "Every extracted row is permanently mapped to its originating PDF bulletin filename and table page number." },
   { step: 4, title: "Additive Label Normalization", desc: "Harmonized 116 raw disease spelling variants into 56 clean canonical labels while preserving source strings in 'disease_raw'." },
-  { step: 5, title: "Syndromic & Primary Cohort Grouping", desc: "Grouped labels into 30 syndromic families and isolated 5 primary study families representing 93.9% of baseline records." },
+  { step: 5, title: "Syndromic & Primary Cohort Grouping", desc: "Grouped labels into 30 syndromic families and isolated 5 primary study families representing 73.5% of baseline records (539 of 733 records)." },
   { step: 6, title: "Temporal Matrix Aggregation", desc: "Aggregated outbreak records and case volumes by epidemiological week, calendar month, and calendar year." },
   { step: 7, title: "Seasonal Concentration Analysis", desc: "Calculated 3-month concentration ratios (CR3) to determine clustering degree within specific calendar windows." },
   { step: 8, title: "Inter-Annual Stability Testing", desc: "Evaluated 12-month rank concordance across 2022–2025 using Kendall's W coefficient of concordance (tested at α = 0.05)." },

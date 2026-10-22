@@ -31,7 +31,7 @@ const STAGES = [
     step: "04",
     num: "5",
     label: "Primary Cohorts",
-    desc: "High-burden analytical cohort capturing 93.9% of all 2022–2025 baseline records (539 of 574 records).",
+    desc: "High-burden analytical cohort capturing 73.5% of all 2022–2025 baseline records (539 of 733 records).",
     examples: ["Dengue (204)", "ADD (153)", "Malaria (70)", "Food Poisoning (69)", "Chikungunya (43)"],
     color: "#38BDF8",
     isPrimary: true,
@@ -73,7 +73,7 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
               <div>
                 <div className="flex items-center justify-between font-mono text-[8px] text-[#B5B0A4]/60 uppercase">
                   <span>STAGE {s.step}</span>
-                  {s.isPrimary && <span className="text-[#38BDF8] font-bold">93.9% RECORDS</span>}
+                  {s.isPrimary && <span className="text-[#38BDF8] font-bold">73.5% RECORDS</span>}
                 </div>
                 <div className="font-serif font-bold text-4xl sm:text-5xl mt-2" style={{ color: s.color }}>
                   {s.num}
@@ -112,7 +112,7 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
             {activeStage === 0 && "116 different raw disease spellings were extracted verbatim from NCDC bulletins."}
             {activeStage === 1 && "Normalized using verified case-insensitive regex dictionary rules."}
             {activeStage === 2 && "Grouped according to official WHO / NVBDCP epidemiological taxonomy."}
-            {activeStage === 3 && "Isolated 5 core cohort families representing 21,955 cases and 266 deaths."}
+            {activeStage === 3 && "Isolated 5 core cohort families representing 20,955 cases and 266 deaths."}
           </div>
         </div>
         <div className="font-mono text-[9px] text-[#B5B0A4]/50 border-t sm:border-t-0 sm:border-l border-[#EEE8DA]/10 pt-2 sm:pt-0 sm:pl-4">

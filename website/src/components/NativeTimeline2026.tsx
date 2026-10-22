@@ -108,11 +108,11 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
         </div>
 
         <div className="p-4 bg-[#111411] border border-[#EEE8DA]/08 rounded-sm text-center">
-          <div className="font-serif text-3xl font-bold text-[#C7A75B]">1,118</div>
+          <div className="font-serif text-3xl font-bold text-[#C7A75B]">2,126</div>
           <div className="font-mono text-[8px] uppercase tracking-widest text-[#B5B0A4] mt-1">
             Reported Cases (W01–W32)
           </div>
-          <div className="font-mono text-[7px] text-[#B5B0A4]/50 mt-0.5">6 Dengue · 15 ADD · 19 FP · 4 Mal · 1 Chik</div>
+          <div className="font-mono text-[7px] text-[#B5B0A4]/50 mt-0.5">6 Dengue · 18 ADD · 19 FP · 1 Mal · 1 Chik</div>
         </div>
 
         <div className="p-4 bg-[#111411] border border-[#EEE8DA]/08 rounded-sm text-center">

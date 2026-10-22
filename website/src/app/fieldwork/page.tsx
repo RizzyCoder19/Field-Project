@@ -234,7 +234,7 @@ export default function FieldworkPage() {
               <div className="space-y-2 text-xs">
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#174A4A]">Statewide IDSP Layer:</span>
-                  <p className="text-[#565C58] mt-0.5">82.8% of events occur in Jun–Oct, with peak concentration cresting statewide in October (CR3 = 0.505).</p>
+                  <p className="text-[#565C58] mt-0.5">73.0% of events occur in Jun–Oct, with peak concentration cresting statewide in October (CR3 = 0.505).</p>
                 </div>
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#C84B2F]">Local Health Post Report:</span>
@@ -249,7 +249,7 @@ export default function FieldworkPage() {
               <div className="space-y-2 text-xs">
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#174A4A]">Statewide IDSP Layer:</span>
-                  <p className="text-[#565C58] mt-0.5">May–July captures 54.3% of outbreak events statewide, with heavy clustering in eastern tribal forest belts (e.g. Gadchiroli).</p>
+                  <p className="text-[#565C58] mt-0.5">May–July captures 51.4% of outbreak events statewide, with heavy clustering in eastern tribal forest belts (61.4% in Gadchiroli and Chandrapur).</p>
                 </div>
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#C84B2F]">Local Health Post Report:</span>
@@ -279,7 +279,7 @@ export default function FieldworkPage() {
               <div className="space-y-2 text-xs">
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#174A4A]">Statewide IDSP Layer:</span>
-                  <p className="text-[#565C58] mt-0.5">No stable recurring monthly pattern across baseline years (W = 0.220, p = 0.450). Sporadic multi-year surges.</p>
+                  <p className="text-[#565C58] mt-0.5">No stable recurring monthly pattern across baseline years (W = 0.150, p = 0.832). Sporadic multi-year surges.</p>
                 </div>
                 <div className="bg-[#FAF7F2] p-2.5 rounded border border-[#D8D1C5]">
                   <span className="font-mono font-bold text-[#C84B2F]">Local Health Post Report:</span>

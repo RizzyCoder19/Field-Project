@@ -40,7 +40,7 @@ const EVIDENCE_ITEMS: EvidenceItem[] = [
     datePeriod: "2022–2025 Completed Years",
     status: "Frozen & Verified (Phase 5E)",
     provenance: "Programmatic Extraction & Additive Cleaning Pipeline",
-    description: "539 outbreak investigation records encompassing 21,955 reported cases and 266 deaths across Dengue, ADD, Malaria, Food Poisoning, and Chikungunya.",
+    description: "539 outbreak investigation records encompassing 20,955 reported cases and 266 deaths across Dengue, ADD, Malaria, Food Poisoning, and Chikungunya.",
     hashOrLocation: "data_pipeline/master/NCDC_Maharashtra_CLEAN_ANALYTICAL.csv",
     usedIn: "Phases 5A through 5E mathematical models, Kendall's W tests, and presentation slides."
   },

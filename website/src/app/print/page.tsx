@@ -138,7 +138,7 @@ export default function PrintPage() {
               <div className="font-mono text-[8px] text-[#B5B0A4]/60">Verified Maharashtra Rows</div>
             </div>
             <div className="p-6 bg-[#111411] border border-[#EEE8DA]/10 rounded-sm">
-              <div className="font-serif text-4xl font-bold text-[#C7A75B]">21,955</div>
+              <div className="font-serif text-4xl font-bold text-[#C7A75B]">20,955</div>
               <div className="font-mono text-[9px] uppercase tracking-wider text-[#B5B0A4] mt-1">Reported Cases</div>
               <div className="font-mono text-[8px] text-[#B5B0A4]/60">2022–2025 Primary Baseline</div>
             </div>

@@ -67,7 +67,7 @@ export default function DataPage() {
           <div className="bg-[#FAF7F2] border border-[#D8D1C5] p-5 rounded">
             <div className="font-mono text-xs uppercase text-[#565C58]">Primary Families</div>
             <div className="font-mono text-2xl sm:text-3xl font-bold text-[#174A4A] mt-1">5</div>
-            <div className="text-xs text-[#7A827D] mt-1">21,955 Reported Cases</div>
+            <div className="text-xs text-[#7A827D] mt-1">20,955 Reported Cases</div>
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function DataPage() {
             </p>
           </div>
           <div className="text-xs font-mono text-[#565C58] bg-[#FAF7F2] px-3 py-1.5 rounded border border-[#D8D1C5]">
-            Total Primary: 539 Records · 21,955 Cases · 266 Deaths
+            Total Primary: 539 Records · 20,955 Cases · 266 Deaths
           </div>
         </div>
 

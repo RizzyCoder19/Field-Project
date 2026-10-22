@@ -33,7 +33,7 @@ const STAGES = [
   {
     id: 3,
     title: "3. Five Primary Families",
-    count: "539 Baseline Records (93.9%)",
+    count: "539 Baseline Records (73.5%)",
     desc: "Dengue (Blue), ADD (Green), Malaria (Gold), Food Poisoning (Red), Chikungunya (Purple).",
     icon: Sparkles
   },

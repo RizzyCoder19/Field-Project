@@ -71,7 +71,7 @@ export default function InteractiveSeasonalChart() {
                 : "text-[#565C58] hover:text-[#171A18]"
             }`}
           >
-            Reported Cases (N=21,955)
+            Reported Cases (N=20,955)
           </button>
         </div>
       </div>

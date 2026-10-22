@@ -24,7 +24,7 @@ export default function MethodPage() {
     {
       num: "04",
       title: "Disease Grouping",
-      desc: "Isolation of the 5 primary epidemic families (Dengue, ADD, Malaria, Food Poisoning, Chikungunya) accounting for 539 baseline records (2022–2025) and 21,955 reported cases.",
+      desc: "Isolation of the 5 primary epidemic families (Dengue, ADD, Malaria, Food Poisoning, Chikungunya) accounting for 539 baseline records (2022–2025) and 20,955 reported cases.",
     },
     {
       num: "05",

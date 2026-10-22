@@ -32,7 +32,7 @@ export default function QuestionnaireViewer() {
     ],
     C: [
       { qId: "C-01", text: "Has anyone in your household been diagnosed with Dengue in the past two years?", type: "Binary + Year", options: ["Yes (2024)", "Yes (2025)", "Yes (Earlier)", "No"], note: "Cluster recall." },
-      { qId: "C-02", text: "In which month did the illness occur?", type: "Calendar Month", note: "Cross-checks the 82.8% June–October NCDC Dengue window." }
+      { qId: "C-02", text: "In which month did the illness occur?", type: "Calendar Month", note: "Cross-checks the 73.0% June–October NCDC Dengue window." }
     ],
     D: [
       { qId: "D-01", text: "What is your household's primary source of daily drinking water?", type: "Single Select", options: ["Municipal piped tap (Direct)", "Overhead / Underground stored tap", "Community public standpost", "Private tanker delivery", "Borewell / Handpump"], note: "Direct link to ADD transmission." },

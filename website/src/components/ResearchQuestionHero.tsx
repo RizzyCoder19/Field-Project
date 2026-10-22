@@ -11,7 +11,7 @@ export default function ResearchQuestionHero() {
       title: "Seasonal Patterns (Calendar-Month & Weekly Aggregation)",
       desc: "Investigated by aggregating 539 baseline records across 52 epidemiological weeks and 12 calendar months. Evaluated using 3-month concentration ratios (CR3) and Kendall's W concordance to test recurring annual rank agreement.",
       icon: Calendar,
-      dataBadge: "CR3 Ratios: 41.9% to 51.4%"
+      dataBadge: "CR3 Ratios: 39.5% to 51.4%"
     },
     outbreak: {
       title: "Outbreak Reports (NCDC / IDSP Surveillance Source)",
@@ -23,7 +23,7 @@ export default function ResearchQuestionHero() {
       title: "Variation Across Diseases (Five Primary Syndromic Families)",
       desc: "Rather than sharing a single monsoon surge, diseases demonstrate distinct temporal profiles: Dengue concentrates in late monsoon (Oct peak); Malaria in early monsoon (May–Jul); ADD shows sustained elevation (Jun–Aug + Oct); Food Poisoning is non-monsoon bimodal; Chikungunya is dispersed.",
       icon: Sparkles,
-      dataBadge: "5 Primary Study Families (93.9%)"
+      dataBadge: "5 Primary Study Families (73.5%)"
     },
     maharashtra: {
       title: "Geographical Scope (Maharashtra State)",

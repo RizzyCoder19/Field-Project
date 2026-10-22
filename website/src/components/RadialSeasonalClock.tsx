@@ -14,7 +14,7 @@ const DISEASES = [
   { id: "add", label: "ADD", color: "#10B981", peak: "Jun–Aug", cr3: "43.1%" },
   { id: "malaria", label: "Malaria", color: "#D4AF37", peak: "May–Jul", cr3: "51.4%" },
   { id: "foodPoisoning", label: "Food Poisoning", color: "#EF4444", peak: "Bimodal (Jan–Feb, Apr–May)", cr3: "44.9%" },
-  { id: "chikungunya", label: "Chikungunya", color: "#A78BFA", peak: "Dispersed", cr3: "41.9%" },
+  { id: "chikungunya", label: "Chikungunya", color: "#A78BFA", peak: "Dispersed", cr3: "39.5%" },
 ];
 
 export default function RadialSeasonalClock({
@@ -293,7 +293,7 @@ export default function RadialSeasonalClock({
       {/* Narrative Footer */}
       <div className="mt-4 text-center max-w-lg">
         <p className="font-mono text-[10px] text-[#B5B0A4] leading-relaxed">
-          {currentDisease === "dengue" && "Dengue: 82.8% of events occur in Jun–Oct. Strong post-monsoon vector proliferation."}
+          {currentDisease === "dengue" && "Dengue: 73.0% of events occur in Jun–Oct. Strong post-monsoon vector proliferation."}
           {currentDisease === "add" && "ADD: High early-monsoon surge in Jun–Aug plus secondary post-monsoon peak. Kendall's W = 0.530 (p = 0.016)."}
           {currentDisease === "malaria" && "Malaria: Pre-monsoon & onset surge in May–Jul. 61.4% concentrated in Gadchiroli + Chandrapur."}
           {currentDisease === "foodPoisoning" && "Food Poisoning: Bimodal non-monsoon timing (Jan–Feb & Apr–May). Highly sensitive to point-source cluster sizes."}

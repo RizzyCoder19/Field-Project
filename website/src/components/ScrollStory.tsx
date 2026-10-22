@@ -194,7 +194,7 @@ export default function ScrollStory() {
             {[
               ["237", "Surveillance Weeks"],
               ["809", "Analytical Records"],
-              ["21,955", "Reported Cases"],
+              ["20,955", "Reported Cases"],
             ].map(([n, l]) => (
               <div key={l} className="text-right">
                 <div className="font-serif text-2xl sm:text-3xl text-[#EEE8DA] font-bold">{n}</div>
@@ -268,7 +268,7 @@ export default function ScrollStory() {
             {[
               { n: "237", l: "SURVEILLANCE WEEKS ARCHIVED", sub: "2022 to 2026 Week 32", c: "#EEE8DA" },
               { n: "809", l: "ANALYTICAL RECORDS EXTRACTED", sub: "Verified Maharashtra outbreak rows", c: "#EEE8DA" },
-              { n: "21,955", l: "REPORTED CASES (2022–2025)", sub: "5 primary cohorts baseline (266 deaths)", c: "#C7A75B" },
+              { n: "20,955", l: "REPORTED CASES (2022–2025)", sub: "5 primary cohorts baseline (266 deaths)", c: "#C7A75B" },
             ].map(({ n, l, sub, c }) => (
               <div key={l} className="reveal-up border-b border-[#EEE8DA]/08 pb-5 last:border-0">
                 <div className="font-serif leading-none font-bold" style={{ fontSize: "clamp(3rem,7vw,5.5rem)", color: c }}>
@@ -458,7 +458,7 @@ export default function ScrollStory() {
         className="px-6 sm:px-14 lg:px-24 py-20 sm:py-28 border-b border-[#EEE8DA]/06"
       >
         <Label n="05" text="Primary Cohort Baseline" />
-        <Q sub="2022–2025 Completed 4-Year Baseline · 93.9% Surveillance Records">
+        <Q sub="2022–2025 Completed 4-Year Baseline · 73.5% Baseline Records (539 of 733)">
           What five disease families did we analyze?
         </Q>
 
@@ -504,7 +504,7 @@ export default function ScrollStory() {
         </div>
 
         <div className="p-4 bg-[#111411] border border-[#EEE8DA]/08 rounded-sm font-mono text-[10px] text-[#B5B0A4] text-center">
-          Combined: <span className="text-[#EEE8DA] font-bold">539 primary records</span> · <span className="text-[#C7A75B] font-bold">21,955 reported cases</span> · <span className="text-[#EEE8DA] font-bold">266 reported deaths</span> across Maharashtra.
+          Combined: <span className="text-[#EEE8DA] font-bold">539 primary records</span> · <span className="text-[#C7A75B] font-bold">20,955 reported cases</span> · <span className="text-[#EEE8DA] font-bold">266 reported deaths</span> across Maharashtra.
         </div>
       </Section>
 
@@ -936,7 +936,7 @@ export default function ScrollStory() {
             {[
               "01. Government PDF Bulletins Archived (237 weeks, 809 raw records)",
               "02. Extraction Pipeline Preserved Immutable Document Provenance",
-              "03. Normalization Condensed 116 Raw Strings into 5 Primary Cohorts (93.9% records)",
+              "03. Normalization Condensed 116 Raw Strings into 5 Primary Cohorts (73.5% baseline records)",
               "04. Five Distinct Temporal Signatures Emerged from 2022–2025 Baseline",
               "05. ADD Is the Only Disease with Statistically Significant Concordance (W = 0.530, p = 0.016)",
               "06. Malaria Shows Heavy Spatial Localization (61.4% in Gadchiroli + Chandrapur)",

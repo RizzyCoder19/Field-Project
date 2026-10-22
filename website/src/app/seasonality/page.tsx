@@ -21,7 +21,7 @@ export default function SeasonalityPage() {
             When Does Disease Actually Move?
           </h1>
           <p className="text-base sm:text-lg text-[#565C58] leading-relaxed">
-            By de-aggregating 539 outbreak-event records and 21,955 reported cases across 48 calendar months, distinct meteorological and behavioural trigger profiles emerge across Maharashtra.
+            By de-aggregating 539 outbreak-event records and 20,955 reported cases across 48 calendar months, distinct meteorological and behavioural trigger profiles emerge across Maharashtra.
           </p>
           <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono text-[#565C58]">
             <span className="font-semibold text-[#171A18]">Jump to disease:</span>
@@ -77,7 +77,7 @@ export default function SeasonalityPage() {
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Dengue Fever</h3>
             </div>
             <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              Peak: Aug–Oct (50.5% CR3)
+              Peak: Jun, Sep, Oct (50.5% CR3)
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export default function SeasonalityPage() {
 
           <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
             <p>
-              <strong>Epidemiological Interpretation:</strong> Dengue exhibits strict late-monsoon and post-monsoon concentration across Maharashtra, with 82.8% of all baseline events occurring between June and October. Peak frequency consistently hits October (40 events, 566 cases) as stagnant rainwater pools and artificial domestic containers create ideal breeding habitats for <em>Aedes aegypti</em>.
+              <strong>Epidemiological Interpretation:</strong> Dengue exhibits strict late-monsoon and post-monsoon concentration across Maharashtra, with 73.0% of all baseline events occurring between June and October. Peak frequency consistently hits October (40 events, 566 cases) as stagnant rainwater pools and artificial domestic containers create ideal breeding habitats for <em>Aedes aegypti</em>.
             </p>
             <p>
               <strong>Fieldwork Linkage (Nallasopara West):</strong> In the local health facility visit, the Medical Officer reported clinical dengue presentations surging through September–November, directly driven by intermittent municipal water supply that compels households to store water for 48–72 hours in open drums.
@@ -201,7 +201,7 @@ export default function SeasonalityPage() {
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Malaria</h3>
             </div>
             <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              Peak: May–Jul (54.3% CR3)
+              Peak: May–Jul (51.4% CR3)
             </div>
           </div>
 
@@ -247,7 +247,7 @@ export default function SeasonalityPage() {
 
           <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
             <p>
-              <strong>Epidemiological Interpretation:</strong> Unlike Dengue, which crests post-monsoon, Malaria outbreaks in Maharashtra concentrate earlier in May–July (54.3% of events). Geographically, Malaria is tightly clustered in 15 districts, heavily concentrated in forested and tribal belts (particularly Gadchiroli and Chandrapur).
+              <strong>Epidemiological Interpretation:</strong> Unlike Dengue, which crests post-monsoon, Malaria outbreaks in Maharashtra concentrate earlier in May–July (51.4% of events). Geographically, Malaria is tightly clustered in 15 districts, heavily concentrated in forested and tribal belts (particularly Gadchiroli and Chandrapur).
             </p>
             <p>
               <strong>Fieldwork Linkage (Nallasopara West):</strong> In peri-urban Palghar, the Medical Officer noted that local transmission is predominantly <em>Plasmodium vivax</em> linked to construction site water accumulation, while severe <em>falciparum</em> cases are rare in this urban center.
@@ -371,7 +371,7 @@ export default function SeasonalityPage() {
 
           <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
             <p>
-              <strong>Epidemiological Interpretation:</strong> Chikungunya exhibits the lowest rank concordance (W = 0.220, p = 0.450) and lowest case volume (701 cases) among the primary cohort. Outbreaks are sporadic and multi-year episodic rather than strictly predictable on an annual calendar basis. Zero fatalities were reported across all 237 surveillance weeks.
+              <strong>Epidemiological Interpretation:</strong> Chikungunya exhibits the lowest rank concordance (W = 0.150, p = 0.832) and lowest case volume (701 cases) among the primary cohort. Outbreaks are sporadic and multi-year episodic rather than strictly predictable on an annual calendar basis. Zero fatalities were reported across all 237 surveillance weeks.
             </p>
             <p>
               <strong>Clinical Nuance:</strong> While mortality is nil, Chikungunya causes debilitating sub-acute and chronic polyarthralgia lasting weeks or months, representing an unmeasured disability burden not captured by acute outbreak death tallies.

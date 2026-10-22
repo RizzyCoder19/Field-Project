@@ -89,8 +89,8 @@ export default function PipelineFlow() {
       num: "5",
       unit: "PRIMARY FAMILIES",
       title: "Primary Analytical Study Cohort",
-      source: "539 Baseline Records (93.9%)",
-      desc: "Selected the top 5 high-burden families representing 93.9% of all 2022–2025 outbreak records.",
+      source: "539 Baseline Records (73.5%)",
+      desc: "Selected the top 5 high-burden families representing 73.5% of all 2022–2025 baseline outbreak records (539 of 733 records).",
       icon: Sparkles,
       highlight: true,
       details: [
