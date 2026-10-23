@@ -53,7 +53,7 @@ export default function ObservationChecklistViewer() {
     <div className="w-full bg-[#080D1F] border border-[#1E335E] rounded-xl shadow-2xl p-6 lg:p-8 space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-[#1E335E]/60 pb-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#D4AF37]">
+          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#F59E0B]">
             <Compass className="w-3.5 h-3.5" />
             <span>Environmental Observation Transects · Standardized Audit Protocol</span>
           </div>
@@ -67,7 +67,7 @@ export default function ObservationChecklistViewer() {
 
         <button
           onClick={handlePrint}
-          className="px-3.5 py-1.5 rounded bg-[#101C38] hover:bg-[#16274D] text-[#D4AF37] border border-[#D4AF37]/40 text-xs font-mono flex items-center space-x-2 transition-all shadow-md"
+          className="px-3.5 py-1.5 rounded bg-[#101C38] hover:bg-[#16274D] text-[#F59E0B] border border-[#F59E0B]/40 text-xs font-mono flex items-center space-x-2 transition-all shadow-md"
         >
           <Printer className="w-3.5 h-3.5" />
           <span>Print / Export Protocol</span>
@@ -82,8 +82,8 @@ export default function ObservationChecklistViewer() {
             onClick={() => setActiveCategory(c.id)}
             className={`px-3 py-2 rounded text-xs font-mono transition-all border ${
               activeCategory === c.id
-                ? "bg-[#16274D] border-[#D4AF37] text-white font-bold shadow-lg"
-                : "bg-[#0D162E] border-[#1E335E]/60 text-[#AEB9D1] hover:border-[#D4AF37]/30"
+                ? "bg-[#16274D] border-[#F59E0B] text-white font-bold shadow-lg"
+                : "bg-[#0D162E] border-[#1E335E]/60 text-[#AEB9D1] hover:border-[#F59E0B]/30"
             }`}
           >
             {c.title}
@@ -93,7 +93,7 @@ export default function ObservationChecklistViewer() {
 
       {/* Active Category Checklist Cards */}
       <div className="space-y-3">
-        <div className="flex justify-between items-center text-xs font-mono text-[#D4AF37] px-1">
+        <div className="flex justify-between items-center text-xs font-mono text-[#F59E0B] px-1">
           <span className="uppercase">{active.title}</span>
           <span>Protocol Rubric View</span>
         </div>
@@ -114,7 +114,7 @@ export default function ObservationChecklistViewer() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
               {ind.options.map((opt, i) => (
                 <div key={i} className="flex items-center space-x-2 text-xs text-[#AEB9D1] bg-[#0A1128]/80 p-2 rounded border border-[#1E335E]/40">
-                  <span className="w-2 h-2 rounded border border-[#D4AF37]"></span>
+                  <span className="w-2 h-2 rounded border border-[#F59E0B]"></span>
                   <span>{opt}</span>
                 </div>
               ))}
@@ -126,7 +126,7 @@ export default function ObservationChecklistViewer() {
       {/* Bottom Academic Integrity Notice */}
       <div className="bg-[#060A17] p-3.5 rounded border border-[#1E335E]/60 flex items-center justify-between text-[11px] font-mono text-[#64748B]">
         <span>All physical indicators are evaluated on public pedestrian transects with zero intrusion into private dwellings.</span>
-        <span className="text-[#D4AF37]">Protocol Version: 1.0 (Ready for Deployment)</span>
+        <span className="text-[#F59E0B]">Protocol Version: 1.0 (Ready for Deployment)</span>
       </div>
     </div>
   );

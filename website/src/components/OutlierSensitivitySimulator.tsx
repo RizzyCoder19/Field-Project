@@ -58,7 +58,7 @@ export default function OutlierSensitivitySimulator() {
           >
             <div className="flex justify-between items-center text-xs font-mono">
               <span className="text-white font-bold">{rec.district} District</span>
-              <span className="text-[#D4AF37]">{rec.year} {rec.week}</span>
+              <span className="text-[#F59E0B]">{rec.year} {rec.week}</span>
             </div>
             <div className="font-serif text-2xl font-bold text-[#EF4444] mt-1">
               {rec.cases} Cases
@@ -71,7 +71,7 @@ export default function OutlierSensitivitySimulator() {
       </div>
 
       {/* Impact Metrics Banner */}
-      <div className="bg-[#0D162E] border border-[#D4AF37]/30 rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div className="bg-[#0D162E] border border-[#F59E0B]/30 rounded-lg p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
         <div>
           <div className="text-[10px] font-mono uppercase text-[#AEB9D1]">Three Records Total</div>
           <div className="font-serif text-xl font-bold text-[#EF4444]">1,615 Cases</div>
@@ -79,7 +79,7 @@ export default function OutlierSensitivitySimulator() {
         </div>
         <div>
           <div className="text-[10px] font-mono uppercase text-[#AEB9D1]">February Share</div>
-          <div className="font-serif text-xl font-bold text-[#D4AF37]">74.7%</div>
+          <div className="font-serif text-xl font-bold text-[#F59E0B]">74.7%</div>
           <div className="text-[10px] text-[#64748B]">1,615 of 2,162 Feb cases</div>
         </div>
         <div>
@@ -102,7 +102,7 @@ export default function OutlierSensitivitySimulator() {
       <div className="bg-[#0A1128] border border-[#1E335E]/40 rounded-lg p-4 space-y-2">
         <div className="flex justify-between items-center text-xs font-mono text-[#AEB9D1] border-b border-[#1E335E]/40 pb-2">
           <span>Monthly Case Volume (12 Calendar Months)</span>
-          <span className="text-[#D4AF37]">Active Peak: {MONTHS[peakMonthIdx]}</span>
+          <span className="text-[#F59E0B]">Active Peak: {MONTHS[peakMonthIdx]}</span>
         </div>
 
         <div className="grid grid-cols-12 gap-1.5 h-44 items-end pt-6">
@@ -127,7 +127,7 @@ export default function OutlierSensitivitySimulator() {
                 ></div>
                 <span
                   className={`text-[10px] font-mono mt-1.5 ${
-                    isPeak ? "text-[#D4AF37] font-bold" : "text-[#64748B]"
+                    isPeak ? "text-[#F59E0B] font-bold" : "text-[#64748B]"
                   }`}
                 >
                   {MONTHS[idx]}

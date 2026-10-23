@@ -57,7 +57,7 @@ export default function InterviewGuideViewer() {
     <div className="w-full bg-[#080D1F] border border-[#1E335E] rounded-xl shadow-2xl p-6 lg:p-8 space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-[#1E335E]/60 pb-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#D4AF37]">
+          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#F59E0B]">
             <Mic className="w-3.5 h-3.5" />
             <span>Key Informant Interview Guides · 4 Stakeholder Archetypes</span>
           </div>
@@ -69,7 +69,7 @@ export default function InterviewGuideViewer() {
           </p>
         </div>
 
-        <span className="text-xs font-mono px-3 py-1 rounded bg-[#101C38] text-[#F3E5AB] border border-[#D4AF37]/30">
+        <span className="text-xs font-mono px-3 py-1 rounded bg-[#101C38] text-[#F3E5AB] border border-[#F59E0B]/30">
           Status: Planned Instrument
         </span>
       </div>
@@ -85,13 +85,13 @@ export default function InterviewGuideViewer() {
               onClick={() => setActiveRole(r.id)}
               className={`p-3 rounded-lg border text-left transition-all ${
                 isSelected
-                  ? "bg-[#16274D] border-[#D4AF37] text-white shadow-xl"
-                  : "bg-[#0D162E] border-[#1E335E]/60 text-[#AEB9D1] hover:border-[#D4AF37]/40"
+                  ? "bg-[#16274D] border-[#F59E0B] text-white shadow-xl"
+                  : "bg-[#0D162E] border-[#1E335E]/60 text-[#AEB9D1] hover:border-[#F59E0B]/40"
               }`}
             >
               <div className="flex items-center justify-between">
-                <Icon className={`w-4 h-4 ${isSelected ? "text-[#D4AF37]" : "text-[#64748B]"}`} />
-                <span className="text-[10px] font-mono text-[#D4AF37]">Guide</span>
+                <Icon className={`w-4 h-4 ${isSelected ? "text-[#F59E0B]" : "text-[#64748B]"}`} />
+                <span className="text-[10px] font-mono text-[#F59E0B]">Guide</span>
               </div>
               <div className="font-serif text-xs font-bold text-white mt-1 line-clamp-1">{r.title}</div>
             </button>
@@ -102,7 +102,7 @@ export default function InterviewGuideViewer() {
       {/* Active Role Content Card */}
       <div className="bg-[#0D162E] border border-[#1E335E] rounded-lg p-6 space-y-4">
         <div className="border-b border-[#1E335E]/60 pb-3">
-          <div className="text-xs font-mono text-[#D4AF37] uppercase tracking-wider font-semibold">
+          <div className="text-xs font-mono text-[#F59E0B] uppercase tracking-wider font-semibold">
             {active.title} Interview Schedule
           </div>
           <p className="text-xs text-[#AEB9D1] mt-1 leading-relaxed">
@@ -115,7 +115,7 @@ export default function InterviewGuideViewer() {
           {active.questions.map((q, idx) => (
             <div key={q.id} className="bg-[#0A1128] border border-[#1E335E]/50 rounded-lg p-4 space-y-2">
               <div className="flex justify-between items-center text-xs font-mono">
-                <span className="text-[#D4AF37] font-bold">{q.id}</span>
+                <span className="text-[#F59E0B] font-bold">{q.id}</span>
                 <span className="text-[10px] uppercase text-[#F87171] bg-[#EF4444]/10 px-2 py-0.5 rounded border border-[#EF4444]/30">
                   Evidence Status: Planned
                 </span>
@@ -132,7 +132,7 @@ export default function InterviewGuideViewer() {
 
         {/* Ethical Protection Note */}
         <div className="flex items-center space-x-2 text-[11px] font-mono text-[#64748B] pt-2">
-          <Shield className="w-3.5 h-3.5 text-[#D4AF37]" />
+          <Shield className="w-3.5 h-3.5 text-[#F59E0B]" />
           <span>Informed consent and institutional anonymity safeguards documented in research ethics protocol.</span>
         </div>
       </div>

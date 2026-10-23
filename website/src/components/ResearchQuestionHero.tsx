@@ -38,20 +38,20 @@ export default function ResearchQuestionHero() {
 
   return (
     <div className="w-full bg-[#080D1F] border border-[#1E335E] rounded-xl shadow-2xl p-6 lg:p-10 my-8">
-      <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#D4AF37] mb-4">
-        <HelpCircle className="w-4 h-4 text-[#D4AF37]" />
+      <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#F59E0B] mb-4">
+        <HelpCircle className="w-4 h-4 text-[#F59E0B]" />
         <span>Central Research Inquiry · Interactive Semantic Explorer</span>
       </div>
 
       {/* Main Interactive Headline Quote */}
-      <blockquote className="font-serif text-2xl lg:text-3xl font-normal text-[#F8F5EC] leading-relaxed border-l-2 border-[#D4AF37] pl-6 my-6">
+      <blockquote className="font-serif text-2xl lg:text-3xl font-normal text-[#F8F5EC] leading-relaxed border-l-2 border-[#F59E0B] pl-6 my-6">
         &ldquo;What{" "}
         <span
           onMouseEnter={() => setActivePhrase("seasonal")}
           className={`cursor-pointer px-1.5 py-0.5 rounded transition-all border-b-2 ${
             activePhrase === "seasonal"
-              ? "bg-[#D4AF37]/20 border-[#D4AF37] text-[#F3E5AB] font-semibold"
-              : "border-[#D4AF37]/40 text-[#D4AF37] hover:bg-[#101C38]"
+              ? "bg-[#F59E0B]/20 border-[#F59E0B] text-[#F3E5AB] font-semibold"
+              : "border-[#F59E0B]/40 text-[#F59E0B] hover:bg-[#101C38]"
           }`}
         >
           seasonal patterns
@@ -96,12 +96,12 @@ export default function ResearchQuestionHero() {
       <div className="bg-[#0D162E] border border-[#1E335E] rounded-lg p-5 mt-6 transition-all duration-300">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#1E335E]/60 pb-3">
           <div className="flex items-center space-x-2.5">
-            <Icon className="w-4 h-4 text-[#D4AF37]" />
+            <Icon className="w-4 h-4 text-[#F59E0B]" />
             <span className="font-serif text-base font-bold text-white">
               {active.title}
             </span>
           </div>
-          <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#101C38] text-[#F3E5AB] border border-[#D4AF37]/30">
+          <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#101C38] text-[#F3E5AB] border border-[#F59E0B]/30">
             {active.dataBadge}
           </span>
         </div>
@@ -112,7 +112,7 @@ export default function ResearchQuestionHero() {
 
         <div className="flex items-center justify-between text-[11px] font-mono text-[#64748B] mt-4 pt-3 border-t border-[#1E335E]/40">
           <span>Hover over highlighted phrases above to inspect methodological definitions.</span>
-          <span className="text-[#D4AF37]">Academic Focus: Descriptive Surveillance</span>
+          <span className="text-[#F59E0B]">Academic Focus: Descriptive Surveillance</span>
         </div>
       </div>
     </div>

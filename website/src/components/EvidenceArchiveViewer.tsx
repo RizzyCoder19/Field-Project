@@ -141,7 +141,7 @@ export default function EvidenceArchiveViewer() {
     switch (cat) {
       case "NCDC/IDSP": return "bg-[#38BDF8]/10 text-[#38BDF8] border-[#38BDF8]/30";
       case "Analytical Dataset": return "bg-[#10B981]/10 text-[#10B981] border-[#10B981]/30";
-      case "Fieldwork Instrument": return "bg-[#D4AF37]/10 text-[#F3E5AB] border-[#D4AF37]/30";
+      case "Fieldwork Instrument": return "bg-[#F59E0B]/10 text-[#F3E5AB] border-[#F59E0B]/30";
       case "Reference Material": return "bg-[#A78BFA]/10 text-[#A78BFA] border-[#A78BFA]/30";
       case "Future Primary Evidence": return "bg-[#EF4444]/10 text-[#F87171] border-[#EF4444]/30";
       default: return "bg-[#101C38] text-[#AEB9D1] border-[#1E335E]";
@@ -153,7 +153,7 @@ export default function EvidenceArchiveViewer() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-[#1E335E]/60 pb-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#D4AF37]">
+          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#F59E0B]">
             <Database className="w-3.5 h-3.5" />
             <span>Digital Evidence Register · Comprehensive Provenance Catalog</span>
           </div>
@@ -172,7 +172,7 @@ export default function EvidenceArchiveViewer() {
             placeholder="Search archive..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="pl-8 pr-3 py-1.5 rounded bg-[#0D162E] border border-[#1E335E] text-xs text-white placeholder-[#64748B] focus:border-[#D4AF37] focus:outline-none w-56 font-mono"
+            className="pl-8 pr-3 py-1.5 rounded bg-[#0D162E] border border-[#1E335E] text-xs text-white placeholder-[#64748B] focus:border-[#F59E0B] focus:outline-none w-56 font-mono"
           />
         </div>
       </div>
@@ -185,7 +185,7 @@ export default function EvidenceArchiveViewer() {
             onClick={() => setFilter(cat)}
             className={`px-3 py-1 rounded text-xs font-mono transition-all border ${
               filter === cat
-                ? "bg-[#D4AF37] text-[#0A1128] border-[#D4AF37] font-bold shadow-md"
+                ? "bg-[#F59E0B] text-[#0A1128] border-[#F59E0B] font-bold shadow-md"
                 : "bg-[#0D162E] text-[#AEB9D1] border-[#1E335E]/60 hover:text-white"
             }`}
           >
@@ -200,7 +200,7 @@ export default function EvidenceArchiveViewer() {
           <div
             key={item.id}
             onClick={() => setSelectedItem(item)}
-            className="bg-[#0D162E] border border-[#1E335E] hover:border-[#D4AF37]/50 rounded-lg p-4 space-y-3 cursor-pointer transition-all hover:bg-[#12203D]"
+            className="bg-[#0D162E] border border-[#1E335E] hover:border-[#F59E0B]/50 rounded-lg p-4 space-y-3 cursor-pointer transition-all hover:bg-[#12203D]"
           >
             <div className="flex justify-between items-start gap-2">
               <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getCategoryBadgeColor(item.category)}`}>
@@ -231,7 +231,7 @@ export default function EvidenceArchiveViewer() {
       {/* Provenance Detail Modal */}
       {selectedItem && (
         <div className="fixed inset-0 z-50 bg-[#0A1128]/85 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-[#0D162E] border border-[#D4AF37] rounded-xl max-w-2xl w-full p-6 shadow-2xl space-y-4 animate-in fade-in zoom-in-95 duration-150">
+          <div className="bg-[#0D162E] border border-[#F59E0B] rounded-xl max-w-2xl w-full p-6 shadow-2xl space-y-4 animate-in fade-in zoom-in-95 duration-150">
             <div className="flex justify-between items-start">
               <div>
                 <span className={`text-[10px] font-mono px-2 py-0.5 rounded border ${getCategoryBadgeColor(selectedItem.category)}`}>
@@ -251,11 +251,11 @@ export default function EvidenceArchiveViewer() {
 
             <div className="space-y-2 text-xs text-[#AEB9D1]">
               <div className="bg-[#0A1128] p-3 rounded border border-[#1E335E] space-y-1 font-mono text-[11px]">
-                <div><span className="text-[#D4AF37]">Document Code:</span> {selectedItem.code}</div>
-                <div><span className="text-[#D4AF37]">Type:</span> {selectedItem.type}</div>
-                <div><span className="text-[#D4AF37]">Period:</span> {selectedItem.datePeriod}</div>
-                <div><span className="text-[#D4AF37]">Status:</span> {selectedItem.status}</div>
-                <div><span className="text-[#D4AF37]">Repository Path:</span> {selectedItem.hashOrLocation}</div>
+                <div><span className="text-[#F59E0B]">Document Code:</span> {selectedItem.code}</div>
+                <div><span className="text-[#F59E0B]">Type:</span> {selectedItem.type}</div>
+                <div><span className="text-[#F59E0B]">Period:</span> {selectedItem.datePeriod}</div>
+                <div><span className="text-[#F59E0B]">Status:</span> {selectedItem.status}</div>
+                <div><span className="text-[#F59E0B]">Repository Path:</span> {selectedItem.hashOrLocation}</div>
               </div>
 
               <div>
@@ -272,7 +272,7 @@ export default function EvidenceArchiveViewer() {
             <div className="pt-3 border-t border-[#1E335E] flex justify-end">
               <button
                 onClick={() => setSelectedItem(null)}
-                className="px-4 py-1.5 rounded bg-[#101C38] text-white text-xs font-mono border border-[#1E335E] hover:border-[#D4AF37]"
+                className="px-4 py-1.5 rounded bg-[#101C38] text-white text-xs font-mono border border-[#1E335E] hover:border-[#F59E0B]"
               >
                 Close Provenance
               </button>

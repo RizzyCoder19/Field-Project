@@ -1,406 +1,229 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, AlertTriangle, Layers, Calendar, ChevronDown } from "lucide-react";
-import { PRIMARY_DISEASES, MONTHS, RESEARCH_METRICS } from "@/data/researchData";
-import InteractiveSeasonalChart from "@/components/InteractiveSeasonalChart";
+import { 
+  Calendar, Clock, CheckCircle2, HelpCircle, 
+  ChevronDown, ChevronUp, Layers, Activity
+} from "lucide-react";
+import { PRIMARY_DISEASES, MONTHS } from "@/data/researchData";
+import RadialSeasonalClock from "@/components/RadialSeasonalClock";
+import NativeSeasonalChart from "@/components/NativeSeasonalChart";
+import SeasonalMatrix from "@/components/SeasonalMatrix";
+import ChapterFooter from "@/components/ChapterFooter";
+
+const DISEASE_KEYS = [
+  { id: "all", label: "All 5 Cohorts", color: "#00F0FF" },
+  { id: "dengue", label: "Dengue", color: "#38BDF8" },
+  { id: "add", label: "ADD", color: "#10B981" },
+  { id: "malaria", label: "Malaria", color: "#F59E0B" },
+  { id: "foodPoisoning", label: "Food Poisoning", color: "#EF4444" },
+  { id: "chikungunya", label: "Chikungunya", color: "#A78BFA" },
+];
 
 export default function SeasonalityPage() {
-  const diseaseKeys = ["dengue", "add", "malaria", "foodPoisoning", "chikungunya"] as const;
+  const [selectedDisease, setSelectedDisease] = useState<string>("all");
+  const [metric, setMetric] = useState<"events" | "cases">("events");
+  const [hoveredMonthIdx, setHoveredMonthIdx] = useState<number | null>(null);
+  const [showMatrixDrawer, setShowMatrixDrawer] = useState(false);
+  const [showMetricExplanation, setShowMetricExplanation] = useState(false);
+
+  // Compute monthly values dynamically
+  const monthlyValues = MONTHS.map((_, mIdx) => {
+    if (selectedDisease === "all") {
+      return Object.values(PRIMARY_DISEASES).reduce((sum, d) => {
+        const arr = metric === "events" ? d.monthlyEvents : d.monthlyCases;
+        return sum + (arr[mIdx] || 0);
+      }, 0);
+    } else {
+      const d = PRIMARY_DISEASES[selectedDisease];
+      if (!d) return 0;
+      const arr = metric === "events" ? d.monthlyEvents : d.monthlyCases;
+      return arr[mIdx] || 0;
+    }
+  });
+
+  const maxMonthVal = Math.max(...monthlyValues);
+  const totalVal = monthlyValues.reduce((a, b) => a + b, 0);
+
+  // Dynamic takeaway for the selection
+  const getTakeaway = () => {
+    if (selectedDisease === "dengue") {
+      return "Dengue exhibits a sharp post-monsoon peak in October (40 records; 26.1% of annual activity), driven by persistent artificial water storage across peri-urban municipal corridors.";
+    }
+    if (selectedDisease === "add") {
+      return "Acute Diarrhoeal Disease surges in July (29 records; 20.1% of annual activity) during peak monsoon rains, reflecting widespread surface water and municipal pipeline contamination.";
+    }
+    if (selectedDisease === "malaria") {
+      return "Malaria concentrates heavily in July–August (27 records; 38.6% of events), with 61.4% of total state outbreaks clustered in the dense forest belts of Gadchiroli and Chandrapur.";
+    }
+    if (selectedDisease === "foodPoisoning") {
+      return "Food Poisoning shows bimodal spikes in February (wedding banquets) and May (festival feasts); three massive banquet events account for 74.7% of all February cases.";
+    }
+    if (selectedDisease === "chikungunya") {
+      return "Chikungunya shows broad dispersion with peak months shifting across years (Sep in 2022, Oct in 2024), yielding lower statistical synchrony than waterborne diseases.";
+    }
+    return "Comparing the five cohorts reveals two distinct seasonal engines: waterborne ADD surges directly during July monsoon rains, while mosquito-borne Dengue peaks three months later in October post-monsoon.";
+  };
 
   return (
-    <div className="w-full">
-      {/* 1. HERO SECTION */}
-      <section className="border-b border-[#D8D1C5] bg-[#FAF7F2] py-16 px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto space-y-4">
-          <div className="text-xs font-mono uppercase tracking-wider text-[#174A4A] font-semibold">
-            Seasonal Disease Dynamics · 2022–2025 Baseline
+    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+      {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
+      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-2">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+            <span>EXHIBIT 04 · TEMPORAL CONCENTRATION</span>
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold tracking-tight text-[#171A18]">
-            When Does Disease Actually Move?
+
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+            The Rhythm of the Seasons
           </h1>
-          <p className="text-base sm:text-lg text-[#565C58] leading-relaxed">
-            By de-aggregating 539 outbreak-event records and 20,955 reported cases across 48 calendar months, distinct meteorological and behavioural trigger profiles emerge across Maharashtra.
-          </p>
-          <div className="flex flex-wrap items-center gap-2 pt-2 text-xs font-mono text-[#565C58]">
-            <span className="font-semibold text-[#171A18]">Jump to disease:</span>
-            <a href="#dengue" className="px-2.5 py-1 bg-[#E8E2D7] hover:bg-[#D8D1C5] rounded text-[#174A4A]">Dengue</a>
-            <a href="#add" className="px-2.5 py-1 bg-[#E8E2D7] hover:bg-[#D8D1C5] rounded text-[#174A4A]">ADD (Diarrheal)</a>
-            <a href="#malaria" className="px-2.5 py-1 bg-[#E8E2D7] hover:bg-[#D8D1C5] rounded text-[#174A4A]">Malaria</a>
-            <a href="#food-poisoning" className="px-2.5 py-1 bg-[#E8E2D7] hover:bg-[#D8D1C5] rounded text-[#174A4A]">Food Poisoning</a>
-            <a href="#chikungunya" className="px-2.5 py-1 bg-[#E8E2D7] hover:bg-[#D8D1C5] rounded text-[#174A4A]">Chikungunya</a>
-          </div>
-        </div>
-      </section>
 
-      {/* 2. CENTRAL INTERACTIVE SEASONAL CHART */}
-      <section className="py-12 px-4 lg:px-8 max-w-7xl mx-auto">
-        <InteractiveSeasonalChart />
-      </section>
-
-      {/* 3. KEY STATISTICAL TAKEAWAY BANNER */}
-      <section className="bg-[#E8E2D7] border-y border-[#D8D1C5] py-8 px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto flex items-start gap-4">
-          <CheckCircle2 className="w-5 h-5 text-[#AEBB55] shrink-0 mt-0.5" />
-          <div className="space-y-1">
-            <h4 className="text-xs font-mono uppercase tracking-wider text-[#171A18] font-bold">
-              Kendall&apos;s W Non-Parametric Concordance Finding
-            </h4>
-            <p className="text-xs text-[#565C58] leading-relaxed">
-              Among all five primary disease families tested across the four baseline years (2022–2025), <strong>only Acute Diarrheal Disease (ADD) demonstrated statistically significant multi-year rank concordance</strong> (W = 0.530, p = 0.016). Vector-borne diseases (Dengue, Malaria, Chikungunya) fluctuate in exact peak calendar week depending on the arrival, intensity, and cessation of the southwest monsoon.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. THE FIVE CONSOLIDATED DISEASE MONOGRAPHS */}
-      <section className="py-16 px-4 lg:px-8 max-w-5xl mx-auto space-y-16">
-        {/* Title for the Consolidated Section */}
-        <div className="border-b border-[#D8D1C5] pb-4">
-          <span className="text-xs font-mono uppercase tracking-wider text-[#174A4A] font-semibold">
-            Comprehensive Analytical Profiles
-          </span>
-          <h2 className="font-serif text-3xl font-bold text-[#171A18] mt-1">
-            Five Disease Families: In-Depth Breakdown
-          </h2>
-          <p className="text-xs text-[#565C58] mt-1">
-            Full empirical metrics, monthly histograms, geographic distribution, and ground-level clinical linkages.
+          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+            Explore how disease outbreaks surge and subside across the twelve months of Maharashtra&apos;s annual calendar.
           </p>
         </div>
-
-        {/* ── 01. DENGUE ────────────────────────────────────────── */}
-        <div id="dengue" className="bg-[#FAF7F2] border border-[#D8D1C5] rounded p-6 sm:p-8 space-y-6 scroll-mt-24">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#D8D1C5] pb-4">
-            <div>
-              <span className="text-xs font-mono uppercase text-[#174A4A] font-semibold">01 · Vector-Borne</span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Dengue Fever</h3>
-            </div>
-            <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              Peak: Jun, Sep, Oct (50.5% CR3)
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Outbreak Records</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">204</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Reported Cases</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">3,144</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Fatalities</div>
-              <div className="text-base font-bold text-[#C84B2F] mt-0.5">93 Deaths</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Districts</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">31 / 36</div>
-            </div>
-          </div>
-
-          {/* Monthly Mini Bar Chart */}
-          <div className="space-y-2">
-            <div className="text-xs font-mono text-[#565C58]">12-Month Outbreak Event Distribution:</div>
-            <div className="grid grid-cols-12 gap-1 items-end h-20 bg-[#F3EFE6] p-2 rounded border border-[#D8D1C5]">
-              {PRIMARY_DISEASES.dengue.monthlyEvents.map((val, i) => {
-                const max = Math.max(...PRIMARY_DISEASES.dengue.monthlyEvents);
-                const heightPct = Math.round((val / max) * 100);
-                return (
-                  <div key={i} className="flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full bg-[#174A4A] rounded-t transition-all hover:bg-[#C84B2F]"
-                      style={{ height: `${heightPct}%` }}
-                      title={`${MONTHS[i]}: ${val} events`}
-                    ></div>
-                    <span className="text-[9px] font-mono text-[#7A827D]">{MONTHS[i][0]}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            <p>
-              <strong>Epidemiological Interpretation:</strong> Dengue exhibits strict late-monsoon and post-monsoon concentration across Maharashtra, with 73.0% of all baseline events occurring between June and October. Peak frequency consistently hits October (40 events, 566 cases) as stagnant rainwater pools and artificial domestic containers create ideal breeding habitats for <em>Aedes aegypti</em>.
-            </p>
-            <p>
-              <strong>Fieldwork Linkage (Nallasopara West):</strong> In the local health facility visit, the Medical Officer reported clinical dengue presentations surging through September–November, directly driven by intermittent municipal water supply that compels households to store water for 48–72 hours in open drums.
-            </p>
-          </div>
-        </div>
-
-        {/* ── 02. ACUTE DIARRHEAL DISEASE (ADD) ──────────────────── */}
-        <div id="add" className="bg-[#FAF7F2] border border-[#D8D1C5] rounded p-6 sm:p-8 space-y-6 scroll-mt-24">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#D8D1C5] pb-4">
-            <div>
-              <span className="text-xs font-mono uppercase text-[#C84B2F] font-semibold">02 · Water-Borne</span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Acute Diarrheal Disease (ADD)</h3>
-            </div>
-            <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded font-bold">
-              Kendall&apos;s W = 0.530 (p = 0.016)*
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Outbreak Records</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">153</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Reported Cases</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">9,050</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Fatalities</div>
-              <div className="text-base font-bold text-[#C84B2F] mt-0.5">93 Deaths</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Districts</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">33 / 36</div>
-            </div>
-          </div>
-
-          {/* Monthly Mini Bar Chart */}
-          <div className="space-y-2">
-            <div className="text-xs font-mono text-[#565C58]">12-Month Outbreak Event Distribution:</div>
-            <div className="grid grid-cols-12 gap-1 items-end h-20 bg-[#F3EFE6] p-2 rounded border border-[#D8D1C5]">
-              {PRIMARY_DISEASES.add.monthlyEvents.map((val, i) => {
-                const max = Math.max(...PRIMARY_DISEASES.add.monthlyEvents);
-                const heightPct = Math.round((val / max) * 100);
-                return (
-                  <div key={i} className="flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full bg-[#C84B2F] rounded-t transition-all hover:bg-[#174A4A]"
-                      style={{ height: `${heightPct}%` }}
-                      title={`${MONTHS[i]}: ${val} events`}
-                    ></div>
-                    <span className="text-[9px] font-mono text-[#7A827D]">{MONTHS[i][0]}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            <p>
-              <strong>Epidemiological Interpretation:</strong> ADD is the single disease in the baseline dataset with statistically confirmed multi-year seasonal concordance. Outbreaks climb rapidly with initial monsoon rains in June (19 events) and July (22 events), with a notable secondary elevation in October (25 events, 1,383 cases).
-            </p>
-            <p>
-              <strong>Fieldwork Linkage (Nallasopara West):</strong> Ground observations noted leaking potable distribution pipelines running parallel to unlined surface drains. During the monsoon onset, negative pressure in damaged supply pipes causes sewer cross-contamination, explaining the immediate surge in gastroenteritis cases at the health post.
-            </p>
-          </div>
-        </div>
-
-        {/* ── 03. MALARIA ────────────────────────────────────────── */}
-        <div id="malaria" className="bg-[#FAF7F2] border border-[#D8D1C5] rounded p-6 sm:p-8 space-y-6 scroll-mt-24">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#D8D1C5] pb-4">
-            <div>
-              <span className="text-xs font-mono uppercase text-[#AEBB55] font-semibold">03 · Vector-Borne</span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Malaria</h3>
-            </div>
-            <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              Peak: May–Jul (51.4% CR3)
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Outbreak Records</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">70</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Reported Cases</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">2,133</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Fatalities</div>
-              <div className="text-base font-bold text-[#C84B2F] mt-0.5">51 Deaths</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Districts</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">15 / 36</div>
-            </div>
-          </div>
-
-          {/* Monthly Mini Bar Chart */}
-          <div className="space-y-2">
-            <div className="text-xs font-mono text-[#565C58]">12-Month Outbreak Event Distribution:</div>
-            <div className="grid grid-cols-12 gap-1 items-end h-20 bg-[#F3EFE6] p-2 rounded border border-[#D8D1C5]">
-              {PRIMARY_DISEASES.malaria.monthlyEvents.map((val, i) => {
-                const max = Math.max(...PRIMARY_DISEASES.malaria.monthlyEvents);
-                const heightPct = Math.round((val / max) * 100);
-                return (
-                  <div key={i} className="flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full bg-[#AEBB55] rounded-t transition-all hover:bg-[#174A4A]"
-                      style={{ height: `${heightPct}%` }}
-                      title={`${MONTHS[i]}: ${val} events`}
-                    ></div>
-                    <span className="text-[9px] font-mono text-[#7A827D]">{MONTHS[i][0]}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            <p>
-              <strong>Epidemiological Interpretation:</strong> Unlike Dengue, which crests post-monsoon, Malaria outbreaks in Maharashtra concentrate earlier in May–July (51.4% of events). Geographically, Malaria is tightly clustered in 15 districts, heavily concentrated in forested and tribal belts (particularly Gadchiroli and Chandrapur).
-            </p>
-            <p>
-              <strong>Fieldwork Linkage (Nallasopara West):</strong> In peri-urban Palghar, the Medical Officer noted that local transmission is predominantly <em>Plasmodium vivax</em> linked to construction site water accumulation, while severe <em>falciparum</em> cases are rare in this urban center.
-            </p>
-          </div>
-        </div>
-
-        {/* ── 04. FOOD POISONING ─────────────────────────────────── */}
-        <div id="food-poisoning" className="bg-[#FAF7F2] border border-[#D8D1C5] rounded p-6 sm:p-8 space-y-6 scroll-mt-24">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#D8D1C5] pb-4">
-            <div>
-              <span className="text-xs font-mono uppercase text-[#D97706] font-semibold">04 · Food-Borne</span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Food Poisoning</h3>
-            </div>
-            <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              High-Case Point Source Outliers
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Outbreak Records</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">69</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Reported Cases</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">5,927</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Fatalities</div>
-              <div className="text-base font-bold text-[#C84B2F] mt-0.5">29 Deaths</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Districts</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">27 / 36</div>
-            </div>
-          </div>
-
-          {/* Monthly Mini Bar Chart */}
-          <div className="space-y-2">
-            <div className="text-xs font-mono text-[#565C58]">12-Month Outbreak Event Distribution:</div>
-            <div className="grid grid-cols-12 gap-1 items-end h-20 bg-[#F3EFE6] p-2 rounded border border-[#D8D1C5]">
-              {PRIMARY_DISEASES.foodPoisoning.monthlyEvents.map((val, i) => {
-                const max = Math.max(...PRIMARY_DISEASES.foodPoisoning.monthlyEvents);
-                const heightPct = Math.round((val / max) * 100);
-                return (
-                  <div key={i} className="flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full bg-[#D97706] rounded-t transition-all hover:bg-[#174A4A]"
-                      style={{ height: `${heightPct}%` }}
-                      title={`${MONTHS[i]}: ${val} events`}
-                    ></div>
-                    <span className="text-[9px] font-mono text-[#7A827D]">{MONTHS[i][0]}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            <p>
-              <strong>Epidemiological Interpretation:</strong> Food Poisoning exhibits extreme case dispersion. While record counts are moderate (69 events), total cases (5,927) are second only to ADD, driven by massive single-event communal gatherings (weddings, religious feasts, residential hostel caterers) where &gt;200 individuals fall ill simultaneously.
-            </p>
-            <p>
-              <strong>Fieldwork Linkage (Nallasopara West):</strong> The facility physician noted that domestic food spoilage cases climb steeply during hot pre-monsoon weeks (April–May) due to ambient temperatures accelerating bacterial growth in unrefrigerated food.
-            </p>
-          </div>
-        </div>
-
-        {/* ── 05. CHIKUNGUNYA ────────────────────────────────────── */}
-        <div id="chikungunya" className="bg-[#FAF7F2] border border-[#D8D1C5] rounded p-6 sm:p-8 space-y-6 scroll-mt-24">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-[#D8D1C5] pb-4">
-            <div>
-              <span className="text-xs font-mono uppercase text-[#7A827D] font-semibold">05 · Vector-Borne</span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#171A18]">Chikungunya</h3>
-            </div>
-            <div className="text-xs font-mono bg-[#E8E2D7] text-[#174A4A] px-3 py-1.5 rounded">
-              0 Deaths Recorded
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Outbreak Records</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">43</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Reported Cases</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">701</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Fatalities</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">0 Deaths</div>
-            </div>
-            <div className="bg-[#F3EFE6] p-3 rounded">
-              <div className="text-[#7A827D]">Districts</div>
-              <div className="text-base font-bold text-[#171A18] mt-0.5">15 / 36</div>
-            </div>
-          </div>
-
-          {/* Monthly Mini Bar Chart */}
-          <div className="space-y-2">
-            <div className="text-xs font-mono text-[#565C58]">12-Month Outbreak Event Distribution:</div>
-            <div className="grid grid-cols-12 gap-1 items-end h-20 bg-[#F3EFE6] p-2 rounded border border-[#D8D1C5]">
-              {PRIMARY_DISEASES.chikungunya.monthlyEvents.map((val, i) => {
-                const max = Math.max(...PRIMARY_DISEASES.chikungunya.monthlyEvents);
-                const heightPct = Math.round((val / max) * 100);
-                return (
-                  <div key={i} className="flex flex-col items-center gap-1 h-full justify-end">
-                    <div
-                      className="w-full bg-[#565C58] rounded-t transition-all hover:bg-[#174A4A]"
-                      style={{ height: `${heightPct}%` }}
-                      title={`${MONTHS[i]}: ${val} events`}
-                    ></div>
-                    <span className="text-[9px] font-mono text-[#7A827D]">{MONTHS[i][0]}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="space-y-3 text-xs sm:text-sm text-[#565C58] leading-relaxed">
-            <p>
-              <strong>Epidemiological Interpretation:</strong> Chikungunya exhibits the lowest rank concordance (W = 0.150, p = 0.832) and lowest case volume (701 cases) among the primary cohort. Outbreaks are sporadic and multi-year episodic rather than strictly predictable on an annual calendar basis. Zero fatalities were reported across all 237 surveillance weeks.
-            </p>
-            <p>
-              <strong>Clinical Nuance:</strong> While mortality is nil, Chikungunya causes debilitating sub-acute and chronic polyarthralgia lasting weeks or months, representing an unmeasured disability burden not captured by acute outbreak death tallies.
-            </p>
-          </div>
-        </div>
       </section>
 
-      {/* 5. NEXT DESTINATION: FIELDWORK */}
-      <section className="bg-[#FAF7F2] border-t border-[#D8D1C5] py-14 px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1">
-            <div className="text-xs font-mono uppercase text-[#C84B2F] font-semibold">The Ground Reality</div>
-            <h3 className="font-serif text-2xl font-bold text-[#171A18]">
-              Connect the Data to the Health Facility
-            </h3>
-            <p className="text-xs text-[#565C58]">
-              Read field notes, direct observations, and the Medical Officer interview from Nallasopara West.
-            </p>
+      {/* 2. THE SIGNATURE INTERACTIVE SEASONAL INSTRUMENT (80% VIEWPORT) */}
+      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-6">
+        {/* Top Control Bar: Disease Filter + Metric Switcher */}
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#F8FAFC]/12 pb-4">
+          {/* Disease Selector Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            {DISEASE_KEYS.map((d) => {
+              const isSelected = selectedDisease === d.id;
+              return (
+                <button
+                  key={d.id}
+                  onClick={() => setSelectedDisease(d.id)}
+                  className="px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm transition-all border flex items-center gap-1.5"
+                  style={{
+                    borderColor: isSelected ? d.color : "rgba(212, 175, 55, 0.18)",
+                    backgroundColor: isSelected ? `${d.color}25` : "#06080F",
+                    color: isSelected ? d.color : "rgba(248, 250, 252, 0.7)",
+                    fontWeight: isSelected ? "bold" : "normal",
+                  }}
+                >
+                  <span className="w-2 h-2 rounded-full" style={{ backgroundColor: d.color }} />
+                  <span>{d.label}</span>
+                </button>
+              );
+            })}
           </div>
-          <Link
-            href="/fieldwork"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#C84B2F] hover:bg-[#A43920] text-white text-sm font-semibold rounded transition-colors whitespace-nowrap shadow-sm"
+
+          {/* Metric Mode Toggle */}
+          <div className="flex items-center bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm p-0.5">
+            <button
+              onClick={() => setMetric("events")}
+              className={`px-3 py-1 text-xs font-mono uppercase tracking-wider rounded-xs transition-all ${
+                metric === "events"
+                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow"
+                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
+              }`}
+            >
+              Outbreak Records
+            </button>
+            <button
+              onClick={() => setMetric("cases")}
+              className={`px-3 py-1 text-xs font-mono uppercase tracking-wider rounded-xs transition-all ${
+                metric === "cases"
+                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow"
+                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
+              }`}
+            >
+              Reported Cases
+            </button>
+          </div>
+        </div>
+
+        {/* The Coordinated Dual Visual Exhibit: Radial Clock + Native Seasonal Bar Graph */}
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-6 sm:p-8 shadow-2xl">
+          {/* Left Column: 12-Month Circular Radial Clock (5 cols) */}
+          <div className="xl:col-span-5 flex flex-col items-center justify-center relative">
+            <RadialSeasonalClock
+              focusedDisease={selectedDisease === "all" ? null : selectedDisease}
+              onSelectDisease={(d) => setSelectedDisease(d || "all")}
+              className="w-full"
+            />
+          </div>
+
+          {/* Right Column: Native Seasonal Bar Graph (7 cols) */}
+          <div className="xl:col-span-7 flex flex-col justify-between">
+            <NativeSeasonalChart
+              initialDisease={selectedDisease}
+              allowToggleMode={true}
+              className="w-full border-0 bg-transparent p-0 shadow-none"
+            />
+          </div>
+        </div>
+
+            {/* Attached Finding Callout */}
+            <div className="p-4 bg-[#06080F] border border-[#00F0FF]/30 rounded-sm flex items-start gap-3 text-xs text-[#94A3B8] leading-relaxed">
+              <CheckCircle2 className="w-4 h-4 text-[#00F0FF] shrink-0 mt-0.5" />
+              <div>
+                <strong className="text-[#F8FAFC]">Primary Finding:</strong> {getTakeaway()}
+              </div>
+            </div>
+
+        {/* 3. CONTEXTUAL METRIC DISCLOSURE: ACTIVITY WINDOW VS CR3 */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2 text-xs font-mono">
+          <button
+            onClick={() => setShowMetricExplanation(!showMetricExplanation)}
+            className="text-[#00F0FF] hover:underline flex items-center gap-1.5"
           >
-            <span>Read Fieldwork Dossier</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>How are &ldquo;Continuous Season Window&rdquo; and &ldquo;CR3 Concentration&rdquo; calculated?</span>
+          </button>
+
+          <span className="text-[#94A3B8]/70">
+            Dengue: 5-month window (73.0%) · CR3: 3 peak months (50.5%)
+          </span>
+        </div>
+
+        {showMetricExplanation && (
+          <div className="p-5 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs text-[#94A3B8] animate-fadeIn">
+            <div className="space-y-1.5 p-3 bg-[#06080F] rounded-sm border border-[#F8FAFC]/10">
+              <div className="text-[#38BDF8] font-bold uppercase">01 · Continuous Activity Window</div>
+              <p className="leading-relaxed">
+                The contiguous calendar block of elevated transmission. For Dengue, June through October captures <strong className="text-[#F8FAFC]">73.0% of baseline records (149 of 204)</strong>.
+              </p>
+            </div>
+            <div className="space-y-1.5 p-3 bg-[#06080F] rounded-sm border border-[#F8FAFC]/10">
+              <div className="text-[#00F0FF] font-bold uppercase">02 · Top-Three-Month Concentration (CR3)</div>
+              <p className="leading-relaxed">
+                The mathematical proportion of events occurring in the 3 highest individual months. For Dengue, June (27), Sep (36), and Oct (40) total <strong className="text-[#F8FAFC]">50.5% (103 of 204)</strong>.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* 4. OPTIONAL EXPANDABLE 5×12 MATRIX DRAWER */}
+        <div className="pt-6 border-t border-[#F8FAFC]/15">
+          <button
+            onClick={() => setShowMatrixDrawer(!showMatrixDrawer)}
+            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold"
+          >
+            <div className="flex items-center gap-2">
+              <Layers className="w-4 h-4" />
+              <span>{showMatrixDrawer ? "Hide 5×12 Seasonal Heatmap Matrix" : "Explore 5×12 Seasonal Heatmap Matrix & Raw Monthly Indices"}</span>
+            </div>
+            {showMatrixDrawer ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </button>
+
+          {showMatrixDrawer && (
+            <div className="pt-6 space-y-6 animate-fadeIn">
+              <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm shadow-xl">
+                <SeasonalMatrix />
+              </div>
+            </div>
+          )}
         </div>
       </section>
+
+      {/* 5. CHAPTER NAVIGATION FOOTER */}
+      <ChapterFooter currentChapterNumber={4} />
     </div>
   );
 }

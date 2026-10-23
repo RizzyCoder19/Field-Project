@@ -2,34 +2,27 @@
 
 @layer base {
   :root {
-    /* ─── ARCHIVAL EDITORIAL + DATA LABORATORY PALETTE ─── */
-    --ink: #111411;
-    --deep-navy: #111A2B;
-    --royal-petrol: #173F3A;
-    --paper-ivory: #EEE8DA;
-    --warm-white: #F8F5EC;
-    --antique-gold: #C7A75B;
-    --oxide: #A94F3D;
-    --sage: #89947C;
-    --fog: #B5B0A4;
-    --tech-blue: #4F91B8;
+    --bg-primary: #06080F;
+    --color-bg: #06080F;
+    --color-dark: #0B111E;
+    --color-dark-surface: #0F172A;
+    --color-darker: #030407;
+    --color-cream: #F8FAFC;
+    --color-gold: #D4AF37;
+    --color-gold-bright: #F5D061;
+    --color-gold-dim: #997B24;
+    --color-cyan: #00F0FF;
+    --color-cyan-dim: #38BDF8;
+    --color-fog: #94A3B8;
+    --color-subtle: #1E293B;
+    --color-border: rgba(212, 175, 55, 0.16);
 
-    /* Semantic aliases */
-    --color-charcoal: #111411;
-    --color-ivory: #EEE8DA;
-    --color-petrol: #173F3A;
-    --color-gold: #C7A75B;
-    --color-oxide: #A94F3D;
-    --color-sage: #89947C;
-    --color-fog: #B5B0A4;
-    --color-blue: #4F91B8;
-
-    /* Disease colour tokens */
-    --dengue: #4F91B8;
-    --add: #89947C;
-    --malaria: #C7A75B;
-    --food-poisoning: #A94F3D;
-    --chikungunya: #7A8BA0;
+    /* Royal Jewel-Tone Disease Telemetry Colors */
+    --dengue: #38BDF8;
+    --add: #10B981;
+    --malaria: #F59E0B;
+    --food-poisoning: #F43F5E;
+    --chikungunya: #A855F7;
   }
 
   *, *::before, *::after {
@@ -42,8 +35,8 @@
   }
 
   body {
-    background-color: #111411;
-    color: #EEE8DA;
+    background-color: #06080F;
+    color: #F8FAFC;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -52,13 +45,13 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif), 'Newsreader', Georgia, serif;
     letter-spacing: -0.02em;
     line-height: 1.1;
   }
 
   .font-serif {
-    font-family: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-serif), 'Newsreader', Georgia, serif;
   }
 
   .font-mono, code, pre {
@@ -67,25 +60,157 @@
 }
 
 /* ─── SCROLLBAR ─── */
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #111411; }
-::-webkit-scrollbar-thumb { background: #C7A75B; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #EEE8DA; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #06080F; }
+::-webkit-scrollbar-thumb { 
+  background: linear-gradient(180deg, #D4AF37, #00F0FF); 
+  border-radius: 2px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+  background: linear-gradient(180deg, #F5D061, #38BDF8); 
+}
 
-/* ─── UTILITIES ─── */
+/* ─── ROYAL EDITORIAL & CYBER-TECH UTILITIES ─── */
 .editorial-grain {
-  background-image: radial-gradient(rgba(238,232,218,0.025) 1px, transparent 0);
-  background-size: 28px 28px;
+  background-image: 
+    radial-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 0),
+    radial-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 0);
+  background-size: 32px 32px, 96px 96px;
+}
+
+.monsoon-panel {
+  background-color: #0B111E;
+  border: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+.monsoon-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(11, 17, 30, 0.95) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.monsoon-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.85), 0 0 20px rgba(212, 175, 55, 0.14);
 }
 
 .gold-rule {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #C7A75B 40%, transparent);
+  background: linear-gradient(90deg, transparent, #D4AF37 35%, #F5D061 50%, #D4AF37 65%, transparent);
 }
 
 .thin-rule {
   height: 1px;
-  background: rgba(238, 232, 218, 0.12);
+  background: rgba(212, 175, 55, 0.14);
+}
+
+.cyan-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00F0FF 40%, transparent);
+}
+
+/* ─── SELF-CONSTRUCTING INTERFACE KEYFRAMES ─── */
+@keyframes constructStroke {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes constructBar {
+  from {
+    transform: scaleY(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes apertureWipe {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-construct-stroke {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: constructStroke 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-aperture-wipe {
+  animation: apertureWipe 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.bar-construct {
+  transform-origin: bottom;
+  animation: constructBar 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ─── GLOBAL EDITORIAL TYPOGRAPHY TARGETS ─── */
+.heading-display {
+  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
+  font-size: clamp(2.75rem, 5.5vw, 4.75rem); /* ~44px - 76px */
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: #F8FAFC;
+}
+
+.heading-section {
+  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
+  font-size: clamp(1.75rem, 3.2vw, 2.6rem); /* ~28px - 42px */
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #F8FAFC;
+}
+
+.copy-lead {
+  font-size: clamp(1.06rem, 1.25vw, 1.25rem); /* ~17px - 20px */
+  line-height: 1.7;
+  color: #94A3B8;
+}
+
+.caption-editorial {
+  font-size: 0.9375rem; /* ~15px */
+  line-height: 1.55;
+  color: #94A3B8;
+}
+
+.control-label {
+  font-family: var(--font-mono), 'JetBrains Mono', monospace;
+  font-size: 0.9375rem; /* ~15px */
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 /* ─── CINEMATIC INTRO OVERLAY ─── */
@@ -93,7 +218,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #000;
+  background: #030407;
   pointer-events: all;
 }
 
@@ -104,21 +229,21 @@
 /* ─── DOCUMENT FRAGMENT TEXTURE ─── */
 .doc-fragment {
   background: #F8F5EC;
-  color: #111411;
+  color: #06080F;
   font-family: var(--font-mono), monospace;
   font-size: 10px;
   line-height: 1.5;
-  border: 1px solid rgba(17,26,43,0.18);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
 }
 
-/* ─── SECTION LABEL STYLE ─── */
+/* ─── SECTION LABELS ─── */
 .section-label {
   font-family: var(--font-mono), monospace;
   font-size: 0.65rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-gold-bright);
 }
 
 .section-label-muted {
@@ -136,19 +261,25 @@
   font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: #EEE8DA;
+  color: #F8FAFC;
 }
 
 .metric-number-gold {
-  color: #C7A75B;
+  color: #F5D061;
+  text-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+.metric-number-cyan {
+  color: #00F0FF;
+  text-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
 }
 
 /* ─── DISEASE COLOUR CLASSES ─── */
-.disease-dengue   { color: var(--dengue); }
-.disease-add      { color: var(--add); }
-.disease-malaria  { color: var(--malaria); }
-.disease-fp       { color: var(--food-poisoning); }
-.disease-chik     { color: var(--chikungunya); }
+.text-dengue { color: var(--dengue); }
+.text-add    { color: var(--add); }
+.text-malaria{ color: var(--malaria); }
+.text-fp     { color: var(--food-poisoning); }
+.text-chik   { color: var(--chikungunya); }
 
 .bg-dengue   { background-color: var(--dengue); }
 .bg-add      { background-color: var(--add); }
@@ -156,63 +287,17 @@
 .bg-fp       { background-color: var(--food-poisoning); }
 .bg-chik     { background-color: var(--chikungunya); }
 
-/* ─── CINEMATIC TEXT ANIMATIONS ─── */
-.cinematic-char {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-/* ─── STICKY SCROLL SCENE ─── */
-.scroll-scene {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
 /* ─── MAP SVG ─── */
 .district-path {
-  transition: fill 0.25s ease, opacity 0.2s ease;
+  transition: fill 0.25s ease, opacity 0.2s ease, stroke-width 0.2s ease;
   cursor: pointer;
 }
 
-.district-path:hover {
-  opacity: 0.85;
-}
-
-/* ─── PDF TABLE ROW HIGHLIGHT ─── */
-@keyframes rowExtract {
-  0%  { background: transparent; }
-  30% { background: rgba(199,167,91,0.35); }
-  70% { background: rgba(199,167,91,0.35); }
-  100%{ background: rgba(199,167,91,0.1); transform: translateX(20px); opacity: 0; }
-}
-
-.extracting-row {
-  animation: rowExtract 1.8s ease forwards;
-}
-
-/* ─── CLUSTER NODE ANIMATION ─── */
-@keyframes clusterPulse {
-  0%, 100% { transform: scale(1); opacity: 0.9; }
-  50%       { transform: scale(1.06); opacity: 1; }
-}
-
-.cluster-node {
-  animation: clusterPulse 2.8s ease-in-out infinite;
-}
-
-/* ─── OUTLIER FLASH ─── */
-@keyframes outlierAlert {
-  0%   { box-shadow: 0 0 0 0 rgba(169,79,61,0); }
-  40%  { box-shadow: 0 0 0 12px rgba(169,79,61,0.4); }
-  100% { box-shadow: 0 0 0 0 rgba(169,79,61,0); }
-}
-
-.outlier-pulse {
-  animation: outlierAlert 2s ease-out infinite;
+.district-path:hover, .district-path:focus-visible {
+  opacity: 0.9;
+  stroke: #00F0FF;
+  stroke-width: 1.5px;
+  outline: none;
 }
 
 /* ─── REDUCED MOTION ─── */
@@ -221,26 +306,27 @@
   ::before,
   ::after {
     animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
-  html { scroll-behavior: auto; }
 }
 
 /* ─── PRINT & PDF EXPORT STYLES ─── */
 @media print {
   @page {
-    size: A4;
+    size: A4 portrait;
     margin: 1.2cm;
   }
 
   body {
     background-color: #FFFFFF !important;
-    color: #111411 !important;
+    color: #06080F !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  .print\\:hidden,
+  .print-hidden,
   #cinematic-intro,
   header,
   nav,
@@ -248,13 +334,12 @@
     display: none !important;
   }
 
-  .print\\:break-after-page {
+  .print-break-after {
     break-after: page !important;
     page-break-after: always !important;
   }
 
-  /* Prevent split inside analytical cards */
-  figure, table, .p-6, .border {
+  figure, table, .monsoon-card, .border {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }

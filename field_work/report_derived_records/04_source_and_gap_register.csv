@@ -1,0 +1,8 @@
+item_id,item,what_the_report_says,report_location,repository_check,status
+RDR-01,Visit metadata,"Visit on 2 October 2026, 10:30–11:45, PHC Nallasopara West",Finalized PDF pp. 24 and 37,"Repeated in website fieldwork page and researchData.ts; website also gives an observation at 12:00",Time discrepancy unresolved
+RDR-02,Observation notes,"One structured observation round; corridor/triage, diagnostics, perimeter",Finalized PDF pp. 24 and 37–38,"Summary exists in report; no original completed observation sheet located; field register has header only",Report-derived summary only
+RDR-03,Interview notes,"One Medical Officer In-Charge interview, responses paraphrased across five modules",Finalized PDF pp. 24 and 38–39,"Website summarizes five modules; website also places quote marks around one passage; no original notes or transcript located",Report-derived summary only; quotation status conflicts
+RDR-04,Consent documentation,"Report says verbal and institutional consent was obtained",Finalized PDF pp. 25 and 37,"No consent record located in current field_work folder",Claim not independently verifiable from repository
+RDR-05,Photographs,"Report describes visit photographs and one 2022 archival image",Finalized PDF pp. 39–40 and 50,"Image files exist in field_work/images, but no completed evidence register ties each file to its stated source/date",Image provenance not fully verified
+RDR-06,Community questionnaires,"Zero completed community questionnaires",Finalized PDF pp. 24 and 37,"Website and report both state zero",Matches report and website
+RDR-07,Patient-level data,"No patient-level data collected",Finalized PDF pp. 24–25,"Website and report both state no patient-level dataset/data",Matches report and website

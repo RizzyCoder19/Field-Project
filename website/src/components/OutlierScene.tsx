@@ -18,7 +18,7 @@ export default function OutlierScene() {
       {/* Title */}
       <div>
         <div className="section-label mb-2">Outlier Sensitivity Analysis</div>
-        <div className="font-serif text-3xl sm:text-4xl text-[#EEE8DA] font-bold">
+        <div className="font-serif text-3xl sm:text-4xl text-[#F8FAFC] font-bold">
           What happened in February?
         </div>
         <div className="font-mono text-[10px] tracking-[0.2em] text-[#A94F3D] uppercase mt-1">
@@ -28,7 +28,7 @@ export default function OutlierScene() {
 
       {/* Three detached records */}
       <div className="flex flex-wrap gap-3">
-        <div className="font-mono text-[9px] text-[#B5B0A4] uppercase tracking-widest w-full mb-1">
+        <div className="font-mono text-[9px] text-[#94A3B8] uppercase tracking-widest w-full mb-1">
           Three outlier records — each a single mass-exposure cluster
         </div>
         {data.threeRecords.map((rec, i) => (
@@ -36,12 +36,12 @@ export default function OutlierScene() {
             key={i}
             className={`border rounded-sm p-3 flex-1 min-w-[140px] transition-all duration-500 ${
               removed
-                ? "border-[#EEE8DA]/08 opacity-30 scale-95"
+                ? "border-[#F8FAFC]/08 opacity-30 scale-95"
                 : "border-[#A94F3D]/50 bg-[#A94F3D]/08 outlier-pulse"
             }`}
           >
-            <div className="font-mono text-[9px] text-[#B5B0A4] uppercase tracking-wider">{rec.year} · {rec.week}</div>
-            <div className="font-serif text-base text-[#EEE8DA] font-bold mt-0.5">{rec.district}</div>
+            <div className="font-mono text-[9px] text-[#94A3B8] uppercase tracking-wider">{rec.year} · {rec.week}</div>
+            <div className="font-serif text-base text-[#F8FAFC] font-bold mt-0.5">{rec.district}</div>
             <div className="font-serif text-2xl text-[#A94F3D] font-bold mt-1">{rec.cases}</div>
             <div className="font-mono text-[8px] text-[#A94F3D] uppercase mt-0.5">reported cases</div>
           </div>
@@ -49,13 +49,13 @@ export default function OutlierScene() {
 
         {/* Combined */}
         <div className={`border rounded-sm p-3 flex-1 min-w-[140px] transition-all duration-500 ${
-          removed ? "border-[#C7A75B]/20 bg-[#C7A75B]/06" : "border-[#A94F3D]/30 bg-[#A94F3D]/05"
+          removed ? "border-[#00F0FF]/20 bg-[#00F0FF]/06" : "border-[#A94F3D]/30 bg-[#A94F3D]/05"
         }`}>
-          <div className="font-mono text-[8px] text-[#B5B0A4] uppercase tracking-wider">Combined</div>
+          <div className="font-mono text-[8px] text-[#94A3B8] uppercase tracking-wider">Combined</div>
           <div className="font-serif text-2xl text-[#A94F3D] font-bold mt-1">
             {removed ? "—" : `${data.totalCases.toLocaleString()}`}
           </div>
-          <div className="font-mono text-[8px] text-[#B5B0A4] mt-0.5">
+          <div className="font-mono text-[8px] text-[#94A3B8] mt-0.5">
             {removed ? "Removed from analysis" : `${data.febOutlierShare}% of Feb cases`}
           </div>
         </div>
@@ -64,20 +64,20 @@ export default function OutlierScene() {
       {/* February total shift */}
       <div className="flex items-center gap-6 flex-wrap">
         <div className="flex flex-col">
-          <div className="font-mono text-[8px] text-[#B5B0A4] uppercase tracking-wider">February total {removed ? "after removal" : "with outliers"}</div>
+          <div className="font-mono text-[8px] text-[#94A3B8] uppercase tracking-wider">February total {removed ? "after removal" : "with outliers"}</div>
           <div
             className="font-serif font-bold leading-none mt-1 transition-all duration-700"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", color: removed ? "#89947C" : "#A94F3D" }}
           >
             {removed ? data.febRemainingCases.toLocaleString() : data.febTotalCases.toLocaleString()}
           </div>
-          <div className="font-mono text-[9px] text-[#B5B0A4] mt-1">
+          <div className="font-mono text-[9px] text-[#94A3B8] mt-1">
             {removed ? "Adjusted Feb cases" : "Original Feb cases"}
           </div>
         </div>
 
         {removed && (
-          <div className="font-mono text-[10px] text-[#C7A75B] tracking-wider">
+          <div className="font-mono text-[10px] text-[#00F0FF] tracking-wider">
             → Peak shifts to April / May
           </div>
         )}
@@ -85,7 +85,7 @@ export default function OutlierScene() {
 
       {/* Bar chart */}
       <div>
-        <div className="font-mono text-[8px] text-[#B5B0A4] uppercase tracking-widest mb-2">
+        <div className="font-mono text-[8px] text-[#94A3B8] uppercase tracking-widest mb-2">
           Food Poisoning — Monthly Case Volume ({removed ? "Outliers Removed" : "Full Baseline"})
         </div>
         <div className="flex items-end gap-1" style={{ height: 80 }}>
@@ -105,7 +105,7 @@ export default function OutlierScene() {
                   className="w-full rounded-t-sm transition-all duration-700"
                   style={{ height: h, background: barColor }}
                 />
-                <div className="font-mono text-[7px] text-[#B5B0A4]/50 mt-0.5 text-center">{MONTHS[mi]}</div>
+                <div className="font-mono text-[7px] text-[#94A3B8]/50 mt-0.5 text-center">{MONTHS[mi]}</div>
               </div>
             );
           })}
@@ -120,14 +120,14 @@ export default function OutlierScene() {
         >
           {removed ? "↩ Restore All Records" : "Remove 3 Outliers →"}
         </button>
-        <div className="font-mono text-[8px] text-[#B5B0A4]/50 max-w-xs">
+        <div className="font-mono text-[8px] text-[#94A3B8]/50 max-w-xs">
           Removes Kolhapur W07, Parbhani W06, Solapur W06 — each a single mass-exposure event
         </div>
       </div>
 
       {/* Caveat */}
-      <div className="border-t border-[#EEE8DA]/08 pt-4">
-        <div className="font-mono text-[8px] text-[#B5B0A4]/50 leading-relaxed max-w-2xl">
+      <div className="border-t border-[#F8FAFC]/08 pt-4">
+        <div className="font-mono text-[8px] text-[#94A3B8]/50 leading-relaxed max-w-2xl">
           <span className="text-[#89947C]">Analytical note:</span> These records are not errors. Each represents a documented mass-exposure cluster verified in the source PDF. 
           The analysis demonstrates sensitivity of aggregate statistics to high-volume point-source events. No causal inference is made about why these outbreaks occurred.
         </div>

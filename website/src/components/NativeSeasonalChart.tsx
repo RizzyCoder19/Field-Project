@@ -10,10 +10,10 @@ interface NativeSeasonalChartProps {
 }
 
 const DISEASE_OPTIONS = [
-  { id: "all", label: "All 5 Cohorts", color: "#C7A75B" },
-  { id: "dengue", label: "Dengue", color: "#38BDF8" },
-  { id: "add", label: "ADD", color: "#10B981" },
-  { id: "malaria", label: "Malaria", color: "#D4AF37" },
+  { id: "all", label: "All 5 Cohorts", color: "#00F0FF" },
+  { id: "dengue", label: "Dengue Fever", color: "#38BDF8" },
+  { id: "add", label: "ADD (Diarrheal)", color: "#10B981" },
+  { id: "malaria", label: "Malaria", color: "#F59E0B" },
   { id: "foodPoisoning", label: "Food Poisoning", color: "#EF4444" },
   { id: "chikungunya", label: "Chikungunya", color: "#A78BFA" },
 ];
@@ -46,8 +46,10 @@ export default function NativeSeasonalChart({
       }
     };
 
-    setAnimatedProgress(0);
-    frameId = requestAnimationFrame(animate);
+    frameId = requestAnimationFrame((timestamp) => {
+      setAnimatedProgress(0);
+      animate(timestamp);
+    });
 
     return () => cancelAnimationFrame(frameId);
   }, [selectedDisease, metric]);
@@ -68,11 +70,11 @@ export default function NativeSeasonalChart({
   });
 
   const maxValue = Math.max(...values, 1);
-  const activeColor = DISEASE_OPTIONS.find((d) => d.id === selectedDisease)?.color || "#C7A75B";
+  const activeColor = DISEASE_OPTIONS.find((d) => d.id === selectedDisease)?.color || "#00F0FF";
 
-  const width = 720;
-  const height = 300;
-  const padding = { top: 35, right: 30, bottom: 45, left: 55 };
+  const width = 840;
+  const height = 340;
+  const padding = { top: 45, right: 35, bottom: 50, left: 65 };
   const chartW = width - padding.left - padding.right;
   const chartH = height - padding.top - padding.bottom;
 
@@ -83,23 +85,26 @@ export default function NativeSeasonalChart({
   const peakIdx = values.indexOf(Math.max(...values));
 
   return (
-    <div ref={containerRef} className={`w-full flex flex-col bg-[#0b0f0b] border border-[#EEE8DA]/08 rounded-sm p-4 sm:p-6 ${className}`}>
+    <div ref={containerRef} className={`w-full flex flex-col bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 lg:p-8 shadow-2xl ${className}`}>
       {/* Top Bar: Disease Selector & Metric Switch */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
-        <div className="flex flex-wrap gap-1.5">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#F8FAFC]/10">
+        <div className="flex flex-wrap gap-2">
           {DISEASE_OPTIONS.map((opt) => {
             const active = selectedDisease === opt.id;
             return (
               <button
                 key={opt.id}
                 onClick={() => setSelectedDisease(opt.id)}
-                className="font-mono text-[9px] uppercase tracking-wider px-2.5 py-1 rounded border transition-all"
+                className="font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm border transition-all flex items-center gap-1.5"
                 style={{
-                  borderColor: active ? opt.color : "rgba(238,232,218,0.12)",
-                  backgroundColor: active ? `${opt.color}20` : "transparent",
-                  color: active ? opt.color : "rgba(238,232,218,0.5)",
+                  borderColor: active ? opt.color : "rgba(212, 175, 55, 0.2)",
+                  backgroundColor: active ? `${opt.color}25` : "#06080F",
+                  color: active ? "#F8FAFC" : "#94A3B8",
+                  fontWeight: active ? "bold" : "normal",
+                  boxShadow: active ? `0 0 12px ${opt.color}40` : "none"
                 }}
               >
+                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: opt.color }} />
                 {opt.label}
               </button>
             );
@@ -107,34 +112,34 @@ export default function NativeSeasonalChart({
         </div>
 
         {allowToggleMode && (
-          <div className="flex items-center gap-1 bg-[#111411] border border-[#EEE8DA]/10 p-0.5 rounded">
+          <div className="flex items-center gap-1 bg-[#06080F] border border-[#F8FAFC]/15 p-1 rounded-sm">
             <button
               onClick={() => setMetric("events")}
-              className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1 rounded transition-colors ${
+              className={`font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm transition-colors ${
                 metric === "events"
-                  ? "bg-[#C7A75B] text-[#111411] font-bold"
-                  : "text-[#B5B0A4]/60 hover:text-[#EEE8DA]"
+                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow-md"
+                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
               }`}
             >
-              Events
+              Outbreak Events (N=539)
             </button>
             <button
               onClick={() => setMetric("cases")}
-              className={`font-mono text-[9px] uppercase tracking-widest px-3 py-1 rounded transition-colors ${
+              className={`font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm transition-colors ${
                 metric === "cases"
-                  ? "bg-[#C7A75B] text-[#111411] font-bold"
-                  : "text-[#B5B0A4]/60 hover:text-[#EEE8DA]"
+                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow-md"
+                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
               }`}
             >
-              Cases
+              Reported Cases (N=20,955)
             </button>
           </div>
         )}
       </div>
 
-      {/* SVG Canvas */}
-      <div className="relative w-full aspect-[21/9] min-h-[240px]">
-        <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full">
+      {/* SVG Canvas - Expanded to 840x340 */}
+      <div className="relative w-full aspect-[21/9] min-h-[260px] sm:min-h-[300px]">
+        <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full overflow-visible">
           <defs>
             <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor={activeColor} stopOpacity="0.95" />
@@ -158,15 +163,15 @@ export default function NativeSeasonalChart({
                   y1={y}
                   x2={width - padding.right}
                   y2={y}
-                  stroke="#EEE8DA"
-                  strokeOpacity="0.06"
+                  stroke="#F8FAFC"
+                  strokeOpacity="0.08"
                   strokeDasharray={ratio === 0 ? "none" : "3,3"}
                 />
                 <text
-                  x={padding.left - 8}
-                  y={y + 3}
+                  x={padding.left - 12}
+                  y={y + 4}
                   textAnchor="end"
-                  className="font-mono text-[8px] fill-[#B5B0A4]/50"
+                  className="font-mono text-xs fill-[#94A3B8]"
                 >
                   {val.toLocaleString()}
                 </text>
@@ -180,20 +185,21 @@ export default function NativeSeasonalChart({
             y1={padding.top + chartH}
             x2={width - padding.right}
             y2={padding.top + chartH}
-            stroke="#EEE8DA"
-            strokeOpacity="0.25"
-            strokeWidth="1"
+            stroke="#F8FAFC"
+            strokeOpacity="0.3"
+            strokeWidth="1.5"
           />
 
-          {/* Animated Bars */}
+          {/* Staggered Animated Bars with clear large typography */}
           {values.map((v, i) => {
-            const h = (v / maxValue) * chartH * animatedProgress;
+            const barProgress = Math.max(0, Math.min(1, (animatedProgress - i * 0.04) / 0.5));
+            const h = (v / maxValue) * chartH * barProgress;
             const x = padding.left + i * barGap + (barGap - barWidth) / 2;
             const y = padding.top + chartH - h;
             const isPeak = i === peakIdx && v > 0;
 
             return (
-              <g key={MONTHS[i]} className="transition-all duration-300">
+              <g key={MONTHS[i]} className="transition-all duration-200">
                 {/* Bar */}
                 <rect
                   x={x}
@@ -202,16 +208,15 @@ export default function NativeSeasonalChart({
                   height={Math.max(h, 0)}
                   fill={isPeak ? "url(#peakGrad)" : "url(#barGrad)"}
                   rx="2"
-                  className="transition-all duration-200"
                 />
 
-                {/* Value on top of bar if high enough */}
-                {animatedProgress > 0.8 && v > 0 && (
+                {/* Value on top of bar */}
+                {barProgress > 0.85 && v > 0 && (
                   <text
                     x={x + barWidth / 2}
-                    y={y - 5}
+                    y={y - 8}
                     textAnchor="middle"
-                    className="font-mono text-[8px] fill-[#EEE8DA] font-bold"
+                    className="font-mono text-xs sm:text-sm fill-[#F8FAFC] font-bold"
                   >
                     {v.toLocaleString()}
                   </text>
@@ -220,10 +225,10 @@ export default function NativeSeasonalChart({
                 {/* X-axis Month Label */}
                 <text
                   x={padding.left + i * barGap + barGap / 2}
-                  y={height - padding.bottom + 18}
+                  y={height - padding.bottom + 26}
                   textAnchor="middle"
-                  className={`font-mono text-[9px] ${
-                    isPeak ? "fill-[#C7A75B] font-bold" : "fill-[#B5B0A4]/70"
+                  className={`font-mono text-xs sm:text-sm font-bold ${
+                    isPeak ? "fill-[#00F0FF]" : "fill-[#94A3B8]"
                   }`}
                 >
                   {MONTHS[i]}
@@ -232,24 +237,62 @@ export default function NativeSeasonalChart({
             );
           })}
 
+          {/* Traced Continuous Seasonal Curve */}
+          {(() => {
+            const linePoints = values.map((v, i) => {
+              const barProgress = Math.max(0, Math.min(1, (animatedProgress - i * 0.04) / 0.5));
+              const h = (v / maxValue) * chartH * barProgress;
+              const x = padding.left + i * barGap + barGap / 2;
+              const y = padding.top + chartH - h;
+              return { x, y };
+            });
+
+            const curveD = linePoints.reduce((acc, pt, idx) => {
+              return idx === 0 ? `M ${pt.x} ${pt.y}` : `${acc} L ${pt.x} ${pt.y}`;
+            }, "");
+
+            return (
+              <g className="pointer-events-none">
+                <path
+                  d={curveD}
+                  fill="none"
+                  stroke={activeColor}
+                  strokeWidth="2.5"
+                  strokeOpacity="0.9"
+                  strokeDasharray="4 4"
+                />
+                {linePoints.map((pt, idx) => (
+                  <circle
+                    key={idx}
+                    cx={pt.x}
+                    cy={pt.y}
+                    r={idx === peakIdx ? 5 : 3}
+                    fill={idx === peakIdx ? "#FFFFFF" : activeColor}
+                  />
+                ))}
+              </g>
+            );
+          })()}
+
           {/* Peak Indicator Callout */}
-          {animatedProgress > 0.9 && values[peakIdx] > 0 && (
+          {animatedProgress > 0.85 && values[peakIdx] > 0 && (
             <g className="animate-fadeIn">
               <rect
-                x={padding.left + peakIdx * barGap + barGap / 2 - 38}
-                y={padding.top - 20}
-                width="76"
-                height="16"
-                rx="2"
-                fill="#111A2B"
+                x={padding.left + peakIdx * barGap + barGap / 2 - 55}
+                y={padding.top - 32}
+                width="110"
+                height="24"
+                rx="3"
+                fill="#0B111E"
                 stroke={activeColor}
-                strokeWidth="1"
+                strokeWidth="1.5"
+                filter="url(#glow)"
               />
               <text
                 x={padding.left + peakIdx * barGap + barGap / 2}
-                y={padding.top - 9}
+                y={padding.top - 16}
                 textAnchor="middle"
-                className="font-mono text-[7px] font-bold uppercase tracking-wider"
+                className="font-mono text-[10px] font-bold uppercase tracking-wider"
                 fill={activeColor}
               >
                 ★ Peak: {MONTHS[peakIdx]}
@@ -260,9 +303,9 @@ export default function NativeSeasonalChart({
       </div>
 
       {/* Analytical Footnote */}
-      <div className="mt-3 flex items-center justify-between text-[#B5B0A4]/60 font-mono text-[8px] border-t border-[#EEE8DA]/06 pt-2">
+      <div className="mt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#94A3B8] border-t border-[#F8FAFC]/10 pt-3">
         <span>Source: 2022–2025 Baseline Archives (539 primary records)</span>
-        <span>
+        <span className="text-[#00F0FF] font-bold">
           {metric === "events"
             ? `Total: ${values.reduce((a, b) => a + b, 0)} outbreak events`
             : `Total: ${values.reduce((a, b) => a + b, 0).toLocaleString()} reported cases`}

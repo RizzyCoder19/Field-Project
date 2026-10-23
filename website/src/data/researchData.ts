@@ -191,7 +191,7 @@ export const PRIMARY_DISEASES: Record<string, DiseaseProfile> = {
     kendallW: 0.319,
     kendallP: 0.229,
     isSignificant: false,
-    color: "#D4AF37", // imperial gold
+    color: "#F59E0B", // imperial gold
     accentColor: "#B45309",
     monthlyEvents: [2, 3, 3, 1, 7, 15, 14, 7, 7, 3, 2, 6],
     monthlyCases: [198, 15, 347, 25, 374, 227, 190, 108, 139, 55, 7, 448],

@@ -49,17 +49,17 @@ export default function QuestionnaireViewer() {
   return (
     <div className="w-full bg-[#080D1F] border border-[#1E335E] rounded-xl shadow-2xl p-6 lg:p-8 space-y-6">
       {/* Top Banner with Strict Disclaimer */}
-      <div className="bg-[#101C38] border-l-4 border-[#D4AF37] p-4 rounded-r-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <div className="bg-[#101C38] border-l-4 border-[#F59E0B] p-4 rounded-r-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#D4AF37] font-bold">
-            <Shield className="w-4 h-4 text-[#D4AF37]" />
+          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#F59E0B] font-bold">
+            <Shield className="w-4 h-4 text-[#F59E0B]" />
             <span>Fieldwork Instrument Status: Standardized Protocol</span>
           </div>
           <p className="text-xs text-[#AEB9D1] mt-1">
             This explorer presents the structured questions prepared for academic fieldwork deployment. In strict compliance with research ethics, <span className="text-white font-bold">all fields are labeled &ldquo;NOT YET COLLECTED&rdquo;</span> — no fabricated respondent surveys are hosted on this platform.
           </p>
         </div>
-        <span className="shrink-0 px-3 py-1.5 rounded bg-[#0A1128] text-[#F3E5AB] font-mono text-xs border border-[#D4AF37]/30">
+        <span className="shrink-0 px-3 py-1.5 rounded bg-[#0A1128] text-[#F3E5AB] font-mono text-xs border border-[#F59E0B]/30">
           Status: Planned
         </span>
       </div>
@@ -75,12 +75,12 @@ export default function QuestionnaireViewer() {
           </p>
         </div>
 
-        <div className="flex bg-[#0D162E] p-1 rounded-lg border border-[#D4AF37]/30 text-xs font-mono">
+        <div className="flex bg-[#0D162E] p-1 rounded-lg border border-[#F59E0B]/30 text-xs font-mono">
           <button
             onClick={() => setActiveTab("full")}
             className={`px-3 py-1.5 rounded transition-all ${
               activeTab === "full"
-                ? "bg-[#D4AF37] text-[#0A1128] font-bold shadow-md"
+                ? "bg-[#F59E0B] text-[#0A1128] font-bold shadow-md"
                 : "text-[#AEB9D1] hover:text-white"
             }`}
           >
@@ -90,7 +90,7 @@ export default function QuestionnaireViewer() {
             onClick={() => setActiveTab("short")}
             className={`px-3 py-1.5 rounded transition-all ${
               activeTab === "short"
-                ? "bg-[#D4AF37] text-[#0A1128] font-bold shadow-md"
+                ? "bg-[#F59E0B] text-[#0A1128] font-bold shadow-md"
                 : "text-[#AEB9D1] hover:text-white"
             }`}
           >
@@ -108,7 +108,7 @@ export default function QuestionnaireViewer() {
               onClick={() => setSelectedSection(sec.id)}
               className={`px-3 py-1.5 rounded text-xs font-mono transition-all ${
                 selectedSection === sec.id
-                  ? "bg-[#16274D] text-[#D4AF37] border border-[#D4AF37] font-bold"
+                  ? "bg-[#16274D] text-[#F59E0B] border border-[#F59E0B] font-bold"
                   : "bg-[#0D162E] text-[#AEB9D1] hover:bg-[#101C38] border border-[#1E335E]/40"
               }`}
             >
@@ -120,7 +120,7 @@ export default function QuestionnaireViewer() {
 
       {/* Questions Preview List */}
       <div className="space-y-3">
-        <div className="flex justify-between items-center text-xs font-mono text-[#D4AF37] px-1">
+        <div className="flex justify-between items-center text-xs font-mono text-[#F59E0B] px-1">
           <span>MODULE {selectedSection}: {fullSections.find(s => s.id === selectedSection)?.title}</span>
           <span>Sample Field Instrument View</span>
         </div>
@@ -129,7 +129,7 @@ export default function QuestionnaireViewer() {
           <div key={q.qId} className="bg-[#0D162E] border border-[#1E335E] rounded-lg p-4 space-y-3">
             <div className="flex justify-between items-start gap-2">
               <div className="flex items-center space-x-2">
-                <span className="font-mono text-xs px-2 py-0.5 rounded bg-[#101C38] text-[#D4AF37] border border-[#D4AF37]/30">
+                <span className="font-mono text-xs px-2 py-0.5 rounded bg-[#101C38] text-[#F59E0B] border border-[#F59E0B]/30">
                   {q.qId}
                 </span>
                 <span className="text-xs font-mono text-[#38BDF8]">{q.type}</span>
@@ -147,7 +147,7 @@ export default function QuestionnaireViewer() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 pl-1 pt-1">
                 {q.options.map((opt, i) => (
                   <div key={i} className="flex items-center space-x-2 text-xs text-[#AEB9D1] bg-[#0A1128]/70 px-3 py-1.5 rounded border border-[#1E335E]/40">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]"></span>
                     <span>{opt}</span>
                   </div>
                 ))}

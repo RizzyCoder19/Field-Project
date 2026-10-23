@@ -1,36 +1,41 @@
 "use client";
 
 import React, { useState } from "react";
+import { RefreshCw } from "lucide-react";
 
 const STAGES = [
   {
     step: "01",
     num: "116",
-    label: "Raw Strings",
+    label: "Raw Strings in Source PDFs",
+    denominator: "Total distinct string variations across all downloaded bulletins",
     desc: "Chaotic OCR variants, abbreviations, mixed casing, and clinical spellings in weekly PDF bulletins.",
     examples: ["Dengue", "Dengue Fever", "DENGUE", "ADD", "Acute Diarrhoea", "Food Poi.", "Suspected Malaria"],
-    color: "#B5B0A4",
+    color: "#94A3B8",
   },
   {
     step: "02",
     num: "56",
-    label: "Clean Labels",
+    label: "Clean Canonical Labels",
+    denominator: "Deterministic dictionary normalization",
     desc: "Harmonized canonical disease labels created via deterministic dictionary lookup while preserving raw provenance.",
     examples: ["Dengue", "Acute Diarrheal Disease", "Malaria", "Food Poisoning", "Chikungunya", "Viral Hepatitis"],
-    color: "#C7A75B",
+    color: "#00F0FF",
   },
   {
     step: "03",
     num: "30",
-    label: "Syndromic Families",
+    label: "Derived Syndromic Families",
+    denominator: "Transmission and etiological groupings",
     desc: "Etiological and transmission groupings (Vector-borne, Enteric, Zoonotic, Respiratory, Food-borne).",
     examples: ["Vector-Borne Arboviral", "Water-Borne Enteric", "Vector-Borne Protozoal", "Toxin/Food-Borne"],
-    color: "#89947C",
+    color: "#10B981",
   },
   {
     step: "04",
     num: "5",
-    label: "Primary Cohorts",
+    label: "Primary Study Cohorts",
+    denominator: "539 records of 733 baseline records (73.5% denominator)",
     desc: "High-burden analytical cohort capturing 73.5% of all 2022–2025 baseline records (539 of 733 records).",
     examples: ["Dengue (204)", "ADD (153)", "Malaria (70)", "Food Poisoning (69)", "Chikungunya (43)"],
     color: "#38BDF8",
@@ -40,58 +45,86 @@ const STAGES = [
 
 export default function NativeTaxonomyConvergence({ className = "" }: { className?: string }) {
   const [activeStage, setActiveStage] = useState(3);
+  const [animKey, setAnimKey] = useState(0);
+
+  const handleReplay = () => {
+    setAnimKey(k => k + 1);
+  };
 
   return (
-    <div className={`w-full bg-[#0b0f0b] border border-[#EEE8DA]/08 rounded-sm p-6 flex flex-col ${className}`}>
+    <div
+      className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 lg:p-8 flex flex-col shadow-2xl ${className}`}
+      role="region"
+      aria-label="Taxonomic Harmonization Convergence Pipeline"
+    >
       {/* Header */}
-      <div className="mb-6">
-        <div className="font-mono text-[9px] uppercase tracking-widest text-[#C7A75B]">
-          Data Cleaning Discipline · Rigorous Reduction
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
+        <div>
+          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+            Deterministic Reduction Architecture · 2022–2025 Baseline
+          </div>
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
+            116 Raw Disease Strings → 5 Primary Analytical Cohorts
+          </h3>
+          <p className="font-mono text-xs sm:text-sm text-[#94A3B8] mt-1 max-w-2xl leading-relaxed">
+            How unstructured government text is transformed into statistically testable cohorts without discarding records or inventing disease classifications.
+          </p>
         </div>
-        <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#EEE8DA] mt-1">
-          116 Raw Strings → 5 Primary Analytical Cohorts
-        </h3>
-        <p className="font-mono text-xs text-[#B5B0A4] mt-1.5 max-w-2xl leading-relaxed">
-          How unstructured government text becomes statistically testable cohorts without discarding records or inventing categories.
-        </p>
+
+        <button
+          onClick={handleReplay}
+          className="px-3 py-1.5 bg-[#06080F] hover:bg-[#1A2234] border border-[#F8FAFC]/15 text-[#D4AF37] hover:text-[#F5D061] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors"
+          title="Reconstruct taxonomy convergence stages"
+        >
+          <RefreshCw className="w-3.5 h-3.5" />
+          <span>Replay Stages</span>
+        </button>
       </div>
 
-      {/* Stage Cards Flow */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 my-2">
+      {/* Stage Cards Flow (Progressive Convergence) */}
+      <div key={animKey} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 my-2">
         {STAGES.map((s, idx) => {
           const isSelected = activeStage === idx;
           return (
             <div
               key={s.step}
               onClick={() => setActiveStage(idx)}
-              className={`p-4 rounded-sm border cursor-pointer transition-all duration-300 flex flex-col justify-between ${
+              className={`p-5 rounded-sm border cursor-pointer transition-all duration-300 flex flex-col justify-between ${
                 isSelected
-                  ? "border-[#C7A75B] bg-[#111A2B]/80 shadow-xl"
-                  : "border-[#EEE8DA]/08 bg-[#111411]/50 hover:border-[#EEE8DA]/20"
+                  ? "border-[#00F0FF] bg-[#1E293B] shadow-2xl scale-[1.02] ring-1 ring-[#00F0FF]/40"
+                  : "border-[#F8FAFC]/10 bg-[#06080F]/80 hover:border-[#F8FAFC]/25"
               }`}
             >
               <div>
-                <div className="flex items-center justify-between font-mono text-[8px] text-[#B5B0A4]/60 uppercase">
+                <div className="flex items-center justify-between font-mono text-[9px] text-[#94A3B8] uppercase font-bold">
                   <span>STAGE {s.step}</span>
-                  {s.isPrimary && <span className="text-[#38BDF8] font-bold">73.5% RECORDS</span>}
+                  {s.isPrimary && (
+                    <span className="text-[#38BDF8] font-bold border border-[#38BDF8]/40 px-1.5 py-0.5 rounded-sm bg-[#38BDF8]/10">
+                      539 / 733 (73.5%)
+                    </span>
+                  )}
                 </div>
-                <div className="font-serif font-bold text-4xl sm:text-5xl mt-2" style={{ color: s.color }}>
+
+                <div className="font-serif font-bold text-4xl sm:text-5xl mt-3" style={{ color: s.color }}>
                   {s.num}
                 </div>
-                <div className="font-mono text-xs font-bold text-[#EEE8DA] mt-1 uppercase tracking-wider">
+
+                <div className="font-mono text-xs font-bold text-[#F8FAFC] mt-1 uppercase tracking-wider">
                   {s.label}
                 </div>
-                <p className="font-mono text-[9px] text-[#B5B0A4] mt-2 leading-relaxed">
+
+                <p className="font-mono text-xs text-[#94A3B8] mt-2.5 leading-relaxed">
                   {s.desc}
                 </p>
               </div>
 
-              {/* Sample badges */}
-              <div className="mt-4 pt-3 border-t border-[#EEE8DA]/08 flex flex-wrap gap-1">
+              {/* Sample Badges */}
+              <div className="mt-5 pt-3 border-t border-[#F8FAFC]/10 flex flex-wrap gap-1.5">
                 {s.examples.slice(0, 3).map((ex) => (
                   <span
                     key={ex}
-                    className="font-mono text-[8px] px-1.5 py-0.5 rounded bg-[#EEE8DA]/05 text-[#EEE8DA]/70 border border-[#EEE8DA]/06"
+                    className="font-mono text-[10px] px-2 py-0.5 rounded-sm bg-[#0B111E] text-[#F8FAFC]/80 border border-[#F8FAFC]/10"
                   >
                     {ex}
                   </span>
@@ -102,21 +135,27 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
         })}
       </div>
 
-      {/* Active Stage Deep Dive */}
-      <div className="mt-4 p-4 bg-[#111411] border border-[#EEE8DA]/10 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* Active Stage Detailed Breakdown Banner */}
+      <div className="mt-4 p-5 bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-xs shadow-xl">
         <div>
-          <div className="font-mono text-[8px] uppercase tracking-widest text-[#C7A75B]">
-            Inspection: Stage {STAGES[activeStage].step} ({STAGES[activeStage].label})
-          </div>
-          <div className="font-mono text-xs text-[#EEE8DA] mt-1">
-            {activeStage === 0 && "116 different raw disease spellings were extracted verbatim from NCDC bulletins."}
-            {activeStage === 1 && "Normalized using verified case-insensitive regex dictionary rules."}
-            {activeStage === 2 && "Grouped according to official WHO / NVBDCP epidemiological taxonomy."}
-            {activeStage === 3 && "Isolated 5 core cohort families representing 20,955 cases and 266 deaths."}
-          </div>
+          <span className="text-[#00F0FF] font-bold uppercase tracking-wider mr-2">
+            Stage {STAGES[activeStage].step} Detail:
+          </span>
+          <span className="text-[#F8FAFC] font-bold text-sm">{STAGES[activeStage].label}</span>
+          <span className="text-[#94A3B8] ml-2 font-normal block sm:inline mt-1 sm:mt-0">
+            — {STAGES[activeStage].denominator}
+          </span>
         </div>
-        <div className="font-mono text-[9px] text-[#B5B0A4]/50 border-t sm:border-t-0 sm:border-l border-[#EEE8DA]/10 pt-2 sm:pt-0 sm:pl-4">
-          Additive normalization: &apos;disease_raw&apos; string permanently preserved in database.
+
+        <div className="flex flex-wrap gap-1.5">
+          {STAGES[activeStage].examples.map((ex) => (
+            <span
+              key={ex}
+              className="text-[10px] px-2.5 py-1 bg-[#0B111E] border border-[#00F0FF]/30 text-[#00F0FF] rounded-sm font-semibold"
+            >
+              {ex}
+            </span>
+          ))}
         </div>
       </div>
     </div>
