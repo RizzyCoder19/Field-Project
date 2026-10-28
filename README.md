@@ -119,6 +119,35 @@ Field-Project/
 
 ---
 
+## 🎨 Research Portal Architecture & Visual Experience
+
+The project features a **Next.js 16 (Turbopack)** web portal engineered to documentary publication standards:
+
+### 🏛️ The 10-Act Connected Evidence Architecture
+Every analytical act is unified across 4 sequential movements with seamless forward/backward continuity and direct evidence references:
+- **Movement I: Foundations of Evidence**
+  - **Act 01: Surveillance Provenance** (`/data`) — 237 official GoI PDF bulletins, SHA-256 extraction checksums, and forensic data ledger.
+  - **Act 02: 5-Phase Analytical Pipeline** (`/methodology`) — Acquisition, cleaning, harmonization, statistical decomposition, and synthesis.
+- **Movement II: The Seasonal Engine**
+  - **Act 03: Seasonal Signature Matrix** (`/seasonality`) — Centerpiece 5×12 monthly outbreak index heatmap and temporal peaks.
+  - **Act 04: Five Disease Taxonomy & Grand Radial Clock** (`/diseases`) — 360° circular seasonal clock geometry with 5 disease signature selectors and deep-dive dossier pages.
+- **Movement III: Mathematical Validation**
+  - **Act 05: Geographic Hyper-Clustering** (`/geography`) — 36-district interactive choropleth and eastern Vidarbha ecological clustering.
+  - **Act 06: Seasonal Stability Matrix** (`/stability`) — Kendall's $W$ concordance, Shannon entropy, and Gini inequality.
+  - **Act 07: Outlier Sensitivity Decomposition** (`/outliers`) — Cook's distance filter isolating super-spreader banquet food poisoning events.
+- **Movement IV: Field Truth & Policy Translation**
+  - **Act 08: Cinematic Fieldwork & Medical Officer Console** (`/fieldwork`) — Forensic photo inspection HUD and 7-inquiry structured clinical questionnaire at Nallasopara West (Palghar District).
+  - **Act 09: 2026 Prospective Verification** (`/comparison-2026`) — 45 out-of-sample outbreak records testing model predictions.
+  - **Act 10: Policy Synthesis & Interventions** (`/findings`) — Stratified public health intervention protocols and monsoon deployment calendars.
+
+### 🎭 Visual & Forensic Design System
+- **Dark Luxury Aesthetic Tokens**: Deep oceanic black (`#070A0F`), nocturnal slate (`#0B0F15`), rich wine-red forensic accents (`#8B1414`, `#180505`), warm parchment typography (`#F0DECE`), and silver slate muted text (`#BAC0B8`).
+- **Full-Bleed Photographic Hero**: Historic Mumbai waterfront with cinematic vignette, cursor drift, and animated typography.
+- **Single-Home Grand Radial Clock**: Dedicated solely to Act 04 (`/diseases`), preserving clean visual hierarchy across the portal.
+- **Cinematic Fieldwork HUD**: High-resolution clinical observation evidence with zoom inspection, EXIF/audit metadata, and complete audio-recorded interview transcript.
+
+---
+
 ## 🚀 Quickstart Guide
 
 ### 🌐 1. Launching the Research Web Portal

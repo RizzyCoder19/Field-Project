@@ -48,3 +48,6 @@ $RECYCLE.BIN/
 # Local report archive (outdated drafts and backups)
 report_archive/
 *.bak
+
+# Codex tools
+.codex/
