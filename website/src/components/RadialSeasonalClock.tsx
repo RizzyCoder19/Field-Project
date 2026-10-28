@@ -2,165 +2,223 @@
 
 import React, { useState } from "react";
 import { PRIMARY_DISEASES, MONTHS } from "@/data/researchData";
+import { Activity, BarChart2, Layers } from "lucide-react";
 
 interface RadialSeasonalClockProps {
   focusedDisease?: string | null;
   onSelectDisease?: (diseaseId: string | null) => void;
   className?: string;
+  metric?: "events" | "cases";
+  onMetricChange?: (metric: "events" | "cases") => void;
+  showMetricToggle?: boolean;
 }
 
 const DISEASES = [
-  { id: "dengue", label: "Dengue Fever", color: "#38BDF8", peak: "Jun–Oct", cr3: "50.5%" },
-  { id: "add", label: "ADD (Diarrheal)", color: "#10B981", peak: "Jun–Aug", cr3: "43.1%" },
-  { id: "malaria", label: "Malaria", color: "#F59E0B", peak: "May–Jul", cr3: "51.4%" },
-  { id: "foodPoisoning", label: "Food Poisoning", color: "#EF4444", peak: "Bimodal (Jan–Feb, Apr–May)", cr3: "44.9%" },
-  { id: "chikungunya", label: "Chikungunya", color: "#A78BFA", peak: "Dispersed", cr3: "39.5%" },
+  { id: "dengue", label: "Dengue Fever", color: "#8B1414", peak: "Sep–Oct (Peak: Oct)", cr3: "50.5%", subtitle: "Vector Post-Monsoon" },
+  { id: "add", label: "ADD (Diarrheal)", color: "#5A7A72", peak: "Jun–Aug (Onset Surge)", cr3: "43.1%", subtitle: "Waterborne Monsoon" },
+  { id: "malaria", label: "Malaria", color: "#C9944A", peak: "May–Jul (Tribal Focus)", cr3: "51.4%", subtitle: "61.4% Vidarbha Forest" },
+  { id: "foodPoisoning", label: "Food Poisoning", color: "#A83C28", peak: "Jan–Feb & Apr–May", cr3: "44.9%", subtitle: "Bimodal Banquet Timing" },
+  { id: "chikungunya", label: "Chikungunya", color: "#7E6080", peak: "Dispersed Cycle", cr3: "39.5%", subtitle: "W = 0.150 Low Stability" },
 ];
 
 export default function RadialSeasonalClock({
   focusedDisease = null,
   onSelectDisease,
   className = "",
+  metric: controlledMetric,
+  onMetricChange,
+  showMetricToggle = true,
 }: RadialSeasonalClockProps) {
   const [hoveredMonth, setHoveredMonth] = useState<number | null>(null);
   const [activeDisease, setActiveDisease] = useState<string | null>(focusedDisease);
+  const [internalMetric, setInternalMetric] = useState<"events" | "cases">("events");
 
+  const currentMetric = controlledMetric !== undefined ? controlledMetric : internalMetric;
   const currentDisease = focusedDisease !== undefined ? focusedDisease : activeDisease;
 
-  const handleDiseaseClick = (id: string) => {
+  const handleDiseaseClick = (id: string | null) => {
     const next = currentDisease === id ? null : id;
     setActiveDisease(next);
     if (onSelectDisease) onSelectDisease(next);
   };
 
-  const cx = 320;
-  const cy = 320;
-  const outerR = 250;
-  const innerR = 95;
+  const handleMetricToggle = (m: "events" | "cases") => {
+    setInternalMetric(m);
+    if (onMetricChange) onMetricChange(m);
+  };
+
+  // Geometry dimensions for expansive, high-readability 720x720 canvas
+  const cx = 360;
+  const cy = 360;
+  const outerR = 285;
+  const innerR = 115;
 
   return (
     <div className={`relative flex flex-col items-center select-none w-full ${className}`}>
-      {/* Controls */}
-      <div className="flex flex-wrap items-center justify-center gap-2.5 mb-5 z-10">
-        <button
-          onClick={() => handleDiseaseClick("")}
-          className={`px-4 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm border transition-all ${
-            !currentDisease
-              ? "border-[#5FB0A8] text-[#5FB0A8] bg-[#5FB0A8]/15 font-bold"
-              : "border-white/[0.08] text-[#A8B6BA] hover:text-[#F5F1E8] bg-[#070A10]"
-          }`}
-        >
-          All 5 Cohorts
-        </button>
-        {DISEASES.map((d) => {
-          const isSelected = currentDisease === d.id;
-          return (
+      {/* Top Filter Buttons & Metric Controls */}
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 w-full z-10 border-b border-white/[0.08] pb-3">
+        {/* Cohort Chips */}
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            onClick={() => handleDiseaseClick(null)}
+            className={`px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider rounded-xs border transition-all cursor-pointer ${
+              !currentDisease
+                ? "border-[#590907] text-[#E8D2B5] bg-[#590907] font-bold shadow-md"
+                : "border-white/[0.10] text-[#A5A79B] hover:text-[#E8D2B5] bg-[#07090C]"
+            }`}
+          >
+            All 5 Cohorts
+          </button>
+
+          {DISEASES.map((d) => {
+            const isSelected = currentDisease === d.id;
+            return (
+              <button
+                key={d.id}
+                onClick={() => handleDiseaseClick(d.id)}
+                className="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider rounded-xs border transition-all flex items-center gap-2 cursor-pointer shadow-sm"
+                style={{
+                  borderColor: isSelected ? "#590907" : "rgba(232, 210, 181, 0.18)",
+                  backgroundColor: isSelected ? "rgba(89, 9, 7, 0.45)" : "#07090C",
+                  color: isSelected ? "#E8D2B5" : "#A5A79B",
+                  fontWeight: isSelected ? "bold" : "normal",
+                  boxShadow: isSelected ? "0 0 14px rgba(89, 9, 7, 0.55)" : "none",
+                }}
+              >
+                <span className="w-2.5 h-2.5 rounded-full ring-1 ring-white/20" style={{ backgroundColor: d.color }} />
+                <span>{d.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Metric Selector (Events vs Cases) */}
+        {showMetricToggle && (
+          <div className="flex items-center p-1 bg-[#07090C] border border-[#E8D2B5]/20 rounded-xs">
             <button
-              key={d.id}
-              onClick={() => handleDiseaseClick(d.id)}
-              className="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm border transition-all flex items-center gap-2"
-              style={{
-                borderColor: isSelected ? d.color : "rgba(212, 175, 55, 0.2)",
-                backgroundColor: isSelected ? `${d.color}25` : "#06080F",
-                color: isSelected ? "#F8FAFC" : "#94A3B8",
-                fontWeight: isSelected ? "bold" : "normal",
-                boxShadow: isSelected ? `0 0 12px ${d.color}40` : "none"
-              }}
+              onClick={() => handleMetricToggle("events")}
+              className={`px-3 py-1 text-xs font-mono uppercase tracking-wider rounded-2xs transition-all cursor-pointer ${
+                currentMetric === "events"
+                  ? "bg-[#590907] text-[#E8D2B5] font-bold border border-[#E8D2B5]/30 shadow-sm"
+                  : "text-[#A5A79B] hover:text-[#E8D2B5]"
+              }`}
             >
-              <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: d.color }} />
-              {d.label}
+              Outbreaks
             </button>
-          );
-        })}
+            <button
+              onClick={() => handleMetricToggle("cases")}
+              className={`px-3 py-1 text-xs font-mono uppercase tracking-wider rounded-2xs transition-all cursor-pointer ${
+                currentMetric === "cases"
+                  ? "bg-[#590907] text-[#E8D2B5] font-bold border border-[#E8D2B5]/30 shadow-sm"
+                  : "text-[#A5A79B] hover:text-[#E8D2B5]"
+              }`}
+            >
+              Reported Cases
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* SVG Radial Clock — Expanded and Huge (640x640 viewBox) */}
-      <div className="relative w-full max-w-[620px] xl:max-w-[680px] aspect-square flex items-center justify-center">
-        <svg viewBox="0 0 640 640" className="w-full h-full overflow-visible">
+      {/* SVG Radial Clock Stage — Grand & Spacious (720x720 viewBox) */}
+      <div className="relative w-full max-w-[620px] sm:max-w-[660px] lg:max-w-[700px] aspect-square flex items-center justify-center">
+        <svg viewBox="0 0 720 720" className="w-full h-full overflow-visible">
           <defs>
-            <radialGradient id="clockBg" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#1E293B" stopOpacity="0.95" />
-              <stop offset="70%" stopColor="#0B111E" stopOpacity="0.98" />
-              <stop offset="100%" stopColor="#06080F" stopOpacity="1" />
+            <radialGradient id="radialClockBg" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#0B0E13" stopOpacity="0.98" />
+              <stop offset="70%" stopColor="#07090C" stopOpacity="0.99" />
+              <stop offset="100%" stopColor="#050709" stopOpacity="1" />
             </radialGradient>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="4" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+            <filter id="clockGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4.5" result="coloredBlur" />
+              <feMerge>
+                <feMergeNode in="coloredBlur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
             </filter>
           </defs>
 
-          {/* Clock Base Circle with progressive construction stroke */}
+          {/* Clock Base Circle with Double Ring Perimeter */}
           <circle
             cx={cx}
             cy={cy}
-            r={outerR + 32}
-            fill="url(#clockBg)"
-            stroke="rgba(212, 175, 55, 0.3)"
-            strokeWidth="2"
-            className="animate-construct-stroke"
+            r={outerR + 36}
+            fill="url(#radialClockBg)"
+            stroke="rgba(232, 210, 181, 0.20)"
+            strokeWidth="1.8"
+          />
+          <circle
+            cx={cx}
+            cy={cy}
+            r={outerR + 24}
+            fill="none"
+            stroke="#590907"
+            strokeWidth="1"
+            strokeOpacity="0.4"
           />
 
-          {/* Month Sectors (12 slices) */}
+          {/* 12-Month Sectors (30° slices) */}
           {MONTHS.map((m, i) => {
             const r2 = (n: number) => Number(n.toFixed(2));
-            const angleDeg = (i * 30) - 90;
+            const angleDeg = i * 30 - 90;
             const angleRad = (angleDeg * Math.PI) / 180;
             const nextAngleRad = ((angleDeg + 30) * Math.PI) / 180;
             const midAngleRad = ((angleDeg + 15) * Math.PI) / 180;
 
             const isHovered = hoveredMonth === i;
+            // Monsoon season months (Jun to Nov) highlighted with delicate tone
+            const isMonsoon = i >= 5 && i <= 10;
 
-            // Coordinates for month label
+            // Month Label Position
             const labelR = outerR + 18;
             const lx = r2(cx + labelR * Math.cos(midAngleRad));
             const ly = r2(cy + labelR * Math.sin(midAngleRad));
 
-            // Sector slice path for hover detection
+            // Sector Slice Path for Hover Detection
             const x1 = r2(cx + innerR * Math.cos(angleRad));
             const y1 = r2(cy + innerR * Math.sin(angleRad));
-            const x2 = r2(cx + (outerR + 4) * Math.cos(angleRad));
-            const y2 = r2(cy + (outerR + 4) * Math.sin(angleRad));
-            const x3 = r2(cx + (outerR + 4) * Math.cos(nextAngleRad));
-            const y3 = r2(cy + (outerR + 4) * Math.sin(nextAngleRad));
+            const x2 = r2(cx + (outerR + 6) * Math.cos(angleRad));
+            const y2 = r2(cy + (outerR + 6) * Math.sin(angleRad));
+            const x3 = r2(cx + (outerR + 6) * Math.cos(nextAngleRad));
+            const y3 = r2(cy + (outerR + 6) * Math.sin(nextAngleRad));
             const x4 = r2(cx + innerR * Math.cos(nextAngleRad));
             const y4 = r2(cy + innerR * Math.sin(nextAngleRad));
 
-            const sliceD = `M ${x1} ${y1} L ${x2} ${y2} A ${outerR + 4} ${outerR + 4} 0 0 1 ${x3} ${y3} L ${x4} ${y4} A ${innerR} ${innerR} 0 0 0 ${x1} ${y1} Z`;
+            const sliceD = `M ${x1} ${y1} L ${x2} ${y2} A ${outerR + 6} ${outerR + 6} 0 0 1 ${x3} ${y3} L ${x4} ${y4} A ${innerR} ${innerR} 0 0 0 ${x1} ${y1} Z`;
 
             return (
               <g key={m}>
-                {/* Interactive sector slice */}
+                {/* Interactive Sector Slice */}
                 <path
                   d={sliceD}
-                  fill={isHovered ? "rgba(0, 240, 255, 0.16)" : "transparent"}
-                  stroke="rgba(212, 175, 55, 0.15)"
+                  fill={isHovered ? "rgba(89, 9, 7, 0.35)" : isMonsoon ? "rgba(165, 167, 155, 0.04)" : "transparent"}
+                  stroke="rgba(232, 210, 181, 0.14)"
                   strokeWidth="0.8"
                   className="cursor-pointer transition-colors duration-200"
                   onMouseEnter={() => setHoveredMonth(i)}
                   onMouseLeave={() => setHoveredMonth(null)}
                 />
 
-                {/* Radial line separator */}
+                {/* Radial Line Separator */}
                 <line
-                  x1={r2(cx + (innerR - 12) * Math.cos(angleRad))}
-                  y1={r2(cy + (innerR - 12) * Math.sin(angleRad))}
-                  x2={r2(cx + (outerR + 8) * Math.cos(angleRad))}
-                  y2={r2(cy + (outerR + 8) * Math.sin(angleRad))}
-                  stroke="#F8FAFC"
+                  x1={r2(cx + (innerR - 10) * Math.cos(angleRad))}
+                  y1={r2(cy + (innerR - 10) * Math.sin(angleRad))}
+                  x2={r2(cx + (outerR + 10) * Math.cos(angleRad))}
+                  y2={r2(cy + (outerR + 10) * Math.sin(angleRad))}
+                  stroke="#E8D2B5"
                   strokeOpacity="0.18"
-                  strokeDasharray="3,3"
+                  strokeDasharray="3,4"
                 />
 
-                {/* Month label - enlarged and prominent */}
+                {/* Month Label — Bold and Crisp in Warm Cream */}
                 <text
                   x={lx}
                   y={ly}
                   textAnchor="middle"
                   dominantBaseline="central"
-                  className="font-mono text-sm tracking-wider pointer-events-none select-none"
-                  fill={isHovered ? "#5FB0A8" : "#F8FAFC"}
-                  fillOpacity={isHovered ? 1 : 0.85}
-                  fontWeight="bold"
+                  className="font-mono text-xs sm:text-sm tracking-wider pointer-events-none select-none transition-colors"
+                  fill={isHovered ? "#E8D2B5" : isMonsoon ? "#F5E8D7" : "#A5A79B"}
+                  fontWeight={isHovered || isMonsoon ? "bold" : "600"}
                 >
                   {m}
                 </text>
@@ -174,20 +232,21 @@ export default function RadialSeasonalClock({
             const curMeta = DISEASES.find((d) => d.id === currentDisease);
             if (!disData || !curMeta) return null;
 
-            const maxEvents = Math.max(...disData.monthlyEvents, 1);
+            const valuesArr = currentMetric === "events" ? disData.monthlyEvents : disData.monthlyCases;
+            const maxVal = Math.max(...valuesArr, 1);
             const r2 = (n: number) => Number(n.toFixed(2));
 
             // Generate 12 radial points
             const polygonPoints = MONTHS.map((_, mIdx) => {
-              const events = disData.monthlyEvents[mIdx] || 0;
-              const midAngleDeg = (mIdx * 30 + 15) - 90;
+              const val = valuesArr[mIdx] || 0;
+              const midAngleDeg = mIdx * 30 + 15 - 90;
               const rad = (midAngleDeg * Math.PI) / 180;
-              const radius = innerR + 20 + (events / maxEvents) * (outerR - innerR - 30);
+              const radius = innerR + 15 + (val / maxVal) * (outerR - innerR - 25);
               return {
                 x: r2(cx + radius * Math.cos(rad)),
                 y: r2(cy + radius * Math.sin(rad)),
-                events,
-                mIdx
+                val,
+                mIdx,
               };
             });
 
@@ -201,35 +260,34 @@ export default function RadialSeasonalClock({
                 <path
                   d={pathD}
                   fill={curMeta.color}
-                  fillOpacity="0.22"
+                  fillOpacity="0.25"
                   stroke={curMeta.color}
-                  strokeWidth="3.5"
+                  strokeWidth="3.2"
                   strokeLinejoin="round"
-                  className="animate-construct-stroke"
                 />
 
                 {/* Data point beads */}
                 {polygonPoints.map((pt) => {
-                  const isPeak = pt.events === maxEvents;
+                  const isPeak = pt.val === maxVal;
                   return (
                     <g key={pt.mIdx}>
                       <circle
                         cx={pt.x}
                         cy={pt.y}
-                        r={isPeak ? 7 : 4.5}
-                        fill={isPeak ? "#FFFFFF" : curMeta.color}
-                        stroke={curMeta.color}
-                        strokeWidth="2"
-                        filter={isPeak ? "url(#glow)" : undefined}
+                        r={isPeak ? 7.5 : 4.5}
+                        fill={isPeak ? "#E8D2B5" : curMeta.color}
+                        stroke="#07090C"
+                        strokeWidth="1.8"
+                        filter={isPeak ? "url(#clockGlow)" : undefined}
                       />
-                      {pt.events > 0 && (
+                      {pt.val > 0 && (
                         <text
                           x={pt.x}
                           y={pt.y - 10}
                           textAnchor="middle"
-                          className="font-mono text-xs font-bold fill-[#F8FAFC] pointer-events-none drop-shadow-lg"
+                          className="font-mono text-[11px] font-bold fill-[#E8D2B5] pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
                         >
-                          {pt.events}
+                          {pt.val}
                         </text>
                       )}
                     </g>
@@ -239,7 +297,7 @@ export default function RadialSeasonalClock({
             );
           })()}
 
-          {/* Disease Concentric Tracks & Bars */}
+          {/* Disease Concentric Tracks & Bars when "All Cohorts" is active */}
           {DISEASES.map((dis, trackIdx) => {
             const r2 = (n: number) => Number(n.toFixed(2));
             const diseaseKey = dis.id === "add" ? "add" : dis.id;
@@ -247,36 +305,37 @@ export default function RadialSeasonalClock({
             if (!data) return null;
 
             const isFocused = !currentDisease || currentDisease === dis.id;
-            const trackR = innerR + 20 + trackIdx * 30; // 5 concentric tracks
-            const maxVal = Math.max(...data.monthlyEvents);
+            const trackR = innerR + 25 + trackIdx * 32; // 5 concentric rings
+            const valuesArr = currentMetric === "events" ? data.monthlyEvents : data.monthlyCases;
+            const maxVal = Math.max(...valuesArr, 1);
 
             return (
               <g key={dis.id} opacity={isFocused ? 1 : 0.12} className="transition-opacity duration-300">
-                {/* Track guideline */}
+                {/* Concentric track guideline */}
                 <circle
                   cx={cx}
                   cy={cy}
                   r={trackR}
                   fill="none"
                   stroke={dis.color}
-                  strokeOpacity={isFocused ? 0.25 : 0.05}
-                  strokeWidth="1.2"
+                  strokeOpacity={isFocused ? 0.35 : 0.08}
+                  strokeWidth="1"
                   strokeDasharray="4 4"
                 />
 
-                {/* 12 monthly bars/arcs along this track */}
+                {/* 12 monthly bars along this track */}
                 {!currentDisease && MONTHS.map((_, mIdx) => {
-                  const events = data.monthlyEvents[mIdx] || 0;
-                  if (events === 0) return null;
+                  const val = valuesArr[mIdx] || 0;
+                  if (val === 0) return null;
 
-                  const midAngleDeg = (mIdx * 30 + 15) - 90;
+                  const midAngleDeg = mIdx * 30 + 15 - 90;
                   const rad = (midAngleDeg * Math.PI) / 180;
-                  const barLen = 6 + (events / maxVal) * 22;
+                  const barLen = 7 + (val / maxVal) * 25;
                   const bx1 = r2(cx + (trackR - barLen / 2) * Math.cos(rad));
                   const by1 = r2(cy + (trackR - barLen / 2) * Math.sin(rad));
                   const bx2 = r2(cx + (trackR + barLen / 2) * Math.cos(rad));
                   const by2 = r2(cy + (trackR + barLen / 2) * Math.sin(rad));
-                  const isPeak = events === maxVal;
+                  const isPeak = val === maxVal;
 
                   return (
                     <g key={mIdx}>
@@ -286,9 +345,9 @@ export default function RadialSeasonalClock({
                         x2={bx2}
                         y2={by2}
                         stroke={dis.color}
-                        strokeWidth={isPeak ? 5.5 : 3.5}
+                        strokeWidth={isPeak ? 5 : 3.2}
                         strokeLinecap="round"
-                        filter={isPeak ? "url(#glow)" : undefined}
+                        filter={isPeak ? "url(#clockGlow)" : undefined}
                       />
                     </g>
                   );
@@ -297,24 +356,44 @@ export default function RadialSeasonalClock({
             );
           })}
 
-          {/* Center Hub — Analytical Interpretation */}
-          <circle cx={cx} cy={cy} r={innerR - 6} fill="#070A10" stroke="#D7B56D" strokeOpacity="0.4" strokeWidth="2" />
+          {/* Center Hub — Analytical Interpretation Stage */}
+          <circle
+            cx={cx}
+            cy={cy}
+            r={innerR - 6}
+            fill="#07090C"
+            stroke="#590907"
+            strokeWidth="2.2"
+          />
+          <circle
+            cx={cx}
+            cy={cy}
+            r={innerR - 16}
+            fill="none"
+            stroke="#E8D2B5"
+            strokeOpacity="0.25"
+            strokeWidth="1"
+            strokeDasharray="2,3"
+          />
 
-          {/* Center Content with large, spacious typography */}
+          {/* Center Content Typography */}
           {hoveredMonth !== null ? (
             <g className="pointer-events-none">
-              <text x={cx} y={cy - 28} textAnchor="middle" className="font-serif text-xl font-bold" fill="#5FB0A8">
+              <text x={cx} y={cy - 30} textAnchor="middle" className="font-serif text-2xl font-bold" fill="#E8D2B5">
                 {MONTHS[hoveredMonth]}
               </text>
-              <text x={cx} y={cy - 6} textAnchor="middle" className="font-mono text-[9px] uppercase tracking-wider" fill="#A8B6BA">
-                Total Baseline Outbreaks
+              <text x={cx} y={cy - 6} textAnchor="middle" className="font-mono text-[10px] uppercase tracking-wider" fill="#A5A79B">
+                Total Baseline {currentMetric === "events" ? "Outbreaks" : "Cases"}
               </text>
-              <text x={cx} y={cy + 22} textAnchor="middle" className="font-mono text-2xl font-bold" fill="#F5F1E8">
+              <text x={cx} y={cy + 24} textAnchor="middle" className="font-mono text-2xl font-bold" fill="#E8D2B5">
                 {DISEASES.reduce((acc, d) => {
                   const p = PRIMARY_DISEASES[d.id];
-                  return acc + (p?.monthlyEvents[hoveredMonth] || 0);
-                }, 0)}{" "}
-                <tspan fontSize="11" fill="#A8B6BA">events</tspan>
+                  const arr = currentMetric === "events" ? p?.monthlyEvents : p?.monthlyCases;
+                  return acc + (arr?.[hoveredMonth] || 0);
+                }, 0).toLocaleString()}{" "}
+                <tspan fontSize="11" fill="#A5A79B">
+                  {currentMetric === "events" ? "records" : "cases"}
+                </tspan>
               </text>
             </g>
           ) : currentDisease ? (
@@ -325,16 +404,16 @@ export default function RadialSeasonalClock({
                 if (!cur || !prof) return null;
                 return (
                   <>
-                    <text x={cx} y={cy - 28} textAnchor="middle" className="font-serif text-lg font-bold" fill={cur.color}>
+                    <text x={cx} y={cy - 32} textAnchor="middle" className="font-serif text-xl font-bold" fill={cur.color}>
                       {cur.label}
                     </text>
-                    <text x={cx} y={cy - 8} textAnchor="middle" className="font-mono text-[10px] uppercase tracking-wider font-semibold" fill="#A8B6BA">
-                      Peak Window
+                    <text x={cx} y={cy - 10} textAnchor="middle" className="font-mono text-[10px] uppercase tracking-wider font-semibold" fill="#A5A79B">
+                      Peak Timing
                     </text>
-                    <text x={cx} y={cy + 14} textAnchor="middle" className="font-serif text-sm font-bold" fill="#F5F1E8">
+                    <text x={cx} y={cy + 12} textAnchor="middle" className="font-serif text-base font-bold" fill="#E8D2B5">
                       {cur.peak}
                     </text>
-                    <text x={cx} y={cy + 32} textAnchor="middle" className="font-mono text-[9px] font-bold text-[#5FB0A8]" fill="#5FB0A8">
+                    <text x={cx} y={cy + 32} textAnchor="middle" className="font-mono text-[10.5px] font-bold" fill="#E8D2B5">
                       CR3 = {cur.cr3} of events
                     </text>
                   </>
@@ -343,27 +422,27 @@ export default function RadialSeasonalClock({
             </g>
           ) : (
             <g className="pointer-events-none">
-              <text x={cx} y={cy - 16} textAnchor="middle" className="font-serif text-base font-bold" fill="#F5F1E8">
+              <text x={cx} y={cy - 20} textAnchor="middle" className="font-serif text-lg font-bold" fill="#E8D2B5">
                 12-Month Clock
               </text>
-              <text x={cx} y={cy + 4} textAnchor="middle" className="font-mono text-xs tracking-wider text-[#5FB0A8] font-bold" fill="#5FB0A8">
-                2022–2025
+              <text x={cx} y={cy + 4} textAnchor="middle" className="font-mono text-xs tracking-widest uppercase font-bold" fill="#590907">
+                2022–2025 BASELINE
               </text>
-              <text x={cx} y={cy + 24} textAnchor="middle" className="font-mono text-[9px] text-[#A8B6BA]" fill="#A8B6BA">
-                Hover month or click cohort
+              <text x={cx} y={cy + 26} textAnchor="middle" className="font-mono text-[10px] text-[#A5A79B]">
+                Hover month or select cohort
               </text>
             </g>
           )}
         </svg>
       </div>
 
-      {/* Narrative Footer */}
+      {/* Narrative Footer Callout */}
       <div className="mt-5 text-center max-w-xl">
-        <p className="font-mono text-xs text-[#94A3B8] leading-relaxed">
-          {currentDisease === "dengue" && "Dengue: 73.0% of events occur in Jun–Oct. Strong post-monsoon vector proliferation."}
-          {currentDisease === "add" && "ADD: High early-monsoon surge in Jun–Aug plus secondary post-monsoon peak. Kendall's W = 0.530 (p = 0.016)."}
-          {currentDisease === "malaria" && "Malaria: Pre-monsoon & onset surge in May–Jul. 61.4% concentrated in Gadchiroli + Chandrapur."}
-          {currentDisease === "foodPoisoning" && "Food Poisoning: Bimodal non-monsoon timing (Jan–Feb & Apr–May). Highly sensitive to point-source cluster sizes."}
+        <p className="font-mono text-xs text-[#A5A79B] leading-relaxed">
+          {currentDisease === "dengue" && "Dengue: 73.0% of events occur in Jun–Oct. Strong post-monsoon Aedes vector proliferation peaking in October."}
+          {currentDisease === "add" && "ADD: High early-monsoon surge in Jun–Aug plus secondary post-monsoon peak. Kendall's W = 0.530 (p = 0.016, statistically significant)."}
+          {currentDisease === "malaria" && "Malaria: Pre-monsoon & onset surge in May–Jul. 61.4% concentrated in Gadchiroli + Chandrapur tribal forest belt."}
+          {currentDisease === "foodPoisoning" && "Food Poisoning: Bimodal non-monsoon timing (Jan–Feb & Apr–May). Highly driven by community banquet catering gatherings."}
           {currentDisease === "chikungunya" && "Chikungunya: Low baseline volume dispersed across months without stable recurring seasonality (W = 0.150)."}
           {!currentDisease && "Concentric seasonal rings reveal distinct temporal niches: Malaria peaks early (May–Jul), ADD spans the monsoon, Dengue rises late (Aug–Oct), and Food Poisoning is non-monsoonal."}
         </p>

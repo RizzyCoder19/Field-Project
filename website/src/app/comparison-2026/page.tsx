@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import NativeTimeline2026 from "@/components/NativeTimeline2026";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 
 export default function Comparison2026Page() {
   const [comparisonMode, setComparisonMode] = useState<"matched" | "unmatched">("matched");
@@ -15,6 +16,8 @@ export default function Comparison2026Page() {
 
   return (
     <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={9} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
@@ -186,7 +189,7 @@ export default function Comparison2026Page() {
       </section>
 
       {/* 4. CHAPTER NAVIGATION FOOTER */}
-      <ChapterFooter currentChapterNumber={8} />
+      <ChapterFooter currentChapterNumber={9} />
     </div>
   );
 }

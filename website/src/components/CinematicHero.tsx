@@ -63,6 +63,7 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
     >
       {/* ── Layer 0 & 1: Full-Bleed Photograph with Cursor Zoom ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        {/* Full-Bleed Photograph with Slow Drift & Cursor Zoom */}
         <div
           ref={imageRef}
           className="relative w-full h-full will-change-transform"
@@ -77,24 +78,23 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[center_right] sm:object-[65%_center] filter brightness-[0.88] contrast-[1.08]"
+            className="object-cover object-[center_right] sm:object-[65%_center] filter brightness-[0.88] contrast-[1.12]"
           />
         </div>
 
-        {/* ── Layer 2: Editorial Vignettes & Contrast Gradients ── */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070A10] via-[#070A10]/85 via-45% to-[#070A10]/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070A10] via-[#070A10]/50 via-20% to-transparent" />
-        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#070A10]/75 to-transparent" />
-        <div className="absolute inset-0 bg-contour-pattern opacity-30 mix-blend-screen" />
+        {/* Editorial Vignettes & Contrast Gradients for Deep Legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070A0F] via-[#070A0F]/85 via-48% to-[#070A0F]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#070A0F] via-[#070A0F]/60 via-22% to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#070A0F]/80 to-transparent" />
+        <div className="absolute inset-0 bg-contour-pattern opacity-25 mix-blend-screen pointer-events-none" />
       </div>
 
-      {/* ── Layer 3: Interactive Foreground & Creative Typography Overlap ── */}
       <div className="relative z-10 max-w-[1280px] w-full mx-auto px-6 sm:px-8 lg:pl-8 lg:pr-24 xl:pr-28 pt-16 sm:pt-24 lg:pt-28 pb-12 sm:pb-14 flex-1 flex flex-col justify-between pointer-events-auto">
         
         {/* Top Eyebrow / Subject Bar */}
         <div className="flex items-center gap-3 animate-fade-in">
           <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
-          <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-[#E8D2B5] uppercase">
+          <span className="text-xs sm:text-sm font-mono font-bold tracking-[0.25em] text-[#E8D2B5] uppercase">
             SEASONAL DISEASE SURVEILLANCE / MAHARASHTRA
           </span>
           <div className="h-px bg-[#A5A79B]/25 w-16 sm:w-28 hidden sm:block" />
@@ -105,13 +105,13 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
 
         {/* Central Display Typography (Composed Directly Over Image) */}
         <div className="my-auto py-8 sm:py-12 max-w-4xl space-y-6">
-          <h1 className="font-serif text-[clamp(2.75rem,5.6vw,5.5rem)] font-bold text-[#E8D2B5] leading-[1.08] tracking-tight drop-shadow-[0_8px_32px_rgba(0,0,0,0.9)]">
-            Do disease outbreaks<br />
-            follow the seasons—<br />
-            <span className="text-[#E8D2B5] italic font-light font-serif">and do those rhythms repeat?</span>
+          <h1 className="font-serif text-[clamp(3.2rem,6.6vw,6.5rem)] font-bold leading-[1.03] tracking-tight drop-shadow-[0_12px_48px_rgba(0,0,0,0.95)]">
+            <span className="text-[#F0DECE] block drop-shadow-lg">Do disease outbreaks</span>
+            <span className="text-[#E8D2B5] block drop-shadow-[0_6px_24px_rgba(139,20,20,0.6)]">follow the seasons—</span>
+            <span className="text-[#F0DECE] italic font-light font-serif block text-[clamp(2.4rem,5vw,4.8rem)]">and do those rhythms repeat?</span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-[#A5A79B] max-w-2xl leading-relaxed drop-shadow-md">
+          <p className="text-lg sm:text-xl lg:text-2xl text-[#BAC0B8] max-w-3xl leading-relaxed drop-shadow-md font-sans">
             A quantitative investigation of NCDC / IDSP weekly outbreak-surveillance reports in Maharashtra (2022–2025), grounded by primary fieldwork in Palghar.
           </p>
 
@@ -119,7 +119,7 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
           <div className="flex flex-wrap items-center gap-4 pt-3">
             <a
               href="#data-transformation"
-              className="px-7 py-3.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_8px_24px_rgba(89,9,7,0.55)] hover:shadow-[0_12px_32px_rgba(89,9,7,0.8)] hover:-translate-y-0.5 flex items-center gap-2 active:translate-y-0 cursor-pointer border border-[#E8D2B5]/30"
+              className="px-7 py-3.5 bg-[#8B1414] hover:bg-[#A31818] text-[#F0DECE] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_8px_24px_rgba(139,20,20,0.6)] hover:shadow-[0_12px_32px_rgba(139,20,20,0.85)] hover:-translate-y-0.5 flex items-center gap-2 active:translate-y-0 cursor-pointer border border-[#F0DECE]/30"
             >
               <span>Begin the Investigation ↓</span>
             </a>
@@ -127,7 +127,7 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="px-6 py-3.5 bg-[#07090C]/80 hover:bg-[#07090C] border border-[#E8D2B5]/30 hover:border-[#E8D2B5] text-[#E8D2B5] hover:text-[#F7EAD7] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
+              className="px-6 py-3.5 bg-[#0B0F15]/90 hover:bg-[#0B0F15] border border-[#F0DECE]/30 hover:border-[#F0DECE] text-[#F0DECE] hover:text-[#FFF] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer shadow-md"
             >
               <FileText className="w-4 h-4 text-[#E8D2B5]" />
               <span>View Full Report</span>
@@ -136,7 +136,7 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
             {onReplayIntro && (
               <button
                 onClick={onReplayIntro}
-                className="px-5 py-3.5 bg-[#07090C]/80 hover:bg-[#07090C] border border-[#590907]/60 hover:border-[#590907] text-[#E8D2B5] hover:text-[#FFF] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
+                className="px-5 py-3.5 bg-[#E8D2B5] hover:bg-[#F7EAD7] border border-[#590907]/40 text-[#590907] font-bold font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
                 title="Replay the cinematic audio-visual documentary prologue"
               >
                 <Play className="w-3.5 h-3.5 fill-[#590907]" />
@@ -148,15 +148,15 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
           {/* Rapid Provenance Strip */}
           <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono text-[#A5A79B]">
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#E8D2B5]">539</strong> Outbreak Records
+              <strong className="text-[#F0DECE] font-bold">539</strong> Outbreak Records
             </span>
             <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#E8D2B5]">20,955</strong> Reported Cases
+              <strong className="text-[#F0DECE] font-bold">20,955</strong> Reported Cases
             </span>
             <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#E8D2B5]">266</strong> Deaths
+              <strong className="text-[#F0DECE] font-bold">266</strong> Deaths
             </span>
             <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">

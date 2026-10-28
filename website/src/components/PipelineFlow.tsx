@@ -132,7 +132,7 @@ export default function PipelineFlow() {
   const current = stages[activeStep - 1];
 
   return (
-    <div ref={ref} className="w-full bg-[#0B0E13] border border-[#E8D2B5]/15 rounded-sm p-4 sm:p-6 lg:p-8 space-y-6 shadow-2xl" role="region" aria-label="Forensic Data Harmonization Pipeline Flow">
+    <div ref={ref} className="w-full bg-[#0E141D] border border-[#F0DECE]/15 rounded-xs p-4 sm:p-6 lg:p-8 space-y-6 shadow-2xl text-[#F0DECE]" role="region" aria-label="Forensic Data Harmonization Pipeline Flow">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
         <div>
@@ -140,17 +140,17 @@ export default function PipelineFlow() {
             <span className="w-2.5 h-2.5 rounded-full bg-[#590907] animate-pulse" />
             <span>Data Harmonization Cascade · Forensic Audit Architecture</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#E8D2B5] mt-1">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F0DECE] mt-1">
             From Weekly Government Bulletins to Structured Analysis
           </h3>
-          <p className="font-mono text-xs sm:text-sm text-[#A5A79B] mt-0.5 max-w-2xl leading-relaxed">
+          <p className="font-mono text-xs sm:text-sm text-[#BAC0B8] mt-0.5 max-w-2xl leading-relaxed">
             Step-by-step additive transformation guaranteeing zero data loss, reproducible code provenance, and 100% source auditability.
           </p>
         </div>
 
         <button
           onClick={() => setAnimKey(k => k + 1)}
-          className="px-3 py-1.5 bg-[#07090C] hover:bg-[#590907]/20 border border-[#E8D2B5]/25 text-[#E8D2B5] hover:text-[#F7EAD7] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+          className="px-3 py-1.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold shadow-md rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
           title="Reconstruct pipeline connectors"
         >
           <RefreshCw className="w-3.5 h-3.5" />

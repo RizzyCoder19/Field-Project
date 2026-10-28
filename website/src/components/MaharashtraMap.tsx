@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import * as d3 from "d3";
-import { RefreshCw, CheckCircle2, ShieldAlert, MapPin } from "lucide-react";
+import { RefreshCw, CheckCircle2, ShieldAlert, MapPin, Compass } from "lucide-react";
 import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export const DISEASE_DISTRICTS: Record<string, string[]> = {
@@ -40,11 +40,11 @@ export const DISEASE_DISTRICTS: Record<string, string[]> = {
 };
 
 export const DISEASE_COLORS: Record<string, string> = {
-  dengue: "#38BDF8",
-  add: "#10B981",
-  malaria: "#F59E0B",
-  foodPoisoning: "#EF4444",
-  chikungunya: "#A78BFA",
+  dengue: "#8B1414",       // Deep Crimson Burgundy
+  add: "#5A7A72",          // Muted Sage Teal
+  malaria: "#C9944A",      // Warm Amber Brass
+  foodPoisoning: "#A83C28", // Terracotta Rust
+  chikungunya: "#7E6080",  // Dusty Mauve Plum Slate
 };
 
 export const DISEASE_LABELS: Record<string, string> = {
@@ -92,6 +92,9 @@ interface MaharashtraMapProps {
   onDistrictSelect?: (districtName: string) => void;
 }
 
+const VIEW_W = 940;
+const VIEW_H = 640;
+
 export default function MaharashtraMap({
   activeDisease = "dengue",
   className = "",
@@ -129,69 +132,107 @@ export default function MaharashtraMap({
 
   // Primary D3.js Cartographic Visualization Engine
   const renderMap = useCallback(() => {
-    if (!geoData || !svgRef.current || !containerRef.current) return;
+    if (!geoData || !svgRef.current) return;
 
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
-    // Determine dimensions with robust fallback
-    const rect = svgRef.current.getBoundingClientRect();
-    const containerW = Math.max(rect.width || containerRef.current.clientWidth || 700, 320);
-    const containerH = Math.max(rect.height || 540, 480);
+    svg
+      .attr("viewBox", `0 0 ${VIEW_W} ${VIEW_H}`)
+      .attr("preserveAspectRatio", "xMidYMid meet");
 
-    // Setup D3 Mercator Projection fitted comfortably within canvas
+    // Setup D3 Mercator Projection fitted comfortably within 940x640 canvas
     const projection = d3.geoMercator()
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .fitExtent([[32, 32], [containerW - 32, containerH - 32]], geoData as any);
+      .fitExtent([[42, 34], [VIEW_W - 42, VIEW_H - 34]], geoData as any);
 
     const pathGen = d3.geoPath().projection(projection);
 
     const activeDistricts = new Set(DISEASE_DISTRICTS[selectedDisease] ?? []);
-    const color = DISEASE_COLORS[selectedDisease] ?? "#38BDF8";
+    const color = DISEASE_COLORS[selectedDisease] ?? "#8B1414";
     const isMalaria = selectedDisease === "malaria";
 
-    // Setup SVG Definitions (Gradients & Glow Filters)
+    // SVG Definitions (Gradients & Filters)
     const defs = svg.append("defs");
 
-    const filter = defs.append("filter")
+    // Luxury Glow Filter for Hotspots
+    const glowFilter = defs.append("filter")
       .attr("id", "d3-district-glow")
-      .attr("x", "-20%")
-      .attr("y", "-20%")
-      .attr("width", "140%")
-      .attr("height", "140%");
-    filter.append("feGaussianBlur")
-      .attr("stdDeviation", "3.5")
+      .attr("x", "-30%")
+      .attr("y", "-30%")
+      .attr("width", "160%")
+      .attr("height", "160%");
+    glowFilter.append("feGaussianBlur")
+      .attr("stdDeviation", "3.2")
       .attr("result", "coloredBlur");
-    const feMerge = filter.append("feMerge");
+    const feMerge = glowFilter.append("feMerge");
     feMerge.append("feMergeNode").attr("in", "coloredBlur");
     feMerge.append("feMergeNode").attr("in", "SourceGraphic");
 
-    // Static Map Group (no zoom transform hijacking)
+    // Linear Gradient for Western Coast / Arabian Sea
+    const seaGradient = defs.append("linearGradient")
+      .attr("id", "sea-gradient")
+      .attr("x1", "0%")
+      .attr("y1", "0%")
+      .attr("x2", "100%")
+      .attr("y2", "0%");
+    seaGradient.append("stop").attr("offset", "0%").attr("stop-color", "#0B1520").attr("stop-opacity", 0.55);
+    seaGradient.append("stop").attr("offset", "80%").attr("stop-color", "#07090C").attr("stop-opacity", 0);
+
+    // Map Container Group
     const mapContainer = svg.append("g").attr("class", "d3-map-container");
 
-    // Background Subtle Drafting Grid
-    const gridGroup = mapContainer.append("g").attr("class", "d3-drafting-grid").attr("opacity", 0.15);
-    const step = 60;
-    for (let x = 0; x < containerW; x += step) {
+    // Layer 0: Arabian Sea Atmospheric Coastline Wash
+    mapContainer.append("rect")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", 140)
+      .attr("height", VIEW_H)
+      .attr("fill", "url(#sea-gradient)")
+      .attr("pointer-events", "none");
+
+    // Arabian Sea Label along Western Margin
+    mapContainer.append("text")
+      .attr("transform", "translate(42, 340) rotate(-90)")
+      .attr("text-anchor", "middle")
+      .attr("fill", "#A5A79B")
+      .attr("font-size", "9.5px")
+      .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
+      .attr("letter-spacing", "0.32em")
+      .attr("opacity", 0.35)
+      .attr("pointer-events", "none")
+      .text("ARABIAN SEA · WESTERN LITTORAL");
+
+    // Layer 0.5: Precision Cartographic Grid Lines & Geodetic Crosshairs
+    const gridGroup = mapContainer.append("g").attr("class", "d3-drafting-grid").attr("opacity", 0.12).attr("pointer-events", "none");
+    const step = 70;
+    for (let x = step; x < VIEW_W; x += step) {
       gridGroup.append("line")
-        .attr("x1", x)
-        .attr("y1", 0)
-        .attr("x2", x)
-        .attr("y2", containerH)
-        .attr("stroke", "#D7B56D")
+        .attr("x1", x).attr("y1", 0)
+        .attr("x2", x).attr("y2", VIEW_H)
+        .attr("stroke", "#A5A79B")
         .attr("stroke-width", 0.5)
         .attr("stroke-dasharray", "2,6");
     }
-    for (let y = 0; y < containerH; y += step) {
+    for (let y = step; y < VIEW_H; y += step) {
       gridGroup.append("line")
-        .attr("x1", 0)
-        .attr("y1", y)
-        .attr("x2", containerW)
-        .attr("y2", y)
-        .attr("stroke", "#D7B56D")
+        .attr("x1", 0).attr("y1", y)
+        .attr("x2", VIEW_W).attr("y2", y)
+        .attr("stroke", "#A5A79B")
         .attr("stroke-width", 0.5)
         .attr("stroke-dasharray", "2,6");
     }
+
+    // Geodetic Crosshairs (+) at key coordinate intersections
+    const crosshairs = [
+      [210, 140], [420, 140], [630, 140],
+      [210, 350], [420, 350], [630, 350],
+      [210, 560], [420, 560], [630, 560],
+    ];
+    crosshairs.forEach(([cx, cy]) => {
+      gridGroup.append("line").attr("x1", cx - 4).attr("y1", cy).attr("x2", cx + 4).attr("y2", cy).attr("stroke", "#E8D2B5").attr("stroke-width", 0.8).attr("opacity", 0.3);
+      gridGroup.append("line").attr("x1", cx).attr("y1", cy - 4).attr("x2", cx).attr("y2", cy + 4).attr("stroke", "#E8D2B5").attr("stroke-width", 0.8).attr("opacity", 0.3);
+    });
 
     // Layer 1: District Polygons via D3 Data Join
     const districtsGroup = mapContainer.append("g").attr("class", "d3-districts");
@@ -204,22 +245,22 @@ export default function MaharashtraMap({
       .attr("d", (d) => pathGen(d as unknown as d3.GeoPermissibleObjects) ?? "")
       .attr("stroke", (d) => {
         const name = d.properties.district;
-        if (name === selectedDistrict) return "#F5F1E8";
-        return activeDistricts.has(name) ? "rgba(215, 181, 109, 0.65)" : "rgba(255, 255, 255, 0.12)";
+        if (name === selectedDistrict) return "#E8D2B5";
+        return activeDistricts.has(name) ? "rgba(232, 210, 181, 0.40)" : "rgba(165, 167, 155, 0.22)";
       })
       .attr("stroke-width", (d) => {
         const name = d.properties.district;
-        if (name === selectedDistrict) return 2.4;
-        return activeDistricts.has(name) ? 1.1 : 0.6;
+        if (name === selectedDistrict) return 2.6;
+        return activeDistricts.has(name) ? 1.2 : 0.65;
       })
       .attr("fill", (d) => {
         const name = d.properties.district;
-        if (!activeDistricts.has(name)) return "rgba(10, 16, 22, 0.78)";
-        if (isMalaria && MALARIA_CONCENTRATION.districts.includes(name)) return "#5FB0A8";
-        return `${color}B3`; // ~70% opacity
+        if (!activeDistricts.has(name)) return "rgba(12, 16, 23, 0.90)";
+        if (isMalaria && MALARIA_CONCENTRATION.districts.includes(name)) return "#590907";
+        return `${color}D9`;
       })
       .style("cursor", "pointer")
-      .style("transition", "fill 0.35s ease, stroke 0.25s ease");
+      .style("transition", "fill 0.25s ease, stroke 0.25s ease");
 
     // D3 Interactive Hover & Click Listeners
     paths
@@ -229,18 +270,30 @@ export default function MaharashtraMap({
         const isMalC = isMalaria && MALARIA_CONCENTRATION.districts.includes(name);
 
         d3.select(this)
-          .attr("stroke", "#5FB0A8")
-          .attr("stroke-width", 2.4)
-          .attr("fill", !isActive ? "rgba(255, 255, 255, 0.15)" : isMalC ? "#6EE7B7" : color)
+          .attr("stroke", "#E8D2B5")
+          .attr("stroke-width", 2.6)
+          .attr("fill", !isActive ? "rgba(165, 167, 155, 0.22)" : isMalC ? "#7E1513" : color)
           .raise();
 
-        const svgBounding = svgRef.current!.getBoundingClientRect();
-        setTooltip({
-          district: name,
-          x: event.clientX - svgBounding.left,
-          y: event.clientY - svgBounding.top - 12,
-          isActive,
-        });
+        if (containerRef.current) {
+          const containerRect = containerRef.current.getBoundingClientRect();
+          setTooltip({
+            district: name,
+            x: event.clientX - containerRect.left,
+            y: event.clientY - containerRect.top - 14,
+            isActive,
+          });
+        }
+      })
+      .on("mousemove", function (event) {
+        if (containerRef.current) {
+          const containerRect = containerRef.current.getBoundingClientRect();
+          setTooltip((prev) => prev ? {
+            ...prev,
+            x: event.clientX - containerRect.left,
+            y: event.clientY - containerRect.top - 14,
+          } : null);
+        }
       })
       .on("mouseleave", function (_, d) {
         const name = d.properties.district;
@@ -249,9 +302,9 @@ export default function MaharashtraMap({
         const isSelected = name === selectedDistrict;
 
         d3.select(this)
-          .attr("stroke", isSelected ? "#F5F1E8" : isActive ? "rgba(215, 181, 109, 0.65)" : "rgba(255, 255, 255, 0.12)")
-          .attr("stroke-width", isSelected ? 2.4 : isActive ? 1.1 : 0.6)
-          .attr("fill", !isActive ? "rgba(10, 16, 22, 0.78)" : isMalC ? "#5FB0A8" : `${color}B3`);
+          .attr("stroke", isSelected ? "#E8D2B5" : isActive ? "rgba(232, 210, 181, 0.40)" : "rgba(165, 167, 155, 0.22)")
+          .attr("stroke-width", isSelected ? 2.6 : isActive ? 1.2 : 0.65)
+          .attr("fill", !isActive ? "rgba(12, 16, 23, 0.90)" : isMalC ? "#590907" : `${color}D9`);
 
         setTooltip(null);
       })
@@ -263,7 +316,7 @@ export default function MaharashtraMap({
         }
       });
 
-    // Layer 2: D3 Centroid District Labels
+    // Layer 2: District Centroid Labels for Key Hubs
     const labelGroup = mapContainer.append("g").attr("class", "d3-district-labels").attr("pointer-events", "none");
 
     geoData.features.forEach((feature) => {
@@ -271,83 +324,119 @@ export default function MaharashtraMap({
       if (KEY_LABELED_DISTRICTS.includes(name)) {
         const centroid = pathGen.centroid(feature as unknown as d3.GeoPermissibleObjects);
         if (centroid && !isNaN(centroid[0]) && !isNaN(centroid[1])) {
-          // Label shadow/halo for maximum legibility
+          const displayLabel = name === "Aurangabad" ? "Chh. Sambhajinagar" : name;
+
+          // Charcoal halo for maximum readability against dark backgrounds
           labelGroup
             .append("text")
             .attr("x", centroid[0])
             .attr("y", centroid[1] + 3)
             .attr("text-anchor", "middle")
-            .attr("fill", "#070A10")
-            .attr("stroke", "#070A10")
+            .attr("fill", "#07090C")
+            .attr("stroke", "#07090C")
             .attr("stroke-width", 3.2)
             .attr("stroke-linejoin", "round")
-            .attr("font-size", "11px")
-            .attr("font-family", "ui-sans-serif, system-ui, sans-serif")
+            .attr("font-size", "10.5px")
+            .attr("font-family", "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif")
             .attr("font-weight", "700")
-            .text(name);
+            .text(displayLabel);
 
-          // Label crisp foreground text
+          // Warm Cream foreground typography
           labelGroup
             .append("text")
             .attr("x", centroid[0])
             .attr("y", centroid[1] + 3)
             .attr("text-anchor", "middle")
-            .attr("fill", "#F5F1E8")
-            .attr("font-size", "11px")
-            .attr("font-family", "ui-sans-serif, system-ui, sans-serif")
+            .attr("fill", "#E8D2B5")
+            .attr("font-size", "10.5px")
+            .attr("font-family", "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif")
             .attr("font-weight", "600")
-            .text(name);
+            .text(displayLabel);
         }
       }
     });
 
-    // Layer 3: D3 Vidarbha Malaria Hotspot Beacon (when Malaria layer is active)
+    // Layer 3: Vidarbha Malaria Hotspot Beacon (when Malaria layer is active)
     if (isMalaria) {
       const gcFeature = geoData.features.find((f) => f.properties.district === "Gadchiroli");
       if (gcFeature) {
         const centroid = pathGen.centroid(gcFeature as unknown as d3.GeoPermissibleObjects);
-
         const beaconGroup = mapContainer.append("g").attr("class", "d3-malaria-beacon");
 
-        // Animated Ping Ring
-        beaconGroup.append("circle")
+        // Primary Burgundy Pulsing Radar Wave via native SVG <animate> (zero CSS transform glitches)
+        const wave1 = beaconGroup.append("circle")
           .attr("cx", centroid[0])
           .attr("cy", centroid[1])
-          .attr("r", 28)
+          .attr("r", 12)
           .attr("fill", "none")
-          .attr("stroke", "#5FB0A8")
-          .attr("stroke-width", 2)
-          .attr("stroke-opacity", 0.9)
-          .attr("class", "animate-ping");
-
-        // Outer Highlight Ring
-        beaconGroup.append("circle")
-          .attr("cx", centroid[0])
-          .attr("cy", centroid[1])
-          .attr("r", 14)
-          .attr("fill", "none")
-          .attr("stroke", "#5FB0A8")
+          .attr("stroke", "#590907")
           .attr("stroke-width", 2);
+        wave1.append("animate")
+          .attr("attributeName", "r")
+          .attr("from", "10")
+          .attr("to", "38")
+          .attr("dur", "2.2s")
+          .attr("repeatCount", "indefinite");
+        wave1.append("animate")
+          .attr("attributeName", "opacity")
+          .attr("from", "0.9")
+          .attr("to", "0")
+          .attr("dur", "2.2s")
+          .attr("repeatCount", "indefinite");
+
+        // Secondary Cream Delayed Wave
+        const wave2 = beaconGroup.append("circle")
+          .attr("cx", centroid[0])
+          .attr("cy", centroid[1])
+          .attr("r", 8)
+          .attr("fill", "none")
+          .attr("stroke", "#E8D2B5")
+          .attr("stroke-width", 1.5);
+        wave2.append("animate")
+          .attr("attributeName", "r")
+          .attr("from", "6")
+          .attr("to", "24")
+          .attr("dur", "2.2s")
+          .attr("begin", "0.5s")
+          .attr("repeatCount", "indefinite");
+        wave2.append("animate")
+          .attr("attributeName", "opacity")
+          .attr("from", "0.85")
+          .attr("to", "0")
+          .attr("dur", "2.2s")
+          .attr("begin", "0.5s")
+          .attr("repeatCount", "indefinite");
+
+        // Steady Concentric Ring
+        beaconGroup.append("circle")
+          .attr("cx", centroid[0])
+          .attr("cy", centroid[1])
+          .attr("r", 13)
+          .attr("fill", "none")
+          .attr("stroke", "#E8D2B5")
+          .attr("stroke-width", 1.6);
 
         // Core Focal Dot
         beaconGroup.append("circle")
           .attr("cx", centroid[0])
           .attr("cy", centroid[1])
           .attr("r", 5)
-          .attr("fill", "#5FB0A8");
+          .attr("fill", "#590907")
+          .attr("stroke", "#E8D2B5")
+          .attr("stroke-width", 1.2);
 
-        // High-visibility Callout Badge
-        const badgeX = centroid[0] - 55;
-        const badgeY = centroid[1] - 40;
+        // Callout Badge: 61.4% Focus
+        const badgeX = centroid[0] - 65;
+        const badgeY = centroid[1] - 44;
 
         beaconGroup.append("rect")
           .attr("x", badgeX)
           .attr("y", badgeY)
-          .attr("width", 110)
+          .attr("width", 130)
           .attr("height", 24)
           .attr("rx", 3)
-          .attr("fill", "#070A10")
-          .attr("stroke", "#5FB0A8")
+          .attr("fill", "#07090C")
+          .attr("stroke", "#590907")
           .attr("stroke-width", 1.5)
           .attr("filter", "url(#d3-district-glow)");
 
@@ -355,28 +444,75 @@ export default function MaharashtraMap({
           .attr("x", centroid[0])
           .attr("y", badgeY + 16)
           .attr("text-anchor", "middle")
-          .attr("fill", "#5FB0A8")
-          .attr("font-size", "11px")
-          .attr("font-family", "JetBrains Mono, monospace")
+          .attr("fill", "#E8D2B5")
+          .attr("font-size", "10.5px")
+          .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
           .attr("font-weight", "bold")
           .text("61.4% Focus (43/70)");
       }
     }
+
+    // Layer 4: Minimal Cartographic Scale & Cardinal Indicator
+    const cartoGroup = mapContainer.append("g").attr("class", "d3-carto-scale").attr("pointer-events", "none");
+
+    // Cardinal Indicator in Top-Right
+    cartoGroup.append("text")
+      .attr("x", VIEW_W - 60)
+      .attr("y", 50)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#E8D2B5")
+      .attr("font-size", "12px")
+      .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
+      .attr("font-weight", "bold")
+      .text("N");
+    cartoGroup.append("path")
+      .attr("d", `M ${VIEW_W - 60} 56 L ${VIEW_W - 64} 68 L ${VIEW_W - 60} 65 L ${VIEW_W - 56} 68 Z`)
+      .attr("fill", "#590907")
+      .attr("stroke", "#E8D2B5")
+      .attr("stroke-width", 0.7);
+
+    // Scale Bar in Bottom-Left
+    const scaleX = 42;
+    const scaleY = VIEW_H - 36;
+    cartoGroup.append("line")
+      .attr("x1", scaleX)
+      .attr("y1", scaleY)
+      .attr("x2", scaleX + 90)
+      .attr("y2", scaleY)
+      .attr("stroke", "#E8D2B5")
+      .attr("stroke-width", 1.5);
+    cartoGroup.append("line").attr("x1", scaleX).attr("y1", scaleY - 4).attr("x2", scaleX).attr("y2", scaleY + 4).attr("stroke", "#E8D2B5").attr("stroke-width", 1.5);
+    cartoGroup.append("line").attr("x1", scaleX + 45).attr("y1", scaleY - 2.5).attr("x2", scaleX + 45).attr("y2", scaleY + 2.5).attr("stroke", "#E8D2B5").attr("stroke-width", 1);
+    cartoGroup.append("line").attr("x1", scaleX + 90).attr("y1", scaleY - 4).attr("x2", scaleX + 90).attr("y2", scaleY + 4).attr("stroke", "#E8D2B5").attr("stroke-width", 1.5);
+    cartoGroup.append("text")
+      .attr("x", scaleX)
+      .attr("y", scaleY + 16)
+      .attr("fill", "#A5A79B")
+      .attr("font-size", "9px")
+      .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
+      .text("0");
+    cartoGroup.append("text")
+      .attr("x", scaleX + 45)
+      .attr("y", scaleY + 16)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#A5A79B")
+      .attr("font-size", "9px")
+      .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
+      .text("100 km");
+    cartoGroup.append("text")
+      .attr("x", scaleX + 90)
+      .attr("y", scaleY + 16)
+      .attr("text-anchor", "end")
+      .attr("fill", "#A5A79B")
+      .attr("font-size", "9px")
+      .attr("font-family", "ui-monospace, SFMono-Regular, Menlo, monospace")
+      .text("200 km");
+
   }, [geoData, selectedDisease, selectedDistrict, onDistrictSelect]);
 
   // Initial and reactive render
   useEffect(() => {
     renderMap();
-  }, [renderMap]);
-
-  // ResizeObserver for dynamic responsiveness
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const observer = new ResizeObserver(() => {
-      renderMap();
-    });
-    observer.observe(containerRef.current);
-    return () => observer.disconnect();
   }, [renderMap]);
 
   const diseases = Object.keys(DISEASE_DISTRICTS);
@@ -387,25 +523,25 @@ export default function MaharashtraMap({
         (containerRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
         (inViewRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
       }}
-      className={`relative flex flex-col bg-[#0A1016] border border-white/[0.1] rounded-sm p-4 sm:p-6 shadow-2xl transition-all duration-700 ease-out ${
+      className={`relative flex flex-col bg-[#07090C] transition-all duration-700 ease-out ${
         hasAnimated ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       } ${className}`}
     >
-      {/* In-Map Header */}
+      {/* Optional Standalone Header */}
       {showControls && (
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 pb-4 border-b border-white/[0.08]">
           <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-[#D7B56D] font-bold flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#D7B56D] animate-pulse" />
+            <div className="font-mono text-xs uppercase tracking-widest text-[#E8D2B5] font-bold flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#590907] ring-1 ring-[#E8D2B5]/40 animate-pulse" />
               <span>{title} · D3.JS CARTOGRAPHIC VISUALIZATION</span>
             </div>
-            <div className="font-mono text-xs text-[#A8B6BA] mt-1">
-              <span className="text-[#F5F1E8] font-bold">
+            <div className="font-mono text-xs text-[#A5A79B] mt-1">
+              <span className="text-[#E8D2B5] font-bold">
                 {DISEASE_DISTRICTS[selectedDisease]?.length ?? 0}
               </span>{" "}
               of 36 districts reporting outbreak events ·{" "}
               {selectedDisease === "malaria" ? (
-                <span className="text-[#5FB0A8] font-semibold">
+                <span className="text-[#E8D2B5] font-semibold">
                   Gadchiroli (29) + Chandrapur (14) = 61.4% of total events
                 </span>
               ) : (
@@ -417,7 +553,7 @@ export default function MaharashtraMap({
           <div className="flex items-center gap-2">
             <button
               onClick={() => renderMap()}
-              className="px-3 py-1.5 bg-[#070A10] hover:bg-white/[0.06] border border-white/15 text-[#D7B56D] hover:text-[#F5F1E8] rounded-xs font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-3 py-1.5 bg-[#0B0E13] hover:bg-[#590907]/30 border border-[#E8D2B5]/25 text-[#E8D2B5] hover:text-[#FFF] rounded-xs font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Re-project D3 Maharashtra district boundaries"
             >
               <RefreshCw className="w-3.5 h-3.5" />
@@ -427,57 +563,34 @@ export default function MaharashtraMap({
         </div>
       )}
 
-      {/* Disease Filter Pills */}
+      {/* Optional Standalone Disease Filter Pills */}
       {showControls && (
-        <>
-          {/* Mobile Horizontal Scrollable Chips */}
-          <div className="flex sm:hidden overflow-x-auto gap-2 pb-2 mb-3 no-scrollbar">
-            {diseases.map((d) => (
-              <button
-                key={d}
-                onClick={() => setSelectedDisease(d)}
-                className="font-mono text-xs uppercase tracking-wider px-3 py-1.5 rounded-xs border transition-all shrink-0 cursor-pointer flex items-center gap-1.5"
-                style={{
-                  borderColor: selectedDisease === d ? DISEASE_COLORS[d] : "rgba(255, 255, 255, 0.12)",
-                  color: selectedDisease === d ? DISEASE_COLORS[d] : "#A8B6BA",
-                  background: selectedDisease === d ? `${DISEASE_COLORS[d]}20` : "#070A10",
-                  fontWeight: selectedDisease === d ? "bold" : "normal",
-                }}
-              >
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: DISEASE_COLORS[d] }} />
-                <span>{DISEASE_LABELS[d]}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Desktop Wrap Pills */}
-          <div className="hidden sm:flex flex-wrap gap-2 mb-4">
-            {diseases.map((d) => (
-              <button
-                key={d}
-                onClick={() => setSelectedDisease(d)}
-                className="font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-xs border transition-all cursor-pointer flex items-center gap-1.5"
-                style={{
-                  borderColor: selectedDisease === d ? DISEASE_COLORS[d] : "rgba(255, 255, 255, 0.12)",
-                  color: selectedDisease === d ? DISEASE_COLORS[d] : "#A8B6BA",
-                  background: selectedDisease === d ? `${DISEASE_COLORS[d]}20` : "#070A10",
-                  fontWeight: selectedDisease === d ? "bold" : "normal",
-                }}
-              >
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: DISEASE_COLORS[d] }} />
-                <span>{DISEASE_LABELS[d]}</span>
-              </button>
-            ))}
-          </div>
-        </>
+        <div className="flex flex-wrap gap-2 mb-4">
+          {diseases.map((d) => (
+            <button
+              key={d}
+              onClick={() => setSelectedDisease(d)}
+              className="font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-xs border transition-all cursor-pointer flex items-center gap-1.5"
+              style={{
+                borderColor: selectedDisease === d ? "#590907" : "rgba(232, 210, 181, 0.18)",
+                color: selectedDisease === d ? "#E8D2B5" : "#A5A79B",
+                background: selectedDisease === d ? "rgba(89, 9, 7, 0.35)" : "#0B0E13",
+                fontWeight: selectedDisease === d ? "bold" : "normal",
+              }}
+            >
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: DISEASE_COLORS[d] }} />
+              <span>{DISEASE_LABELS[d]}</span>
+            </button>
+          ))}
+        </div>
       )}
 
-      {/* Spacious D3 SVG Map Stage (Height min 380px on mobile, 560px on tablet, 620px on desktop) */}
-      <div className="relative flex-1 min-h-[380px] sm:min-h-[520px] lg:min-h-[620px] bg-[#070A10] rounded-xs overflow-hidden border border-white/[0.06] flex items-center justify-center">
+      {/* Spacious D3 SVG Map Stage */}
+      <div className="relative w-full flex-1 min-h-[420px] sm:min-h-[540px] lg:min-h-[600px] bg-[#07090C] rounded-xs overflow-hidden flex items-center justify-center">
         {!loaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-[#070A10]/90 z-20">
-            <div className="font-mono text-xs text-[#5FB0A8] tracking-widest animate-pulse flex items-center gap-2">
-              <MapPin className="w-4 h-4 animate-bounce" />
+          <div className="absolute inset-0 flex items-center justify-center bg-[#07090C]/90 z-20">
+            <div className="font-mono text-xs text-[#A5A79B] tracking-widest animate-pulse flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-[#590907] animate-bounce" />
               <span>D3.JS: COMPUTING MERCATOR PROJECTION & DISTRICT CENTROIDS…</span>
             </div>
           </div>
@@ -485,32 +598,35 @@ export default function MaharashtraMap({
 
         <svg
           ref={svgRef}
-          className="w-full h-full min-h-[380px] sm:min-h-[520px] lg:min-h-[620px]"
+          className="w-full h-full min-h-[420px] sm:min-h-[540px] lg:min-h-[600px] select-none"
           style={{ display: "block" }}
         />
 
-        {/* Floating Tooltip */}
-        {tooltip && (
+        {/* Dynamic Responsive Floating Tooltip */}
+        {tooltip && containerRef.current && (
           <div
-            className="absolute pointer-events-none bg-[#0A1016]/95 backdrop-blur-md border border-[#5FB0A8]/60 rounded-xs px-4 py-3 shadow-[0_12px_32px_rgba(0,0,0,0.8)] z-50 transition-transform"
-            style={{ left: Math.min(tooltip.x + 16, 520), top: Math.max(tooltip.y, 20) }}
+            className="absolute pointer-events-none bg-[#0B0E13]/95 backdrop-blur-md border border-[#590907]/70 rounded-xs px-4 py-3 shadow-[0_12px_32px_rgba(0,0,0,0.95)] z-50 transition-all duration-75"
+            style={{
+              left: Math.min(Math.max(16, tooltip.x + 18), (containerRef.current?.clientWidth || 700) - 230),
+              top: Math.max(16, tooltip.y - 10),
+            }}
           >
-            <div className="font-serif text-base text-[#F5F1E8] font-bold">
+            <div className="font-serif text-base text-[#E8D2B5] font-bold">
               {tooltip.district} District
             </div>
             {tooltip.isActive ? (
-              <div className="font-mono text-xs text-[#5FB0A8] mt-1 uppercase tracking-wider flex items-center gap-1.5 font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#5FB0A8]" />
-                <span>Reporting Outbreak Record</span>
+              <div className="font-mono text-xs text-[#E8D2B5] mt-1 uppercase tracking-wider flex items-center gap-1.5 font-bold">
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#590907]" />
+                <span>Verified Outbreak Record</span>
               </div>
             ) : (
-              <div className="font-mono text-xs text-[#87999E] mt-1 uppercase tracking-wider">
-                Zero Outbreak Records in Cohort
+              <div className="font-mono text-xs text-[#A5A79B] mt-1 uppercase tracking-wider">
+                Zero Outbreak Records
               </div>
             )}
             {selectedDisease === "malaria" && MALARIA_CONCENTRATION.districts.includes(tooltip.district) && (
-              <div className="font-mono text-xs text-[#D7B56D] mt-1.5 font-bold flex items-center gap-1 bg-[#D7B56D]/10 px-2 py-0.5 rounded-xs">
-                <ShieldAlert className="w-3 h-3 text-[#D7B56D]" />
+              <div className="font-mono text-xs text-[#E8D2B5] mt-1.5 font-bold flex items-center gap-1 bg-[#590907]/30 border border-[#590907]/50 px-2 py-0.5 rounded-xs">
+                <ShieldAlert className="w-3 h-3 text-[#590907]" />
                 <span>Vidarbha Endemic Forest Cluster (61.4%)</span>
               </div>
             )}
@@ -519,30 +635,30 @@ export default function MaharashtraMap({
 
         {/* Map Legend */}
         {showLegend && (
-          <div className="absolute bottom-3 right-3 bg-[#0A1016]/95 backdrop-blur-md border border-white/15 rounded-xs p-2.5 sm:p-3.5 flex flex-col gap-2 shadow-2xl z-10 max-w-[210px] sm:max-w-xs text-[11px] sm:text-xs">
-            <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-[#87999E] font-bold border-b border-white/[0.08] pb-1">
-              SURVEILLANCE LEGEND (D3.JS)
+          <div className="absolute bottom-3 right-3 bg-[#0B0E13]/95 backdrop-blur-md border border-[#E8D2B5]/20 rounded-xs p-2.5 sm:p-3 flex flex-col gap-2 shadow-2xl z-10 max-w-[210px] sm:max-w-xs text-[11px] sm:text-xs">
+            <div className="text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-[#A5A79B] font-bold border-b border-white/[0.08] pb-1">
+              SURVEILLANCE FOOTPRINT
             </div>
             <div className="flex items-center gap-2">
               <div
                 className="w-3.5 h-3.5 rounded-xs border border-white/20 shrink-0"
-                style={{ background: `${DISEASE_COLORS[selectedDisease]}CC` }}
+                style={{ background: `${DISEASE_COLORS[selectedDisease]}D9` }}
               />
-              <span className="font-mono text-[11px] sm:text-xs text-[#F5F1E8] tracking-wider uppercase font-semibold">
+              <span className="font-mono text-[11px] sm:text-xs text-[#E8D2B5] tracking-wider uppercase font-semibold">
                 Reporting District
               </span>
             </div>
             {selectedDisease === "malaria" && (
               <div className="flex items-center gap-2">
-                <div className="w-3.5 h-3.5 rounded-xs bg-[#5FB0A8] border border-white/30 shrink-0" />
-                <span className="font-mono text-[10px] sm:text-xs text-[#5FB0A8] tracking-wider uppercase font-bold">
+                <div className="w-3.5 h-3.5 rounded-xs bg-[#590907] border border-[#E8D2B5]/40 shrink-0" />
+                <span className="font-mono text-[10px] sm:text-xs text-[#E8D2B5] tracking-wider uppercase font-bold">
                   Vidarbha Clust. (61.4%)
                 </span>
               </div>
             )}
             <div className="flex items-center gap-2">
-              <div className="w-3.5 h-3.5 rounded-xs bg-[#0A1016] border border-white/20 shrink-0" />
-              <span className="font-mono text-[10px] sm:text-xs text-[#87999E] tracking-wider uppercase">
+              <div className="w-3.5 h-3.5 rounded-xs bg-[#0C1017] border border-white/20 shrink-0" />
+              <span className="font-mono text-[10px] sm:text-xs text-[#A5A79B] tracking-wider uppercase">
                 Zero Outbreaks
               </span>
             </div>
@@ -550,16 +666,16 @@ export default function MaharashtraMap({
         )}
       </div>
 
-      {/* Mobile Selected District Inspection Sheet (block sm:hidden) */}
+      {/* Selected District Inspection Drawer */}
       {selectedDistrict && (
-        <div className="block sm:hidden p-3.5 bg-[#0B111E] border border-[#5FB0A8]/50 rounded-xs shadow-xl animate-fade-in space-y-2">
+        <div className="p-3.5 bg-[#0B0E13] border border-[#590907]/60 rounded-xs shadow-xl animate-fade-in space-y-2 mt-3">
           <div className="flex items-center justify-between border-b border-white/10 pb-2">
-            <div className="font-serif text-lg font-bold text-[#F5F1E8]">
+            <div className="font-serif text-lg font-bold text-[#E8D2B5]">
               {selectedDistrict} District
             </div>
             <button
               onClick={() => setSelectedDistrict(null)}
-              className="text-xs font-mono text-[#87999E] hover:text-[#F5F1E8] px-2 py-0.5 bg-white/[0.04] rounded-xs"
+              className="text-xs font-mono text-[#A5A79B] hover:text-[#E8D2B5] px-2 py-0.5 bg-white/[0.04] rounded-xs cursor-pointer"
             >
               Clear ✕
             </button>
@@ -567,15 +683,15 @@ export default function MaharashtraMap({
 
           <div className="flex items-center gap-2 text-xs font-mono">
             <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: DISEASE_COLORS[selectedDisease] }} />
-            <span className="text-[#A8B6BA] uppercase">{DISEASE_LABELS[selectedDisease]}:</span>
-            <span className="font-bold text-[#F5F1E8]">
+            <span className="text-[#A5A79B] uppercase">{DISEASE_LABELS[selectedDisease]}:</span>
+            <span className="font-bold text-[#E8D2B5]">
               {(DISEASE_DISTRICTS[selectedDisease] || []).includes(selectedDistrict) ? "Verified Outbreak Record" : "Zero Records"}
             </span>
           </div>
 
           {selectedDisease === "malaria" && MALARIA_CONCENTRATION.districts.includes(selectedDistrict) && (
-            <div className="p-2 bg-[#D7B56D]/10 border border-[#D7B56D]/30 rounded-xs text-[11px] font-mono text-[#D7B56D] flex items-center gap-1.5 font-bold">
-              <ShieldAlert className="w-3.5 h-3.5 shrink-0 text-[#D7B56D]" />
+            <div className="p-2 bg-[#590907]/20 border border-[#590907]/40 rounded-xs text-[11px] font-mono text-[#E8D2B5] flex items-center gap-1.5 font-bold">
+              <ShieldAlert className="w-3.5 h-3.5 shrink-0 text-[#590907]" />
               <span>Vidarbha Endemic Focus: Part of 61.4% state malaria burden.</span>
             </div>
           )}

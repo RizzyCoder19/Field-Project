@@ -15,6 +15,12 @@
     --color-sage-light: #C2C4B8;
     --color-sage-dim: #7C7E72;
 
+    --bg-canvas: #A5A79B;
+    --bg-cream: #E8D2B5;
+    --bg-burgundy: #590907;
+    --color-ink: #1C1E1A;
+    --color-ink-muted: #3D4037;
+
     --bg-ink: #07090C;
     --bg-section: #0B0E13;
     --bg-card: #0F131A;
@@ -27,15 +33,15 @@
     --color-brass-dim: #C5AF94;
     --color-teal: #A5A79B;
     --color-teal-dim: #7C7E72;
-    --color-hairline: rgba(232, 210, 181, 0.12);
-    --color-hairline-warm: rgba(89, 9, 7, 0.25);
+    --color-hairline: rgba(89, 9, 7, 0.15);
+    --color-hairline-warm: rgba(89, 9, 7, 0.30);
 
     /* Disease-Specific Analytical Colors */
     --dengue: #590907;
-    --add: #A5A79B;
-    --malaria: #E8D2B5;
-    --food-poisoning: #9B2220;
-    --chikungunya: #7C7E72;
+    --add: #5A7A72;
+    --malaria: #C9944A;
+    --food-poisoning: #A83C28;
+    --chikungunya: #7E6080;
   }
 
   *, *::before, *::after {
@@ -48,8 +54,8 @@
   }
 
   body {
-    background-color: var(--bg-ink);
-    color: var(--color-cream);
+    background-color: #070A0F;
+    color: #F0DECE;
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;

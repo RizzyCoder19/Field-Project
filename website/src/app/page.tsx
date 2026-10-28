@@ -84,7 +84,7 @@ export default function HomePage() {
             ════════════════════════════════════════════════════════════════════ */}
         <section
           id="data-transformation"
-          className="py-12 sm:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0E13] border-b border-[#E8D2B5]/15 select-none"
+          className="py-12 sm:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0F15] border-b border-[#F0DECE]/12 text-[#F0DECE] select-none"
           aria-label="How We Transformed The Data"
         >
           <div className="max-w-[1360px] mx-auto space-y-8">
@@ -92,16 +92,16 @@ export default function HomePage() {
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
-                  <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#E8D2B5] uppercase">
+                  <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#F0DECE] uppercase">
                     DATA PROVENANCE & HARMONIZATION PIPELINE
                   </span>
                   <span className="text-white/20">|</span>
                   <span className="text-[11px] font-mono text-[#A5A79B]">237 Bulletins → Structured Investigation</span>
                 </div>
-                <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8D2B5] tracking-tight">
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0DECE] tracking-tight">
                   How we transformed raw government data into this website
                 </h2>
-                <p className="text-xs sm:text-sm text-[#A5A79B] max-w-2xl leading-relaxed">
+                <p className="text-sm sm:text-base text-[#BAC0B8] max-w-3xl leading-relaxed">
                   Raw government surveillance PDFs contain formatting inconsistencies, varying string notations, and unnormalized district listings. Here is the exact additive forensic cascade that converted 237 weekly bulletins into the 539 audited cohort records you explore below.
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3">
                 <Link
                   href="/data"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-all border border-[#E8D2B5]/30 shadow-md cursor-pointer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#8B1414] hover:bg-[#A31818] text-[#F0DECE] font-bold text-xs uppercase tracking-wider rounded-xs transition-all border border-[#F0DECE]/30 shadow-md cursor-pointer"
                 >
                   <Database className="w-3.5 h-3.5" />
                   <span>Explore Raw Data Archive</span>
@@ -133,7 +133,7 @@ export default function HomePage() {
             ════════════════════════════════════════════════════════════════════ */}
         <section
           id="study-scope"
-          className="py-10 sm:py-14 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0E13] border-b border-[#E8D2B5]/15"
+          className="py-10 sm:py-14 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-gradient-to-b from-[#180505] to-[#110303] border-b border-[#F0DECE]/12 text-[#F0DECE]"
           aria-label="Executive Cohort Metrics"
         >
           <div className="max-w-[1360px] mx-auto space-y-8">
@@ -165,7 +165,7 @@ export default function HomePage() {
                 <a
                   href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
                   download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-                  className="text-xs font-mono font-bold text-[#E8D2B5] hover:text-[#FFF] transition-colors flex items-center gap-1.5 px-3.5 py-1.5 bg-[#590907] hover:bg-[#7E1513] border border-[#E8D2B5]/30 rounded-xs shadow-md"
+                  className="text-xs font-mono font-bold text-[#E8D2B5] hover:text-[#FFF] transition-colors flex items-center gap-1.5 px-3.5 py-1.5 bg-[#8B1414] hover:bg-[#A31818] border border-[#F0DECE]/30 rounded-xs shadow-md"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>Download Monograph (PDF)</span>
@@ -175,7 +175,7 @@ export default function HomePage() {
 
             {/* 4 Primary Verified Provenance Metrics Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+              <div className="bg-[#240808] border border-[#F0DECE]/15 p-4 sm:p-5 rounded-xs space-y-1 shadow-lg">
                 <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
                   SURVEILLANCE COVERAGE
                 </span>
@@ -261,10 +261,10 @@ export default function HomePage() {
         {/* ════════════════════════════════════════════════════════════════════
             SITE FOOTER
             ════════════════════════════════════════════════════════════════════ */}
-        <footer className="py-8 px-6 sm:px-8 border-t border-[#E8D2B5]/15 bg-[#07090C] lg:pr-24 xl:pr-28">
+        <footer className="py-8 px-6 sm:px-8 border-t border-[#F0DECE]/12 bg-[#070A0F] text-[#BAC0B8] lg:pr-24 xl:pr-28">
           <div className="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#A5A79B]">
             <div>
-              <span className="text-[#E8D2B5]">Analysis of Seasonal Disease Patterns Using Government Health Data</span>
+              <span className="text-[#F0DECE] font-bold">Analysis of Seasonal Disease Patterns Using Government Health Data</span>
               <span className="text-white/20 mx-2">|</span>
               <span>Khan Umar · RP Institute, University of Mumbai</span>
             </div>

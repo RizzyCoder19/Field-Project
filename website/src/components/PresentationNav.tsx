@@ -8,19 +8,19 @@ import { Menu, X, FileText, ChevronDown, Compass, ArrowUp, ExternalLink, BookOpe
 const PRIMARY_LINKS = [
   { label: "Overview", href: "/" },
   { label: "Data Archive", href: "/data" },
-  { label: "5 Diseases", href: "/diseases" },
+  { label: "5 Diseases & Clock", href: "/diseases" },
   { label: "Geography", href: "/geography" },
   { label: "Fieldwork", href: "/fieldwork" },
   { label: "Findings", href: "/findings" },
 ];
 
 const EXPLORE_LINKS = [
-  { label: "Seasonality & Radial Clock", href: "/seasonality" },
-  { label: "Kendall's W Repeatability", href: "/stability" },
-  { label: "Outlier Sensitivity Testing", href: "/outliers" },
-  { label: "Matched 2026 Comparison", href: "/comparison-2026" },
-  { label: "12-Stage Methodology", href: "/method" },
-  { label: "Surveillance Bulletin Sources", href: "/sources" },
+  { label: "Act 03 · Monsoon Heatmap Matrix", href: "/seasonality" },
+  { label: "Act 06 · Kendall's W Repeatability", href: "/stability" },
+  { label: "Act 07 · Outlier Sensitivity Testing", href: "/outliers" },
+  { label: "Act 09 · Matched 2026 Comparison", href: "/comparison-2026" },
+  { label: "Act 02 · 12-Stage Pipeline", href: "/method" },
+  { label: "Sources & Auditable Archive", href: "/sources" },
   { label: "Evidence Dossier", href: "/evidence" },
   { label: "Research Thesis", href: "/research" },
 ];
@@ -114,7 +114,7 @@ export default function PresentationNav() {
     <>
       {/* ── Top Navigation Bar: Displays on non-homepage, and at the top of homepage before scrolling ── */}
       <header
-        className={`z-[190] bg-[#070A10]/95 backdrop-blur-md border-b border-white/[0.08] transition-all duration-500 ${
+        className={`z-[190] bg-[#070A0F]/95 backdrop-blur-md border-b border-[#F0DECE]/12 text-[#F0DECE] transition-all duration-500 ${
           isHomepage
             ? `fixed top-0 left-0 right-0 ${
                 isScrolled
@@ -132,10 +132,10 @@ export default function PresentationNav() {
             className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#590907] rounded-sm py-1 shrink-0"
           >
             <div className="flex flex-col">
-              <span className="text-xs font-bold text-[#E8D2B5] tracking-[0.16em] uppercase group-hover:text-[#F7EAD7] transition-colors">
+              <span className="text-xs font-bold text-[#F0DECE] tracking-[0.16em] uppercase transition-colors">
                 From Data to the Ground
               </span>
-              <span className="text-[11px] text-[#A5A79B] hidden sm:inline tracking-normal">
+              <span className="text-[11px] text-[#A5A79B] hidden sm:inline tracking-normal font-normal">
                 Seasonal Disease Surveillance in Maharashtra
               </span>
             </div>
@@ -149,8 +149,8 @@ export default function PresentationNav() {
                 href={link.href}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
                   isActive(link.href)
-                    ? "text-[#E8D2B5] font-bold bg-[#590907]/30 border border-[#590907]/50"
-                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
+                    ? "text-[#F0DECE] font-bold bg-[#8B1414] shadow-sm border border-[#F0DECE]/20"
+                    : "text-[#A5A79B] hover:text-[#F0DECE] font-medium"
                 }`}
               >
                 {link.label}
@@ -166,8 +166,8 @@ export default function PresentationNav() {
                 }}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1 cursor-pointer ${
                   EXPLORE_LINKS.some((l) => isActive(l.href))
-                    ? "text-[#E8D2B5] font-bold bg-[#590907]/20"
-                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
+                    ? "text-[#F0DECE] font-bold bg-[#8B1414] shadow-sm border border-[#F0DECE]/20"
+                    : "text-[#A5A79B] hover:text-[#F0DECE] font-medium"
                 }`}
                 aria-expanded={exploreOpen}
                 aria-haspopup="true"
@@ -178,10 +178,10 @@ export default function PresentationNav() {
 
               {exploreOpen && (
                 <div
-                  className="absolute top-full right-0 mt-2 w-64 bg-[#0B0E13] border border-[#E8D2B5]/20 rounded-sm shadow-2xl py-1 z-50 divide-y divide-white/[0.04]"
+                  className="absolute top-full right-0 mt-2 w-64 bg-[#0B0F15] border border-[#F0DECE]/20 rounded-xs shadow-2xl py-1 z-50 divide-y divide-white/[0.06] text-[#F0DECE]"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="px-3 py-2 text-[10px] font-mono uppercase text-[#E8D2B5] tracking-widest font-semibold">
+                  <div className="px-3 py-2 text-[10px] font-mono uppercase text-[#F0DECE] tracking-widest font-bold">
                     Academic Chapters & Archives
                   </div>
                   <div className="py-1">
@@ -191,8 +191,8 @@ export default function PresentationNav() {
                         href={link.href}
                         className={`block px-4 py-2 text-xs font-mono transition-colors ${
                           isActive(link.href)
-                            ? "text-[#E8D2B5] bg-[#590907]/30"
-                            : "text-[#A5A79B] hover:text-[#E8D2B5] hover:bg-white/[0.04]"
+                            ? "text-[#F0DECE] bg-[#8B1414] font-bold"
+                            : "text-[#A5A79B] hover:text-[#F0DECE] hover:bg-white/[0.06]"
                         }`}
                       >
                         {link.label}
@@ -209,7 +209,7 @@ export default function PresentationNav() {
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#590907] hover:bg-[#590907] text-[#E8D2B5] hover:text-[#FFF] text-xs font-mono uppercase tracking-wider rounded-sm transition-all cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#8B1414] hover:bg-[#A31818] text-[#F0DECE] font-bold border border-[#F0DECE]/30 shadow-md text-xs font-mono uppercase tracking-wider rounded-sm transition-all cursor-pointer shadow-sm"
             >
               <FileText className="w-3.5 h-3.5 text-[#E8D2B5]" />
               <span className="hidden sm:inline">Academic PDF</span>
@@ -218,7 +218,7 @@ export default function PresentationNav() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-[#A5A79B] hover:text-[#E8D2B5] focus:outline-none cursor-pointer"
+              className="lg:hidden p-2 text-[#F0DECE] hover:text-[#FFF] focus:outline-none cursor-pointer"
               aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileOpen}
             >

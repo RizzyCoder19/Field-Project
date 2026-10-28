@@ -38,7 +38,7 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#070A10] text-[#F5F1E8] selection:bg-[#D7B56D] selection:text-[#070A10]">
+      <body className="min-h-full flex flex-col bg-[#070A0F] text-[#F0DECE] selection:bg-[#8B1414] selection:text-[#F0DECE]">
         <PresentationNav />
         <main className="flex-1 w-full">{children}</main>
       </body>

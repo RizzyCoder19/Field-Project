@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import NativeKendallAlignment from "@/components/NativeKendallAlignment";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 import { PRIMARY_DISEASES } from "@/data/researchData";
 
 interface StabilityProfile {
@@ -82,6 +83,8 @@ export default function StabilityPage() {
 
   return (
     <div className="w-full bg-[#070A10] text-[#F5F1E8] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={6} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-white/[0.08] bg-gradient-to-b from-[#05070B] to-[#070A10] pt-12 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-3">

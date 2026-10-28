@@ -8,6 +8,7 @@ import {
 import { SURVEILLANCE_COVERAGE, PRIMARY_DISEASES } from "@/data/researchData";
 import NativeTaxonomyConvergence from "@/components/NativeTaxonomyConvergence";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 
 interface SampleRecord {
   id: number;
@@ -105,6 +106,8 @@ export default function DataPage() {
 
   return (
     <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={1} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
@@ -488,7 +491,7 @@ export default function DataPage() {
       </section>
 
       {/* 4. CHAPTER NAVIGATION FOOTER */}
-      <ChapterFooter currentChapterNumber={2} />
+      <ChapterFooter currentChapterNumber={1} />
     </div>
   );
 }

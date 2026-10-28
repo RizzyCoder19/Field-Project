@@ -9,13 +9,14 @@ import {
 import { PRIMARY_DISEASES } from "@/data/researchData";
 import MaharashtraMap from "@/components/MaharashtraMap";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 
 const DISTRICT_SUMMARY = [
-  { disease: "Malaria", id: "malaria", color: "#F59E0B", count: 15, total: 36, pct: "41.7%", focal: "Focal eastern tribal forest cluster: Gadchiroli (29) & Chandrapur (14) = 61.4% of total state events." },
-  { disease: "Dengue", id: "dengue", color: "#38BDF8", count: 31, total: 36, pct: "86.1%", focal: "Statewide urban and peri-urban municipal corridors (Pune, Thane, Nashik, Kolhapur, Nanded)." },
-  { disease: "ADD", id: "add", color: "#10B981", count: 33, total: 36, pct: "91.7%", focal: "Universal footprint across 33 districts; highest geographical dispersion in the study." },
-  { disease: "Food Poisoning", id: "foodPoisoning", color: "#EF4444", count: 27, total: 36, pct: "75.0%", focal: "Agricultural and semi-urban banquet corridors (Kolhapur, Parbhani, Solapur, Pune, Sangli)." },
-  { disease: "Chikungunya", id: "chikungunya", color: "#A78BFA", count: 15, total: 36, pct: "41.7%", focal: "Western & central urban hubs (Pune, Nashik, Ahmednagar, Satara, Thane)." },
+  { disease: "Malaria", id: "malaria", color: "#C9944A", count: 15, total: 36, pct: "41.7%", focal: "Focal eastern tribal forest cluster: Gadchiroli (29) & Chandrapur (14) = 61.4% of total state events." },
+  { disease: "Dengue", id: "dengue", color: "#8B1414", count: 31, total: 36, pct: "86.1%", focal: "Statewide urban and peri-urban municipal corridors (Pune, Thane, Nashik, Kolhapur, Nanded)." },
+  { disease: "ADD", id: "add", color: "#5A7A72", count: 33, total: 36, pct: "91.7%", focal: "Universal footprint across 33 districts; highest geographical dispersion in the study." },
+  { disease: "Food Poisoning", id: "foodPoisoning", color: "#A83C28", count: 27, total: 36, pct: "75.0%", focal: "Agricultural and semi-urban banquet corridors (Kolhapur, Parbhani, Solapur, Pune, Sangli)." },
+  { disease: "Chikungunya", id: "chikungunya", color: "#7E6080", count: 15, total: 36, pct: "41.7%", focal: "Western & central urban hubs (Pune, Nashik, Ahmednagar, Satara, Thane)." },
 ];
 
 export default function GeographyPage() {
@@ -26,30 +27,32 @@ export default function GeographyPage() {
   const currentSummary = DISTRICT_SUMMARY.find(d => d.id === selectedDisease) || DISTRICT_SUMMARY[0];
 
   return (
-    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+    <div className="w-full bg-[#07090C] text-[#E8D2B5] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={5} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-[#E8D2B5]/15 bg-gradient-to-b from-[#07090C] to-[#0B0E13] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#A5A79B] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#590907] ring-1 ring-[#E8D2B5]/40" />
             <span>EXHIBIT 05 · SPATIAL EPIDEMIOLOGY</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#E8D2B5] leading-[1.12]">
             The Geographic Reporting Footprint
           </h1>
 
-          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#A5A79B] max-w-3xl leading-relaxed pt-1">
             Mapping 36 districts reveals stark contrasts between widespread urban arboviruses and localized forest malaria.
           </p>
         </div>
       </section>
 
-      {/* 2. THE MAP IS THE EXPERIENCE: DOMINANT SPATIAL OBSERVATORY (80% VIEWPORT) */}
+      {/* 2. THE MAP IS THE EXPERIENCE: DOMINANT SPATIAL OBSERVATORY */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-6">
         {/* Floating Disease Selector Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#F8FAFC]/12 pb-3">
-          <span className="text-xs font-mono text-[#94A3B8] uppercase tracking-wider">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.08] pb-3">
+          <span className="text-xs font-mono text-[#A5A79B] uppercase tracking-wider font-semibold">
             Select Disease Surveillance Footprint:
           </span>
 
@@ -60,17 +63,17 @@ export default function GeographyPage() {
                 <button
                   key={d.id}
                   onClick={() => setSelectedDisease(d.id)}
-                  className="px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm transition-all border flex items-center gap-1.5"
+                  className="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider rounded-xs transition-all border flex items-center gap-2 cursor-pointer shadow-sm"
                   style={{
-                    borderColor: isSelected ? d.color : "rgba(212, 175, 55, 0.18)",
-                    backgroundColor: isSelected ? `${d.color}25` : "#06080F",
-                    color: isSelected ? d.color : "rgba(248, 250, 252, 0.7)",
+                    borderColor: isSelected ? "#590907" : "rgba(232, 210, 181, 0.2)",
+                    backgroundColor: isSelected ? "#590907" : "#0B0E13",
+                    color: isSelected ? "#E8D2B5" : "#A5A79B",
                     fontWeight: isSelected ? "bold" : "normal",
                   }}
                 >
                   <span className="w-2 h-2 rounded-full" style={{ backgroundColor: d.color }} />
                   <span>{d.disease}</span>
-                  <span className="text-[10px] opacity-70">({d.count}/36)</span>
+                  <span className="text-[10px] opacity-80">({d.count}/36)</span>
                 </button>
               );
             })}
@@ -78,20 +81,20 @@ export default function GeographyPage() {
         </div>
 
         {/* Dominant Map Container with Integrated Live HUD */}
-        <div className="relative bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[580px] flex flex-col justify-between">
+        <div className="relative bg-[#0B0E13] border border-[#E8D2B5]/15 rounded-xs p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[580px] flex flex-col justify-between">
           {/* Top Floating Focal Finding Badge */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#F8FAFC]/10 z-10 relative">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-white/[0.08] z-10 relative">
             <div className="space-y-0.5">
-              <div className="text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5" style={{ color: currentSummary.color }}>
+              <div className="text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 font-bold" style={{ color: currentSummary.color }}>
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Active Layer: {currentSummary.disease} ({currentSummary.count} of 36 Districts · {currentSummary.pct})</span>
               </div>
-              <div className="text-xs font-mono text-[#F8FAFC] font-semibold">
+              <div className="text-xs font-mono text-[#E8D2B5] font-semibold">
                 {currentSummary.focal}
               </div>
             </div>
 
-            <div className="text-[11px] font-mono text-[#94A3B8] bg-[#06080F] px-3 py-1.5 border border-[#F8FAFC]/10 rounded-sm">
+            <div className="text-[11px] font-mono text-[#A5A79B] bg-[#07090C] px-3 py-1.5 border border-white/[0.08] rounded-xs">
               Shading = Investigated Outbreak Presence (≥1 Record)
             </div>
           </div>
@@ -101,56 +104,58 @@ export default function GeographyPage() {
             <MaharashtraMap
               activeDisease={selectedDisease}
               showLegend={false}
-              className="w-full h-[min(68vh,680px)] min-h-[480px]"
+              showControls={false}
+              className="w-full h-[min(68vh,680px)] min-h-[480px] border-none shadow-none bg-transparent p-0"
+              onDistrictSelect={(name) => setSelectedDistrictName(name)}
             />
           </div>
 
           {/* Bottom Floating Hotspot Callout & Honest Legend Note */}
-          <div className="pt-4 border-t border-[#F8FAFC]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono text-[#94A3B8] z-10 relative">
+          <div className="pt-4 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono text-[#A5A79B] z-10 relative">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-xs border border-[#5FB0A8]" style={{ backgroundColor: currentSummary.color }} />
-              <span className="text-[#F8FAFC] font-semibold">Colored Districts:</span>
+              <span className="w-3 h-3 rounded-xs border border-[#E8D2B5]/30" style={{ backgroundColor: currentSummary.color }} />
+              <span className="text-[#E8D2B5] font-semibold">Colored Districts:</span>
               <span>≥1 Investigated Outbreak Verified in 2022–2025</span>
             </div>
 
-            <div className="text-[11px] text-[#94A3B8]/70">
+            <div className="text-[11px] text-[#A5A79B]/80">
               Absence of shading indicates 0 official investigated reports, not guaranteed biological absence.
             </div>
           </div>
         </div>
 
         {/* 3. OPTIONAL EXPANDABLE TECHNICAL DISTRICT TABLE */}
-        <div className="pt-6 border-t border-[#F8FAFC]/15">
+        <div className="pt-6 border-t border-white/[0.08]">
           <button
             onClick={() => setShowTableDrawer(!showTableDrawer)}
-            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold"
+            className="w-full p-4 bg-[#0B0E13] hover:bg-[#590907]/20 border border-[#E8D2B5]/20 rounded-xs transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#E8D2B5] font-bold cursor-pointer"
           >
             <div className="flex items-center gap-2">
-              <Compass className="w-4 h-4" />
+              <Compass className="w-4 h-4 text-[#590907]" />
               <span>{showTableDrawer ? "Hide Geographic Footprint Details" : "Explore 36-District Spatial Reporting Matrix & Administrative Methodology"}</span>
             </div>
-            {showTableDrawer ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            {showTableDrawer ? <ChevronUp className="w-4 h-4 text-[#590907]" /> : <ChevronDown className="w-4 h-4 text-[#590907]" />}
           </button>
 
           {showTableDrawer && (
             <div className="pt-6 space-y-6 animate-fadeIn font-mono text-xs">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[#94A3B8]">
-                <div className="p-4 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-2">
-                  <div className="text-[#F59E0B] font-bold uppercase">Malaria Forest Belt</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-[#A5A79B]">
+                <div className="p-4 bg-[#0B0E13] border border-[#590907]/40 rounded-xs space-y-2">
+                  <div className="text-[#C9944A] font-bold uppercase">Malaria Forest Belt</div>
                   <p className="text-[11px] leading-relaxed">
                     Gadchiroli (29 records) and Chandrapur (14 records) account for 61.4% of all malaria events. High forest cover, persistent tribal hamlets, and riverine vector breeding drive intense localization.
                   </p>
                 </div>
 
-                <div className="p-4 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-2">
-                  <div className="text-[#38BDF8] font-bold uppercase">Urban Dengue Corridors</div>
+                <div className="p-4 bg-[#0B0E13] border border-[#590907]/40 rounded-xs space-y-2">
+                  <div className="text-[#8B1414] font-bold uppercase">Urban Dengue Corridors</div>
                   <p className="text-[11px] leading-relaxed">
                     Dengue spans 31 of 36 districts (86.1%), concentrated along urbanized highways and municipal corporations (Pune, Thane, Nashik, Kolhapur) with artificial household water storage.
                   </p>
                 </div>
 
-                <div className="p-4 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-2">
-                  <div className="text-[#10B981] font-bold uppercase">Universal ADD Footprint</div>
+                <div className="p-4 bg-[#0B0E13] border border-[#590907]/40 rounded-xs space-y-2">
+                  <div className="text-[#5A7A72] font-bold uppercase">Universal ADD Footprint</div>
                   <p className="text-[11px] leading-relaxed">
                     Acute Diarrhoeal Disease was reported across 33 of 36 districts (91.7%), demonstrating that water distribution vulnerabilities during monsoon affect every administrative subdivision.
                   </p>

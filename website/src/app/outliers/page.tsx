@@ -8,12 +8,15 @@ import {
 } from "lucide-react";
 import NativeOutlierDecomposition from "@/components/NativeOutlierDecomposition";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 
 export default function OutliersPage() {
   const [showMethodologyDrawer, setShowMethodologyDrawer] = useState(false);
 
   return (
     <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={7} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">

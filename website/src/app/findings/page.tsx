@@ -7,6 +7,7 @@ import {
   ExternalLink, Layers, Award, Sparkles, AlertCircle
 } from "lucide-react";
 import ChapterFooter from "@/components/ChapterFooter";
+import ConnectedEvidenceHeader from "@/components/ConnectedEvidenceHeader";
 
 interface SynthesisNode {
   id: string;
@@ -91,6 +92,8 @@ export default function FindingsPage() {
 
   return (
     <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+      <ConnectedEvidenceHeader currentActNumber={10} />
+
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
