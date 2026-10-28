@@ -73,7 +73,7 @@ export default function Comparison2026Page() {
         {/* Dynamic Comparison Panel */}
         <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm shadow-xl space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#F8FAFC]/10 pb-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold">
               {comparisonMode === "matched" ? "Matched Period Evaluation (Weeks 01–32 Only)" : "Flawed Direct Comparison (32 Weeks vs 52 Weeks)"}
             </span>
             <span className="text-xs font-mono text-[#94A3B8]">
@@ -106,8 +106,8 @@ export default function Comparison2026Page() {
           </div>
 
           {/* Attached Takeaway Banner */}
-          <div className="p-4 bg-[#06080F] border border-[#00F0FF]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
-            <CheckCircle2 className="w-5 h-5 text-[#00F0FF] shrink-0 mt-0.5" />
+          <div className="p-4 bg-[#06080F] border border-[#5FB0A8]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
+            <CheckCircle2 className="w-5 h-5 text-[#5FB0A8] shrink-0 mt-0.5" />
             <div>
               <strong className="text-[#F8FAFC]">Core Epidemiological Caveat:</strong> Dengue and Chikungunya surge predominantly during Weeks 36–45 (October post-monsoon). 
               Because the 2026 observation cutoff occurs at Week 32, evaluating vector diseases before their peak season arrives would produce a completely invalid conclusion.
@@ -119,7 +119,7 @@ export default function Comparison2026Page() {
         <div className="pt-6 border-t border-[#F8FAFC]/15">
           <button
             onClick={() => setShowTableDrawer(!showTableDrawer)}
-            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold"
+            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold"
           >
             <div className="flex items-center gap-2">
               <BarChart2 className="w-4 h-4" />

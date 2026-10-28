@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { RefreshCw, CheckCircle2, AlertCircle } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 interface KendallDisease {
   key: string;
@@ -112,17 +113,25 @@ const KENDALL_DATA: KendallDisease[] = [
   },
 ];
 
+interface NativeKendallAlignmentProps {
+  className?: string;
+  activeCohort?: string;
+  onSelectCohort?: (key: string) => void;
+}
+
 export default function NativeKendallAlignment({
   className = "",
   activeCohort,
-}: {
-  className?: string;
-  activeCohort?: string;
-}) {
+  onSelectCohort,
+}: NativeKendallAlignmentProps) {
   const [internalKey, setInternalKey] = useState("add");
   const [animKey, setAnimKey] = useState(0);
+  const { ref, hasAnimated } = useInViewAnimation<HTMLDivElement>({ threshold: 0.15 });
   const selectedKey = activeCohort || internalKey;
-  const setSelectedKey = setInternalKey;
+  const setSelectedKey = (key: string) => {
+    setInternalKey(key);
+    onSelectCohort?.(key);
+  };
   const active = KENDALL_DATA.find((d) => d.key === selectedKey) || KENDALL_DATA[0];
 
   const handleReplay = () => {
@@ -155,21 +164,22 @@ export default function NativeKendallAlignment({
 
   return (
     <div
-      className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`}
+      ref={ref}
+      className={`w-full bg-[#0A1016] border border-white/[0.08] rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`}
       role="region"
       aria-label="Kendall W Inter-Annual Concordance Analysis"
     >
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-white/[0.06]">
         <div>
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             Non-Parametric Statistical Concordance · Kendall&apos;s W Framework
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F5F1E8] mt-1">
             Do the 12 calendar monthly rankings repeat across years?
           </h3>
-          <p className="font-mono text-xs sm:text-sm text-[#94A3B8] mt-1 max-w-2xl leading-relaxed">
+          <p className="font-mono text-xs sm:text-sm text-[#A8B6BA] mt-1 max-w-2xl leading-relaxed">
             Kendall&apos;s coefficient of concordance (W) tests whether the 12 calendar months maintain identical relative rank order across all 4 independent baseline years (evaluated at α = 0.05).
           </p>
         </div>
@@ -178,7 +188,7 @@ export default function NativeKendallAlignment({
         <div className="flex items-center gap-3">
           <button
             onClick={handleReplay}
-            className="px-3 py-1.5 bg-[#06080F] hover:bg-[#1A2234] border border-[#F8FAFC]/15 text-[#D4AF37] hover:text-[#F5D061] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors"
+            className="px-3 py-1.5 bg-[#070A10] hover:bg-[#121922] border border-white/[0.08] text-[#D7B56D] hover:text-[#E8CD8C] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors"
             title="Reconstruct rank trajectory paths"
           >
             <RefreshCw className="w-3.5 h-3.5" />
@@ -188,8 +198,8 @@ export default function NativeKendallAlignment({
           <div
             className={`px-3.5 py-1.5 rounded-sm border font-mono text-xs uppercase tracking-wider flex items-center gap-1.5 ${
               active.isSignificant
-                ? "border-[#10B981]/60 text-[#10B981] bg-[#10B981]/15 font-bold shadow-sm"
-                : "border-[#F8FAFC]/15 text-[#94A3B8] bg-[#06080F]"
+                ? "border-[#10B981]/50 text-[#10B981] bg-[#10B981]/10 font-bold"
+                : "border-white/[0.08] text-[#A8B6BA] bg-[#070A10]"
             }`}
           >
             {active.isSignificant ? (
@@ -199,7 +209,7 @@ export default function NativeKendallAlignment({
               </>
             ) : (
               <>
-                <AlertCircle className="w-4 h-4 text-[#94A3B8]" />
+                <AlertCircle className="w-4 h-4 text-[#A8B6BA]" />
                 <span>Non-Significant Trend (p ≥ 0.05)</span>
               </>
             )}
@@ -218,8 +228,8 @@ export default function NativeKendallAlignment({
             }}
             className={`font-mono text-xs uppercase tracking-wider px-3.5 py-2 rounded-sm border transition-all ${
               selectedKey === item.key
-                ? "border-[#00F0FF] bg-[#00F0FF]/15 text-[#F8FAFC] font-bold shadow-lg"
-                : "border-[#F8FAFC]/15 text-[#94A3B8] hover:border-[#F8FAFC]/30 bg-[#06080F]"
+                ? "border-[#5FB0A8] bg-[#5FB0A8]/15 text-[#F5F1E8] font-bold"
+                : "border-white/[0.08] text-[#A8B6BA] hover:border-white/[0.2] bg-[#070A10]"
             }`}
           >
             <span style={{ color: item.color }} className="mr-1.5">●</span>
@@ -228,8 +238,64 @@ export default function NativeKendallAlignment({
         ))}
       </div>
 
-      {/* Exhibit 1: Alluvial / Rank Trajectory Chart Across 4 Baseline Years */}
-      <div className="p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm mb-6">
+      {/* ── MOBILE VERSION (block lg:hidden): Annual Rank Alignment Cards ── */}
+      <div className="block lg:hidden space-y-4 mb-6">
+        <div className="p-4 bg-[#06080F] border border-white/10 rounded-sm space-y-3">
+          <div className="flex items-center justify-between font-mono text-xs text-[#A8B6BA]">
+            <span>Peak Month Continuity</span>
+            <span className="font-bold text-[#D7B56D]">Primary: {primaryMonth}</span>
+          </div>
+
+          {/* 4 Years Vertical Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {active.annualRanks.map((yrData) => (
+              <div
+                key={yrData.year}
+                className="bg-[#0B111E] border border-white/[0.08] p-3 rounded-xs space-y-2"
+              >
+                <div className="flex items-center justify-between border-b border-white/[0.06] pb-1.5 font-mono text-xs">
+                  <span className="font-bold text-[#F5F1E8]">{yrData.year} Calendar Year</span>
+                  <span className="text-[#87999E] text-[10px]">Top 4 Outbreak Months</span>
+                </div>
+
+                <div className="grid grid-cols-4 gap-1.5 pt-1">
+                  {yrData.ranks.map((rObj) => {
+                    const isPrimary = rObj.month === primaryMonth;
+                    return (
+                      <div
+                        key={rObj.month}
+                        className={`p-2 rounded-xs text-center border font-mono transition-all ${
+                          isPrimary
+                            ? "bg-white/10 border-white/40 ring-1 ring-[#5FB0A8]"
+                            : "bg-white/[0.02] border-white/[0.06]"
+                        }`}
+                      >
+                        <div className="text-[9px] text-[#87999E]">#{rObj.rank}</div>
+                        <div
+                          className={`text-xs font-bold mt-0.5 ${
+                            isPrimary ? "text-[#5FB0A8]" : "text-[#F5F1E8]"
+                          }`}
+                        >
+                          {rObj.month}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-xs font-mono text-[#87999E] pt-1">
+            {active.isSignificant
+              ? "★ Primary peak month consistently maintains #1 or #2 rank across all four years."
+              : "Peak timing shifts across years, failing the strict α = 0.05 threshold."}
+          </div>
+        </div>
+      </div>
+
+      {/* ── DESKTOP VERSION (hidden lg:block): SVG Bump Chart Across 4 Baseline Years ── */}
+      <div className="hidden lg:block p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm mb-6">
         <div className="flex items-center justify-between font-mono text-xs text-[#94A3B8] uppercase tracking-wider mb-4">
           <span>Rank Trajectory Continuity (2022–2025 Baseline) · {active.name}</span>
           <span className="font-bold" style={{ color: active.color }}>
@@ -266,11 +332,11 @@ export default function NativeKendallAlignment({
               stroke={active.color}
               strokeWidth="4"
               strokeLinecap="round"
-              className="animate-construct-stroke"
               style={{
                 strokeDasharray: 900,
-                strokeDashoffset: 0,
-                filter: `drop-shadow(0 0 8px ${active.color}80)`
+                strokeDashoffset: hasAnimated ? 0 : 900,
+                transition: "stroke-dashoffset 1.3s cubic-bezier(0.16, 1, 0.3, 1)",
+                filter: `drop-shadow(0 0 8px ${active.color}80)`,
               }}
             />
 
@@ -313,19 +379,19 @@ export default function NativeKendallAlignment({
           </svg>
         </div>
 
-        <div className="mt-3 flex items-center justify-between text-xs font-mono text-[#94A3B8]">
+        <div className="mt-3 flex items-center justify-between text-xs font-mono text-[#A8B6BA]">
           <span>
             {active.isSignificant
               ? "★ Solid trajectory at Rank #1 illustrates persistent inter-annual peak timing."
               : "Oscillating trajectory illustrates peak month variation across baseline years."}
           </span>
-          <span className="text-[#00F0FF]">Scale: Rank #1 = Highest Monthly Volume</span>
+          <span className="text-[#5FB0A8]">Scale: Rank #1 = Highest Monthly Volume</span>
         </div>
       </div>
 
       {/* Exhibit 2: Comparative Kendall's W Dot Plot with Reference Threshold */}
-      <div className="p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm">
-        <div className="flex items-center justify-between font-mono text-xs text-[#94A3B8] uppercase tracking-wider mb-3">
+      <div className="p-4 sm:p-5 bg-[#070A10] border border-white/[0.06] rounded-sm">
+        <div className="flex items-center justify-between font-mono text-xs text-[#A8B6BA] uppercase tracking-wider mb-3">
           <span>Comparative Dot Plot: Kendall&apos;s W Concordance Scale (0.0 → 1.0)</span>
           <span className="text-[#10B981] font-bold">Significance Cutoff: α = 0.05 (W ≈ 0.48)</span>
         </div>
@@ -343,7 +409,7 @@ export default function NativeKendallAlignment({
                   handleReplay();
                 }}
                 className={`relative flex items-center h-9 px-3 rounded-sm cursor-pointer transition-all ${
-                  isCurrent ? "bg-[#1E293B] border border-[#00F0FF]/50 shadow-md" : "hover:bg-[#0B111E]/70"
+                  isCurrent ? "bg-[#131D26] border border-[#5FB0A8]/40 shadow-md" : "hover:bg-[#0A1016]/70"
                 }`}
               >
                 {/* Disease Name */}
@@ -352,7 +418,7 @@ export default function NativeKendallAlignment({
                 </span>
 
                 {/* Plot Axis Track */}
-                <div className="relative flex-1 h-2 bg-[#0B111E] rounded-full mx-4 border border-[#F8FAFC]/10">
+                <div className="relative flex-1 h-2 bg-[#0A1016] rounded-full mx-4 border border-white/[0.08]">
                   {/* Significance marker reference at W approx 0.48 */}
                   <div
                     className="absolute top-[-8px] bottom-[-8px] w-px bg-[#10B981] border-r border-dashed border-[#10B981] z-10"
@@ -368,14 +434,14 @@ export default function NativeKendallAlignment({
                       boxShadow: isCurrent ? `0 0 16px ${item.color}` : "none",
                     }}
                   >
-                    <span className="w-2 h-2 rounded-full bg-[#06080F]" />
+                    <span className="w-2 h-2 rounded-full bg-[#070A10]" />
                   </div>
                 </div>
 
                 {/* Stat Values */}
                 <div className="w-28 text-right font-mono text-xs tabular-nums shrink-0">
-                  <span className="font-bold text-[#F8FAFC]">W = {item.w.toFixed(3)}</span>
-                  <span className="text-[#94A3B8] text-[10px] ml-1.5">p = {item.p}</span>
+                  <span className="font-bold text-[#F5F1E8]">W = {item.w.toFixed(3)}</span>
+                  <span className="text-[#A8B6BA] text-[10px] ml-1.5">p = {item.p}</span>
                 </div>
               </div>
             );
@@ -383,23 +449,23 @@ export default function NativeKendallAlignment({
         </div>
 
         {/* Alignment Summary & Statistical Context Bar */}
-        <div className="mt-5 pt-4 border-t border-[#F8FAFC]/10 flex flex-wrap items-center justify-between gap-6">
+        <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <div>
-              <div className="font-mono text-[9px] uppercase text-[#94A3B8] tracking-wider">Concordance W</div>
+              <div className="font-mono text-[9px] uppercase text-[#A8B6BA] tracking-wider">Concordance W</div>
               <div className="font-serif text-3xl font-bold" style={{ color: active.color }}>
                 {active.w.toFixed(3)}
               </div>
             </div>
-            <div className="border-l border-[#F8FAFC]/10 pl-6">
-              <div className="font-mono text-[9px] uppercase text-[#94A3B8] tracking-wider">p-value</div>
-              <div className={`font-serif text-3xl font-bold ${active.isSignificant ? "text-[#10B981]" : "text-[#F8FAFC]"}`}>
+            <div className="border-l border-white/[0.06] pl-6">
+              <div className="font-mono text-[9px] uppercase text-[#A8B6BA] tracking-wider">p-value</div>
+              <div className={`font-serif text-3xl font-bold ${active.isSignificant ? "text-[#10B981]" : "text-[#F5F1E8]"}`}>
                 {active.p}
               </div>
             </div>
           </div>
 
-          <div className="max-w-md font-mono text-xs text-[#94A3B8] leading-relaxed">
+          <div className="max-w-md font-mono text-xs text-[#A8B6BA] leading-relaxed">
             {active.explanation}
           </div>
         </div>

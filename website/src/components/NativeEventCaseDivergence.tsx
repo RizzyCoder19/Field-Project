@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { RefreshCw } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const DATA = [
   {
@@ -59,6 +60,7 @@ const DATA = [
 export default function NativeEventCaseDivergence({ className = "" }: { className?: string }) {
   const [selectedKey, setSelectedKey] = useState<string>("foodPoisoning");
   const [animKey, setAnimKey] = useState(0);
+  const { ref, hasAnimated } = useInViewAnimation<HTMLDivElement>({ threshold: 0.15 });
 
   const maxEvents = 220;
   const maxCases = 10000;
@@ -71,6 +73,7 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
 
   return (
     <div
+      ref={ref}
       className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`}
       role="region"
       aria-label="Outbreak Events versus Reported Cases Divergence"
@@ -78,8 +81,8 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
       {/* Question Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
         <div>
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
             Analytical Divergence · Events vs. Patient Volume (2022–2025)
           </div>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
@@ -115,7 +118,7 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
               onClick={() => setSelectedKey(item.key)}
               className={`p-4 rounded-sm border cursor-pointer transition-all duration-300 ${
                 isSelected
-                  ? "border-[#00F0FF] bg-[#1E293B] shadow-2xl ring-1 ring-[#00F0FF]/40"
+                  ? "border-[#5FB0A8] bg-[#1E293B] shadow-2xl ring-1 ring-[#5FB0A8]/40"
                   : "border-[#F8FAFC]/10 bg-[#06080F]/80 hover:border-[#F8FAFC]/25"
               }`}
             >
@@ -124,7 +127,7 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
                   <span className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
                   <span className="font-serif text-lg font-bold text-[#F8FAFC]">{item.label}</span>
                 </div>
-                <div className="font-mono text-xs text-[#00F0FF] font-bold">
+                <div className="font-mono text-xs text-[#5FB0A8] font-bold">
                   Avg. {item.ratio.toFixed(1)} cases / outbreak event
                 </div>
               </div>
@@ -139,12 +142,12 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
                   </div>
                   <div className="w-full bg-[#06080F] h-2.5 rounded-sm overflow-hidden border border-[#F8FAFC]/10">
                     <div
-                      className="h-full rounded-sm bar-construct"
+                      className="h-full rounded-sm transition-all duration-700 ease-out"
                       style={{
-                        width: `${eventWidthPct}%`,
+                        width: hasAnimated ? `${eventWidthPct}%` : "0%",
                         backgroundColor: item.color,
                         opacity: 0.6,
-                        animationDelay: `${staggerDelay}ms`,
+                        transitionDelay: `${staggerDelay}ms`,
                       }}
                     />
                   </div>
@@ -158,11 +161,11 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
                   </div>
                   <div className="w-full bg-[#06080F] h-2.5 rounded-sm overflow-hidden border border-[#F8FAFC]/10">
                     <div
-                      className="h-full rounded-sm bar-construct"
+                      className="h-full rounded-sm transition-all duration-700 ease-out"
                       style={{
-                        width: `${caseWidthPct}%`,
+                        width: hasAnimated ? `${caseWidthPct}%` : "0%",
                         backgroundColor: item.color,
-                        animationDelay: `${staggerDelay + 40}ms`,
+                        transitionDelay: `${staggerDelay + 60}ms`,
                       }}
                     />
                   </div>
@@ -177,7 +180,7 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
       <div className="mt-6 p-5 border border-[#F8FAFC]/15 bg-[#06080F] rounded-sm space-y-3">
         <div className="flex items-center justify-between font-mono text-xs uppercase tracking-wider border-b border-[#F8FAFC]/10 pb-2">
           <div className="flex items-center gap-2">
-            <span className="text-[#00F0FF] font-bold">Epidemiological Focus:</span>
+            <span className="text-[#5FB0A8] font-bold">Epidemiological Focus:</span>
             <span className="font-bold text-[#F8FAFC]">{activeItem.label}</span>
           </div>
           <span className="text-[#D4AF37]">Click disease above to switch breakdown</span>
@@ -197,7 +200,7 @@ export default function NativeEventCaseDivergence({ className = "" }: { classNam
             <div className="font-mono text-[9px] uppercase tracking-widest text-[#94A3B8] mt-0.5">Reported Cases</div>
           </div>
           <div>
-            <div className="font-serif text-3xl font-bold text-[#00F0FF]">
+            <div className="font-serif text-3xl font-bold text-[#5FB0A8]">
               {activeItem.ratio.toFixed(1)}
             </div>
             <div className="font-mono text-[9px] uppercase tracking-widest text-[#94A3B8] mt-0.5">Mean Cluster Size</div>

@@ -2,27 +2,27 @@
 
 @layer base {
   :root {
-    --bg-primary: #06080F;
-    --color-bg: #06080F;
-    --color-dark: #0B111E;
-    --color-dark-surface: #0F172A;
-    --color-darker: #030407;
-    --color-cream: #F8FAFC;
-    --color-gold: #D4AF37;
-    --color-gold-bright: #F5D061;
-    --color-gold-dim: #997B24;
-    --color-cyan: #00F0FF;
-    --color-cyan-dim: #38BDF8;
-    --color-fog: #94A3B8;
-    --color-subtle: #1E293B;
-    --color-border: rgba(212, 175, 55, 0.16);
+    /* ── Editorial Ink & Paper Palette ── */
+    --bg-ink: #070A10;
+    --bg-section: #0A1016;
+    --bg-card: #0E1420;
+    --color-cream: #F5F1E8;
+    --color-secondary: #A8B6BA;
+    --color-muted: #87999E;
+    --color-brass: #D7B56D;
+    --color-brass-bright: #E8C97D;
+    --color-brass-dim: #A8904F;
+    --color-teal: #5FB0A8;
+    --color-teal-dim: #4A8F88;
+    --color-hairline: rgba(255, 255, 255, 0.10);
+    --color-hairline-warm: rgba(215, 181, 109, 0.14);
 
-    /* Royal Jewel-Tone Disease Telemetry Colors */
-    --dengue: #38BDF8;
-    --add: #10B981;
-    --malaria: #F59E0B;
-    --food-poisoning: #F43F5E;
-    --chikungunya: #A855F7;
+    /* Disease-Specific Analytical Colors */
+    --dengue: #4DA8D6;
+    --add: #3DA88A;
+    --malaria: #D4943A;
+    --food-poisoning: #C4565C;
+    --chikungunya: #9B7DC9;
   }
 
   *, *::before, *::after {
@@ -35,8 +35,8 @@
   }
 
   body {
-    background-color: #06080F;
-    color: #F8FAFC;
+    background-color: var(--bg-ink);
+    color: var(--color-cream);
     font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -61,63 +61,188 @@
 
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #06080F; }
-::-webkit-scrollbar-thumb { 
-  background: linear-gradient(180deg, #D4AF37, #00F0FF); 
-  border-radius: 2px; 
+::-webkit-scrollbar-track { background: var(--bg-ink); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-brass-dim);
+  border-radius: 2px;
 }
-::-webkit-scrollbar-thumb:hover { 
-  background: linear-gradient(180deg, #F5D061, #38BDF8); 
-}
-
-/* ─── ROYAL EDITORIAL & CYBER-TECH UTILITIES ─── */
-.editorial-grain {
-  background-image: 
-    radial-gradient(rgba(212, 175, 55, 0.035) 1px, transparent 0),
-    radial-gradient(rgba(0, 240, 255, 0.025) 1px, transparent 0);
-  background-size: 32px 32px, 96px 96px;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brass);
 }
 
-.monsoon-panel {
-  background-color: #0B111E;
-  border: 1px solid rgba(212, 175, 55, 0.16);
+/* ─── EDITORIAL LAYOUT UTILITIES ─── */
+.editorial-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.monsoon-card {
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(11, 17, 30, 0.95) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.16);
-  backdrop-filter: blur(8px);
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+@media (min-width: 640px) {
+  .editorial-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
-.monsoon-card:hover {
-  border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.85), 0 0 20px rgba(212, 175, 55, 0.14);
+.section-bg {
+  background-color: var(--bg-section);
 }
 
-.gold-rule {
+.card-bg {
+  background-color: var(--bg-card);
+}
+
+/* ─── ATMOSPHERIC TOPOGRAPHIC / CONTOUR TEXTURE ─── */
+.bg-contour-pattern {
+  background-color: var(--bg-ink);
+  background-image: radial-gradient(circle at 50% 0%, rgba(95, 176, 168, 0.035) 0%, transparent 65%),
+    radial-gradient(circle at 100% 100%, rgba(215, 181, 109, 0.025) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30 Q 30 20 60 30 T 120 30 M0 60 Q 30 70 60 60 T 120 60 M0 90 Q 30 80 60 90 T 120 90' fill='none' stroke='rgba(255,255,255,0.015)' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+/* ─── LAYERED INTELLIGENCE SURFACES ─── */
+.panel-intelligence {
+  background: linear-gradient(180deg, #0D131C 0%, #080C12 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.tag-intel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-secondary);
+}
+
+.tag-intel-brass {
+  border-color: rgba(215, 181, 109, 0.3);
+  background: rgba(215, 181, 109, 0.06);
+  color: var(--color-brass);
+}
+
+.tag-intel-teal {
+  border-color: rgba(95, 176, 168, 0.3);
+  background: rgba(95, 176, 168, 0.06);
+  color: var(--color-teal);
+}
+
+/* ─── HAIRLINE DIVIDERS ─── */
+.hairline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #D4AF37 35%, #F5D061 50%, #D4AF37 65%, transparent);
+  background: var(--color-hairline);
 }
 
-.thin-rule {
+.hairline-warm {
   height: 1px;
-  background: rgba(212, 175, 55, 0.14);
+  background: var(--color-hairline-warm);
 }
 
-.cyan-rule {
+.hairline-brass {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #00F0FF 40%, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-brass-dim) 35%, var(--color-brass) 50%, var(--color-brass-dim) 65%, transparent);
+  opacity: 0.5;
 }
 
-/* ─── SELF-CONSTRUCTING INTERFACE KEYFRAMES ─── */
-@keyframes constructStroke {
+/* ─── GLOBAL EDITORIAL TYPOGRAPHY ─── */
+.heading-display {
+  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
+  font-size: clamp(2.75rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--color-cream);
+}
+
+.heading-section {
+  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
+  font-size: clamp(1.75rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--color-cream);
+}
+
+.heading-subsection {
+  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
+  font-size: clamp(1.375rem, 2vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--color-cream);
+}
+
+.copy-lead {
+  font-size: clamp(1.06rem, 1.25vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--color-secondary);
+}
+
+.copy-body {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.65;
+  color: var(--color-secondary);
+}
+
+.caption-editorial {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.label-section {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+.label-muted {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ─── METRIC NUMBERS ─── */
+.metric-number {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--color-cream);
+}
+
+.metric-number-brass {
+  color: var(--color-brass);
+}
+
+/* ─── SUBTLE ENTRANCE ANIMATIONS ─── */
+@keyframes fadeInUp {
   from {
-    stroke-dashoffset: 1200;
+    opacity: 0;
+    transform: translateY(16px);
   }
   to {
-    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes constructBar {
@@ -131,147 +256,17 @@
   }
 }
 
-@keyframes apertureWipe {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0% 0 0);
-  }
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes radarSweep {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(0.98);
-  }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.02);
-  }
-}
-
-.animate-construct-stroke {
-  stroke-dasharray: 1200;
-  stroke-dashoffset: 1200;
-  animation: constructStroke 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.animate-aperture-wipe {
-  animation: apertureWipe 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
 }
 
 .bar-construct {
   transform-origin: bottom;
   animation: constructBar 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* ─── GLOBAL EDITORIAL TYPOGRAPHY TARGETS ─── */
-.heading-display {
-  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
-  font-size: clamp(2.75rem, 5.5vw, 4.75rem); /* ~44px - 76px */
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-  color: #F8FAFC;
-}
-
-.heading-section {
-  font-family: var(--font-serif), 'Newsreader', Georgia, serif;
-  font-size: clamp(1.75rem, 3.2vw, 2.6rem); /* ~28px - 42px */
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.02em;
-  color: #F8FAFC;
-}
-
-.copy-lead {
-  font-size: clamp(1.06rem, 1.25vw, 1.25rem); /* ~17px - 20px */
-  line-height: 1.7;
-  color: #94A3B8;
-}
-
-.caption-editorial {
-  font-size: 0.9375rem; /* ~15px */
-  line-height: 1.55;
-  color: #94A3B8;
-}
-
-.control-label {
-  font-family: var(--font-mono), 'JetBrains Mono', monospace;
-  font-size: 0.9375rem; /* ~15px */
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-/* ─── CINEMATIC INTRO OVERLAY ─── */
-#cinematic-intro {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #030407;
-  pointer-events: all;
-}
-
-#cinematic-intro.dismissed {
-  pointer-events: none;
-}
-
-/* ─── DOCUMENT FRAGMENT TEXTURE ─── */
-.doc-fragment {
-  background: #F8F5EC;
-  color: #06080F;
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
-  line-height: 1.5;
-  border: 1px solid rgba(212, 175, 55, 0.28);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.6);
-}
-
-/* ─── SECTION LABELS ─── */
-.section-label {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--color-gold-bright);
-}
-
-.section-label-muted {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-fog);
-}
-
-/* ─── METRIC NUMBERS ─── */
-.metric-number {
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: #F8FAFC;
-}
-
-.metric-number-gold {
-  color: #F5D061;
-  text-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
-}
-
-.metric-number-cyan {
-  color: #00F0FF;
-  text-shadow: 0 0 25px rgba(0, 240, 255, 0.35);
 }
 
 /* ─── DISEASE COLOUR CLASSES ─── */
@@ -295,9 +290,49 @@
 
 .district-path:hover, .district-path:focus-visible {
   opacity: 0.9;
-  stroke: #00F0FF;
+  stroke: var(--color-teal);
   stroke-width: 1.5px;
   outline: none;
+}
+
+/* ─── BUTTON STYLES ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--color-brass);
+  color: var(--bg-ink);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brass-bright);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: transparent;
+  color: var(--color-cream);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-brass);
+  background-color: rgba(215, 181, 109, 0.08);
 }
 
 /* ─── REDUCED MOTION ─── */
@@ -327,7 +362,6 @@
   }
 
   .print-hidden,
-  #cinematic-intro,
   header,
   nav,
   button:not(.print-allow) {
@@ -339,7 +373,7 @@
     page-break-after: always !important;
   }
 
-  figure, table, .monsoon-card, .border {
+  figure, table, .border {
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }

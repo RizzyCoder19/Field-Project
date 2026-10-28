@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { PRIMARY_DISEASES, MONTHS, MONTH_FULL } from "@/data/researchData";
 import { RefreshCw, Table } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 const DISEASE_ORDER = ["dengue", "add", "malaria", "foodPoisoning", "chikungunya"] as const;
 type DiseaseKey = typeof DISEASE_ORDER[number];
@@ -39,6 +40,7 @@ export default function SeasonalMatrix({
   const [prevHighlight, setPrevHighlight] = useState<string | null>(highlightDisease);
   const [showAccessibleTable, setShowAccessibleTable] = useState(false);
   const [matrixKey, setMatrixKey] = useState(0);
+  const { ref, hasAnimated } = useInViewAnimation<HTMLDivElement>({ threshold: 0.15 });
 
   if (highlightDisease !== prevHighlight) {
     setPrevHighlight(highlightDisease);
@@ -80,13 +82,13 @@ export default function SeasonalMatrix({
   };
 
   return (
-    <div className={`flex flex-col gap-5 ${className}`} role="region" aria-label="Five-Disease Monthly Seasonal Heatmap">
+    <div ref={ref} className={`flex flex-col gap-5 ${className}`} role="region" aria-label="Five-Disease Monthly Seasonal Heatmap">
       {/* Header & Controls */}
       {showControls && (
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#F8FAFC]/10 pb-4">
           <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+            <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
               Seasonal Signature Matrix · 2022–2025 Baseline
             </div>
             <div className="font-serif text-2xl text-[#F8FAFC] font-bold mt-1">
@@ -111,7 +113,7 @@ export default function SeasonalMatrix({
                 onClick={() => setMetricMode("percentage")}
                 className="font-mono text-xs tracking-wider uppercase px-3 py-1.5 rounded-sm transition-all focus:outline-none"
                 style={{
-                  background: metricMode === "percentage" ? "#00F0FF" : "transparent",
+                  background: metricMode === "percentage" ? "#5FB0A8" : "transparent",
                   color: metricMode === "percentage" ? "#06080F" : "#94A3B8",
                   fontWeight: metricMode === "percentage" ? 700 : 400,
                 }}
@@ -123,7 +125,7 @@ export default function SeasonalMatrix({
                 onClick={() => setMetricMode("events")}
                 className="font-mono text-xs tracking-wider uppercase px-3 py-1.5 rounded-sm transition-all focus:outline-none"
                 style={{
-                  background: metricMode === "events" ? "#00F0FF" : "transparent",
+                  background: metricMode === "events" ? "#5FB0A8" : "transparent",
                   color: metricMode === "events" ? "#06080F" : "#94A3B8",
                   fontWeight: metricMode === "events" ? 700 : 400,
                 }}
@@ -136,7 +138,7 @@ export default function SeasonalMatrix({
             {/* Accessibility Toggle */}
             <button
               onClick={() => setShowAccessibleTable(!showAccessibleTable)}
-              className="font-mono text-xs tracking-wider uppercase px-2.5 py-1.5 border border-[#F8FAFC]/15 hover:border-[#00F0FF]/40 text-[#94A3B8] hover:text-[#F8FAFC] rounded-sm transition-all flex items-center gap-1.5"
+              className="font-mono text-xs tracking-wider uppercase px-2.5 py-1.5 border border-[#F8FAFC]/15 hover:border-[#5FB0A8]/40 text-[#94A3B8] hover:text-[#F8FAFC] rounded-sm transition-all flex items-center gap-1.5"
               title="Toggle accessible tabular data"
               aria-expanded={showAccessibleTable}
             >
@@ -147,22 +149,165 @@ export default function SeasonalMatrix({
         </div>
       )}
 
-      {/* Heatmap Matrix Display with Staged Construction */}
-      <div key={matrixKey} className="overflow-x-auto pb-2">
+      {/* ── MOBILE VERSION (block lg:hidden): Dedicated Disease Signature Dossier Deck ── */}
+      <div className="block lg:hidden space-y-4">
+        {/* Quick Disease Filter Chips for Mobile Thumb Navigation */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 no-scrollbar">
+          <button
+            onClick={() => handleDiseaseClick(focusedDisease ? (focusedDisease as DiseaseKey) : ("dengue" as DiseaseKey))}
+            className={`px-3 py-1.5 rounded-xs font-mono text-xs uppercase tracking-wider shrink-0 transition-all ${
+              focusedDisease === null
+                ? "bg-[#D7B56D] text-[#070A10] font-bold"
+                : "bg-[#06080F] border border-white/15 text-[#A8B6BA]"
+            }`}
+            onClickCapture={() => setFocusedDisease(null)}
+          >
+            All 5 Cohorts
+          </button>
+          {diseases.map(({ key, data, color }) => (
+            <button
+              key={key}
+              onClick={() => handleDiseaseClick(key)}
+              className={`px-3 py-1.5 rounded-xs font-mono text-xs uppercase tracking-wider shrink-0 transition-all flex items-center gap-1.5 ${
+                focusedDisease === key
+                  ? "bg-white/15 text-[#F5F1E8] font-bold border border-white/30"
+                  : "bg-[#06080F] border border-white/10 text-[#A8B6BA]"
+              }`}
+            >
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
+              <span>{data.shortName || data.name.split(" ")[0]}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* Mobile Disease Dossier Cards */}
+        {diseases
+          .filter(({ key }) => focusedDisease === null || focusedDisease === key)
+          .map(({ key, data, color, totalEvents, values, monthlyEvents, monthlyCases }) => {
+            const maxVal = Math.max(...values);
+            const peakMonthIdx = values.indexOf(maxVal);
+
+            return (
+              <div
+                key={key}
+                className="bg-gradient-to-b from-[#0D131C] to-[#070A10] border border-white/[0.12] rounded-sm p-4 space-y-3.5 shadow-lg"
+              >
+                {/* Header */}
+                <div className="flex items-start justify-between gap-2 border-b border-white/[0.06] pb-3">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
+                      <h4 className="font-serif text-lg font-bold text-[#F5F1E8]">{data.name}</h4>
+                    </div>
+                    <div className="flex items-center gap-2 mt-1 text-[11px] font-mono text-[#87999E]">
+                      <span><strong className="text-[#F5F1E8]">{totalEvents}</strong> outbreaks</span>
+                      <span>•</span>
+                      <span><strong className="text-[#5FB0A8]">{data.cases.toLocaleString()}</strong> cases</span>
+                      <span>•</span>
+                      <span><strong className="text-[#D7B56D]">{data.deaths}</strong> deaths</span>
+                    </div>
+                  </div>
+
+                  <span className="text-[10px] font-mono uppercase px-2 py-1 bg-white/[0.04] border border-white/[0.1] text-[#D7B56D] rounded-xs font-bold shrink-0">
+                    Peak: {MONTHS[peakMonthIdx]}
+                  </span>
+                </div>
+
+                {/* 12-Month Spark Heatstrip */}
+                <div className="space-y-1.5">
+                  <div className="flex items-center justify-between text-[10px] font-mono text-[#87999E] uppercase">
+                    <span>12-Month Distribution ({metricMode === "percentage" ? "Within-Disease %" : "Raw Outbreaks"})</span>
+                    <span className="text-[#5FB0A8] font-bold">Jun–Sep Monsoon</span>
+                  </div>
+
+                  {/* 12 Columns */}
+                  <div className="grid grid-cols-12 gap-1 bg-[#06080F] p-2 rounded-xs border border-white/[0.06]">
+                    {MONTHS.map((m, mi) => {
+                      const val = values[mi];
+                      const isPeak = mi === peakMonthIdx;
+                      const isMonsoon = MONSOON_MONTHS.includes(mi);
+                      const intensity = maxVal > 0 ? val / maxVal : 0;
+                      const isCellActive = hoveredCell?.disease === key && hoveredCell?.month === mi;
+
+                      return (
+                        <div
+                          key={m}
+                          onClick={() => setHoveredCell(isCellActive ? null : { disease: key, month: mi })}
+                          className={`flex flex-col items-center cursor-pointer transition-all ${
+                            isMonsoon ? "relative" : ""
+                          }`}
+                        >
+                          {/* Heat Block */}
+                          <div
+                            className={`w-full h-8 rounded-xs transition-all flex items-end justify-center ${
+                              isPeak ? "ring-1 ring-[#D7B56D]" : ""
+                            } ${isCellActive ? "ring-2 ring-white scale-105" : ""}`}
+                            style={{
+                              backgroundColor: intensity > 0
+                                ? `${color}${Math.round(Math.max(0.18, intensity) * 255).toString(16).padStart(2, "0")}`
+                                : "rgba(255,255,255,0.03)",
+                            }}
+                          >
+                            {intensity > 0.4 && (
+                              <span className="text-[8px] font-mono font-bold text-[#070A10] leading-none mb-0.5">
+                                {metricMode === "percentage" ? `${Math.round(val)}%` : val}
+                              </span>
+                            )}
+                          </div>
+                          {/* Month Initial */}
+                          <span
+                            className={`text-[9px] font-mono mt-1 ${
+                              isMonsoon ? "text-[#5FB0A8] font-bold" : "text-[#87999E]"
+                            }`}
+                          >
+                            {m.slice(0, 1)}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Active Tapped Cell Detail */}
+                {hoveredCell?.disease === key && (
+                  <div className="p-2.5 bg-[#121A26] border border-[#5FB0A8]/40 rounded-xs text-xs font-mono flex items-center justify-between">
+                    <div>
+                      <span className="text-[#5FB0A8] font-bold">{MONTH_FULL[hoveredCell.month]}: </span>
+                      <span className="text-[#F5F1E8] font-bold">
+                        {monthlyEvents[hoveredCell.month]} outbreaks ({values[hoveredCell.month].toFixed(1)}%)
+                      </span>
+                    </div>
+                    <span className="text-[#5FB0A8]">
+                      {monthlyCases[hoveredCell.month].toLocaleString()} cases
+                    </span>
+                  </div>
+                )}
+
+                {/* Epidemiological Note */}
+                <p className="text-xs text-[#A8B6BA] font-mono leading-relaxed pt-1 border-t border-white/[0.04]">
+                  {data.summary || "Monitored across 36 Maharashtra administrative districts via NCDC/IDSP weekly surveillance."}
+                </p>
+              </div>
+            );
+          })}
+      </div>
+
+      {/* ── DESKTOP VERSION (hidden lg:block): Full 720px Matrix with Staged Construction ── */}
+      <div key={matrixKey} className="hidden lg:block overflow-x-auto pb-2">
         <div style={{ minWidth: 720 }}>
           {/* Month Column Headers with Monsoon Band Indicator */}
           <div className="flex mb-2" style={{ marginLeft: "13rem" }}>
             <div className="relative flex w-full">
               {/* Monsoon Window Boundary Label */}
               <div
-                className="absolute top-0 bottom-0 flex items-center justify-center border-t border-l border-r border-[#00F0FF]/40 bg-[#00F0FF]/05 rounded-t-sm"
+                className="absolute top-0 bottom-0 flex items-center justify-center border-t border-l border-r border-[#5FB0A8]/40 bg-[#5FB0A8]/05 rounded-t-sm"
                 style={{
                   left: `${(5 / 12) * 100}%`,
                   width: `${(4 / 12) * 100}%`,
                   height: "24px",
                 }}
               >
-                <span className="font-mono text-[8px] tracking-[0.2em] text-[#00F0FF] uppercase font-bold">
+                <span className="font-mono text-[8px] tracking-[0.2em] text-[#5FB0A8] uppercase font-bold">
                   Monsoon Window (Jun–Sep)
                 </span>
               </div>
@@ -173,7 +318,7 @@ export default function SeasonalMatrix({
                     className="font-mono text-xs uppercase font-bold"
                     style={{
                       color: MONSOON_MONTHS.includes(mi)
-                        ? "#00F0FF"
+                        ? "#5FB0A8"
                         : hoveredCell?.month === mi
                         ? "#F8FAFC"
                         : "#94A3B8",
@@ -198,10 +343,14 @@ export default function SeasonalMatrix({
                   key={key}
                   className={`flex items-center transition-all duration-300 rounded-sm p-2 ${
                     isSelected
-                      ? "bg-[#1E293B] border border-[#00F0FF]/60 shadow-lg"
+                      ? "bg-[#1E293B] border border-[#5FB0A8]/60 shadow-lg"
                       : "bg-[#0B111E]/80 border border-[#F8FAFC]/10 hover:border-[#F8FAFC]/25"
                   }`}
-                  style={{ opacity: isDimmed ? 0.35 : 1 }}
+                  style={{
+                    opacity: isDimmed ? 0.35 : (hasAnimated ? 1 : 0),
+                    transform: hasAnimated ? "translateY(0)" : "translateY(8px)",
+                    transition: `opacity 0.4s ease ${rowIdx * 70}ms, transform 0.4s ease ${rowIdx * 70}ms`,
+                  }}
                 >
                   {/* Disease Label Button */}
                   <button
@@ -221,7 +370,7 @@ export default function SeasonalMatrix({
                       </div>
                     </div>
                     {isSelected && (
-                      <span className="font-mono text-[9px] text-[#00F0FF] uppercase font-bold">
+                      <span className="font-mono text-[9px] text-[#5FB0A8] uppercase font-bold">
                         Active
                       </span>
                     )}
@@ -251,7 +400,7 @@ export default function SeasonalMatrix({
                           onMouseLeave={() => setHoveredCell(null)}
                           onFocus={() => setHoveredCell({ disease: key, month: mi })}
                           onBlur={() => setHoveredCell(null)}
-                          className="flex-1 h-12 rounded-sm relative flex flex-col items-center justify-center cursor-pointer transition-all focus:outline-none focus:ring-1 focus:ring-[#00F0FF] animate-scale-in"
+                          className="flex-1 h-12 rounded-sm relative flex flex-col items-center justify-center cursor-pointer transition-all focus:outline-none focus:ring-1 focus:ring-[#5FB0A8] animate-scale-in"
                           style={{
                             backgroundColor: color,
                             opacity: fillOpacity,
@@ -288,7 +437,7 @@ export default function SeasonalMatrix({
 
       {/* Interactive Tooltip & Context Details */}
       {hoveredCell ? (
-        <div className="p-3.5 bg-[#1E293B] border border-[#00F0FF]/50 rounded-sm flex flex-wrap items-center justify-between gap-3 text-xs font-mono shadow-xl">
+        <div className="p-3.5 bg-[#1E293B] border border-[#5FB0A8]/50 rounded-sm flex flex-wrap items-center justify-between gap-3 text-xs font-mono shadow-xl">
           <div className="flex items-center gap-2">
             <span
               className="w-3 h-3 rounded-full"
@@ -297,7 +446,7 @@ export default function SeasonalMatrix({
             <span className="font-serif text-base font-bold text-[#F8FAFC]">
               {PRIMARY_DISEASES[hoveredCell.disease].name}
             </span>
-            <span className="text-[#00F0FF] font-bold uppercase tracking-wider">
+            <span className="text-[#5FB0A8] font-bold uppercase tracking-wider">
               · {MONTH_FULL[hoveredCell.month]}
             </span>
           </div>
@@ -317,7 +466,7 @@ export default function SeasonalMatrix({
             </div>
             <div>
               <span className="text-[#94A3B8] uppercase text-[9px] mr-1.5">Reported Cases:</span>
-              <span className="font-bold text-sm text-[#00F0FF]">
+              <span className="font-bold text-sm text-[#5FB0A8]">
                 {PRIMARY_DISEASES[hoveredCell.disease].monthlyCases[hoveredCell.month].toLocaleString()}
               </span>
             </div>
@@ -330,7 +479,7 @@ export default function SeasonalMatrix({
             <span className="uppercase tracking-wider">Visual Intensity Scale:</span>
             <div className="flex items-center gap-1.5">
               <span className="text-[10px] text-[#94A3B8]">0%</span>
-              <div className="w-20 h-2.5 rounded-sm bg-gradient-to-r from-[#0B111E] to-[#00F0FF]" />
+              <div className="w-20 h-2.5 rounded-sm bg-gradient-to-r from-[#0B111E] to-[#5FB0A8]" />
               <span className="text-[10px] text-[#F8FAFC] font-bold">Peak</span>
             </div>
           </div>
@@ -342,14 +491,14 @@ export default function SeasonalMatrix({
 
       {/* Methodological Guidance Note */}
       <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm font-mono text-xs text-[#94A3B8] leading-relaxed">
-        <span className="text-[#00F0FF] font-bold uppercase tracking-wider mr-1.5">Methodological Note:</span>
+        <span className="text-[#5FB0A8] font-bold uppercase tracking-wider mr-1.5">Methodological Note:</span>
         Within-disease percentages isolate monthly timing independent of baseline outbreak frequency (Dengue: 204 records vs. Chikungunya: 43 records). Raw event counts across different diseases are surveillance reporting frequencies and must not be treated as directly comparable population risk rates.
       </div>
 
       {/* Accessible Summary Table */}
       {showAccessibleTable && (
         <div className="overflow-x-auto border border-[#F8FAFC]/10 rounded-sm p-3 bg-[#06080F]">
-          <div className="font-mono text-xs text-[#00F0FF] font-bold uppercase mb-2">
+          <div className="font-mono text-xs text-[#5FB0A8] font-bold uppercase mb-2">
             Tabular Summary: Monthly Event Counts (2022–2025 Baseline)
           </div>
           <table className="w-full text-xs font-mono text-left text-[#F8FAFC]">
@@ -359,7 +508,7 @@ export default function SeasonalMatrix({
                 {MONTHS.map((m) => (
                   <th key={m} className="py-2 px-2.5 text-right">{m}</th>
                 ))}
-                <th className="py-2 px-2.5 text-right font-bold text-[#00F0FF]">Total</th>
+                <th className="py-2 px-2.5 text-right font-bold text-[#5FB0A8]">Total</th>
               </tr>
             </thead>
             <tbody>
@@ -369,7 +518,7 @@ export default function SeasonalMatrix({
                   {monthlyEvents.map((cnt, i) => (
                     <td key={i} className="py-2 px-2.5 text-right tabular-nums">{cnt}</td>
                   ))}
-                  <td className="py-2 px-2.5 text-right font-bold text-[#00F0FF] tabular-nums">{totalEvents}</td>
+                  <td className="py-2 px-2.5 text-right font-bold text-[#5FB0A8] tabular-nums">{totalEvents}</td>
                 </tr>
               ))}
             </tbody>

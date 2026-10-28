@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { OUTLIER_SENSITIVITY_DATA, MONTHS } from "@/data/researchData";
 import { RefreshCw, ArrowDownRight } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export default function NativeOutlierDecomposition({ className = "" }: { className?: string }) {
   const [isTrimmed, setIsTrimmed] = useState(false);
   const [activeStep, setActiveStep] = useState<number>(4); // 0=start, 1=-651, 2=-543, 3=-421, 4=final
   const [isDecomposing, setIsDecomposing] = useState(false);
+  const { ref, hasAnimated } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 });
 
   // Animate the waterfall sequence
   const playDecomposition = () => {
@@ -28,6 +30,16 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
     return () => timeouts.forEach(clearTimeout);
   };
 
+  // Automatically trigger decomposition demonstration on first viewport entry
+  useEffect(() => {
+    if (!hasAnimated) return;
+    const timer = setTimeout(() => {
+      playDecomposition();
+    }, 450);
+
+    return () => clearTimeout(timer);
+  }, [hasAnimated]);
+
   const handleToggle = () => {
     if (!isTrimmed) {
       playDecomposition();
@@ -44,7 +56,7 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
   const maxChartVal = 2200;
 
   return (
-    <div className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`} role="region" aria-label="Waterfall Outlier Decomposition Analysis">
+    <div ref={ref} className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`} role="region" aria-label="Waterfall Outlier Decomposition Analysis">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
         <div>
@@ -90,11 +102,74 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
         </div>
       </div>
 
-      {/* Primary Visual Exhibit: SVG Waterfall Arithmetic Chart */}
-      <div className="p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm mb-6">
+      {/* ── MOBILE VERSION (block sm:hidden): Arithmetic Waterfall Cascade Deck ── */}
+      <div className="block sm:hidden space-y-3 mb-6">
+        <div className="p-4 bg-[#06080F] border border-white/10 rounded-sm space-y-3">
+          <div className="flex items-center justify-between font-mono text-xs text-[#87999E] uppercase">
+            <span>February Arithmetic Cascade</span>
+            <span className="text-[#5FB0A8] font-bold">-1,615 (-74.7%)</span>
+          </div>
+
+          {/* Starting Bar */}
+          <div className="p-3 bg-[#EF4444]/15 border border-[#EF4444]/40 rounded-xs flex items-center justify-between">
+            <div>
+              <div className="text-[10px] font-mono uppercase text-[#EF4444] font-bold">Starting Baseline</div>
+              <div className="font-serif text-xl font-bold text-[#F5F1E8]">Raw February Total</div>
+            </div>
+            <div className="font-serif text-2xl font-bold text-[#EF4444]">
+              2,162 <span className="text-xs font-mono font-normal text-[#A8B6BA]">cases</span>
+            </div>
+          </div>
+
+          {/* 3 Outlier Records Subtractions */}
+          <div className="space-y-2 pl-3 border-l-2 border-[#F59E0B]/40 ml-1">
+            <div className="p-2.5 bg-[#0B111E] border border-white/[0.08] rounded-xs flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-mono text-[#D7B56D]">Kolhapur · 2024 W07</div>
+                <div className="text-xs text-[#F5F1E8] font-bold">Mass Wedding Feast</div>
+              </div>
+              <div className="font-serif text-lg font-bold text-[#F59E0B]">-651</div>
+            </div>
+
+            <div className="p-2.5 bg-[#0B111E] border border-white/[0.08] rounded-xs flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-mono text-[#D7B56D]">Parbhani · 2024 W08</div>
+                <div className="text-xs text-[#F5F1E8] font-bold">Religious Feast Gathering</div>
+              </div>
+              <div className="font-serif text-lg font-bold text-[#F59E0B]">-543</div>
+            </div>
+
+            <div className="p-2.5 bg-[#0B111E] border border-white/[0.08] rounded-xs flex items-center justify-between">
+              <div>
+                <div className="text-[10px] font-mono text-[#D7B56D]">Solapur · 2023 W06</div>
+                <div className="text-xs text-[#F5F1E8] font-bold">Banquet Exposure Cluster</div>
+              </div>
+              <div className="font-serif text-lg font-bold text-[#F59E0B]">-421</div>
+            </div>
+          </div>
+
+          {/* Result Bar */}
+          <div className="p-3 bg-[#10B981]/15 border border-[#10B981]/40 rounded-xs flex items-center justify-between">
+            <div>
+              <div className="text-[10px] font-mono uppercase text-[#10B981] font-bold">Trimmed Baseline</div>
+              <div className="font-serif text-xl font-bold text-[#F5F1E8]">Remaining February Cases</div>
+            </div>
+            <div className="font-serif text-2xl font-bold text-[#10B981]">
+              547 <span className="text-xs font-mono font-normal text-[#A8B6BA]">cases</span>
+            </div>
+          </div>
+
+          <div className="text-[11px] font-mono text-[#87999E] pt-1">
+            * 3 single records account for 74.7% of February cases. Once trimmed, February ranks #4 instead of #1.
+          </div>
+        </div>
+      </div>
+
+      {/* ── DESKTOP VERSION (hidden sm:block): SVG Waterfall Arithmetic Chart ── */}
+      <div className="hidden sm:block p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm mb-6">
         <div className="flex items-center justify-between font-mono text-xs text-[#94A3B8] uppercase tracking-wider mb-4">
           <span>February Case Volume Arithmetic Cascade (2,162 → 547 cases)</span>
-          <span className="text-[#00F0FF] font-bold">Extraction Subtotal: -1,615 (-74.7%)</span>
+          <span className="text-[#5FB0A8] font-bold">Extraction Subtotal: -1,615 (-74.7%)</span>
         </div>
 
         <div className="relative w-full aspect-[21/9] min-h-[240px]">
@@ -399,7 +474,7 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
                     width={barW}
                     height={Math.max(h, 2)}
                     rx="2"
-                    fill={isFeb ? (isTrimmed ? "#10B981" : "#EF4444") : isAprMay && isTrimmed ? "#00F0FF" : "#38BDF8"}
+                    fill={isFeb ? (isTrimmed ? "#10B981" : "#EF4444") : isAprMay && isTrimmed ? "#5FB0A8" : "#38BDF8"}
                     fillOpacity={isFeb ? 0.95 : isAprMay && isTrimmed ? 0.9 : 0.65}
                     className="transition-all duration-700 ease-out"
                   />
@@ -421,7 +496,7 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
                       isFeb
                         ? "fill-[#EF4444] font-bold"
                         : isAprMay && isTrimmed
-                        ? "fill-[#00F0FF] font-bold"
+                        ? "fill-[#5FB0A8] font-bold"
                         : "fill-[#94A3B8]"
                     }`}
                   >
@@ -436,7 +511,7 @@ export default function NativeOutlierDecomposition({ className = "" }: { classNa
 
       {/* Methodological Discipline Note */}
       <div className="mt-4 p-3 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm font-mono text-xs text-[#94A3B8] leading-relaxed">
-        <span className="text-[#00F0FF] font-bold uppercase tracking-wider">Methodological Discipline: </span>
+        <span className="text-[#5FB0A8] font-bold uppercase tracking-wider">Methodological Discipline: </span>
         These three records were <span className="text-[#F8FAFC] font-bold">never deleted</span> from the primary research archive. 
         Sensitivity analysis models the sensitivity of temporal distributions to single point-source mass exposure events (such as banquet or institutional catering contamination) versus diffuse community transmission.
       </div>

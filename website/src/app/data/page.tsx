@@ -108,8 +108,8 @@ export default function DataPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 02 · FROM BULLETIN TO DATA</span>
           </div>
 
@@ -138,7 +138,7 @@ export default function DataPage() {
                 onClick={() => setSelectedRecordIndex(idx)}
                 className={`px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm transition-all border flex items-center gap-2 ${
                   selectedRecordIndex === idx
-                    ? "bg-[#0B111E] border-[#00F0FF] text-[#F8FAFC] font-bold shadow-md"
+                    ? "bg-[#0B111E] border-[#5FB0A8] text-[#F8FAFC] font-bold shadow-md"
                     : "bg-[#06080F] border-[#F8FAFC]/15 text-[#94A3B8]/70 hover:text-[#F8FAFC]"
                 }`}
               >
@@ -153,7 +153,7 @@ export default function DataPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left: The Raw Government Bulletin Facsimile (6 cols) */}
           <div className="lg:col-span-6 p-5 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm flex flex-col justify-between shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 px-3 py-1 bg-[#1E293B] border-b border-l border-[#F8FAFC]/15 text-[9px] font-mono uppercase text-[#00F0FF] font-bold tracking-wider">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#1E293B] border-b border-l border-[#F8FAFC]/15 text-[9px] font-mono uppercase text-[#5FB0A8] font-bold tracking-wider">
               OFFICIAL NCDC / IDSP FORM B
             </div>
 
@@ -166,7 +166,7 @@ export default function DataPage() {
                 <div className="font-serif text-lg font-bold text-[#F8FAFC]">
                   Weekly Outbreaks Reported Under IDSP
                 </div>
-                <div className="flex items-center gap-3 text-[11px] font-mono text-[#00F0FF]">
+                <div className="flex items-center gap-3 text-[11px] font-mono text-[#5FB0A8]">
                   <span>Year: {currentSample.year}</span>
                   <span>·</span>
                   <span>Week: {currentSample.week}</span>
@@ -181,7 +181,7 @@ export default function DataPage() {
                   Raw Bulletin Notification Row:
                 </div>
 
-                <div className="p-3.5 bg-[#06080F] border border-[#00F0FF]/40 rounded-sm space-y-2 relative">
+                <div className="p-3.5 bg-[#06080F] border border-[#5FB0A8]/40 rounded-sm space-y-2 relative">
                   <div className="grid grid-cols-2 gap-2 text-[11px]">
                     <div>
                       <span className="text-[#94A3B8]/70">District: </span>
@@ -195,7 +195,7 @@ export default function DataPage() {
 
                   <div>
                     <span className="text-[#94A3B8]/70 text-[11px]">Reported Illness / Syndrome: </span>
-                    <div className="text-[#00F0FF] font-semibold text-xs pt-0.5">
+                    <div className="text-[#5FB0A8] font-semibold text-xs pt-0.5">
                       &ldquo;{currentSample.rawDisease}&rdquo;
                     </div>
                   </div>
@@ -229,15 +229,15 @@ export default function DataPage() {
           </div>
 
           {/* Right: The Structured Canonical Research Record (6 cols) */}
-          <div className="lg:col-span-6 p-5 bg-[#0B111E] border border-[#00F0FF]/30 rounded-sm flex flex-col justify-between shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 px-3 py-1 bg-[#00F0FF] text-[#06080F] text-[9px] font-mono uppercase font-bold tracking-wider">
+          <div className="lg:col-span-6 p-5 bg-[#0B111E] border border-[#5FB0A8]/30 rounded-sm flex flex-col justify-between shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 px-3 py-1 bg-[#5FB0A8] text-[#06080F] text-[9px] font-mono uppercase font-bold tracking-wider">
               CANONICAL RESEARCH RECORD
             </div>
 
             <div className="space-y-4">
               {/* Record Header */}
               <div className="border-b border-[#F8FAFC]/15 pb-3 pt-1 space-y-1">
-                <div className="text-[10px] font-mono text-[#00F0FF] tracking-widest uppercase font-bold">
+                <div className="text-[10px] font-mono text-[#5FB0A8] tracking-widest uppercase font-bold">
                   DETERMINISTIC REDUCTION SCHEMA
                 </div>
                 <div className="font-serif text-lg font-bold text-[#F8FAFC] flex items-center gap-2">
@@ -255,17 +255,17 @@ export default function DataPage() {
               <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm font-mono text-xs space-y-1.5">
                 <div className="text-[#94A3B8]/60 text-[10px] uppercase pb-1 border-b border-[#F8FAFC]/10 flex justify-between">
                   <span>Standardised Database Tuple</span>
-                  <span className="text-[#00F0FF]">SQL / CSV</span>
+                  <span className="text-[#5FB0A8]">SQL / CSV</span>
                 </div>
 
                 <div className="space-y-1 pt-1 text-[11px]">
                   <div>
                     <span className="text-[#94A3B8]/70">surveillance_year: </span>
-                    <span className="text-[#00F0FF] font-bold">{currentSample.year}</span>
+                    <span className="text-[#5FB0A8] font-bold">{currentSample.year}</span>
                   </div>
                   <div>
                     <span className="text-[#94A3B8]/70">epidemiological_week: </span>
-                    <span className="text-[#00F0FF] font-bold">{currentSample.week}</span>
+                    <span className="text-[#5FB0A8] font-bold">{currentSample.week}</span>
                   </div>
                   <div>
                     <span className="text-[#94A3B8]/70">district_standardised: </span>
@@ -297,7 +297,7 @@ export default function DataPage() {
               </div>
             </div>
 
-            <div className="pt-4 mt-2 border-t border-[#F8FAFC]/10 flex items-center justify-between text-[10px] font-mono text-[#00F0FF]">
+            <div className="pt-4 mt-2 border-t border-[#F8FAFC]/10 flex items-center justify-between text-[10px] font-mono text-[#5FB0A8]">
               <span>Deterministic Rule Applied</span>
               <span>116 Raw Variations $\to$ 5 Groups</span>
             </div>
@@ -315,8 +315,8 @@ export default function DataPage() {
               onClick={() => setActiveTerm(activeTerm === "records" ? null : "records")}
               className={`px-3 py-1 rounded-sm border font-mono text-xs transition-all ${
                 activeTerm === "records"
-                  ? "bg-[#00F0FF]/20 border-[#00F0FF] text-[#00F0FF] font-bold"
-                  : "bg-[#0B111E] border-[#F8FAFC]/15 text-[#F8FAFC] hover:border-[#00F0FF]/50"
+                  ? "bg-[#5FB0A8]/20 border-[#5FB0A8] text-[#5FB0A8] font-bold"
+                  : "bg-[#0B111E] border-[#F8FAFC]/15 text-[#F8FAFC] hover:border-[#5FB0A8]/50"
               }`}
             >
               01 · Outbreak Record (539)
@@ -350,7 +350,7 @@ export default function DataPage() {
             <div className="p-4 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm text-xs font-mono leading-relaxed text-[#94A3B8] transition-all">
               {activeTerm === "records" && (
                 <div>
-                  <strong className="text-[#00F0FF]">Outbreak Record:</strong> An official notification filed when a cluster of illnesses exceeds baseline thresholds in a village or ward, triggering rapid response team deployment.
+                  <strong className="text-[#5FB0A8]">Outbreak Record:</strong> An official notification filed when a cluster of illnesses exceeds baseline thresholds in a village or ward, triggering rapid response team deployment.
                 </div>
               )}
               {activeTerm === "cases" && (
@@ -367,8 +367,8 @@ export default function DataPage() {
           )}
 
           {/* Concise Takeaway Callout */}
-          <div className="p-4 bg-[#0B111E]/60 border border-[#00F0FF]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
-            <CheckCircle2 className="w-5 h-5 text-[#00F0FF] shrink-0 mt-0.5" />
+          <div className="p-4 bg-[#0B111E]/60 border border-[#5FB0A8]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
+            <CheckCircle2 className="w-5 h-5 text-[#5FB0A8] shrink-0 mt-0.5" />
             <div>
               <strong className="text-[#F8FAFC]">Core Public Health Principle:</strong> Outbreak bulletins document investigated cluster events, not census sickness. 
               A single record can represent 5 cases or 650 cases—which is why analyzing outbreak frequency alongside patient case volume is essential throughout this study.
@@ -380,7 +380,7 @@ export default function DataPage() {
         <div className="pt-6 border-t border-[#F8FAFC]/15">
           <button
             onClick={() => setShowTechnicalDrawer(!showTechnicalDrawer)}
-            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold"
+            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold"
           >
             <div className="flex items-center gap-2">
               <Database className="w-4 h-4" />
@@ -394,7 +394,7 @@ export default function DataPage() {
               {/* Taxonomic Pipeline */}
               <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-4">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase text-[#00F0FF] font-bold">Deterministic Pipeline</span>
+                  <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold">Deterministic Pipeline</span>
                   <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">Taxonomic Convergence</h3>
                   <p className="text-xs text-[#94A3B8]">How 116 raw OCR strings converge into five canonical research cohorts:</p>
                 </div>
@@ -404,7 +404,7 @@ export default function DataPage() {
               {/* Surveillance Coverage Audit Grid */}
               <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-4">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-mono uppercase text-[#00F0FF] font-bold">Temporal Accounting</span>
+                  <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold">Temporal Accounting</span>
                   <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">Surveillance Coverage Across 237 Weeks</h3>
                   <p className="text-xs text-[#94A3B8]">Distinguishing active outbreak weeks from verified NIL weeks and unlocated bulletins:</p>
                 </div>
@@ -414,7 +414,7 @@ export default function DataPage() {
                     const unlocatedWeeks = cov.totalWeeks - cov.publishedWeeks;
                     return (
                       <div key={cov.year} className="p-3 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm space-y-1">
-                        <div className="text-[#00F0FF] font-bold">{cov.year}</div>
+                        <div className="text-[#5FB0A8] font-bold">{cov.year}</div>
                         <div className="text-[11px] text-[#F8FAFC]">{cov.outbreakWeeks} Outbreak Wks</div>
                         <div className="text-[10px] text-[#94A3B8]">{cov.nilWeeks} NIL Wks</div>
                         {unlocatedWeeks > 0 && (
@@ -430,7 +430,7 @@ export default function DataPage() {
               <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div className="space-y-1">
-                    <span className="text-[10px] font-mono uppercase text-[#00F0FF] font-bold">Canonical Dataset</span>
+                    <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold">Canonical Dataset</span>
                     <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">Primary Cohort Verification Table</h3>
                   </div>
 
@@ -441,7 +441,7 @@ export default function DataPage() {
                       placeholder="Filter disease..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-8 pr-3 py-1 bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm font-mono text-xs text-[#F8FAFC] focus:outline-none focus:border-[#00F0FF]"
+                      className="pl-8 pr-3 py-1 bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm font-mono text-xs text-[#F8FAFC] focus:outline-none focus:border-[#5FB0A8]"
                     />
                   </div>
                 </div>

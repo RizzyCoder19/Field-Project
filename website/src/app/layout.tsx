@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "From Data to the Ground | Seasonal Disease Patterns in Maharashtra",
-  description: "A cinematic live research presentation analyzing seasonal disease patterns in Maharashtra using NCDC/IDSP surveillance data alongside primary qualitative fieldwork in Nallasopara West. B.Sc. Data Science Semester III Field Project by Khan Umar, RP Institute, University of Mumbai.",
+  description: "An editorial research experience analysing seasonal disease outbreak patterns in Maharashtra using NCDC/IDSP surveillance data (2022–2025), paired with field evidence from Nallasopara West. B.Sc. Data Science Field Project by Khan Umar, RP Institute, University of Mumbai.",
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#06080F] text-[#F8FAFC] selection:bg-[#D4AF37] selection:text-[#030407]">
+      <body className="min-h-full flex flex-col bg-[#070A10] text-[#F5F1E8] selection:bg-[#D7B56D] selection:text-[#070A10]">
         <PresentationNav />
         <main className="flex-1 w-full">{children}</main>
       </body>

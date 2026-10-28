@@ -20,7 +20,7 @@ const STAGES = [
     denominator: "Deterministic dictionary normalization",
     desc: "Harmonized canonical disease labels created via deterministic dictionary lookup while preserving raw provenance.",
     examples: ["Dengue", "Acute Diarrheal Disease", "Malaria", "Food Poisoning", "Chikungunya", "Viral Hepatitis"],
-    color: "#00F0FF",
+    color: "#5FB0A8",
   },
   {
     step: "03",
@@ -60,8 +60,8 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
         <div>
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
             Deterministic Reduction Architecture · 2022–2025 Baseline
           </div>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
@@ -92,7 +92,7 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
               onClick={() => setActiveStage(idx)}
               className={`p-5 rounded-sm border cursor-pointer transition-all duration-300 flex flex-col justify-between ${
                 isSelected
-                  ? "border-[#00F0FF] bg-[#1E293B] shadow-2xl scale-[1.02] ring-1 ring-[#00F0FF]/40"
+                  ? "border-[#5FB0A8] bg-[#1E293B] shadow-2xl scale-[1.02] ring-1 ring-[#5FB0A8]/40"
                   : "border-[#F8FAFC]/10 bg-[#06080F]/80 hover:border-[#F8FAFC]/25"
               }`}
             >
@@ -138,7 +138,7 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
       {/* Active Stage Detailed Breakdown Banner */}
       <div className="mt-4 p-5 bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-xs shadow-xl">
         <div>
-          <span className="text-[#00F0FF] font-bold uppercase tracking-wider mr-2">
+          <span className="text-[#5FB0A8] font-bold uppercase tracking-wider mr-2">
             Stage {STAGES[activeStage].step} Detail:
           </span>
           <span className="text-[#F8FAFC] font-bold text-sm">{STAGES[activeStage].label}</span>
@@ -151,7 +151,7 @@ export default function NativeTaxonomyConvergence({ className = "" }: { classNam
           {STAGES[activeStage].examples.map((ex) => (
             <span
               key={ex}
-              className="text-[10px] px-2.5 py-1 bg-[#0B111E] border border-[#00F0FF]/30 text-[#00F0FF] rounded-sm font-semibold"
+              className="text-[10px] px-2.5 py-1 bg-[#0B111E] border border-[#5FB0A8]/30 text-[#5FB0A8] rounded-sm font-semibold"
             >
               {ex}
             </span>

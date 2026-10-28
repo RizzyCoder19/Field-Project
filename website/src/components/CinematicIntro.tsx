@@ -45,6 +45,14 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
   const [skip, setSkip] = useState(false);
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSkip(true);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  useEffect(() => {
     if (skip) {
       gsap.to(containerRef.current, { opacity: 0, duration: 0.35, onComplete });
       return;
@@ -127,12 +135,22 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
       className="fixed inset-0 bg-black flex items-center justify-center z-[9999] overflow-hidden"
       style={{ cursor: "default" }}
     >
-      {/* Skip button */}
+      {/* High-visibility tactile Skip button (accessible on both mobile and desktop) */}
       <button
         onClick={() => setSkip(true)}
-        className="fixed bottom-6 right-6 z-[10000] text-[10px] font-mono uppercase tracking-[0.2em] text-[#F8FAFC]/30 hover:text-[#F8FAFC]/70 transition-colors px-3 py-1.5 border border-[#F8FAFC]/10"
+        className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[10002] flex items-center gap-2 px-4 py-2.5 bg-[#0E1420]/90 hover:bg-[#1A2234] border border-[#D7B56D]/70 hover:border-[#D7B56D] text-[#D7B56D] hover:text-[#FFF] font-mono text-xs font-bold uppercase tracking-wider rounded-xs backdrop-blur-md shadow-2xl transition-all active:scale-95 cursor-pointer"
+        aria-label="Skip cinematic introduction"
       >
-        Skip Intro
+        <span>Skip Intro</span>
+        <span className="text-white/60 font-mono text-xs">✕</span>
+      </button>
+
+      {/* Secondary bottom skip button */}
+      <button
+        onClick={() => setSkip(true)}
+        className="fixed bottom-6 right-6 z-[10000] text-[10px] font-mono uppercase tracking-[0.2em] text-[#F8FAFC]/50 hover:text-[#F8FAFC] transition-colors px-3 py-1.5 border border-[#F8FAFC]/20 bg-black/40 backdrop-blur-xs rounded-xs"
+      >
+        Skip Intro [Esc]
       </button>
 
       {/* SCENE 01: Royal Gold line */}
@@ -219,47 +237,56 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
         </div>
       </div>
 
-      {/* SCENE 03: PDF table */}
+      {/* SCENE 03: Government PDF Outbreak Bulletin Table */}
       <div
         ref={scene2Ref}
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-0 flex items-center justify-center p-4 sm:p-8"
         style={{ opacity: 0, transform: "translateY(20px)" }}
       >
-        <div className="doc-fragment rounded-sm p-0 w-[min(1100px,94vw)] shadow-2xl">
-          <div className="table-heading bg-[#173F3A] text-[#F8FAFC] px-4 py-3 flex items-center gap-3 opacity-0 translate-y-2">
-            <span className="font-mono text-[clamp(9px,1vw,13px)] tracking-widest uppercase opacity-70">NCDC / IDSP</span>
-            <span className="font-mono text-[clamp(9px,1vw,13px)] tracking-widest uppercase opacity-70">Maharashtra Weekly Outbreak Bulletin</span>
-            <span className="ml-auto font-mono text-[clamp(9px,1vw,13px)] opacity-50">Source Document</span>
+        <div className="doc-fragment rounded-sm p-0 w-[min(1080px,94vw)] shadow-[0_25px_60px_rgba(0,0,0,0.95)] bg-[#F8F6F0] border border-[#D7B56D]/50 overflow-hidden">
+          {/* Bulletin Header Bar */}
+          <div className="table-heading bg-[#0B1522] text-[#F8FAFC] px-4 sm:px-6 py-3.5 flex items-center justify-between border-b border-[#D7B56D]/30 opacity-0 translate-y-2">
+            <div className="flex items-center gap-3">
+              <span className="w-2 h-2 bg-[#D7B56D] rotate-45 shrink-0" />
+              <span className="font-mono text-xs font-bold tracking-[0.2em] text-[#D7B56D] uppercase">NCDC / IDSP</span>
+              <span className="h-3 w-px bg-white/20 hidden sm:block" />
+              <span className="font-mono text-xs tracking-wider text-[#F8FAFC] hidden sm:block">Maharashtra Weekly Outbreak Bulletin</span>
+            </div>
+            <span className="font-mono text-[10px] text-[#5FB0A8] bg-[#5FB0A8]/10 px-2 py-0.5 rounded-xs border border-[#5FB0A8]/30 uppercase font-semibold">
+              Archival Source Table
+            </span>
           </div>
-          <div className="overflow-hidden">
-            <table className="w-full text-[clamp(0.7rem,1.35vw,1rem)] font-mono">
+
+          {/* Table Data */}
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs sm:text-sm font-mono border-collapse">
               <thead>
-                <tr className="border-b border-[#06080F]/15 bg-[#F8FAFC]/80">
+                <tr className="border-b-2 border-[#0F172A]/20 bg-[#EFECE4]">
                   {["YEAR", "WEEK", "DISTRICT", "DISEASE", "CASES", "DEATHS"].map((h) => (
-                    <th key={h} className="table-heading px-2 sm:px-4 py-3 text-left font-bold tracking-widest text-[clamp(8px,0.9vw,12px)] uppercase text-[#06080F]/60 opacity-0 translate-y-2">
+                    <th key={h} className="table-heading px-3 sm:px-5 py-3 text-left font-bold tracking-widest text-xs uppercase text-[#1E293B] opacity-0 translate-y-2">
                       {h}
                     </th>
                   ))}
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="divide-y divide-[#0F172A]/10">
                 {DOC_ROWS.map((r, i) => {
                   const isFocus = r.year === FOCUS_ROW.year && r.week === FOCUS_ROW.week && r.district === FOCUS_ROW.district;
                   return (
                     <tr
                       key={i}
-                      className={`table-row border-b border-[#06080F]/8 opacity-0 translate-y-2 ${isFocus ? "focus-row" : ""}`}
-                      style={{
-                        backgroundColor: isFocus ? "transparent" : i % 2 === 0 ? "rgba(17,20,17,0.03)" : "transparent",
-                        fontWeight: isFocus ? 700 : 400,
-                      }}
+                      className={`table-row opacity-0 translate-y-2 transition-colors ${
+                        isFocus ? "focus-row bg-[#D7B56D]/30 font-bold border-l-4 border-l-[#D7B56D]" : i % 2 === 0 ? "bg-[#F3EFE6]" : "bg-[#F8F6F0]"
+                      }`}
                     >
-                      <td className="px-2 sm:px-4 py-2.5 text-[#06080F]/70">{r.year}</td>
-                      <td className="px-2 sm:px-4 py-2.5 text-[#06080F]/70">{r.week}</td>
-                      <td className="px-2 sm:px-4 py-2.5 text-[#06080F]">{r.district}</td>
-                      <td className="px-2 sm:px-4 py-2.5 text-[#06080F]">{r.disease}</td>
-                      <td className={`px-2 sm:px-4 py-2.5 text-right tabular-nums ${isFocus ? "text-[#A94F3D] font-bold" : "text-[#06080F]"}`}>{r.cases}</td>
-                      <td className="px-2 sm:px-4 py-2.5 text-right tabular-nums text-[#06080F]/60">{r.deaths}</td>
+                      <td className="px-3 sm:px-5 py-2.5 text-[#334155]">{r.year}</td>
+                      <td className="px-3 sm:px-5 py-2.5 text-[#334155]">{r.week}</td>
+                      <td className="px-3 sm:px-5 py-2.5 text-[#0F172A] font-semibold">{r.district}</td>
+                      <td className="px-3 sm:px-5 py-2.5 text-[#0F172A] font-medium">{r.disease}</td>
+                      <td className={`px-3 sm:px-5 py-2.5 text-right tabular-nums font-bold ${isFocus ? "text-[#B91C1C]" : "text-[#0F172A]"}`}>
+                        {r.cases}
+                      </td>
+                      <td className="px-3 sm:px-5 py-2.5 text-right tabular-nums text-[#64748B]">{r.deaths}</td>
                     </tr>
                   );
                 })}
@@ -276,7 +303,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
         style={{ opacity: 0 }}
       >
         <div className="flex flex-col items-center gap-4">
-          <div className="record-heading font-mono text-[clamp(11px,1.2vw,16px)] tracking-[0.3em] text-[#00F0FF] uppercase mb-4 opacity-0 translate-y-2">Record Extracted</div>
+          <div className="record-heading font-mono text-[clamp(11px,1.2vw,16px)] tracking-[0.3em] text-[#5FB0A8] uppercase mb-4 opacity-0 translate-y-2">Record Extracted</div>
           <div className="grid grid-cols-3 gap-3 sm:gap-5 w-[min(820px,92vw)]">
             {[
               { k: "YEAR", v: "2024" },
@@ -286,7 +313,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
               { k: "CASES", v: "651" },
               { k: "DEATHS", v: "0" },
             ].map(({ k, v }) => (
-              <div key={k} className="record-card border border-[#00F0FF]/30 bg-[#111A2B]/80 p-3 sm:p-5 rounded-sm opacity-0 translate-y-3">
+              <div key={k} className="record-card border border-[#5FB0A8]/30 bg-[#111A2B]/80 p-3 sm:p-5 rounded-sm opacity-0 translate-y-3">
                 <div className="font-mono text-[clamp(8px,0.9vw,12px)] tracking-widest text-[#94A3B8] uppercase mb-1">{k}</div>
                 <div className="font-serif text-[clamp(1.1rem,3.5vw,2.8rem)] text-[#F8FAFC] font-bold leading-tight">{v}</div>
               </div>
@@ -309,7 +336,7 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
           ].map(({ n, l }, i) => (
             <div key={i} className="metric-in" style={{ opacity: 0, transform: "translateY(24px)" }}>
               <div className="font-serif text-[clamp(3rem,min(12vw,16vh),9rem)] font-bold text-[#F8FAFC] leading-none tracking-tight max-w-full">{n}</div>
-              <div className="font-mono text-[clamp(10px,1.1vw,14px)] tracking-[0.3em] text-[#00F0FF] uppercase mt-2">{l}</div>
+              <div className="font-mono text-[clamp(10px,1.1vw,14px)] tracking-[0.3em] text-[#5FB0A8] uppercase mt-2">{l}</div>
             </div>
           ))}
         </div>
@@ -354,8 +381,8 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
               style={{ opacity: 0, transform: "translateY(12px)" }}
             >
               {i > 0 && <div className="w-px h-4 bg-[#F8FAFC]/15 mx-auto" style={{ position: "absolute", left: "50%", marginTop: "-1.5rem" }} />}
-              <div className={`font-serif text-[clamp(3rem,9vw,7rem)] font-bold leading-none ${gold ? "text-[#00F0FF]" : "text-[#F8FAFC]"}`}>{n}</div>
-              <div className={`font-mono text-[clamp(11px,1.5vw,18px)] tracking-[0.22em] uppercase ${gold ? "text-[#00F0FF]" : "text-[#94A3B8]"}`}>{l}</div>
+              <div className={`font-serif text-[clamp(3rem,9vw,7rem)] font-bold leading-none ${gold ? "text-[#5FB0A8]" : "text-[#F8FAFC]"}`}>{n}</div>
+              <div className={`font-mono text-[clamp(11px,1.5vw,18px)] tracking-[0.22em] uppercase ${gold ? "text-[#5FB0A8]" : "text-[#94A3B8]"}`}>{l}</div>
               {i < 3 && (
                 <div className="absolute font-mono text-[#94A3B8]/40 text-xs" style={{ transform: "translateX(-200px) translateY(1.5rem)" }}>↓</div>
               )}
@@ -370,13 +397,13 @@ export default function CinematicIntro({ onComplete }: CinematicIntroProps) {
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-8"
         style={{ opacity: 0 }}
       >
-        <div className="title-line font-mono text-[10px] tracking-[0.35em] text-[#00F0FF] uppercase mb-8" style={{ opacity: 0, transform: "translateY(12px)" }}>
+        <div className="title-line font-mono text-[10px] tracking-[0.35em] text-[#5FB0A8] uppercase mb-8" style={{ opacity: 0, transform: "translateY(12px)" }}>
           Diseases leave patterns.
         </div>
         <div className="title-line font-serif text-[clamp(1.8rem,5vw,3.5rem)] font-light text-[#F8FAFC] leading-tight max-w-3xl mb-4" style={{ opacity: 0, transform: "translateY(16px)" }}>
           Data lets us see them.
         </div>
-        <div className="title-line my-6 w-16 h-px bg-[#00F0FF] mx-auto" style={{ opacity: 0, transform: "translateY(8px)" }} />
+        <div className="title-line my-6 w-16 h-px bg-[#5FB0A8] mx-auto" style={{ opacity: 0, transform: "translateY(8px)" }} />
         <div className="title-line font-mono text-[10px] tracking-[0.2em] text-[#94A3B8] uppercase" style={{ opacity: 0, transform: "translateY(10px)" }}>
           From Government Records to Seasonal Patterns in Maharashtra
         </div>

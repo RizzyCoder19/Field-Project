@@ -64,7 +64,7 @@ function Q({ children, sub }: { children: React.ReactNode; sub?: string }) {
         {children}
       </h2>
       {sub && (
-        <div className="mt-3 font-mono text-[10px] tracking-[0.25em] text-[#00F0FF] uppercase">
+        <div className="mt-3 font-mono text-[10px] tracking-[0.25em] text-[#5FB0A8] uppercase">
           {sub}
         </div>
       )}
@@ -76,7 +76,7 @@ function Q({ children, sub }: { children: React.ReactNode; sub?: string }) {
 function Label({ n, text }: { n: string; text: string }) {
   return (
     <div className="flex items-center gap-3 mb-4">
-      <span className="font-mono text-[9px] text-[#00F0FF] border border-[#00F0FF]/30 px-2 py-0.5 rounded-sm uppercase tracking-widest font-bold">
+      <span className="font-mono text-[9px] text-[#5FB0A8] border border-[#5FB0A8]/30 px-2 py-0.5 rounded-sm uppercase tracking-widest font-bold">
         Act {n}
       </span>
       <span className="font-mono text-[9px] tracking-[0.2em] text-[#94A3B8]/70 uppercase">
@@ -167,7 +167,7 @@ export default function ScrollStory() {
           <Label n="01" text="The Research Mandate" />
           <Q sub="Government Health Surveillance · Maharashtra 2022–2026">
             When do diseases appear?<br />
-            <span className="text-[#00F0FF] italic font-light">And do their patterns repeat across years?</span>
+            <span className="text-[#5FB0A8] italic font-light">And do their patterns repeat across years?</span>
           </Q>
 
           {/* 4 Core Inquiries */}
@@ -179,7 +179,7 @@ export default function ScrollStory() {
               { q: "HOW STABLE", text: "are these patterns under non-parametric rank concordance testing?" },
             ].map(({ q, text }) => (
               <div key={q} className="bg-[#06080F] p-6 lg:p-8 flex flex-col justify-between">
-                <div className="font-serif text-3xl lg:text-4xl text-[#00F0FF] font-bold">{q}</div>
+                <div className="font-serif text-3xl lg:text-4xl text-[#5FB0A8] font-bold">{q}</div>
                 <div className="font-mono text-xs text-[#F8FAFC]/75 mt-3 leading-relaxed">{text}</div>
               </div>
             ))}
@@ -233,11 +233,11 @@ export default function ScrollStory() {
                   <div
                     key={yr.year}
                     className={`border border-[#F8FAFC]/08 rounded-sm p-4 ${
-                      is2026 ? "border-[#00F0FF]/40 bg-[#00F0FF]/05" : "bg-[#06080F]/40"
+                      is2026 ? "border-[#5FB0A8]/40 bg-[#5FB0A8]/05" : "bg-[#06080F]/40"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-mono text-sm font-bold" style={{ color: is2026 ? "#00F0FF" : "#F8FAFC" }}>
+                      <span className="font-mono text-sm font-bold" style={{ color: is2026 ? "#5FB0A8" : "#F8FAFC" }}>
                         {yr.year}
                       </span>
                       <div className="flex gap-4 font-mono text-[9px] text-[#94A3B8]">
@@ -249,7 +249,7 @@ export default function ScrollStory() {
                     <div className="w-full bg-[#F8FAFC]/06 h-1.5 rounded-full overflow-hidden">
                       <div
                         className="h-full rounded-full"
-                        style={{ width: `${pct * 100}%`, background: is2026 ? "#00F0FF" : "#4F91B8" }}
+                        style={{ width: `${pct * 100}%`, background: is2026 ? "#5FB0A8" : "#4F91B8" }}
                       />
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export default function ScrollStory() {
             </div>
 
             <div className="mt-4 p-3.5 border border-[#F8FAFC]/08 bg-[#06080F]/60 rounded-sm font-mono text-[9px] text-[#94A3B8] leading-relaxed">
-              <span className="text-[#00F0FF] font-bold">Surveillance Distinction: </span>
+              <span className="text-[#5FB0A8] font-bold">Surveillance Distinction: </span>
               A <span className="text-[#F8FAFC] font-bold">NIL week</span> indicates no outbreak was officially published in that bulletin. 
               It does <span className="underline">not</span> imply zero disease in Maharashtra hospitals.
             </div>
@@ -269,7 +269,7 @@ export default function ScrollStory() {
             {[
               { n: "237", l: "SURVEILLANCE WEEKS ARCHIVED", sub: "2022 to 2026 Week 32", c: "#F8FAFC" },
               { n: "809", l: "ANALYTICAL RECORDS EXTRACTED", sub: "Verified Maharashtra outbreak rows", c: "#F8FAFC" },
-              { n: "20,955", l: "REPORTED CASES (2022–2025)", sub: "5 primary cohorts baseline (266 deaths)", c: "#00F0FF" },
+              { n: "20,955", l: "REPORTED CASES (2022–2025)", sub: "5 primary cohorts baseline (266 deaths)", c: "#5FB0A8" },
             ].map(({ n, l, sub, c }) => (
               <div key={l} className="reveal-up border-b border-[#F8FAFC]/08 pb-5 last:border-0">
                 <div className="font-serif leading-none font-bold" style={{ fontSize: "clamp(3rem,7vw,5.5rem)", color: c }}>
@@ -293,7 +293,7 @@ export default function ScrollStory() {
       >
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
-            <span className="font-mono text-[9px] text-[#00F0FF] border border-[#00F0FF]/30 px-2 py-0.5 rounded-sm uppercase tracking-widest font-bold">
+            <span className="font-mono text-[9px] text-[#5FB0A8] border border-[#5FB0A8]/30 px-2 py-0.5 rounded-sm uppercase tracking-widest font-bold">
               Raw Data Access
             </span>
             <span className="font-mono text-[9px] tracking-[0.2em] text-[#94A3B8]/70 uppercase">
@@ -303,7 +303,7 @@ export default function ScrollStory() {
           <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-end">
             <div className="max-w-3xl reveal-up">
               <Q sub="Open Repository · Raw Sources · Reproducible Analysis">
-                Want to explore the <span className="text-[#00F0FF] italic font-light">raw data?</span>
+                Want to explore the <span className="text-[#5FB0A8] italic font-light">raw data?</span>
               </Q>
               <p className="font-mono text-sm sm:text-base text-[#94A3B8] leading-relaxed -mt-5">
                 Browse the source files behind this research, including the weekly bulletins, extracted records, field materials, and data processing pipeline.
@@ -313,14 +313,14 @@ export default function ScrollStory() {
               href="https://github.com/RizzyCoder19/Field-Project/tree/master"
               target="_blank"
               rel="noopener noreferrer"
-              className="group shrink-0 inline-flex items-center justify-center gap-3 px-7 py-5 rounded-sm font-mono text-xs uppercase tracking-widest font-bold bg-[#00F0FF] text-[#06080F] hover:bg-[#F59E0B] transition-colors shadow-xl reveal-up"
+              className="group shrink-0 inline-flex items-center justify-center gap-3 px-7 py-5 rounded-sm font-mono text-xs uppercase tracking-widest font-bold bg-[#5FB0A8] text-[#06080F] hover:bg-[#F59E0B] transition-colors shadow-xl reveal-up"
             >
               <span>Explore the GitHub Repository</span>
               <span aria-hidden="true" className="text-lg transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
             </a>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#00F0FF]/20 mt-12 reveal-up">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#5FB0A8]/20 mt-12 reveal-up">
             {[
               { path: "/raw dataset", detail: "Original weekly source files", icon: "01" },
               { path: "/data_pipeline", detail: "Processing and extraction", icon: "02" },
@@ -328,7 +328,7 @@ export default function ScrollStory() {
               { path: "Analysis files", detail: "Explore the research outputs", icon: "04" },
             ].map(({ path, detail, icon }) => (
               <div key={path} className="bg-[#0d1209] p-5 sm:p-6 min-h-32 flex flex-col justify-between">
-                <span className="font-mono text-[9px] tracking-widest text-[#00F0FF]">{icon} / OPEN REPOSITORY</span>
+                <span className="font-mono text-[9px] tracking-widest text-[#5FB0A8]">{icon} / OPEN REPOSITORY</span>
                 <div>
                   <div className="font-serif text-lg text-[#F8FAFC] font-bold">{path}</div>
                   <div className="font-mono text-[9px] text-[#94A3B8]/70 mt-1">{detail}</div>
@@ -351,7 +351,7 @@ export default function ScrollStory() {
         <div className="absolute inset-0 px-6 sm:px-14 lg:px-24 py-16 flex flex-col justify-between">
           <div>
             <Label n="03" text="Data Engineering Pipeline" />
-            <Q>How did we turn PDF documents<br /><span className="text-[#00F0FF] italic font-light">into structured data?</span></Q>
+            <Q>How did we turn PDF documents<br /><span className="text-[#5FB0A8] italic font-light">into structured data?</span></Q>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-6 items-center my-auto">
@@ -394,8 +394,8 @@ export default function ScrollStory() {
 
             {/* Center Arrow */}
             <div ref={pdfArrow} className="flex flex-col items-center gap-1 my-2" style={{ opacity: 0, transform: "scaleY(0)" }}>
-              <div className="font-mono text-[8px] text-[#00F0FF] uppercase tracking-widest">EXTRACTION</div>
-              <div className="text-[#00F0FF] text-3xl">→</div>
+              <div className="font-mono text-[8px] text-[#5FB0A8] uppercase tracking-widest">EXTRACTION</div>
+              <div className="text-[#5FB0A8] text-3xl">→</div>
             </div>
 
             {/* Right: Structured Analytical Record */}
@@ -416,7 +416,7 @@ export default function ScrollStory() {
                     <div className="font-mono text-[7px] tracking-widest text-[#94A3B8]/50 uppercase">{f}</div>
                     <div
                       className={`font-mono ${small ? "text-[10px]" : "text-sm"} font-bold truncate mt-0.5`}
-                      style={{ color: gold ? "#00F0FF" : red ? "#EF4444" : "#F8FAFC" }}
+                      style={{ color: gold ? "#5FB0A8" : red ? "#EF4444" : "#F8FAFC" }}
                     >
                       {v}
                     </div>
@@ -470,7 +470,7 @@ export default function ScrollStory() {
               onClick={() => setFocusedDisease(focusedDisease === key ? null : key)}
               className={`p-5 rounded-sm border cursor-pointer transition-all duration-300 flex flex-col justify-between ${
                 focusedDisease === key
-                  ? "border-[#00F0FF] bg-[#0d1209] shadow-xl scale-[1.02]"
+                  ? "border-[#5FB0A8] bg-[#0d1209] shadow-xl scale-[1.02]"
                   : "border-[#F8FAFC]/10 bg-[#06080F]/60 hover:border-[#F8FAFC]/30"
               }`}
             >
@@ -505,7 +505,7 @@ export default function ScrollStory() {
         </div>
 
         <div className="p-4 bg-[#06080F] border border-[#F8FAFC]/08 rounded-sm font-mono text-[10px] text-[#94A3B8] text-center">
-          Combined: <span className="text-[#F8FAFC] font-bold">539 primary records</span> · <span className="text-[#00F0FF] font-bold">20,955 reported cases</span> · <span className="text-[#F8FAFC] font-bold">266 reported deaths</span> across Maharashtra.
+          Combined: <span className="text-[#F8FAFC] font-bold">539 primary records</span> · <span className="text-[#5FB0A8] font-bold">20,955 reported cases</span> · <span className="text-[#F8FAFC] font-bold">266 reported deaths</span> across Maharashtra.
         </div>
       </Section>
 
@@ -557,7 +557,7 @@ export default function ScrollStory() {
                 onClick={() => setFocusedDisease(isSelected ? null : key)}
                 className={`p-4 rounded-sm border cursor-pointer transition-all duration-300 ${
                   isSelected
-                    ? "border-[#00F0FF] bg-[#111A2B] shadow-lg scale-105"
+                    ? "border-[#5FB0A8] bg-[#111A2B] shadow-lg scale-105"
                     : "border-[#F8FAFC]/08 bg-[#0b0f0b] hover:border-[#F8FAFC]/25"
                 }`}
               >
@@ -647,7 +647,7 @@ export default function ScrollStory() {
           <div className="p-5 border border-[#F59E0B]/50 bg-[#F59E0B]/08 rounded-sm">
             <div className="font-mono text-[8px] uppercase tracking-widest text-[#F59E0B] font-bold">Malaria Focus Cluster</div>
             <div className="font-serif text-3xl font-bold text-[#F8FAFC] mt-1">61.4% Concentrated</div>
-            <div className="font-mono text-[9px] text-[#00F0FF] font-bold mt-1">
+            <div className="font-mono text-[9px] text-[#5FB0A8] font-bold mt-1">
               43 of 70 events in Gadchiroli & Chandrapur only.
             </div>
             <div className="font-mono text-[8px] text-[#94A3B8]/60 mt-1">
@@ -702,7 +702,7 @@ export default function ScrollStory() {
         ref={fieldTransition}
         className="relative w-full flex flex-col items-center justify-center text-center py-28 sm:py-36 px-6 border-b border-[#F8FAFC]/06 bg-black"
       >
-        <div className="field-char font-mono text-[10px] tracking-[0.35em] text-[#00F0FF] uppercase mb-6">
+        <div className="field-char font-mono text-[10px] tracking-[0.35em] text-[#5FB0A8] uppercase mb-6">
           Beyond Secondary Government Bulletins
         </div>
         <div className="field-char font-serif text-[clamp(2.4rem,5vw,4.5rem)] text-[#F8FAFC] font-bold leading-tight max-w-3xl">
@@ -714,7 +714,7 @@ export default function ScrollStory() {
         <div className="field-char mt-10 font-mono text-[9px] text-[#94A3B8]/60 tracking-[0.2em] uppercase">
           02 October 2026 · Nallasopara West · Palghar, Maharashtra
         </div>
-        <div className="field-char mt-2 font-mono text-[8px] text-[#00F0FF] tracking-wider uppercase font-bold">
+        <div className="field-char mt-2 font-mono text-[8px] text-[#5FB0A8] tracking-wider uppercase font-bold">
           ONE FACILITY · ONE KEY-INFORMANT INTERVIEW · ONE STRUCTURED OBSERVATION
         </div>
       </div>
@@ -736,7 +736,7 @@ export default function ScrollStory() {
             <h2 className="font-serif text-[clamp(2rem,4.5vw,3.8rem)] text-[#F8FAFC] font-bold leading-tight">
               PHC Nallasopara West
             </h2>
-            <div className="font-serif text-lg text-[#00F0FF] mt-0.5">Vasai-Virar City Municipal Corporation (VVMC) Health Post</div>
+            <div className="font-serif text-lg text-[#5FB0A8] mt-0.5">Vasai-Virar City Municipal Corporation (VVMC) Health Post</div>
             <div className="flex flex-wrap gap-4 mt-3 font-mono text-[9px] text-[#F8FAFC]/60">
               <span>📅 Date: 02 October 2026</span>
               <span>⏰ Time: 10:30 AM – 11:45 AM</span>
@@ -778,7 +778,7 @@ export default function ScrollStory() {
               ["11:45",       "Visible Abate / temephos larvicide inspection markings stenciled on adjacent building entries."],
             ].map(([time, note]) => (
               <div key={time} className="flex gap-4 py-3 border-b border-[#F8FAFC]/05 text-xs font-mono">
-                <span className="text-[#00F0FF] w-24 shrink-0 font-bold">{time}</span>
+                <span className="text-[#5FB0A8] w-24 shrink-0 font-bold">{time}</span>
                 <span className="text-[#89947C] shrink-0 font-bold">OBS</span>
                 <span className="text-[#F8FAFC]/75 leading-relaxed">{note}</span>
               </div>
@@ -829,7 +829,7 @@ export default function ScrollStory() {
             },
           ].map((item) => (
             <div key={item.title} className="p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm">
-              <div className="font-mono text-[9px] uppercase tracking-wider text-[#00F0FF] font-bold mb-2">
+              <div className="font-mono text-[9px] uppercase tracking-wider text-[#5FB0A8] font-bold mb-2">
                 {item.title}
               </div>
               <p className="font-mono text-xs text-[#F8FAFC]/80 leading-relaxed">
@@ -956,7 +956,7 @@ export default function ScrollStory() {
               "11. State Surveillance & Local Facility Observations Provide Complementary Perspectives",
             ].map((step, idx) => (
               <div key={step} className="flex items-center gap-3 py-1 font-mono text-xs text-[#94A3B8]">
-                <span className="text-[#00F0FF] font-bold">{String(idx + 1).padStart(2, "0")}.</span>
+                <span className="text-[#5FB0A8] font-bold">{String(idx + 1).padStart(2, "0")}.</span>
                 <span>{step.slice(4)}</span>
               </div>
             ))}
@@ -970,7 +970,7 @@ export default function ScrollStory() {
             <div className="font-serif text-[clamp(2.5rem,5.5vw,4.5rem)] text-[#89947C] italic font-light leading-tight">
               The context is local.
             </div>
-            <div className="font-serif text-[clamp(2rem,4vw,3.5rem)] font-bold text-[#00F0FF] leading-tight mt-1">
+            <div className="font-serif text-[clamp(2rem,4vw,3.5rem)] font-bold text-[#5FB0A8] leading-tight mt-1">
               The interpretation needs both.
             </div>
           </div>
@@ -982,7 +982,7 @@ export default function ScrollStory() {
             <div className="font-serif text-xl font-bold text-[#F8FAFC]">Khan Umar</div>
             <div className="font-mono text-[9px] text-[#94A3B8] uppercase">B.Sc. Data Science · Semester III</div>
             <div className="font-mono text-[9px] text-[#94A3B8]">RP Institute · Affiliated to University of Mumbai</div>
-            <div className="font-mono text-[9px] text-[#00F0FF] mt-1 font-bold">Project Guide: [Confirm before submission]</div>
+            <div className="font-mono text-[9px] text-[#5FB0A8] mt-1 font-bold">Project Guide: [Confirm before submission]</div>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
@@ -990,7 +990,7 @@ export default function ScrollStory() {
               href="https://github.com/RizzyCoder19/Field-Project/tree/master"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest font-bold rounded border border-[#00F0FF]/50 text-[#00F0FF] hover:bg-[#00F0FF]/15 transition-all shadow-md flex items-center gap-2"
+              className="px-5 py-3 font-mono text-[10px] uppercase tracking-widest font-bold rounded border border-[#5FB0A8]/50 text-[#5FB0A8] hover:bg-[#5FB0A8]/15 transition-all shadow-md flex items-center gap-2"
             >
               <span>GitHub Database</span>
               <span>↗</span>
@@ -998,7 +998,7 @@ export default function ScrollStory() {
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="px-6 py-3 font-mono text-[10px] uppercase tracking-widest font-bold rounded bg-[#00F0FF] text-[#06080F] hover:bg-[#F59E0B] transition-all shadow-xl flex items-center gap-2"
+              className="px-6 py-3 font-mono text-[10px] uppercase tracking-widest font-bold rounded bg-[#5FB0A8] text-[#06080F] hover:bg-[#F59E0B] transition-all shadow-xl flex items-center gap-2"
             >
               <span>📄</span> Export Presentation PDF
             </a>

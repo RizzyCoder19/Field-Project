@@ -2,10 +2,19 @@
 
 import React, { useState, useEffect } from "react";
 import { Play, Pause, AlertTriangle, ShieldCheck } from "lucide-react";
+import { useInViewAnimation } from "@/hooks/useInViewAnimation";
 
 export default function NativeTimeline2026({ className = "" }: { className?: string }) {
   const [currentWeek, setCurrentWeek] = useState(32);
   const [isPlaying, setIsPlaying] = useState(false);
+  const { ref, hasAnimated } = useInViewAnimation<HTMLDivElement>({ threshold: 0.2 });
+
+  // Automatically scrub timeline progression on first viewport entry
+  useEffect(() => {
+    if (!hasAnimated) return;
+    setCurrentWeek(1);
+    setIsPlaying(true);
+  }, [hasAnimated]);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -17,7 +26,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
         }
         return prev + 1;
       });
-    }, 90);
+    }, 70);
 
     return () => clearInterval(interval);
   }, [isPlaying]);
@@ -62,6 +71,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
 
   return (
     <div
+      ref={ref}
       className={`w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 flex flex-col shadow-2xl ${className}`}
       role="region"
       aria-label="2026 Out of Sample Partial Window Timeline"
@@ -69,8 +79,8 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-[#F8FAFC]/10">
         <div>
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
             Out-of-Sample Surveillance Boundary · 2026 Incomplete Window
           </div>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
@@ -85,7 +95,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
         <div className="flex items-center gap-2">
           <button
             onClick={isPlaying ? () => setIsPlaying(false) : handleReplay}
-            className="font-mono text-xs uppercase tracking-wider px-4 py-2 rounded-sm border border-[#00F0FF] text-[#00F0FF] hover:bg-[#00F0FF]/15 transition-all flex items-center gap-2 font-bold"
+            className="font-mono text-xs uppercase tracking-wider px-4 py-2 rounded-sm border border-[#5FB0A8] text-[#5FB0A8] hover:bg-[#5FB0A8]/15 transition-all flex items-center gap-2 font-bold"
           >
             {isPlaying ? (
               <>
@@ -106,7 +116,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
       <div className="p-4 sm:p-5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm mb-6">
         <div className="flex items-center justify-between font-mono text-xs text-[#94A3B8] uppercase tracking-wider mb-3">
           <span>Cumulative Surveillance Progression (Weeks 01–32)</span>
-          <span className="text-[#00F0FF] font-bold">
+          <span className="text-[#5FB0A8] font-bold">
             Current Position: Week {currentWeek} · {activePoints.length > 0 ? activePoints[activePoints.length - 1].cases.toLocaleString() : 0} Cases
           </span>
         </div>
@@ -162,7 +172,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
               <path
                 d={activeLinePath}
                 fill="none"
-                stroke="#00F0FF"
+                stroke="#5FB0A8"
                 strokeWidth="3"
                 strokeLinecap="round"
                 className="animate-construct-stroke"
@@ -173,8 +183,8 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
             {/* Gradient definition */}
             <defs>
               <linearGradient id="timelineGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#00F0FF" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#00F0FF" stopOpacity="0.0" />
+                <stop offset="0%" stopColor="#5FB0A8" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#5FB0A8" stopOpacity="0.0" />
               </linearGradient>
             </defs>
 
@@ -214,7 +224,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
                   cx={plotX(currentWeek)}
                   cy={plotY(activePoints[activePoints.length - 1].cases)}
                   r="6"
-                  fill="#00F0FF"
+                  fill="#5FB0A8"
                   stroke="#F8FAFC"
                   strokeWidth="2"
                   className="animate-pulse"
@@ -244,7 +254,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
       <div className="relative mb-6 px-1">
         <div className="flex justify-between items-center text-xs font-mono text-[#94A3B8] mb-1.5">
           <span>Interactive Week Scrubber</span>
-          <span className="text-[#00F0FF]">Drag to reconstruct week timeline: W01 → W{currentWeek}</span>
+          <span className="text-[#5FB0A8]">Drag to reconstruct week timeline: W01 → W{currentWeek}</span>
         </div>
         <input
           type="range"
@@ -255,7 +265,7 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
             setIsPlaying(false);
             setCurrentWeek(Number(e.target.value));
           }}
-          className="w-full accent-[#00F0FF] cursor-ew-resize bg-[#06080F] h-2 rounded border border-[#F8FAFC]/20"
+          className="w-full accent-[#5FB0A8] cursor-ew-resize bg-[#06080F] h-2 rounded border border-[#F8FAFC]/20"
         />
         <div className="flex justify-between font-mono text-[9px] text-[#94A3B8] mt-1.5">
           <span>W01 (Jan Start)</span>
@@ -276,8 +286,8 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
         </div>
 
         <div className="p-4 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm text-center">
-          <div className="font-serif text-3xl sm:text-4xl font-bold text-[#00F0FF]">2,126</div>
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] mt-1 font-semibold">
+          <div className="font-serif text-3xl sm:text-4xl font-bold text-[#5FB0A8]">2,126</div>
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] mt-1 font-semibold">
             Reported Cases (W01–W32)
           </div>
           <div className="font-mono text-[10px] text-[#94A3B8]/70 mt-0.5">
@@ -307,20 +317,20 @@ export default function NativeTimeline2026({ className = "" }: { className?: str
           </p>
         </div>
 
-        <div className="p-4 bg-[#00F0FF]/08 border border-[#00F0FF]/30 rounded-sm space-y-1">
-          <div className="font-mono text-xs uppercase tracking-widest text-[#00F0FF] font-bold flex items-center gap-1.5">
+        <div className="p-4 bg-[#5FB0A8]/08 border border-[#5FB0A8]/30 rounded-sm space-y-1">
+          <div className="font-mono text-xs uppercase tracking-widest text-[#5FB0A8] font-bold flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5" />
             Taxonomic Classification Discipline
           </div>
           <p className="font-mono text-xs text-[#F8FAFC]/90 leading-relaxed">
-            All 19 Food Poisoning events recorded in 2026 W01–W32 were explicitly categorized as <span className="text-[#00F0FF] font-bold">&ldquo;Suspected&rdquo;</span> in the published NCDC bulletins.
+            All 19 Food Poisoning events recorded in 2026 W01–W32 were explicitly categorized as <span className="text-[#5FB0A8] font-bold">&ldquo;Suspected&rdquo;</span> in the published NCDC bulletins.
           </p>
         </div>
       </div>
 
       {/* Reconciliation Provenance */}
       <div className="p-3 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm font-mono text-xs text-[#94A3B8] leading-relaxed">
-        <span className="text-[#00F0FF] font-bold uppercase tracking-wider mr-1">Reconciliation Provenance:</span>
+        <span className="text-[#5FB0A8] font-bold uppercase tracking-wider mr-1">Reconciliation Provenance:</span>
         Verified against canonical raw records and Phase 5B/5C surveillance outputs (2,126 reported cases across the five primary families). An earlier preliminary Phase 5D document draft cited an un-reconciled figure of 1,118 cases; this implementation reflects the canonical verified total.
       </div>
     </div>

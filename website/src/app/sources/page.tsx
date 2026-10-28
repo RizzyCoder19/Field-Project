@@ -66,8 +66,8 @@ export default function SourcesPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 12 · PROVENANCE & AUDIT TRAIL</span>
           </div>
 
@@ -87,10 +87,10 @@ export default function SourcesPage() {
           <a
             href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
             download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-            className="p-6 bg-[#06080F] hover:bg-[#161F30] border border-[#00F0FF]/50 hover:border-[#00F0FF] rounded-sm transition-all flex items-center justify-between group shadow-lg"
+            className="p-6 bg-[#06080F] hover:bg-[#161F30] border border-[#5FB0A8]/50 hover:border-[#5FB0A8] rounded-sm transition-all flex items-center justify-between group shadow-lg"
           >
             <div className="space-y-1.5">
-              <span className="text-[#00F0FF] font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span className="text-[#5FB0A8] font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <FileText className="w-4 h-4" />
                 <span>Export Formal Academic Report</span>
               </span>
@@ -101,7 +101,7 @@ export default function SourcesPage() {
                 Clean, standardized institutional report view for submission and review.
               </p>
             </div>
-            <ArrowRight className="w-5 h-5 text-[#00F0FF] transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 text-[#5FB0A8] transition-transform group-hover:translate-x-1" />
           </a>
 
           <a
@@ -112,7 +112,7 @@ export default function SourcesPage() {
           >
             <div className="space-y-1.5">
               <span className="text-[#F8FAFC] font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <Code className="w-4 h-4 text-[#00F0FF]" />
+                <Code className="w-4 h-4 text-[#5FB0A8]" />
                 <span>Source Code & Datasets</span>
               </span>
               <div className="font-serif text-lg font-bold text-[#F8FAFC]">
@@ -130,7 +130,7 @@ export default function SourcesPage() {
       {/* 3. PRIMARY GOVERNMENT SOURCES */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6">
         <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00F0FF] font-bold">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
             Primary Government Provenance
           </span>
           <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
@@ -145,7 +145,7 @@ export default function SourcesPage() {
               className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-2 shadow-md"
             >
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                <span className="text-[#00F0FF] font-bold uppercase">PRIMARY SOURCE 0{idx + 1}</span>
+                <span className="text-[#5FB0A8] font-bold uppercase">PRIMARY SOURCE 0{idx + 1}</span>
                 <span className="text-[#94A3B8]">{src.period}</span>
               </div>
               <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">
@@ -166,7 +166,7 @@ export default function SourcesPage() {
       <section className="border-t border-[#F8FAFC]/15 bg-[#030407] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-6">
           <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00F0FF] font-bold">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
               Epidemiological Literature
             </span>
             <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
@@ -180,7 +180,7 @@ export default function SourcesPage() {
                 key={idx}
                 className="p-5 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-1.5"
               >
-                <div className="text-[#00F0FF] font-bold uppercase">Citation 0{idx + 1}</div>
+                <div className="text-[#5FB0A8] font-bold uppercase">Citation 0{idx + 1}</div>
                 <p className="text-[#F8FAFC] leading-relaxed font-sans text-sm font-medium">
                   {lit.citation}
                 </p>
@@ -196,7 +196,7 @@ export default function SourcesPage() {
       {/* 5. ACADEMIC CREDENTIAL FRAMEWORK */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6">
         <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#00F0FF] font-bold">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
             Academic Context
           </span>
           <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
@@ -219,8 +219,8 @@ export default function SourcesPage() {
 
       {/* 6. CHAPTER CONCLUDING TAKEAWAY */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="p-6 bg-[#0B111E] border border-[#00F0FF]/40 rounded-sm space-y-2">
-          <div className="text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold flex items-center gap-1.5">
+        <div className="p-6 bg-[#0B111E] border border-[#5FB0A8]/40 rounded-sm space-y-2">
+          <div className="text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4" />
             <span>Chapter 12 Takeaway</span>
           </div>

@@ -49,7 +49,7 @@ export default function OutlierScene() {
 
         {/* Combined */}
         <div className={`border rounded-sm p-3 flex-1 min-w-[140px] transition-all duration-500 ${
-          removed ? "border-[#00F0FF]/20 bg-[#00F0FF]/06" : "border-[#A94F3D]/30 bg-[#A94F3D]/05"
+          removed ? "border-[#5FB0A8]/20 bg-[#5FB0A8]/06" : "border-[#A94F3D]/30 bg-[#A94F3D]/05"
         }`}>
           <div className="font-mono text-[8px] text-[#94A3B8] uppercase tracking-wider">Combined</div>
           <div className="font-serif text-2xl text-[#A94F3D] font-bold mt-1">
@@ -77,7 +77,7 @@ export default function OutlierScene() {
         </div>
 
         {removed && (
-          <div className="font-mono text-[10px] text-[#00F0FF] tracking-wider">
+          <div className="font-mono text-[10px] text-[#5FB0A8] tracking-wider">
             → Peak shifts to April / May
           </div>
         )}

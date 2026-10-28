@@ -30,8 +30,8 @@ export default function GeographyPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 05 · SPATIAL EPIDEMIOLOGY</span>
           </div>
 
@@ -108,7 +108,7 @@ export default function GeographyPage() {
           {/* Bottom Floating Hotspot Callout & Honest Legend Note */}
           <div className="pt-4 border-t border-[#F8FAFC]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono text-[#94A3B8] z-10 relative">
             <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-xs border border-[#00F0FF]" style={{ backgroundColor: currentSummary.color }} />
+              <span className="w-3 h-3 rounded-xs border border-[#5FB0A8]" style={{ backgroundColor: currentSummary.color }} />
               <span className="text-[#F8FAFC] font-semibold">Colored Districts:</span>
               <span>≥1 Investigated Outbreak Verified in 2022–2025</span>
             </div>
@@ -123,7 +123,7 @@ export default function GeographyPage() {
         <div className="pt-6 border-t border-[#F8FAFC]/15">
           <button
             onClick={() => setShowTableDrawer(!showTableDrawer)}
-            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold"
+            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold"
           >
             <div className="flex items-center gap-2">
               <Compass className="w-4 h-4" />

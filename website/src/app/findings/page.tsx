@@ -76,7 +76,7 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     evidenceTitle: "Threshold Divergence Between Clinics & IDSP Bulletins",
     evidenceData: "Palghar UHP logs daily fevers on Form P/L, but state bulletins only aggregate formally declared outbreak investigations.",
     evidenceCategory: "Operational Systems",
-    color: "#00F0FF",
+    color: "#5FB0A8",
     certainty: "Operational (Fieldwork)",
     actionTitle: "Syndromic Digital Threshold Triggers",
     actionTiming: "Continuous Year-Round System",
@@ -94,8 +94,8 @@ export default function FindingsPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 10 · SYNTHESIS & ACTION</span>
           </div>
 
@@ -171,10 +171,10 @@ export default function FindingsPage() {
             </div>
 
             {/* Right: The Recommended Public Health Action (6 cols) */}
-            <div className="lg:col-span-6 p-6 bg-[#06080F] border border-[#00F0FF]/30 rounded-sm flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-6 p-6 bg-[#06080F] border border-[#5FB0A8]/30 rounded-sm flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="font-bold text-[#00F0FF] uppercase tracking-wider">
+                  <span className="font-bold text-[#5FB0A8] uppercase tracking-wider">
                     TARGETED INTERVENTION
                   </span>
                   <span className="text-[10px] text-[#10B981] font-bold">{activeNode.actionTiming}</span>
@@ -189,7 +189,7 @@ export default function FindingsPage() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between text-xs font-mono text-[#00F0FF]">
+              <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between text-xs font-mono text-[#5FB0A8]">
                 <span>Operational Priority #{activeNode.num}</span>
                 <ArrowRight className="w-4 h-4" />
               </div>
@@ -204,7 +204,7 @@ export default function FindingsPage() {
                 onClick={() => setSelectedNodeId(n.id)}
                 className={`p-2.5 rounded-sm border text-left transition-all ${
                   selectedNodeId === n.id
-                    ? "bg-[#06080F] border-[#00F0FF] text-[#F8FAFC]"
+                    ? "bg-[#06080F] border-[#5FB0A8] text-[#F8FAFC]"
                     : "bg-[#06080F]/40 border-[#F8FAFC]/10 text-[#94A3B8]/70 hover:text-[#F8FAFC]"
                 }`}
               >
@@ -217,7 +217,7 @@ export default function FindingsPage() {
 
         {/* 3. SCIENTIFIC RESTRAINT & LIMITATIONS OF EVIDENCE */}
         <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-3 font-mono text-xs text-[#94A3B8]">
-          <div className="flex items-center gap-2 text-[#00F0FF] font-bold uppercase text-[11px]">
+          <div className="flex items-center gap-2 text-[#5FB0A8] font-bold uppercase text-[11px]">
             <ShieldCheck className="w-4 h-4" />
             <span>Research Restraint & Boundaries of Interpretation</span>
           </div>
@@ -232,9 +232,9 @@ export default function FindingsPage() {
         </div>
 
         {/* 4. DIRECT ACADEMIC REPORT ACCESS */}
-        <div className="p-6 bg-gradient-to-r from-[#0B111E] to-[#1A2234] border border-[#00F0FF]/40 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-6 bg-gradient-to-r from-[#0B111E] to-[#1A2234] border border-[#5FB0A8]/40 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase text-[#00F0FF] font-bold tracking-wider">
+            <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold tracking-wider">
               Comprehensive Academic Documentation
             </span>
             <h4 className="font-serif text-xl font-bold text-[#F8FAFC]">
@@ -248,7 +248,7 @@ export default function FindingsPage() {
           <a
             href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
             download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-            className="px-5 py-3 bg-[#00F0FF] hover:bg-[#38BDF8] text-[#06080F] font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all shadow-lg flex items-center justify-center gap-2 shrink-0"
+            className="px-5 py-3 bg-[#5FB0A8] hover:bg-[#38BDF8] text-[#06080F] font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all shadow-lg flex items-center justify-center gap-2 shrink-0"
           >
             <FileText className="w-4 h-4" />
             <span>Open Academic Report (PDF)</span>

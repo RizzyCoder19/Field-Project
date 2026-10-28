@@ -10,7 +10,7 @@ interface NativeSeasonalChartProps {
 }
 
 const DISEASE_OPTIONS = [
-  { id: "all", label: "All 5 Cohorts", color: "#00F0FF" },
+  { id: "all", label: "All 5 Cohorts", color: "#5FB0A8" },
   { id: "dengue", label: "Dengue Fever", color: "#38BDF8" },
   { id: "add", label: "ADD (Diarrheal)", color: "#10B981" },
   { id: "malaria", label: "Malaria", color: "#F59E0B" },
@@ -24,9 +24,15 @@ export default function NativeSeasonalChart({
   allowToggleMode = true,
 }: NativeSeasonalChartProps) {
   const [selectedDisease, setSelectedDisease] = useState(initialDisease);
+  const [prevInitialDisease, setPrevInitialDisease] = useState(initialDisease);
   const [metric, setMetric] = useState<"events" | "cases">("events");
   const [animatedProgress, setAnimatedProgress] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  if (initialDisease && prevInitialDisease !== initialDisease) {
+    setPrevInitialDisease(initialDisease);
+    setSelectedDisease(initialDisease);
+  }
 
   useEffect(() => {
     let frameId: number;
@@ -70,7 +76,7 @@ export default function NativeSeasonalChart({
   });
 
   const maxValue = Math.max(...values, 1);
-  const activeColor = DISEASE_OPTIONS.find((d) => d.id === selectedDisease)?.color || "#00F0FF";
+  const activeColor = DISEASE_OPTIONS.find((d) => d.id === selectedDisease)?.color || "#5FB0A8";
 
   const width = 840;
   const height = 340;
@@ -85,9 +91,9 @@ export default function NativeSeasonalChart({
   const peakIdx = values.indexOf(Math.max(...values));
 
   return (
-    <div ref={containerRef} className={`w-full flex flex-col bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 lg:p-8 shadow-2xl ${className}`}>
+    <div ref={containerRef} className={`w-full flex flex-col bg-[#0A1016] border border-white/[0.08] rounded-sm p-4 sm:p-6 lg:p-8 shadow-2xl ${className}`}>
       {/* Top Bar: Disease Selector & Metric Switch */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-[#F8FAFC]/10">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/[0.06]">
         <div className="flex flex-wrap gap-2">
           {DISEASE_OPTIONS.map((opt) => {
             const active = selectedDisease === opt.id;
@@ -97,11 +103,10 @@ export default function NativeSeasonalChart({
                 onClick={() => setSelectedDisease(opt.id)}
                 className="font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm border transition-all flex items-center gap-1.5"
                 style={{
-                  borderColor: active ? opt.color : "rgba(212, 175, 55, 0.2)",
-                  backgroundColor: active ? `${opt.color}25` : "#06080F",
-                  color: active ? "#F8FAFC" : "#94A3B8",
+                  borderColor: active ? opt.color : "rgba(255, 255, 255, 0.10)",
+                  backgroundColor: active ? `${opt.color}25` : "#070A10",
+                  color: active ? "#F5F1E8" : "#A8B6BA",
                   fontWeight: active ? "bold" : "normal",
-                  boxShadow: active ? `0 0 12px ${opt.color}40` : "none"
                 }}
               >
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: opt.color }} />
@@ -112,13 +117,13 @@ export default function NativeSeasonalChart({
         </div>
 
         {allowToggleMode && (
-          <div className="flex items-center gap-1 bg-[#06080F] border border-[#F8FAFC]/15 p-1 rounded-sm">
+          <div className="flex items-center gap-1 bg-[#070A10] border border-white/[0.08] p-1 rounded-sm">
             <button
               onClick={() => setMetric("events")}
               className={`font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm transition-colors ${
                 metric === "events"
-                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow-md"
-                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
+                  ? "bg-[#5FB0A8] text-[#070A10] font-bold"
+                  : "text-[#A8B6BA] hover:text-[#F5F1E8]"
               }`}
             >
               Outbreak Events (N=539)
@@ -127,8 +132,8 @@ export default function NativeSeasonalChart({
               onClick={() => setMetric("cases")}
               className={`font-mono text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-sm transition-colors ${
                 metric === "cases"
-                  ? "bg-[#00F0FF] text-[#06080F] font-bold shadow-md"
-                  : "text-[#94A3B8] hover:text-[#F8FAFC]"
+                  ? "bg-[#5FB0A8] text-[#070A10] font-bold"
+                  : "text-[#A8B6BA] hover:text-[#F5F1E8]"
               }`}
             >
               Reported Cases (N=20,955)
@@ -137,7 +142,7 @@ export default function NativeSeasonalChart({
         )}
       </div>
 
-      {/* SVG Canvas - Expanded to 840x340 */}
+      {/* SVG Canvas - 840x340 */}
       <div className="relative w-full aspect-[21/9] min-h-[260px] sm:min-h-[300px]">
         <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full overflow-visible">
           <defs>
@@ -163,7 +168,7 @@ export default function NativeSeasonalChart({
                   y1={y}
                   x2={width - padding.right}
                   y2={y}
-                  stroke="#F8FAFC"
+                  stroke="#F5F1E8"
                   strokeOpacity="0.08"
                   strokeDasharray={ratio === 0 ? "none" : "3,3"}
                 />
@@ -171,7 +176,7 @@ export default function NativeSeasonalChart({
                   x={padding.left - 12}
                   y={y + 4}
                   textAnchor="end"
-                  className="font-mono text-xs fill-[#94A3B8]"
+                  className="font-mono text-xs fill-[#A8B6BA]"
                 >
                   {val.toLocaleString()}
                 </text>
@@ -185,18 +190,18 @@ export default function NativeSeasonalChart({
             y1={padding.top + chartH}
             x2={width - padding.right}
             y2={padding.top + chartH}
-            stroke="#F8FAFC"
-            strokeOpacity="0.3"
+            stroke="#F5F1E8"
+            strokeOpacity="0.25"
             strokeWidth="1.5"
           />
 
-          {/* Staggered Animated Bars with clear large typography */}
+          {/* Staggered Animated Bars */}
           {values.map((v, i) => {
             const barProgress = Math.max(0, Math.min(1, (animatedProgress - i * 0.04) / 0.5));
             const h = (v / maxValue) * chartH * barProgress;
             const x = padding.left + i * barGap + (barGap - barWidth) / 2;
             const y = padding.top + chartH - h;
-            const isPeak = i === peakIdx && v > 0;
+            const isPeak = i === peakIdx && values[peakIdx] > 0;
 
             return (
               <g key={MONTHS[i]} className="transition-all duration-200">
@@ -216,7 +221,7 @@ export default function NativeSeasonalChart({
                     x={x + barWidth / 2}
                     y={y - 8}
                     textAnchor="middle"
-                    className="font-mono text-xs sm:text-sm fill-[#F8FAFC] font-bold"
+                    className="font-mono text-xs sm:text-sm fill-[#F5F1E8] font-bold"
                   >
                     {v.toLocaleString()}
                   </text>
@@ -228,7 +233,7 @@ export default function NativeSeasonalChart({
                   y={height - padding.bottom + 26}
                   textAnchor="middle"
                   className={`font-mono text-xs sm:text-sm font-bold ${
-                    isPeak ? "fill-[#00F0FF]" : "fill-[#94A3B8]"
+                    isPeak ? "fill-[#5FB0A8]" : "fill-[#A8B6BA]"
                   }`}
                 >
                   {MONTHS[i]}
@@ -283,10 +288,9 @@ export default function NativeSeasonalChart({
                 width="110"
                 height="24"
                 rx="3"
-                fill="#0B111E"
+                fill="#0A1016"
                 stroke={activeColor}
                 strokeWidth="1.5"
-                filter="url(#glow)"
               />
               <text
                 x={padding.left + peakIdx * barGap + barGap / 2}
@@ -303,9 +307,9 @@ export default function NativeSeasonalChart({
       </div>
 
       {/* Analytical Footnote */}
-      <div className="mt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#94A3B8] border-t border-[#F8FAFC]/10 pt-3">
+      <div className="mt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#A8B6BA] border-t border-white/[0.06] pt-3">
         <span>Source: 2022–2025 Baseline Archives (539 primary records)</span>
-        <span className="text-[#00F0FF] font-bold">
+        <span className="text-[#5FB0A8] font-bold">
           {metric === "events"
             ? `Total: ${values.reduce((a, b) => a + b, 0)} outbreak events`
             : `Total: ${values.reduce((a, b) => a + b, 0).toLocaleString()} reported cases`}

@@ -17,8 +17,8 @@ export default function OutliersPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 07 · NUMERICAL SENSITIVITY</span>
           </div>
 
@@ -40,8 +40,8 @@ export default function OutliersPage() {
         </div>
 
         {/* Direct Attached Takeaways Banner */}
-        <div className="p-4 bg-[#0B111E] border border-[#00F0FF]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
-          <CheckCircle2 className="w-5 h-5 text-[#00F0FF] shrink-0 mt-0.5" />
+        <div className="p-4 bg-[#0B111E] border border-[#5FB0A8]/30 rounded-sm flex items-start gap-3 text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
+          <CheckCircle2 className="w-5 h-5 text-[#5FB0A8] shrink-0 mt-0.5" />
           <div>
             <strong className="text-[#F8FAFC]">Core Public Health Finding:</strong> When three single banquet records totaling <strong className="text-[#EF4444]">1,615 cases</strong> are set aside in sensitivity analysis, February case volume collapses from 2,162 down to 547 cases. 
             The genuine background seasonal peak moves to the pre-monsoon summer months of April (899 cases) and May (894 cases).
@@ -53,14 +53,14 @@ export default function OutliersPage() {
           <span>
             ★ Scientific Integrity: Government bulletins remain 100% authentic; sensitivity testing investigates analytical distortion, not fraud.
           </span>
-          <span className="text-[#00F0FF]">Sensitivity Protocol</span>
+          <span className="text-[#5FB0A8]">Sensitivity Protocol</span>
         </div>
 
         {/* 3. OPTIONAL EXPANDABLE SENSITIVITY METHODOLOGY DRAWER */}
         <div className="pt-6 border-t border-[#F8FAFC]/15">
           <button
             onClick={() => setShowMethodologyDrawer(!showMethodologyDrawer)}
-            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#00F0FF] font-bold"
+            className="w-full p-4 bg-[#0B111E] hover:bg-[#1A2234] border border-[#F8FAFC]/15 rounded-sm transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold"
           >
             <div className="flex items-center gap-2">
               <ShieldAlert className="w-4 h-4" />

@@ -22,7 +22,7 @@ export default function PrintPage() {
       {/* Print Control Header (Hidden in Print) */}
       <div className="max-w-5xl mx-auto mb-10 pb-6 border-b border-[#F8FAFC/10] flex flex-wrap items-center justify-between gap-4 print-hidden">
         <div>
-          <span className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-semibold">
+          <span className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-semibold">
             Offline & Archival Print Layout
           </span>
           <h1 className="font-serif text-2xl font-bold text-[#F8FAFC]">
@@ -42,7 +42,7 @@ export default function PrintPage() {
           </Link>
           <button
             onClick={handlePrint}
-            className="px-5 py-2 font-mono text-[10px] uppercase tracking-widest font-bold rounded bg-[#00F0FF] text-[#06080F] hover:bg-[#F59E0B] transition-colors shadow-lg flex items-center gap-2"
+            className="px-5 py-2 font-mono text-[10px] uppercase tracking-widest font-bold rounded bg-[#5FB0A8] text-[#06080F] hover:bg-[#F59E0B] transition-colors shadow-lg flex items-center gap-2"
           >
             <span>🖨️</span> Print / Save as PDF
           </button>
@@ -53,13 +53,13 @@ export default function PrintPage() {
       <div className="max-w-5xl mx-auto space-y-16 print:space-y-8">
         {/* COVER / TITLE PAGE */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#00F0FF] mb-4 font-semibold">
+          <div className="font-mono text-[9px] uppercase tracking-[0.25em] text-[#5FB0A8] mb-4 font-semibold">
             B.Sc. Data Science · Semester III · Field Project
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#F8FAFC] print:text-black leading-tight">
             Analysis of Seasonal Disease Patterns Using Government Health Data
           </h1>
-          <h2 className="font-serif text-xl sm:text-2xl text-[#00F0FF] print:text-[#896b27] italic mt-3">
+          <h2 className="font-serif text-xl sm:text-2xl text-[#5FB0A8] print:text-[#896b27] italic mt-3">
             From Government Records to Seasonal Patterns and Local Field Context in Maharashtra
           </h2>
 
@@ -75,7 +75,7 @@ export default function PrintPage() {
             </div>
             <div>
               <div className="font-mono text-[8px] uppercase tracking-wider text-[#94A3B8]">Project Guide</div>
-              <div className="font-mono text-xs font-bold text-[#00F0FF]">Prof. Angelin</div>
+              <div className="font-mono text-xs font-bold text-[#5FB0A8]">Prof. Angelin</div>
             </div>
             <div>
               <div className="font-mono text-[8px] uppercase tracking-wider text-[#94A3B8]">Surveillance Period</div>
@@ -87,27 +87,27 @@ export default function PrintPage() {
 
         {/* ACT 01: THE CORE QUESTION */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 01</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 01</div>
           <h2 className="font-serif text-3xl font-bold mt-1">What is the Question?</h2>
-          <p className="font-serif text-xl italic text-[#00F0FF] mt-1">
+          <p className="font-serif text-xl italic text-[#5FB0A8] mt-1">
             When do diseases appear? And do their patterns repeat across years?
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
             <div className="p-4 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm print:bg-gray-50 print:border-gray-200">
-              <div className="font-serif text-2xl font-bold text-[#00F0FF]">WHEN</div>
+              <div className="font-serif text-2xl font-bold text-[#5FB0A8]">WHEN</div>
               <div className="font-mono text-xs text-[#94A3B8] mt-1">does outbreak activity concentrate?</div>
             </div>
             <div className="p-4 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm print:bg-gray-50 print:border-gray-200">
-              <div className="font-serif text-2xl font-bold text-[#00F0FF]">WHICH</div>
+              <div className="font-serif text-2xl font-bold text-[#5FB0A8]">WHICH</div>
               <div className="font-mono text-xs text-[#94A3B8] mt-1">diseases show recurring patterns?</div>
             </div>
             <div className="p-4 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm print:bg-gray-50 print:border-gray-200">
-              <div className="font-serif text-2xl font-bold text-[#00F0FF]">WHERE</div>
+              <div className="font-serif text-2xl font-bold text-[#5FB0A8]">WHERE</div>
               <div className="font-mono text-xs text-[#94A3B8] mt-1">are events geographically localized?</div>
             </div>
             <div className="p-4 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm print:bg-gray-50 print:border-gray-200">
-              <div className="font-serif text-2xl font-bold text-[#00F0FF]">HOW STABLE</div>
+              <div className="font-serif text-2xl font-bold text-[#5FB0A8]">HOW STABLE</div>
               <div className="font-mono text-xs text-[#94A3B8] mt-1">are patterns under statistical testing?</div>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function PrintPage() {
 
         {/* ACT 02: WHERE DID THE DATA COME FROM? */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 02</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 02</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Where did the data come from?</h2>
           <p className="font-mono text-xs text-[#94A3B8] mt-1">
             Source: National Centre for Disease Control (NCDC) / Integrated Disease Surveillance Programme (IDSP)
@@ -133,7 +133,7 @@ export default function PrintPage() {
               <div className="font-mono text-[8px] text-[#94A3B8]">Verified Maharashtra Rows</div>
             </div>
             <div className="p-6 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm print:bg-gray-50 print:border-gray-200">
-              <div className="font-serif text-4xl font-bold text-[#00F0FF]">20,955</div>
+              <div className="font-serif text-4xl font-bold text-[#5FB0A8]">20,955</div>
               <div className="font-mono text-[9px] uppercase tracking-wider text-[#94A3B8] mt-1">Reported Cases</div>
               <div className="font-mono text-[8px] text-[#94A3B8]">2022–2025 Primary Baseline</div>
             </div>
@@ -142,7 +142,7 @@ export default function PrintPage() {
 
         {/* ACT 03 & 04: EXTRACTION & TAXONOMY */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 03 & 04</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 03 & 04</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Extraction & Taxonomic Normalization</h2>
           <div className="mt-6">
             <NativeTaxonomyConvergence />
@@ -151,9 +151,9 @@ export default function PrintPage() {
 
         {/* ACT 05 & 06: SEASONAL VISUALIZATION */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 05 & 06</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 05 & 06</div>
           <h2 className="font-serif text-3xl font-bold mt-1">When do these diseases appear?</h2>
-          <p className="font-serif text-xl italic text-[#00F0FF] mt-1">
+          <p className="font-serif text-xl italic text-[#5FB0A8] mt-1">
             Five Diseases · Five Temporal Signatures
           </p>
 
@@ -165,7 +165,7 @@ export default function PrintPage() {
 
         {/* ACT 07: CONCORDANCE & DIVERGENCE */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 07</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 07</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Concordance & Case Divergence</h2>
 
           <div className="mt-6 space-y-6">
@@ -176,7 +176,7 @@ export default function PrintPage() {
 
         {/* ACT 08: GEOGRAPHY */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 08</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 08</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Geographic Footprint: Maharashtra</h2>
           <p className="font-mono text-xs text-[#94A3B8] mt-1">
             Statewide seasonal synchronization does not imply geographic uniformity.
@@ -204,7 +204,7 @@ export default function PrintPage() {
 
         {/* ACT 09: OUTLIER SENSITIVITY */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 09</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 09</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Outlier Sensitivity Decomposition</h2>
           <div className="mt-6">
             <NativeOutlierDecomposition />
@@ -213,7 +213,7 @@ export default function PrintPage() {
 
         {/* ACT 10: 2026 SURVEILLANCE WINDOW */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 10</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 10</div>
           <h2 className="font-serif text-3xl font-bold mt-1">2026 Partial-Year Surveillance Window</h2>
           <div className="mt-6">
             <NativeTimeline2026 />
@@ -222,11 +222,11 @@ export default function PrintPage() {
 
         {/* ACT 11, 12, 13: FIELD EVIDENCE & SYNTHESIS */}
         <section className="print-break-after border-b border-[#F8FAFC/10] pb-12 print:pb-8">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 11, 12 & 13</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 11, 12 & 13</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Fieldwork Evidence & Contextual Comparison</h2>
 
           <div className="mt-6 p-4 bg-[#0B111E] border border-[#F8FAFC/10] rounded-sm">
-            <div className="font-mono text-[8px] text-[#00F0FF] uppercase tracking-widest font-bold">
+            <div className="font-mono text-[8px] text-[#5FB0A8] uppercase tracking-widest font-bold">
               Facility Verification
             </div>
             <div className="font-serif text-lg font-bold mt-1">PHC Nallasopara West — VVMC Health Post</div>
@@ -270,9 +270,9 @@ export default function PrintPage() {
 
         {/* ACT 14: CONCLUSION & CREDITS */}
         <section className="pt-6">
-          <div className="font-mono text-[9px] uppercase tracking-widest text-[#00F0FF] font-bold">Act 14</div>
+          <div className="font-mono text-[9px] uppercase tracking-widest text-[#5FB0A8] font-bold">Act 14</div>
           <h2 className="font-serif text-3xl font-bold mt-1">Conclusion</h2>
-          <div className="font-serif text-2xl italic text-[#00F0FF] mt-2">
+          <div className="font-serif text-2xl italic text-[#5FB0A8] mt-2">
             The pattern is seasonal. The context is local. The interpretation needs both.
           </div>
 

@@ -139,8 +139,8 @@ export default function MethodPage() {
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
       <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#00F0FF] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#00F0FF]" />
+          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
             <span>EXHIBIT 11 · DATA PIPELINE</span>
           </div>
 
@@ -167,13 +167,13 @@ export default function MethodPage() {
                   onClick={() => setSelectedStageIdx(idx)}
                   className={`w-full p-3 rounded-sm border text-left transition-all flex items-center justify-between ${
                     isSelected
-                      ? "bg-[#0B111E] border-[#00F0FF] shadow-md"
+                      ? "bg-[#0B111E] border-[#5FB0A8] shadow-md"
                       : "bg-[#06080F] border-[#F8FAFC]/10 hover:border-[#F8FAFC]/25"
                   }`}
                 >
                   <div className="flex items-center gap-3">
                     <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded-xs ${
-                      isSelected ? "bg-[#00F0FF] text-[#06080F]" : "bg-[#0B111E] text-[#94A3B8]"
+                      isSelected ? "bg-[#5FB0A8] text-[#06080F]" : "bg-[#0B111E] text-[#94A3B8]"
                     }`}>
                       {stg.num}
                     </span>
@@ -184,7 +184,7 @@ export default function MethodPage() {
                     </span>
                   </div>
                   <ChevronRight className={`w-4 h-4 transition-transform ${
-                    isSelected ? "text-[#00F0FF] translate-x-0.5" : "text-[#94A3B8]/40"
+                    isSelected ? "text-[#5FB0A8] translate-x-0.5" : "text-[#94A3B8]/40"
                   }`} />
                 </button>
               );
@@ -195,7 +195,7 @@ export default function MethodPage() {
           <div className="lg:col-span-7 p-6 sm:p-8 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm shadow-2xl space-y-6">
             <div className="flex items-center justify-between border-b border-[#F8FAFC]/10 pb-4">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#00F0FF] font-bold tracking-widest">
+                <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold tracking-widest">
                   PIPELINE STAGE {activeStage.num} OF 12
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#F8FAFC]">
@@ -219,7 +219,7 @@ export default function MethodPage() {
               </div>
 
               <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm space-y-1">
-                <span className="text-[10px] text-[#00F0FF] uppercase font-bold">Transformation Procedure:</span>
+                <span className="text-[10px] text-[#5FB0A8] uppercase font-bold">Transformation Procedure:</span>
                 <p className="text-[#94A3B8]">{activeStage.transform}</p>
               </div>
 
@@ -232,7 +232,7 @@ export default function MethodPage() {
             {/* Verification Artifact Pointer */}
             <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between font-mono text-xs">
               <span className="text-[#94A3B8]">Verification Artifact:</span>
-              <span className="text-[#00F0FF] font-semibold">{activeStage.artifact}</span>
+              <span className="text-[#5FB0A8] font-semibold">{activeStage.artifact}</span>
             </div>
           </div>
         </div>

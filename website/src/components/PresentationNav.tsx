@@ -3,291 +3,532 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { 
-  Menu, X, BookOpen, ExternalLink, FileText 
-} from "lucide-react";
-import { RESEARCH_CHAPTERS, getChapterByPath } from "@/data/chapters";
+import { Menu, X, FileText, ChevronDown, Compass, ArrowUp, ExternalLink, BookOpen, Layers } from "lucide-react";
+
+const PRIMARY_LINKS = [
+  { label: "Overview", href: "/" },
+  { label: "Data Archive", href: "/data" },
+  { label: "5 Diseases", href: "/diseases" },
+  { label: "Geography", href: "/geography" },
+  { label: "Fieldwork", href: "/fieldwork" },
+  { label: "Findings", href: "/findings" },
+];
+
+const EXPLORE_LINKS = [
+  { label: "Seasonality & Radial Clock", href: "/seasonality" },
+  { label: "Kendall's W Repeatability", href: "/stability" },
+  { label: "Outlier Sensitivity Testing", href: "/outliers" },
+  { label: "Matched 2026 Comparison", href: "/comparison-2026" },
+  { label: "12-Stage Methodology", href: "/method" },
+  { label: "Surveillance Bulletin Sources", href: "/sources" },
+  { label: "Evidence Dossier", href: "/evidence" },
+  { label: "Research Thesis", href: "/research" },
+];
+
+import { CANONICAL_RESEARCH_ACTS } from "@/data/researchJourney";
+
+const NARRATIVE_ACTS = [
+  { id: "hero", label: "Intro", shortTitle: "Introduction", actNumber: "00", category: "FOUNDATION", deepDiveUrl: "/" },
+  ...CANONICAL_RESEARCH_ACTS.map((act) => ({
+    id: act.id,
+    label: `${act.actNumber} ${act.shortTitle}`,
+    shortTitle: act.shortTitle,
+    actNumber: act.actNumber,
+    category: act.category,
+    question: act.question,
+    deepDiveUrl: act.deepDiveUrl,
+  })),
+];
 
 export default function PresentationNav() {
   const pathname = usePathname();
-  const [scrollPct, setScrollPct] = useState(0);
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [exploreOpen, setExploreOpen] = useState(false);
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("hero");
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const currentChapter = getChapterByPath(pathname);
+  const isHomepage = pathname === "/";
 
+  // Track scroll position to transition from top nav to cinematic side rail
   useEffect(() => {
-    const onScroll = () => {
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
-      setScrollPct(pct);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
     };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close menus on route change
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setExploreOpen(false);
+    setSideMenuOpen(false);
+  }
+
+  // Close explore dropdown when clicking outside
+  useEffect(() => {
+    if (!exploreOpen) return;
+    const handleClick = () => setExploreOpen(false);
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, [exploreOpen]);
+
+  // Track active section on homepage using IntersectionObserver
+  useEffect(() => {
+    if (!isHomepage) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-25% 0px -55% 0px",
+        threshold: 0,
+      }
+    );
+
+    NARRATIVE_ACTS.forEach((act) => {
+      const el = document.getElementById(act.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, [isHomepage]);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
+
+  const currentAct = NARRATIVE_ACTS.find((a) => a.id === activeSection) || NARRATIVE_ACTS[0];
 
   return (
     <>
-      {/* Scroll Progress Indicator Bar */}
-      <div className="fixed top-0 left-0 right-0 h-[2px] z-[200] bg-[#06080F]">
-        <div
-          className="h-full bg-gradient-to-r from-[#D4AF37] via-[#00F0FF] to-[#38BDF8] transition-all duration-75 shadow-[0_0_8px_rgba(0,240,255,0.4)]"
-          style={{ width: `${scrollPct}%` }}
-        />
-      </div>
-
-      {/* Top Floating Editorial Nav Bar */}
-      <header className="sticky top-0 left-0 right-0 z-[190] px-3 sm:px-6 py-2.5 bg-[#06080F]/94 backdrop-blur-md border-b border-[#D4AF37]/18 shadow-2xl">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
-          {/* Left Brand Identity */}
+      {/* ── Top Navigation Bar: Displays on non-homepage, and at the top of homepage before scrolling ── */}
+      <header
+        className={`z-[190] bg-[#070A10]/95 backdrop-blur-md border-b border-white/[0.08] transition-all duration-500 ${
+          isHomepage
+            ? `fixed top-0 left-0 right-0 ${
+                isScrolled
+                  ? "-translate-y-full opacity-0 pointer-events-none"
+                  : "translate-y-0 opacity-100"
+              }`
+            : "sticky top-0 left-0 right-0"
+        }`}
+      >
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
+          
+          {/* Left: Project Title */}
           <Link
             href="/"
-            className="group flex items-center gap-2.5 focus:outline-none focus:ring-1 focus:ring-[#D4AF37] rounded-sm py-1"
+            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D7B56D] rounded-sm py-1 shrink-0"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-[#D4AF37] shadow-[0_0_12px_rgba(212,175,55,0.8)] group-hover:scale-125 transition-transform" />
             <div className="flex flex-col">
-              <span className="font-mono text-[10px] sm:text-xs text-[#F5D061] tracking-[0.24em] uppercase font-bold group-hover:text-[#FFF] transition-colors">
+              <span className="text-xs font-bold text-[#D7B56D] tracking-[0.16em] uppercase group-hover:text-[#E8C97D] transition-colors">
                 From Data to the Ground
               </span>
-              <span className="text-[11px] sm:text-xs text-[#94A3B8] hidden md:inline">
-                Seasonal Disease Surveillance in Maharashtra · Khan Umar
+              <span className="text-[11px] text-[#87999E] hidden sm:inline tracking-normal">
+                Seasonal Disease Surveillance in Maharashtra
               </span>
             </div>
           </Link>
 
-          {/* Center: Current Chapter Badge (Medium+ screens) */}
-          {currentChapter && (
-            <div className="hidden lg:flex items-center gap-2 bg-[#0B111E] border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-sm shadow-sm">
-              <span className="font-mono text-xs text-[#D4AF37] font-bold">
-                {currentChapter.chapterCode} / 12
-              </span>
-              <span className="text-[#94A3B8]/40">·</span>
-              <span className="text-xs font-serif font-semibold text-[#F8FAFC] truncate max-w-[220px]">
-                {currentChapter.shortTitle}
-              </span>
+          {/* Center: Desktop Nav Links */}
+          <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation">
+            {PRIMARY_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
+                  isActive(link.href)
+                    ? "text-[#D7B56D] font-bold bg-white/[0.04]"
+                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+
+            {/* Deep Dives Dropdown */}
+            <div className="relative">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setExploreOpen(!exploreOpen);
+                }}
+                className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1 cursor-pointer ${
+                  EXPLORE_LINKS.some((l) => isActive(l.href))
+                    ? "text-[#D7B56D] font-bold"
+                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                }`}
+                aria-expanded={exploreOpen}
+                aria-haspopup="true"
+              >
+                <span>Deep Dives</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${exploreOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {exploreOpen && (
+                <div
+                  className="absolute top-full right-0 mt-2 w-64 bg-[#0E1420] border border-white/[0.10] rounded-sm shadow-2xl py-1 z-50 divide-y divide-white/[0.04]"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="px-3 py-2 text-[10px] font-mono uppercase text-[#D7B56D] tracking-widest font-semibold">
+                    Academic Chapters & Archives
+                  </div>
+                  <div className="py-1">
+                    {EXPLORE_LINKS.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`block px-4 py-2 text-xs font-mono transition-colors ${
+                          isActive(link.href)
+                            ? "text-[#D7B56D] bg-[#D7B56D]/[0.08]"
+                            : "text-[#A8B6BA] hover:text-[#F5F1E8] hover:bg-white/[0.04]"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          )}
+          </nav>
 
-          {/* Right Action Tools */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* Quick Chapter Links */}
-            <nav className="hidden xl:flex items-center gap-1 text-xs font-mono text-[#94A3B8]">
-              <Link
-                href="/data"
-                className={`px-2.5 py-1.5 rounded-sm transition-colors ${
-                  pathname === "/data"
-                    ? "text-[#00F0FF] bg-[#141E34] border border-[#00F0FF]/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]"
-                    : "hover:text-[#F8FAFC] hover:bg-[#0B111E]/70"
-                }`}
-              >
-                Data
-              </Link>
-              <Link
-                href="/diseases"
-                className={`px-2.5 py-1.5 rounded-sm transition-colors ${
-                  pathname === "/diseases"
-                    ? "text-[#00F0FF] bg-[#141E34] border border-[#00F0FF]/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]"
-                    : "hover:text-[#F8FAFC] hover:bg-[#0B111E]/70"
-                }`}
-              >
-                Diseases
-              </Link>
-              <Link
-                href="/seasonality"
-                className={`px-2.5 py-1.5 rounded-sm transition-colors ${
-                  pathname === "/seasonality"
-                    ? "text-[#00F0FF] bg-[#141E34] border border-[#00F0FF]/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]"
-                    : "hover:text-[#F8FAFC] hover:bg-[#0B111E]/70"
-                }`}
-              >
-                Seasonality
-              </Link>
-              <Link
-                href="/geography"
-                className={`px-2.5 py-1.5 rounded-sm transition-colors ${
-                  pathname === "/geography"
-                    ? "text-[#00F0FF] bg-[#141E34] border border-[#00F0FF]/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]"
-                    : "hover:text-[#F8FAFC] hover:bg-[#0B111E]/70"
-                }`}
-              >
-                Geography
-              </Link>
-              <Link
-                href="/fieldwork"
-                className={`px-2.5 py-1.5 rounded-sm transition-colors ${
-                  pathname === "/fieldwork"
-                    ? "text-[#00F0FF] bg-[#141E34] border border-[#00F0FF]/50 shadow-[0_0_10px_rgba(0,240,255,0.2)]"
-                    : "hover:text-[#F8FAFC] hover:bg-[#0B111E]/70"
-                }`}
-              >
-                Fieldwork
-              </Link>
-            </nav>
-
-            {/* Explore Committed Version on GitHub Button */}
-            <a
-              href="https://github.com/RizzyCoder19/Field-Project/tree/previous-version"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0B111E] border border-[#38BDF8]/40 hover:border-[#38BDF8] text-[#38BDF8] hover:bg-[#38BDF8]/15 px-2.5 sm:px-3 py-1.5 rounded-sm font-mono text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md focus:outline-none focus:ring-1 focus:ring-[#38BDF8]"
-              title="Explore the previous committed version on GitHub (previous-version branch)"
-            >
-              <ExternalLink className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">GitHub</span> Archive
-            </a>
-
-            {/* Export PDF Button */}
+          {/* Right: Academic Report Trigger + Mobile Hamburger */}
+          <div className="flex items-center gap-3">
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="bg-[#0B111E] border border-[#D4AF37]/50 hover:border-[#F5D061] text-[#F5D061] hover:bg-[#D4AF37]/15 px-2.5 sm:px-3 py-1.5 rounded-sm font-mono text-xs uppercase tracking-wider flex items-center gap-1.5 transition-all shadow-md focus:outline-none focus:ring-1 focus:ring-[#D4AF37]"
-              title="Download the finalized academic report PDF"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#D7B56D]/60 hover:border-[#D7B56D] hover:bg-[#D7B56D]/10 text-[#D7B56D] text-xs font-mono uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Report</span> PDF
+              <span className="hidden sm:inline">Academic PDF</span>
+              <span className="sm:hidden">PDF</span>
             </a>
 
-            {/* Navigation Drawer Menu Toggle */}
             <button
-              onClick={() => setDrawerOpen(!drawerOpen)}
-              aria-label="Toggle exhibition chapter menu"
-              aria-expanded={drawerOpen}
-              className="bg-[#0B111E] border border-[#F8FAFC]/20 hover:border-[#00F0FF]/60 text-[#F8FAFC] px-3 py-1.5 rounded-sm flex items-center gap-2 transition-colors focus:outline-none focus:ring-1 focus:ring-[#00F0FF]"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="lg:hidden p-2 text-[#A8B6BA] hover:text-[#F5F1E8] focus:outline-none cursor-pointer"
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
             >
-              <span className="font-mono text-xs uppercase tracking-wider font-semibold hidden sm:inline">
-                Chapters
-              </span>
-              {drawerOpen ? <X className="w-4 h-4 text-[#00F0FF]" /> : <Menu className="w-4 h-4" />}
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
+
         </div>
       </header>
 
-      {/* Navigation Drawer Overlay */}
-      {drawerOpen && (
-        <div
-          className="fixed inset-0 z-[210] flex justify-end bg-black/75 backdrop-blur-sm transition-opacity"
-          onClick={() => setDrawerOpen(false)}
+      {/* ── CINEMATIC DOCKED SIDE RAIL (DESKTOP: Follows user on the right panel, never overlapping content) ── */}
+      {isHomepage && (
+        <aside
+          className={`hidden lg:flex fixed right-3 xl:right-6 top-1/2 -translate-y-1/2 z-[140] flex-col items-center select-none transition-all duration-500 ease-out ${
+            isScrolled
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-6 pointer-events-none"
+          }`}
+          aria-label="Documentary Acts Timeline Rail"
         >
-          <div
-            className="relative h-full w-[min(480px,92vw)] bg-[#06080F] border-l border-[#F8FAFC]/15 overflow-y-auto flex flex-col shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Drawer Header */}
-            <div className="p-5 sm:p-6 border-b border-[#F8FAFC]/15 flex items-center justify-between sticky top-0 bg-[#06080F]/98 z-10">
-              <div>
-                <div className="font-mono text-[10px] tracking-[0.25em] text-[#00F0FF] uppercase font-bold flex items-center gap-1.5">
-                  <BookOpen className="w-3.5 h-3.5" />
-                  Research Chapters Index
-                </div>
-                <div className="font-serif text-lg sm:text-xl font-bold text-[#F8FAFC] mt-0.5">
-                  12 Exhibition Chapters
-                </div>
+          <div className="bg-[#0A1016]/92 backdrop-blur-xl border border-white/[0.12] p-2 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.85)] flex flex-col items-center gap-1.5">
+            
+            {/* Chapters / Menu Drawer Trigger */}
+            <button
+              onClick={() => setSideMenuOpen(!sideMenuOpen)}
+              className="w-8 h-8 rounded-full flex items-center justify-center text-[#D7B56D] hover:text-[#FFF] hover:bg-white/[0.08] transition-all cursor-pointer relative group"
+              title="Open Research Chapters & Navigation Drawer"
+              aria-label="Open Chapters Menu"
+            >
+              <Menu className="w-4 h-4" />
+              {/* Tooltip */}
+              <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-1.5 px-2.5 py-1 bg-[#0E1420]/95 border border-[#D7B56D]/40 text-[#D7B56D] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
+                <span>Chapters & Navigation</span>
               </div>
-              <button
-                onClick={() => setDrawerOpen(false)}
-                className="p-1.5 text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#0B111E] rounded-sm transition-colors"
-                aria-label="Close navigation drawer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+            </button>
 
-            {/* Chapters List */}
-            <div className="p-4 sm:p-6 space-y-2 flex-1">
-              {RESEARCH_CHAPTERS.map((ch) => {
-                const isActive = pathname === ch.path;
+            {/* Hairline Divider Track */}
+            <div className="w-px h-2.5 bg-gradient-to-b from-[#D7B56D]/50 to-white/10" />
+
+            {/* Canonical 9 Acts Rail Beads */}
+            <nav className="flex flex-col items-center gap-1" aria-label="Acts jump navigation">
+              {CANONICAL_RESEARCH_ACTS.map((act) => {
+                const isCurrent = activeSection === act.id;
                 return (
                   <Link
-                    key={ch.id}
-                    href={ch.path}
-                    onClick={() => setDrawerOpen(false)}
-                    className={`block p-3.5 sm:p-4 rounded-sm border transition-all ${
-                      isActive
-                        ? "bg-[#0B111E] border-[#00F0FF] shadow-md ring-1 ring-[#00F0FF]/30"
-                        : "bg-[#06080F] hover:bg-[#0B111E]/70 border-[#F8FAFC]/10 hover:border-[#F8FAFC]/30"
+                    key={act.id}
+                    href={act.deepDiveUrl}
+                    className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-mono transition-all relative group cursor-pointer ${
+                      isCurrent
+                        ? "bg-[#D7B56D] text-[#070A10] font-bold shadow-[0_0_14px_rgba(215,181,109,0.7)] scale-110 ring-2 ring-[#D7B56D]/30"
+                        : "text-[#87999E] hover:text-[#F5F1E8] hover:bg-white/[0.06]"
                     }`}
+                    aria-label={`Enter Act ${act.actNumber}: ${act.shortTitle}`}
+                    aria-current={isCurrent ? "true" : undefined}
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <div className="flex items-center gap-2 text-xs font-mono">
-                        <span
-                          className={`font-bold ${
-                            isActive ? "text-[#00F0FF]" : "text-[#94A3B8]"
-                          }`}
-                        >
-                          CHAPTER {ch.chapterCode}
-                        </span>
-                        <span className="text-[#94A3B8]/40">·</span>
-                        <span className="text-[10px] uppercase text-[#94A3B8]/80 tracking-wider">
-                          {ch.category}
-                        </span>
-                      </div>
-                      {isActive && (
-                        <span className="text-[10px] font-mono font-bold bg-[#00F0FF]/20 text-[#00F0FF] px-1.5 py-0.5 rounded-sm">
-                          Current
-                        </span>
-                      )}
+                    <span>{act.actNumber}</span>
+
+                    {/* Smooth Floating Tooltip on Hover */}
+                    <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 px-3 py-1.5 bg-[#0E1420]/95 backdrop-blur-md border border-[#D7B56D]/40 rounded-xs shadow-2xl whitespace-nowrap z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-150">
+                      <span className="text-[10px] font-mono font-bold text-[#D7B56D]">
+                        ACT {act.actNumber}
+                      </span>
+                      <span className="h-2.5 w-px bg-white/20" />
+                      <span className="text-xs font-serif font-bold text-[#F5F1E8]">
+                        {act.shortTitle}
+                      </span>
+                      <span className="text-[9px] font-mono text-[#5FB0A8] uppercase tracking-wider px-1.5 py-0.5 bg-[#5FB0A8]/10 rounded-2xs">
+                        {act.category}
+                      </span>
                     </div>
-                    <div
-                      className={`font-serif text-base sm:text-lg font-bold mt-1.5 leading-snug ${
-                        isActive ? "text-[#00F0FF]" : "text-[#F8FAFC]"
-                      }`}
-                    >
-                      {ch.title}
-                    </div>
-                    <p className="text-xs text-[#94A3B8] mt-1 leading-relaxed line-clamp-2">
-                      {ch.question}
-                    </p>
-                    {ch.keyMetric && (
-                      <div className="mt-2 text-[11px] font-mono text-[#00F0FF]/80 flex items-center gap-1.5">
-                        <span className="w-1 h-1 rounded-full bg-[#00F0FF]" />
-                        <span>{ch.keyMetric}</span>
-                      </div>
-                    )}
                   </Link>
                 );
               })}
+            </nav>
+
+            {/* Hairline Divider Track */}
+            <div className="w-px h-2.5 bg-gradient-to-t from-[#D7B56D]/50 to-white/10" />
+
+            {/* Smooth Return to Top Trigger */}
+            <a
+              href="#hero"
+              className="w-7 h-7 rounded-full flex items-center justify-center text-[#87999E] hover:text-[#D7B56D] hover:bg-white/[0.08] transition-all cursor-pointer relative group"
+              title="Return to Research Question (Top)"
+              aria-label="Return to Top"
+            >
+              <ArrowUp className="w-3.5 h-3.5" />
+              {/* Tooltip */}
+              <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center px-2 py-1 bg-[#0E1420]/95 border border-white/20 text-[#F5F1E8] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
+                <span>Top</span>
+              </div>
+            </a>
+
+          </div>
+        </aside>
+      )}
+
+      {/* ── MOBILE SCROLLING PILL (Displays active act cleanly at bottom-right on mobile when scrolled) ── */}
+      {isHomepage && isScrolled && (
+        <div className="lg:hidden fixed bottom-5 right-4 z-[140] animate-in fade-in slide-in-from-bottom-2 duration-300">
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="flex items-center gap-2 px-3.5 py-2 bg-[#0E1420]/95 backdrop-blur-xl border border-[#D7B56D]/60 text-[#D7B56D] rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.8)] text-xs font-mono font-bold active:scale-95 transition-all cursor-pointer"
+            aria-label="Open acts navigation"
+          >
+            <Compass className="w-3.5 h-3.5 text-[#D7B56D]" />
+            <span>{currentAct.actNumber !== "00" ? `Act ${currentAct.actNumber}` : "Intro"}</span>
+            <ChevronDown className="w-3 h-3 text-[#D7B56D]/70" />
+          </button>
+        </div>
+      )}
+
+      {/* ── DESKTOP SIDE SLIDE-OUT CHAPTER DRAWER ── */}
+      {sideMenuOpen && (
+        <div className="hidden lg:block fixed inset-0 z-[200]">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity"
+            onClick={() => setSideMenuOpen(false)}
+          />
+
+          {/* Drawer Panel */}
+          <div className="absolute top-0 right-0 bottom-0 w-96 bg-[#0A1016]/98 backdrop-blur-2xl border-l border-white/[0.10] p-6 shadow-2xl flex flex-col justify-between overflow-y-auto animate-in slide-in-from-right duration-300">
+            <div className="space-y-6">
+              
+              <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#D7B56D] uppercase tracking-widest">
+                  <Compass className="w-4 h-4 text-[#D7B56D]" />
+                  <span>Research Chapters</span>
+                </div>
+                <button
+                  onClick={() => setSideMenuOpen(false)}
+                  className="p-1 text-[#87999E] hover:text-[#FFF] transition-colors cursor-pointer rounded-xs"
+                  aria-label="Close drawer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* 9 Acts Direct Links */}
+              <div className="space-y-1.5">
+                <div className="text-[10px] font-mono uppercase tracking-widest text-[#5FB0A8] font-bold">
+                  9 Canonical Research Stages
+                </div>
+                <div className="space-y-1">
+                  {CANONICAL_RESEARCH_ACTS.map((act) => {
+                    const isCurrent = activeSection === act.id;
+                    return (
+                      <Link
+                        key={act.id}
+                        href={act.deepDiveUrl}
+                        onClick={() => setSideMenuOpen(false)}
+                        className={`flex items-center justify-between p-2 rounded-xs text-xs font-mono transition-colors ${
+                          isCurrent
+                            ? "bg-[#D7B56D] text-[#070A10] font-bold"
+                            : "text-[#A8B6BA] hover:text-[#F5F1E8] hover:bg-white/[0.04]"
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${isCurrent ? "bg-[#070A10] text-[#D7B56D]" : "bg-white/10"}`}>
+                            {act.actNumber}
+                          </span>
+                          <span>{act.shortTitle}</span>
+                        </div>
+                        <span className="text-[9px] opacity-60 uppercase">{act.category}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Primary Pages */}
+              <div className="space-y-1 pt-4 border-t border-white/[0.08]">
+                <div className="text-[10px] font-mono uppercase tracking-widest text-[#87999E] font-bold">
+                  Academic Pages
+                </div>
+                <div className="grid grid-cols-2 gap-1">
+                  {PRIMARY_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setSideMenuOpen(false)}
+                      className={`px-2 py-1.5 rounded-xs text-xs font-mono uppercase tracking-wider ${
+                        isActive(link.href) ? "text-[#D7B56D] font-bold bg-white/[0.04]" : "text-[#A8B6BA] hover:text-[#FFF]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
             </div>
 
-            {/* Drawer Footer Actions */}
-            <div className="p-5 border-t border-[#F8FAFC]/15 bg-[#030407] space-y-3">
-              <div className="flex items-center justify-between text-xs font-mono text-[#94A3B8]">
-                <span>Candidate: Khan Umar</span>
-                <span>University of Mumbai</span>
+            {/* Drawer Footer: Academic Report Download */}
+            <div className="pt-6 border-t border-white/[0.08]">
+              <a
+                href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
+                download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
+                className="w-full py-2.5 bg-[#D7B56D] hover:bg-[#E8C97D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center gap-2 shadow-lg"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Download Academic Report (PDF)</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* ── MOBILE FULL NAVIGATION DRAWER ── */}
+      {mobileOpen && (
+        <div className="lg:hidden fixed inset-0 bg-[#070A10]/98 backdrop-blur-2xl z-[200] overflow-y-auto p-5 space-y-6">
+          <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
+            <div className="flex flex-col">
+              <span className="text-xs font-bold text-[#D7B56D] tracking-[0.16em] uppercase">
+                From Data to the Ground
+              </span>
+              <span className="text-[10px] text-[#87999E]">
+                Seasonal Disease Surveillance in Maharashtra
+              </span>
+            </div>
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="p-1.5 text-[#87999E] hover:text-[#FFF] rounded-xs"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Canonical Research Documentary Acts (Direct Jump) */}
+          {isHomepage && (
+            <div className="space-y-1">
+              <div className="text-[10px] font-mono text-[#D7B56D] uppercase tracking-widest mb-2 font-bold flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-[#D7B56D]" />
+                <span>Documentary Journey Acts (Jump)</span>
               </div>
-              <div className="grid grid-cols-3 gap-2 text-xs font-mono">
-                <Link
-                  href="/print"
-                  target="_blank"
-                  className="p-2 text-center bg-[#0B111E] hover:bg-[#162035] text-[#00F0FF] border border-[#00F0FF]/40 rounded-sm font-semibold transition-colors flex items-center justify-center gap-1"
-                >
-                  <FileText className="w-3 h-3" />
-                  <span>Print</span>
-                </Link>
-                <a
-                  href="https://github.com/RizzyCoder19/Field-Project/tree/previous-version"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-center bg-[#0B111E] hover:bg-[#162035] text-[#38BDF8] border border-[#38BDF8]/40 rounded-sm font-semibold transition-colors flex items-center justify-center gap-1"
-                  title="Explore previous committed version on GitHub"
-                >
-                  <ExternalLink className="w-3 h-3" />
-                  <span>Archive</span>
-                </a>
-                <a
-                  href="https://github.com/RizzyCoder19/Field-Project/tree/master"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 text-center bg-[#06080F] hover:bg-[#0B111E] text-[#F8FAFC] border border-[#F8FAFC]/15 rounded-sm transition-colors flex items-center justify-center gap-1"
-                >
-                  <span>Master</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+              <div className="grid grid-cols-1 gap-1">
+                {NARRATIVE_ACTS.map((act) => {
+                  const isCurrent = activeSection === act.id;
+                  return (
+                    <Link
+                      key={act.id}
+                      href={act.deepDiveUrl}
+                      onClick={() => setMobileOpen(false)}
+                      className={`flex items-center justify-between px-3 py-2.5 rounded-xs text-xs font-mono uppercase tracking-wider transition-colors ${
+                        isCurrent
+                          ? "bg-[#D7B56D] text-[#070A10] font-bold"
+                          : "text-[#A8B6BA] hover:text-[#F5F1E8] bg-white/[0.02]"
+                      }`}
+                    >
+                      <span>{act.label}</span>
+                      <span className="text-[10px] opacity-60">Enter →</span>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
+          )}
+
+          {/* Primary Top Pages */}
+          <div className="space-y-1 pt-3 border-t border-white/[0.08]">
+            <div className="text-[10px] font-mono text-[#5FB0A8] uppercase tracking-widest mb-2 font-bold">
+              Primary Navigation
+            </div>
+            {PRIMARY_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block py-2 text-sm font-mono uppercase tracking-wider ${
+                  isActive(link.href) ? "text-[#D7B56D] font-bold" : "text-[#A8B6BA]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Deep Dives */}
+          <div className="space-y-1 pt-4 border-t border-white/[0.08]">
+            <div className="text-[10px] font-mono text-[#87999E] uppercase tracking-widest mb-2 font-bold">
+              Research Chapters & Deep Dives
+            </div>
+            {EXPLORE_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className="block py-1.5 text-xs font-mono text-[#87999E] hover:text-[#F5F1E8]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="pt-4 border-t border-white/[0.08]">
+            <a
+              href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
+              download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-[#D7B56D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Download Academic PDF</span>
+            </a>
           </div>
         </div>
       )}
     </>
   );
 }
+
+

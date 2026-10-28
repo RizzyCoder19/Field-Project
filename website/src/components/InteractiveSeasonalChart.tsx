@@ -52,8 +52,8 @@ export default function InteractiveSeasonalChart() {
       {/* Top Controls: Mode & Disease Selector Buttons */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-[#F8FAFC]/10 pb-5">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#00F0FF] font-bold">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00F0FF] animate-pulse" />
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
             12-Month Outbreak Trajectory Matrix
           </div>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
@@ -80,7 +80,7 @@ export default function InteractiveSeasonalChart() {
               }}
               className={`px-3 py-1.5 rounded-sm transition-colors font-medium ${
                 mode === "events"
-                  ? "bg-[#00F0FF] text-[#06080F] font-bold"
+                  ? "bg-[#5FB0A8] text-[#06080F] font-bold"
                   : "text-[#94A3B8] hover:text-[#F8FAFC]"
               }`}
             >
@@ -93,7 +93,7 @@ export default function InteractiveSeasonalChart() {
               }}
               className={`px-3 py-1.5 rounded-sm transition-colors font-medium ${
                 mode === "cases"
-                  ? "bg-[#00F0FF] text-[#06080F] font-bold"
+                  ? "bg-[#5FB0A8] text-[#06080F] font-bold"
                   : "text-[#94A3B8] hover:text-[#F8FAFC]"
               }`}
             >
@@ -117,7 +117,7 @@ export default function InteractiveSeasonalChart() {
               }}
               className={`px-3.5 py-1.5 text-xs font-mono font-medium rounded-sm transition-all border ${
                 isSelected
-                  ? "bg-[#1E293B] text-[#F8FAFC] border-[#00F0FF] shadow-lg font-bold ring-1 ring-[#00F0FF]/40"
+                  ? "bg-[#1E293B] text-[#F8FAFC] border-[#5FB0A8] shadow-lg font-bold ring-1 ring-[#5FB0A8]/40"
                   : "bg-[#06080F] text-[#94A3B8] border-[#F8FAFC]/15 hover:border-[#F8FAFC]/30"
               }`}
             >
@@ -134,7 +134,7 @@ export default function InteractiveSeasonalChart() {
           }}
           className={`px-3.5 py-1.5 text-xs font-mono font-medium rounded-sm transition-all border ${
             showAll
-              ? "bg-[#1E293B] text-[#00F0FF] border-[#00F0FF] shadow-lg font-bold ring-1 ring-[#00F0FF]/40"
+              ? "bg-[#1E293B] text-[#5FB0A8] border-[#5FB0A8] shadow-lg font-bold ring-1 ring-[#5FB0A8]/40"
               : "bg-[#06080F] text-[#94A3B8] border-[#F8FAFC]/15 hover:border-[#F8FAFC]/30"
           }`}
         >
@@ -166,9 +166,9 @@ export default function InteractiveSeasonalChart() {
               y="40"
               width={(3 / 11) * 930}
               height="240"
-              fill="#00F0FF"
+              fill="#5FB0A8"
               fillOpacity="0.04"
-              stroke="#00F0FF"
+              stroke="#5FB0A8"
               strokeDasharray="4 4"
               strokeOpacity="0.2"
             />
@@ -180,13 +180,13 @@ export default function InteractiveSeasonalChart() {
               const isMonsoon = i >= 5 && i <= 8;
               return (
                 <g key={m} onMouseEnter={() => setHoveredMonth(i)} onMouseLeave={() => setHoveredMonth(null)} className="cursor-pointer">
-                  <line x1={x} y1="40" x2={x} y2="280" stroke={isHovered ? "#00F0FF" : "rgba(248, 250, 252, 0.08)"} strokeWidth={isHovered ? 1.5 : 1} />
+                  <line x1={x} y1="40" x2={x} y2="280" stroke={isHovered ? "#5FB0A8" : "rgba(248, 250, 252, 0.08)"} strokeWidth={isHovered ? 1.5 : 1} />
                   <text
                     x={x}
                     y="305"
                     textAnchor="middle"
                     className={`text-xs font-mono ${
-                      isMonsoon ? "fill-[#00F0FF] font-bold" : isHovered ? "font-bold fill-[#F8FAFC]" : "fill-[#94A3B8]"
+                      isMonsoon ? "fill-[#5FB0A8] font-bold" : isHovered ? "font-bold fill-[#F8FAFC]" : "fill-[#94A3B8]"
                     }`}
                   >
                     {m}
@@ -291,7 +291,7 @@ export default function InteractiveSeasonalChart() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
         <div className="bg-[#06080F] border border-[#F8FAFC]/10 p-4 rounded-sm">
           <div className="font-mono text-xs uppercase text-[#94A3B8]">Peak Window (CR3)</div>
-          <div className="font-mono text-base font-bold text-[#00F0FF] mt-1">
+          <div className="font-mono text-base font-bold text-[#5FB0A8] mt-1">
             {selectedProfile.cr3Window}
           </div>
           <div className="text-[10px] font-mono text-[#94A3B8]/70 mt-0.5">Top 3-Month Concentration</div>
@@ -328,7 +328,7 @@ export default function InteractiveSeasonalChart() {
 
       {/* Short Authoritative Interpretation */}
       <div className="bg-[#06080F] border border-[#F8FAFC]/10 p-4 rounded-sm space-y-1.5 font-mono">
-        <div className="text-xs uppercase text-[#00F0FF] font-bold">
+        <div className="text-xs uppercase text-[#5FB0A8] font-bold">
           Epidemiological Summary: {selectedProfile.name}
         </div>
         <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed">
