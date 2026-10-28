@@ -132,25 +132,25 @@ export default function PipelineFlow() {
   const current = stages[activeStep - 1];
 
   return (
-    <div ref={ref} className="w-full bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-4 sm:p-6 lg:p-8 space-y-6 shadow-2xl" role="region" aria-label="Forensic Data Harmonization Pipeline Flow">
+    <div ref={ref} className="w-full bg-[#0B0E13] border border-[#E8D2B5]/15 rounded-sm p-4 sm:p-6 lg:p-8 space-y-6 shadow-2xl" role="region" aria-label="Forensic Data Harmonization Pipeline Flow">
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#F8FAFC]/10 pb-4">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#5FB0A8] font-bold">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#5FB0A8] animate-pulse" />
+          <div className="flex items-center space-x-2 text-xs font-mono uppercase text-[#A5A79B] font-bold">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#590907] animate-pulse" />
             <span>Data Harmonization Cascade · Forensic Audit Architecture</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F8FAFC] mt-1">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#E8D2B5] mt-1">
             From Weekly Government Bulletins to Structured Analysis
           </h3>
-          <p className="font-mono text-xs sm:text-sm text-[#94A3B8] mt-0.5 max-w-2xl leading-relaxed">
+          <p className="font-mono text-xs sm:text-sm text-[#A5A79B] mt-0.5 max-w-2xl leading-relaxed">
             Step-by-step additive transformation guaranteeing zero data loss, reproducible code provenance, and 100% source auditability.
           </p>
         </div>
 
         <button
           onClick={() => setAnimKey(k => k + 1)}
-          className="px-3 py-1.5 bg-[#06080F] hover:bg-[#1A2234] border border-[#F8FAFC]/15 text-[#D4AF37] hover:text-[#F5D061] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors"
+          className="px-3 py-1.5 bg-[#07090C] hover:bg-[#590907]/20 border border-[#E8D2B5]/25 text-[#E8D2B5] hover:text-[#F7EAD7] rounded-sm font-mono text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
           title="Reconstruct pipeline connectors"
         >
           <RefreshCw className="w-3.5 h-3.5" />
@@ -160,7 +160,7 @@ export default function PipelineFlow() {
 
       {/* ── MOBILE VERSION (block md:hidden): Vertical Harmonization Stepper ── */}
       <div className="block md:hidden space-y-4">
-        <div className="relative pl-6 border-l-2 border-[#D7B56D]/30 ml-2 space-y-6">
+        <div className="relative pl-6 border-l-2 border-[#590907]/40 ml-2 space-y-6">
           {stages.map((st) => {
             const isSelected = activeStep === st.step;
             return (
@@ -169,8 +169,8 @@ export default function PipelineFlow() {
                 <div
                   className={`absolute -left-[31px] top-3 w-5 h-5 rounded-full flex items-center justify-center font-mono text-[9px] font-bold border transition-all ${
                     isSelected
-                      ? "bg-[#D7B56D] text-[#070A10] border-[#D7B56D] ring-4 ring-[#D7B56D]/20"
-                      : "bg-[#070A10] text-[#A8B6BA] border-white/20"
+                      ? "bg-[#590907] text-[#E8D2B5] border-[#590907] ring-4 ring-[#590907]/30"
+                      : "bg-[#07090C] text-[#A5A79B] border-white/20"
                   }`}
                 >
                   {st.step}
@@ -181,30 +181,30 @@ export default function PipelineFlow() {
                   onClick={() => setActiveStep(isSelected ? 0 : st.step)}
                   className={`p-4 rounded-sm border cursor-pointer transition-all ${
                     isSelected
-                      ? "bg-[#1E293B] border-[#5FB0A8] shadow-xl"
-                      : "bg-[#06080F] border-white/10 hover:border-white/20"
+                      ? "bg-[#0F131A] border-[#590907] shadow-xl"
+                      : "bg-[#07090C] border-white/10 hover:border-white/20"
                   }`}
                 >
                   <div className="flex items-start justify-between gap-2">
                     <div>
-                      <div className="text-[10px] font-mono text-[#D7B56D] uppercase font-bold tracking-wider">
+                      <div className="text-[10px] font-mono text-[#A5A79B] uppercase font-bold tracking-wider">
                         STAGE 0{st.step} · {st.unit}
                       </div>
-                      <div className="font-serif text-2xl font-bold text-[#F5F1E8] mt-0.5">
-                        {st.num} <span className="text-xs font-mono font-normal text-[#87999E]">{st.unit}</span>
+                      <div className="font-serif text-2xl font-bold text-[#E8D2B5] mt-0.5">
+                        {st.num} <span className="text-xs font-mono font-normal text-[#A5A79B]">{st.unit}</span>
                       </div>
-                      <h4 className="font-serif text-sm font-bold text-[#A8B6BA] mt-1">
+                      <h4 className="font-serif text-sm font-bold text-[#A5A79B] mt-1">
                         {st.title}
                       </h4>
                     </div>
 
                     <div className="flex flex-col items-end gap-1 shrink-0">
                       {st.highlight && (
-                        <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded-xs bg-[#D7B56D] text-[#070A10] font-bold">
+                        <span className="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded-xs bg-[#590907] text-[#E8D2B5] font-bold border border-[#E8D2B5]/30">
                           CORE
                         </span>
                       )}
-                      <span className="text-[10px] font-mono text-[#5FB0A8]">
+                      <span className="text-[10px] font-mono text-[#A5A79B]">
                         {isSelected ? "Collapse ▲" : "Inspect ▼"}
                       </span>
                     </div>
@@ -213,29 +213,29 @@ export default function PipelineFlow() {
                   {/* In-Place Collapsible Mobile Dossier Details */}
                   {isSelected && (
                     <div className="mt-4 pt-3 border-t border-white/10 space-y-3 animate-fade-in">
-                      <p className="text-xs text-[#F5F1E8] leading-relaxed">
+                      <p className="text-xs text-[#E8D2B5] leading-relaxed">
                         {st.desc}
                       </p>
 
                       {/* Source */}
-                      <div className="text-[11px] font-mono text-[#D7B56D]">
+                      <div className="text-[11px] font-mono text-[#E8D2B5]">
                         Source: {st.source}
                       </div>
 
                       {/* Input -> Output */}
-                      <div className="p-2.5 bg-[#070A10] border border-white/10 rounded-xs font-mono text-[11px] space-y-1">
-                        <div className="text-[#87999E]"><strong className="text-white/60">Input:</strong> {st.inputOutput.input}</div>
-                        <div className="text-[#5FB0A8]"><strong className="text-[#5FB0A8]/70">Output:</strong> {st.inputOutput.output}</div>
+                      <div className="p-2.5 bg-[#07090C] border border-white/10 rounded-xs font-mono text-[11px] space-y-1">
+                        <div className="text-[#A5A79B]"><strong className="text-white/60">Input:</strong> {st.inputOutput.input}</div>
+                        <div className="text-[#E8D2B5]"><strong className="text-[#A5A79B]">Output:</strong> {st.inputOutput.output}</div>
                       </div>
 
                       {/* Checklist */}
                       <div className="space-y-1.5 pt-1">
-                        <div className="text-[10px] font-mono uppercase text-[#87999E] font-bold">
+                        <div className="text-[10px] font-mono uppercase text-[#A5A79B] font-bold">
                           Audit Verification:
                         </div>
                         {st.details.map((dt, i) => (
-                          <div key={i} className="flex items-start gap-2 text-xs text-[#A8B6BA]">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#10B981] shrink-0 mt-0.5" />
+                          <div key={i} className="flex items-start gap-2 text-xs text-[#A5A79B]">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#590907] shrink-0 mt-0.5" />
                             <span>{dt}</span>
                           </div>
                         ))}
@@ -261,33 +261,33 @@ export default function PipelineFlow() {
                 onClick={() => setActiveStep(st.step)}
                 className={`p-3.5 rounded-sm border transition-all cursor-pointer relative flex flex-col justify-between ${
                   isSelected
-                    ? "bg-[#1E293B] border-[#5FB0A8] shadow-2xl ring-1 ring-[#5FB0A8]/40"
-                    : "bg-[#06080F] border-[#F8FAFC]/10 hover:border-[#F8FAFC]/30"
+                    ? "bg-[#0F131A] border-[#590907] shadow-2xl ring-2 ring-[#590907]/50"
+                    : "bg-[#07090C] border-white/10 hover:border-[#E8D2B5]/30"
                 }`}
               >
                 {st.highlight && (
-                  <span className="absolute -top-2 right-2 text-[9px] font-mono uppercase px-2 py-0.5 rounded-sm bg-[#D4AF37] text-[#06080F] font-bold shadow-md">
+                  <span className="absolute -top-2 right-2 text-[9px] font-mono uppercase px-2 py-0.5 rounded-sm bg-[#590907] text-[#E8D2B5] font-bold shadow-md border border-[#E8D2B5]/30">
                     CORE
                   </span>
                 )}
                 <div>
-                  <div className="text-[10px] font-mono text-[#94A3B8] uppercase font-semibold">
+                  <div className="text-[10px] font-mono text-[#A5A79B] uppercase font-semibold">
                     STAGE 0{st.step}
                   </div>
-                  <div className={`font-serif text-3xl font-bold mt-1 ${isSelected ? "text-[#5FB0A8]" : "text-[#F8FAFC]"}`}>
+                  <div className={`font-serif text-3xl font-bold mt-1 ${isSelected ? "text-[#E8D2B5]" : "text-[#A5A79B]"}`}>
                     {st.num}
                   </div>
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#94A3B8] mt-0.5">
+                  <div className="text-[10px] font-mono uppercase tracking-wider text-[#A5A79B] mt-0.5">
                     {st.unit}
                   </div>
                 </div>
 
                 {/* Progress Indicator Pip */}
-                <div className="mt-3 pt-2 border-t border-[#F8FAFC]/10 flex items-center justify-between text-[10px] font-mono">
-                  <span className={isSelected ? "text-[#5FB0A8] font-bold" : "text-[#94A3B8]/60"}>
+                <div className="mt-3 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono">
+                  <span className={isSelected ? "text-[#E8D2B5] font-bold" : "text-[#A5A79B]/60"}>
                     {isSelected ? "Active View" : "Click to Inspect"}
                   </span>
-                  <ChevronRight className={`w-3.5 h-3.5 ${isSelected ? "text-[#5FB0A8]" : "text-[#94A3B8]/40"}`} />
+                  <ChevronRight className={`w-3.5 h-3.5 ${isSelected ? "text-[#590907]" : "text-[#A5A79B]/40"}`} />
                 </div>
               </div>
             );
@@ -296,46 +296,46 @@ export default function PipelineFlow() {
 
         {/* Detailed Stage Deep-Dive Card */}
         {current && (
-          <div className="bg-[#06080F] border border-[#F8FAFC]/15 rounded-sm p-5 sm:p-6 space-y-4">
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-[#F8FAFC]/10 pb-4">
+          <div className="bg-[#07090C] border border-[#E8D2B5]/20 rounded-sm p-5 sm:p-6 space-y-4">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-white/10 pb-4">
               <div>
-                <div className="text-xs font-mono text-[#5FB0A8] uppercase tracking-wider font-bold">
+                <div className="text-xs font-mono text-[#A5A79B] uppercase tracking-wider font-bold">
                   STAGE {current.step} OF 6 · {current.unit}
                 </div>
-                <h4 className="font-serif text-2xl font-bold text-[#F8FAFC] mt-0.5">
+                <h4 className="font-serif text-2xl font-bold text-[#E8D2B5] mt-0.5">
                   {current.title}
                 </h4>
               </div>
-              <span className="text-xs font-mono px-3 py-1.5 rounded-sm bg-[#0B111E] text-[#D4AF37] border border-[#D4AF37]/30">
+              <span className="text-xs font-mono px-3 py-1.5 rounded-sm bg-[#0B0E13] text-[#E8D2B5] border border-[#590907]/50">
                 Source: {current.source}
               </span>
             </div>
 
-            <p className="text-sm sm:text-base text-[#F8FAFC] leading-relaxed">
+            <p className="text-sm sm:text-base text-[#E8D2B5] leading-relaxed">
               {current.desc}
             </p>
 
             {/* Input / Output Transformation Badge */}
-            <div className="p-3 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
+            <div className="p-3 bg-[#0B0E13] border border-white/10 rounded-sm flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
               <div className="flex items-center gap-2">
-                <span className="text-[#94A3B8] uppercase text-[9px]">Input:</span>
-                <span className="text-[#F8FAFC] font-semibold">{current.inputOutput.input}</span>
+                <span className="text-[#A5A79B] uppercase text-[9px]">Input:</span>
+                <span className="text-[#E8D2B5] font-semibold">{current.inputOutput.input}</span>
               </div>
-              <ArrowRight className="w-4 h-4 text-[#5FB0A8]" />
+              <ArrowRight className="w-4 h-4 text-[#590907]" />
               <div className="flex items-center gap-2">
-                <span className="text-[#94A3B8] uppercase text-[9px]">Output:</span>
-                <span className="text-[#5FB0A8] font-bold">{current.inputOutput.output}</span>
+                <span className="text-[#A5A79B] uppercase text-[9px]">Output:</span>
+                <span className="text-[#E8D2B5] font-bold">{current.inputOutput.output}</span>
               </div>
             </div>
 
             {/* Detailed Breakdown Points */}
-            <div className="bg-[#0B111E] p-4 rounded-sm border border-[#F8FAFC]/10 space-y-2.5">
-              <div className="text-xs font-mono uppercase text-[#D4AF37] font-bold tracking-wider mb-2">
+            <div className="bg-[#0B0E13] p-4 rounded-sm border border-white/10 space-y-2.5">
+              <div className="text-xs font-mono uppercase text-[#E8D2B5] font-bold tracking-wider mb-2">
                 Verification &amp; Audit Specifications:
               </div>
               {current.details.map((dt, i) => (
-                <div key={i} className="flex items-start space-x-2.5 text-xs sm:text-sm text-[#F8FAFC]">
-                  <CheckCircle2 className="w-4 h-4 text-[#10B981] mt-0.5 shrink-0" />
+                <div key={i} className="flex items-start space-x-2.5 text-xs sm:text-sm text-[#E8D2B5]">
+                  <CheckCircle2 className="w-4 h-4 text-[#590907] mt-0.5 shrink-0" />
                   <span>{dt}</span>
                 </div>
               ))}

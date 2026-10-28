@@ -129,13 +129,13 @@ export default function PresentationNav() {
           {/* Left: Project Title */}
           <Link
             href="/"
-            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D7B56D] rounded-sm py-1 shrink-0"
+            className="group flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#590907] rounded-sm py-1 shrink-0"
           >
             <div className="flex flex-col">
-              <span className="text-xs font-bold text-[#D7B56D] tracking-[0.16em] uppercase group-hover:text-[#E8C97D] transition-colors">
+              <span className="text-xs font-bold text-[#E8D2B5] tracking-[0.16em] uppercase group-hover:text-[#F7EAD7] transition-colors">
                 From Data to the Ground
               </span>
-              <span className="text-[11px] text-[#87999E] hidden sm:inline tracking-normal">
+              <span className="text-[11px] text-[#A5A79B] hidden sm:inline tracking-normal">
                 Seasonal Disease Surveillance in Maharashtra
               </span>
             </div>
@@ -149,8 +149,8 @@ export default function PresentationNav() {
                 href={link.href}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors ${
                   isActive(link.href)
-                    ? "text-[#D7B56D] font-bold bg-white/[0.04]"
-                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                    ? "text-[#E8D2B5] font-bold bg-[#590907]/30 border border-[#590907]/50"
+                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
                 }`}
               >
                 {link.label}
@@ -166,8 +166,8 @@ export default function PresentationNav() {
                 }}
                 className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-sm transition-colors flex items-center gap-1 cursor-pointer ${
                   EXPLORE_LINKS.some((l) => isActive(l.href))
-                    ? "text-[#D7B56D] font-bold"
-                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                    ? "text-[#E8D2B5] font-bold bg-[#590907]/20"
+                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
                 }`}
                 aria-expanded={exploreOpen}
                 aria-haspopup="true"
@@ -178,10 +178,10 @@ export default function PresentationNav() {
 
               {exploreOpen && (
                 <div
-                  className="absolute top-full right-0 mt-2 w-64 bg-[#0E1420] border border-white/[0.10] rounded-sm shadow-2xl py-1 z-50 divide-y divide-white/[0.04]"
+                  className="absolute top-full right-0 mt-2 w-64 bg-[#0B0E13] border border-[#E8D2B5]/20 rounded-sm shadow-2xl py-1 z-50 divide-y divide-white/[0.04]"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <div className="px-3 py-2 text-[10px] font-mono uppercase text-[#D7B56D] tracking-widest font-semibold">
+                  <div className="px-3 py-2 text-[10px] font-mono uppercase text-[#E8D2B5] tracking-widest font-semibold">
                     Academic Chapters & Archives
                   </div>
                   <div className="py-1">
@@ -191,8 +191,8 @@ export default function PresentationNav() {
                         href={link.href}
                         className={`block px-4 py-2 text-xs font-mono transition-colors ${
                           isActive(link.href)
-                            ? "text-[#D7B56D] bg-[#D7B56D]/[0.08]"
-                            : "text-[#A8B6BA] hover:text-[#F5F1E8] hover:bg-white/[0.04]"
+                            ? "text-[#E8D2B5] bg-[#590907]/30"
+                            : "text-[#A5A79B] hover:text-[#E8D2B5] hover:bg-white/[0.04]"
                         }`}
                       >
                         {link.label}
@@ -209,16 +209,16 @@ export default function PresentationNav() {
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#D7B56D]/60 hover:border-[#D7B56D] hover:bg-[#D7B56D]/10 text-[#D7B56D] text-xs font-mono uppercase tracking-wider rounded-sm transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-[#590907] hover:bg-[#590907] text-[#E8D2B5] hover:text-[#FFF] text-xs font-mono uppercase tracking-wider rounded-sm transition-all cursor-pointer shadow-sm"
             >
-              <FileText className="w-3.5 h-3.5" />
+              <FileText className="w-3.5 h-3.5 text-[#E8D2B5]" />
               <span className="hidden sm:inline">Academic PDF</span>
               <span className="sm:hidden">PDF</span>
             </a>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-[#A8B6BA] hover:text-[#F5F1E8] focus:outline-none cursor-pointer"
+              className="lg:hidden p-2 text-[#A5A79B] hover:text-[#E8D2B5] focus:outline-none cursor-pointer"
               aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileOpen}
             >
@@ -239,24 +239,24 @@ export default function PresentationNav() {
           }`}
           aria-label="Documentary Acts Timeline Rail"
         >
-          <div className="bg-[#0A1016]/92 backdrop-blur-xl border border-white/[0.12] p-2 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.85)] flex flex-col items-center gap-1.5">
+          <div className="bg-[#0B0E13]/95 backdrop-blur-xl border border-[#E8D2B5]/20 p-2 rounded-full shadow-[0_12px_40px_rgba(0,0,0,0.9)] flex flex-col items-center gap-1.5">
             
             {/* Chapters / Menu Drawer Trigger */}
             <button
               onClick={() => setSideMenuOpen(!sideMenuOpen)}
-              className="w-8 h-8 rounded-full flex items-center justify-center text-[#D7B56D] hover:text-[#FFF] hover:bg-white/[0.08] transition-all cursor-pointer relative group"
+              className="w-8 h-8 rounded-full flex items-center justify-center text-[#E8D2B5] hover:text-[#FFF] hover:bg-[#590907]/30 transition-all cursor-pointer relative group"
               title="Open Research Chapters & Navigation Drawer"
               aria-label="Open Chapters Menu"
             >
               <Menu className="w-4 h-4" />
               {/* Tooltip */}
-              <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-1.5 px-2.5 py-1 bg-[#0E1420]/95 border border-[#D7B56D]/40 text-[#D7B56D] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
+              <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-1.5 px-2.5 py-1 bg-[#0B0E13]/95 border border-[#590907]/60 text-[#E8D2B5] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
                 <span>Chapters & Navigation</span>
               </div>
             </button>
 
             {/* Hairline Divider Track */}
-            <div className="w-px h-2.5 bg-gradient-to-b from-[#D7B56D]/50 to-white/10" />
+            <div className="w-px h-2.5 bg-gradient-to-b from-[#590907]/80 to-[#A5A79B]/20" />
 
             {/* Canonical 9 Acts Rail Beads */}
             <nav className="flex flex-col items-center gap-1" aria-label="Acts jump navigation">
@@ -268,8 +268,8 @@ export default function PresentationNav() {
                     href={act.deepDiveUrl}
                     className={`w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-mono transition-all relative group cursor-pointer ${
                       isCurrent
-                        ? "bg-[#D7B56D] text-[#070A10] font-bold shadow-[0_0_14px_rgba(215,181,109,0.7)] scale-110 ring-2 ring-[#D7B56D]/30"
-                        : "text-[#87999E] hover:text-[#F5F1E8] hover:bg-white/[0.06]"
+                        ? "bg-[#590907] text-[#E8D2B5] font-bold shadow-[0_0_14px_rgba(89,9,7,0.8)] scale-110 ring-2 ring-[#E8D2B5]/40"
+                        : "text-[#A5A79B] hover:text-[#E8D2B5] hover:bg-white/[0.06]"
                     }`}
                     aria-label={`Enter Act ${act.actNumber}: ${act.shortTitle}`}
                     aria-current={isCurrent ? "true" : undefined}
@@ -277,15 +277,15 @@ export default function PresentationNav() {
                     <span>{act.actNumber}</span>
 
                     {/* Smooth Floating Tooltip on Hover */}
-                    <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 px-3 py-1.5 bg-[#0E1420]/95 backdrop-blur-md border border-[#D7B56D]/40 rounded-xs shadow-2xl whitespace-nowrap z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-150">
-                      <span className="text-[10px] font-mono font-bold text-[#D7B56D]">
+                    <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center gap-2 px-3 py-1.5 bg-[#0B0E13]/95 backdrop-blur-md border border-[#590907]/60 rounded-xs shadow-2xl whitespace-nowrap z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-150">
+                      <span className="text-[10px] font-mono font-bold text-[#E8D2B5]">
                         ACT {act.actNumber}
                       </span>
                       <span className="h-2.5 w-px bg-white/20" />
-                      <span className="text-xs font-serif font-bold text-[#F5F1E8]">
+                      <span className="text-xs font-serif font-bold text-[#E8D2B5]">
                         {act.shortTitle}
                       </span>
-                      <span className="text-[9px] font-mono text-[#5FB0A8] uppercase tracking-wider px-1.5 py-0.5 bg-[#5FB0A8]/10 rounded-2xs">
+                      <span className="text-[9px] font-mono text-[#A5A79B] uppercase tracking-wider px-1.5 py-0.5 bg-[#590907]/30 rounded-2xs">
                         {act.category}
                       </span>
                     </div>
@@ -295,18 +295,18 @@ export default function PresentationNav() {
             </nav>
 
             {/* Hairline Divider Track */}
-            <div className="w-px h-2.5 bg-gradient-to-t from-[#D7B56D]/50 to-white/10" />
+            <div className="w-px h-2.5 bg-gradient-to-t from-[#590907]/80 to-[#A5A79B]/20" />
 
             {/* Smooth Return to Top Trigger */}
             <a
               href="#hero"
-              className="w-7 h-7 rounded-full flex items-center justify-center text-[#87999E] hover:text-[#D7B56D] hover:bg-white/[0.08] transition-all cursor-pointer relative group"
+              className="w-7 h-7 rounded-full flex items-center justify-center text-[#A5A79B] hover:text-[#E8D2B5] hover:bg-white/[0.08] transition-all cursor-pointer relative group"
               title="Return to Research Question (Top)"
               aria-label="Return to Top"
             >
               <ArrowUp className="w-3.5 h-3.5" />
               {/* Tooltip */}
-              <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center px-2 py-1 bg-[#0E1420]/95 border border-white/20 text-[#F5F1E8] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
+              <div className="absolute right-9 top-1/2 -translate-y-1/2 hidden group-hover:flex items-center px-2 py-1 bg-[#0B0E13]/95 border border-white/20 text-[#E8D2B5] font-mono text-[10px] uppercase tracking-wider rounded-xs whitespace-nowrap shadow-xl pointer-events-none">
                 <span>Top</span>
               </div>
             </a>
@@ -320,12 +320,12 @@ export default function PresentationNav() {
         <div className="lg:hidden fixed bottom-5 right-4 z-[140] animate-in fade-in slide-in-from-bottom-2 duration-300">
           <button
             onClick={() => setMobileOpen(true)}
-            className="flex items-center gap-2 px-3.5 py-2 bg-[#0E1420]/95 backdrop-blur-xl border border-[#D7B56D]/60 text-[#D7B56D] rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.8)] text-xs font-mono font-bold active:scale-95 transition-all cursor-pointer"
+            className="flex items-center gap-2 px-3.5 py-2 bg-[#0B0E13]/95 backdrop-blur-xl border border-[#590907]/80 text-[#E8D2B5] rounded-full shadow-[0_8px_24px_rgba(89,9,7,0.6)] text-xs font-mono font-bold active:scale-95 transition-all cursor-pointer"
             aria-label="Open acts navigation"
           >
-            <Compass className="w-3.5 h-3.5 text-[#D7B56D]" />
+            <Compass className="w-3.5 h-3.5 text-[#590907]" />
             <span>{currentAct.actNumber !== "00" ? `Act ${currentAct.actNumber}` : "Intro"}</span>
-            <ChevronDown className="w-3 h-3 text-[#D7B56D]/70" />
+            <ChevronDown className="w-3 h-3 text-[#A5A79B]" />
           </button>
         </div>
       )}
@@ -359,7 +359,7 @@ export default function PresentationNav() {
 
               {/* 9 Acts Direct Links */}
               <div className="space-y-1.5">
-                <div className="text-[10px] font-mono uppercase tracking-widest text-[#5FB0A8] font-bold">
+                <div className="text-[10px] font-mono uppercase tracking-widest text-[#A5A79B] font-bold">
                   9 Canonical Research Stages
                 </div>
                 <div className="space-y-1">
@@ -372,12 +372,12 @@ export default function PresentationNav() {
                         onClick={() => setSideMenuOpen(false)}
                         className={`flex items-center justify-between p-2 rounded-xs text-xs font-mono transition-colors ${
                           isCurrent
-                            ? "bg-[#D7B56D] text-[#070A10] font-bold"
-                            : "text-[#A8B6BA] hover:text-[#F5F1E8] hover:bg-white/[0.04]"
+                            ? "bg-[#590907] text-[#E8D2B5] font-bold shadow-md"
+                            : "text-[#A5A79B] hover:text-[#E8D2B5] hover:bg-white/[0.04]"
                         }`}
                       >
                         <div className="flex items-center gap-2.5">
-                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${isCurrent ? "bg-[#070A10] text-[#D7B56D]" : "bg-white/10"}`}>
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] ${isCurrent ? "bg-[#0B0E13] text-[#E8D2B5]" : "bg-white/10"}`}>
                             {act.actNumber}
                           </span>
                           <span>{act.shortTitle}</span>
@@ -391,7 +391,7 @@ export default function PresentationNav() {
 
               {/* Primary Pages */}
               <div className="space-y-1 pt-4 border-t border-white/[0.08]">
-                <div className="text-[10px] font-mono uppercase tracking-widest text-[#87999E] font-bold">
+                <div className="text-[10px] font-mono uppercase tracking-widest text-[#A5A79B] font-bold">
                   Academic Pages
                 </div>
                 <div className="grid grid-cols-2 gap-1">
@@ -401,7 +401,7 @@ export default function PresentationNav() {
                       href={link.href}
                       onClick={() => setSideMenuOpen(false)}
                       className={`px-2 py-1.5 rounded-xs text-xs font-mono uppercase tracking-wider ${
-                        isActive(link.href) ? "text-[#D7B56D] font-bold bg-white/[0.04]" : "text-[#A8B6BA] hover:text-[#FFF]"
+                        isActive(link.href) ? "text-[#E8D2B5] font-bold bg-[#590907]/30" : "text-[#A5A79B] hover:text-[#FFF]"
                       }`}
                     >
                       {link.label}
@@ -417,7 +417,7 @@ export default function PresentationNav() {
               <a
                 href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
                 download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-                className="w-full py-2.5 bg-[#D7B56D] hover:bg-[#E8C97D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center gap-2 shadow-lg"
+                className="w-full py-2.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-colors flex items-center justify-center gap-2 shadow-lg border border-[#E8D2B5]/30 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>Download Academic Report (PDF)</span>
@@ -430,19 +430,19 @@ export default function PresentationNav() {
 
       {/* ── MOBILE FULL NAVIGATION DRAWER ── */}
       {mobileOpen && (
-        <div className="lg:hidden fixed inset-0 bg-[#070A10]/98 backdrop-blur-2xl z-[200] overflow-y-auto p-5 space-y-6">
+        <div className="lg:hidden fixed inset-0 bg-[#07090C]/98 backdrop-blur-2xl z-[200] overflow-y-auto p-5 space-y-6">
           <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
             <div className="flex flex-col">
-              <span className="text-xs font-bold text-[#D7B56D] tracking-[0.16em] uppercase">
+              <span className="text-xs font-bold text-[#E8D2B5] tracking-[0.16em] uppercase">
                 From Data to the Ground
               </span>
-              <span className="text-[10px] text-[#87999E]">
+              <span className="text-[10px] text-[#A5A79B]">
                 Seasonal Disease Surveillance in Maharashtra
               </span>
             </div>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-1.5 text-[#87999E] hover:text-[#FFF] rounded-xs"
+              className="p-1.5 text-[#A5A79B] hover:text-[#FFF] rounded-xs cursor-pointer"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />
@@ -452,8 +452,8 @@ export default function PresentationNav() {
           {/* Canonical Research Documentary Acts (Direct Jump) */}
           {isHomepage && (
             <div className="space-y-1">
-              <div className="text-[10px] font-mono text-[#D7B56D] uppercase tracking-widest mb-2 font-bold flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5 text-[#D7B56D]" />
+              <div className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-widest mb-2 font-bold flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-[#590907]" />
                 <span>Documentary Journey Acts (Jump)</span>
               </div>
               <div className="grid grid-cols-1 gap-1">
@@ -466,8 +466,8 @@ export default function PresentationNav() {
                       onClick={() => setMobileOpen(false)}
                       className={`flex items-center justify-between px-3 py-2.5 rounded-xs text-xs font-mono uppercase tracking-wider transition-colors ${
                         isCurrent
-                          ? "bg-[#D7B56D] text-[#070A10] font-bold"
-                          : "text-[#A8B6BA] hover:text-[#F5F1E8] bg-white/[0.02]"
+                          ? "bg-[#590907] text-[#E8D2B5] font-bold"
+                          : "text-[#A5A79B] hover:text-[#E8D2B5] bg-white/[0.02]"
                       }`}
                     >
                       <span>{act.label}</span>
@@ -481,7 +481,7 @@ export default function PresentationNav() {
 
           {/* Primary Top Pages */}
           <div className="space-y-1 pt-3 border-t border-white/[0.08]">
-            <div className="text-[10px] font-mono text-[#5FB0A8] uppercase tracking-widest mb-2 font-bold">
+            <div className="text-[10px] font-mono text-[#A5A79B] uppercase tracking-widest mb-2 font-bold">
               Primary Navigation
             </div>
             {PRIMARY_LINKS.map((link) => (
@@ -490,7 +490,7 @@ export default function PresentationNav() {
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={`block py-2 text-sm font-mono uppercase tracking-wider ${
-                  isActive(link.href) ? "text-[#D7B56D] font-bold" : "text-[#A8B6BA]"
+                  isActive(link.href) ? "text-[#E8D2B5] font-bold" : "text-[#A5A79B]"
                 }`}
               >
                 {link.label}
@@ -500,7 +500,7 @@ export default function PresentationNav() {
 
           {/* Deep Dives */}
           <div className="space-y-1 pt-4 border-t border-white/[0.08]">
-            <div className="text-[10px] font-mono text-[#87999E] uppercase tracking-widest mb-2 font-bold">
+            <div className="text-[10px] font-mono text-[#A5A79B] uppercase tracking-widest mb-2 font-bold">
               Research Chapters & Deep Dives
             </div>
             {EXPLORE_LINKS.map((link) => (
@@ -508,7 +508,7 @@ export default function PresentationNav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-1.5 text-xs font-mono text-[#87999E] hover:text-[#F5F1E8]"
+                className="block py-1.5 text-xs font-mono text-[#A5A79B] hover:text-[#E8D2B5]"
               >
                 {link.label}
               </Link>
@@ -519,7 +519,7 @@ export default function PresentationNav() {
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="w-full flex items-center justify-center gap-2 py-3 bg-[#D7B56D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs border border-[#E8D2B5]/30 shadow-lg cursor-pointer"
             >
               <FileText className="w-4 h-4" />
               <span>Download Academic PDF</span>

@@ -270,39 +270,43 @@ export default function CinematicChapterNavigator() {
   return (
     <section
       id="documentary-portal"
-      className="relative w-full bg-[#070A10] border-b border-white/[0.08] py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 select-none"
+      className="relative w-full bg-[#07090C] border-b border-[#E8D2B5]/15 py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 select-none overflow-hidden"
       aria-label="Documentary Chapters Portal"
     >
-      <div className="max-w-[1360px] mx-auto space-y-6">
+      {/* Background Editorial Glow Accents */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#590907]/15 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#A5A79B]/5 blur-3xl pointer-events-none" />
+
+      <div className="max-w-[1360px] mx-auto space-y-6 relative z-10">
 
         {/* ── SECTION HEADER & VIEW CONTROLS ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-5">
           <div className="space-y-1.5">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#D7B56D] rotate-45 shrink-0" />
-              <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#D7B56D] uppercase">
+              <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
+              <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#E8D2B5] uppercase">
                 RESEARCH DOCUMENTARY ARCHITECTURE
               </span>
               <span className="text-white/20">|</span>
-              <span className="text-[11px] font-mono text-[#5FB0A8]">9 Interactive Episodes</span>
+              <span className="text-[11px] font-mono text-[#A5A79B]">9 Interactive Episodes</span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5F1E8] tracking-tight">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8D2B5] tracking-tight">
               Choose your research chapter
             </h2>
-            <p className="text-xs sm:text-sm text-[#A8B6BA] max-w-2xl leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#A5A79B] max-w-2xl leading-relaxed">
               Explore Maharashtra&apos;s seasonal disease surveillance through nine curated documentary acts. Hover to experience the cinematic camera drift, then enter any chapter.
             </p>
           </div>
 
           {/* Mode Switcher Buttons */}
           <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
-            <div className="flex items-center p-1 bg-[#0A1016] border border-white/[0.10] rounded-xs">
+            <div className="flex items-center p-1 bg-[#0B0E13] border border-[#E8D2B5]/20 rounded-xs">
               <button
                 onClick={() => setDisplayMode("spotlight")}
                 className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-2xs transition-colors cursor-pointer ${
                   displayMode === "spotlight"
-                    ? "bg-[#D7B56D] text-[#070A10] font-bold shadow-sm"
-                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                    ? "bg-[#590907] text-[#E8D2B5] font-bold shadow-md border border-[#E8D2B5]/30"
+                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
                 }`}
                 aria-label="Spotlight Stage View"
               >
@@ -313,8 +317,8 @@ export default function CinematicChapterNavigator() {
                 onClick={() => setDisplayMode("grid")}
                 className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-2xs transition-colors cursor-pointer ${
                   displayMode === "grid"
-                    ? "bg-[#D7B56D] text-[#070A10] font-bold shadow-sm"
-                    : "text-[#A8B6BA] hover:text-[#F5F1E8]"
+                    ? "bg-[#590907] text-[#E8D2B5] font-bold shadow-md border border-[#E8D2B5]/30"
+                    : "text-[#A5A79B] hover:text-[#E8D2B5]"
                 }`}
                 aria-label="9-Act Gallery Grid"
               >
@@ -335,8 +339,14 @@ export default function CinematicChapterNavigator() {
               onMouseMove={handleStageMouseMove}
               onMouseEnter={handleStageMouseEnter}
               onMouseLeave={handleStageMouseLeave}
-              className="relative w-full h-[480px] sm:h-[540px] lg:h-[580px] rounded-sm overflow-hidden border border-white/[0.12] shadow-[0_16px_50px_rgba(0,0,0,0.9)] group"
+              className="relative w-full h-[480px] sm:h-[540px] lg:h-[580px] rounded-xs overflow-hidden border border-[#E8D2B5]/25 shadow-[0_20px_60px_rgba(0,0,0,0.95)] group"
             >
+              {/* Corner Accents echoing the Hero */}
+              <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#590907] z-20 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#590907] z-20 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#590907] z-20 pointer-events-none" />
+              <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#590907] z-20 pointer-events-none" />
+
               {/* Background Photo with Parallax Drift */}
               <div
                 ref={stageImageRef}
@@ -352,26 +362,26 @@ export default function CinematicChapterNavigator() {
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 1280px"
-                  className="object-cover object-center filter brightness-[0.75] contrast-[1.08]"
+                  className="object-cover object-center filter brightness-[0.72] contrast-[1.10]"
                 />
               </div>
 
               {/* Vignettes & Filmic Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070A10] via-[#070A10]/70 via-45% to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070A10]/95 via-[#070A10]/60 via-40% to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#07090C] via-[#07090C]/80 via-50% to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#07090C]/95 via-[#07090C]/65 via-42% to-transparent" />
               <div className="absolute inset-0 bg-contour-pattern opacity-20 mix-blend-screen pointer-events-none" />
 
               {/* Top Film Metadata Bar */}
               <div className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between pointer-events-none z-10">
-                <div className="flex items-center gap-2 px-2.5 py-1 bg-[#070A10]/90 backdrop-blur-md border border-[#D7B56D]/40 rounded-xs">
-                  <span className="w-1.5 h-1.5 bg-[#D7B56D] rounded-full animate-pulse" />
-                  <span className="text-[10px] font-mono font-bold text-[#D7B56D] tracking-widest uppercase">
+                <div className="flex items-center gap-2 px-2.5 py-1 bg-[#07090C]/90 backdrop-blur-md border border-[#590907]/60 rounded-xs">
+                  <span className="w-1.5 h-1.5 bg-[#590907] rounded-full animate-pulse" />
+                  <span className="text-[10px] font-mono font-bold text-[#E8D2B5] tracking-widest uppercase">
                     {activeAct.tag}
                   </span>
                 </div>
 
-                <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 bg-[#070A10]/80 backdrop-blur-md border border-white/10 rounded-xs text-[10px] font-mono text-[#87999E]">
-                  <MapPin className="w-3 h-3 text-[#5FB0A8]" />
+                <div className="hidden sm:flex items-center gap-2 px-2.5 py-1 bg-[#07090C]/85 backdrop-blur-md border border-white/10 rounded-xs text-[10px] font-mono text-[#A5A79B]">
+                  <MapPin className="w-3 h-3 text-[#590907]" />
                   <span>{activeAct.coordinates}</span>
                 </div>
               </div>
@@ -379,42 +389,42 @@ export default function CinematicChapterNavigator() {
               {/* Central Research Narrative Typography Overlay */}
               <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-10 space-y-4 max-w-3xl">
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] uppercase tracking-wider font-semibold">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#A5A79B] uppercase tracking-wider font-semibold">
                     <span>Act {activeAct.actNumber} of 09</span>
                     <span className="text-white/20">·</span>
-                    <span className="px-2 py-0.5 bg-[#5FB0A8]/15 border border-[#5FB0A8]/30 rounded-2xs text-[10px]">
+                    <span className="px-2 py-0.5 bg-[#590907]/25 border border-[#590907]/50 rounded-2xs text-[10px] text-[#E8D2B5]">
                       {activeAct.categoryLabel}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#F5F1E8] tracking-tight leading-snug drop-shadow-lg">
+                  <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8D2B5] tracking-tight leading-snug drop-shadow-lg">
                     {activeAct.title}
                   </h3>
 
-                  <p className="font-serif text-sm sm:text-base text-[#D7B56D] italic">
+                  <p className="font-serif text-sm sm:text-base text-[#E8D2B5] italic font-light">
                     {activeAct.question}
                   </p>
 
-                  <p className="text-xs sm:text-sm text-[#A8B6BA] line-clamp-2 max-w-2xl leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#A5A79B] line-clamp-2 max-w-2xl leading-relaxed">
                     {activeAct.description}
                   </p>
                 </div>
 
                 {/* Key Empirical Metric Badge & Action Trigger */}
                 <div className="pt-2 flex flex-wrap items-center gap-3">
-                  <div className="px-3 py-1.5 bg-[#070A10]/90 backdrop-blur-md border border-white/[0.12] rounded-xs flex items-center gap-2.5">
-                    <span className="text-xs font-mono font-bold text-[#F5F1E8]">
+                  <div className="px-3 py-1.5 bg-[#07090C]/90 backdrop-blur-md border border-[#E8D2B5]/20 rounded-xs flex items-center gap-2.5">
+                    <span className="text-xs font-mono font-bold text-[#E8D2B5]">
                       {activeAct.keyMetric}
                     </span>
                     <span className="h-3 w-px bg-white/20" />
-                    <span className="text-[10px] font-mono text-[#87999E] uppercase">
+                    <span className="text-[10px] font-mono text-[#A5A79B] uppercase">
                       {activeAct.metricLabel}
                     </span>
                   </div>
 
                   <Link
                     href={activeAct.path}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#D7B56D] hover:bg-[#E8C97D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_4px_20px_rgba(215,181,109,0.35)] cursor-pointer group/btn"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_6px_24px_rgba(89,9,7,0.6)] hover:shadow-[0_8px_32px_rgba(89,9,7,0.85)] border border-[#E8D2B5]/30 cursor-pointer group/btn"
                   >
                     <span>Enter Act {activeAct.actNumber}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
@@ -425,7 +435,7 @@ export default function CinematicChapterNavigator() {
               {/* Left / Right Stage Arrow Navigators */}
               <button
                 onClick={handlePrevAct}
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#070A10]/80 hover:bg-[#070A10] border border-white/20 hover:border-[#D7B56D] text-[#F5F1E8] flex items-center justify-center transition-all cursor-pointer z-20 backdrop-blur-md shadow-xl"
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-20 backdrop-blur-md shadow-xl"
                 aria-label="Previous Act"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -433,7 +443,7 @@ export default function CinematicChapterNavigator() {
 
               <button
                 onClick={handleNextAct}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#070A10]/80 hover:bg-[#070A10] border border-white/20 hover:border-[#D7B56D] text-[#F5F1E8] flex items-center justify-center transition-all cursor-pointer z-20 backdrop-blur-md shadow-xl"
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-20 backdrop-blur-md shadow-xl"
                 aria-label="Next Act"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -442,9 +452,9 @@ export default function CinematicChapterNavigator() {
 
             {/* Filmstrip Episode Selector Track */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between text-xs font-mono text-[#87999E]">
+              <div className="flex items-center justify-between text-xs font-mono text-[#A5A79B]">
                 <div className="flex items-center gap-2">
-                  <Compass className="w-3.5 h-3.5 text-[#D7B56D]" />
+                  <Compass className="w-3.5 h-3.5 text-[#590907]" />
                   <span className="uppercase tracking-wider">Select Episode to Inspect</span>
                 </div>
                 <span>{activeActIndex + 1} / 9</span>
@@ -459,8 +469,8 @@ export default function CinematicChapterNavigator() {
                       onClick={() => setActiveActIndex(index)}
                       className={`relative aspect-[16/10] rounded-xs overflow-hidden border text-left p-2 flex flex-col justify-between transition-all cursor-pointer group ${
                         isActive
-                          ? "border-[#D7B56D] ring-2 ring-[#D7B56D]/50 shadow-[0_0_15px_rgba(215,181,109,0.3)] scale-[1.02]"
-                          : "border-white/[0.08] hover:border-white/30 opacity-75 hover:opacity-100"
+                          ? "border-[#590907] ring-2 ring-[#590907]/60 shadow-[0_0_18px_rgba(89,9,7,0.5)] scale-[1.03]"
+                          : "border-white/[0.08] hover:border-[#E8D2B5]/30 opacity-75 hover:opacity-100"
                       }`}
                       aria-label={`Select Act ${act.actNumber}: ${act.shortTitle}`}
                     >
@@ -469,7 +479,7 @@ export default function CinematicChapterNavigator() {
                         src={act.image}
                         alt={act.imageAlt}
                         fill
-                        className="object-cover object-center filter brightness-[0.6] group-hover:brightness-[0.8] transition-all"
+                        className="object-cover object-center filter brightness-[0.55] group-hover:brightness-[0.8] transition-all"
                         sizes="160px"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
@@ -477,17 +487,17 @@ export default function CinematicChapterNavigator() {
                       {/* Card Content Overlay */}
                       <div className="relative z-10 flex items-center justify-between w-full">
                         <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded-2xs ${
-                          isActive ? "bg-[#D7B56D] text-[#070A10]" : "bg-black/60 text-white/80"
+                          isActive ? "bg-[#590907] text-[#E8D2B5] border border-[#E8D2B5]/30" : "bg-black/60 text-[#A5A79B]"
                         }`}>
                           {act.actNumber}
                         </span>
                       </div>
 
                       <div className="relative z-10">
-                        <span className="text-[11px] font-serif font-bold text-[#F5F1E8] line-clamp-1 block group-hover:text-[#D7B56D] transition-colors">
+                        <span className="text-[11px] font-serif font-bold text-[#E8D2B5] line-clamp-1 block group-hover:text-[#F7EAD7] transition-colors">
                           {act.shortTitle}
                         </span>
-                        <span className="text-[9px] font-mono text-[#87999E] block uppercase tracking-wider">
+                        <span className="text-[9px] font-mono text-[#A5A79B] block uppercase tracking-wider">
                           {act.category}
                         </span>
                       </div>
@@ -512,8 +522,8 @@ export default function CinematicChapterNavigator() {
                   onClick={() => setSelectedCategory(cat.id)}
                   className={`px-3 py-1.5 text-xs font-mono uppercase tracking-wider rounded-xs whitespace-nowrap transition-colors cursor-pointer ${
                     selectedCategory === cat.id
-                      ? "bg-[#D7B56D] text-[#070A10] font-bold"
-                      : "text-[#A8B6BA] hover:text-[#FFF] bg-white/[0.03] border border-white/[0.08]"
+                      ? "bg-[#590907] text-[#E8D2B5] font-bold border border-[#E8D2B5]/30 shadow-md"
+                      : "text-[#A5A79B] hover:text-[#E8D2B5] bg-[#0B0E13] border border-white/[0.08]"
                   }`}
                 >
                   {cat.label}
@@ -572,7 +582,7 @@ function ActPosterCard({ act, reducedMotion }: { act: DocumentaryAct; reducedMot
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group relative h-[360px] sm:h-[400px] rounded-xs overflow-hidden border border-white/[0.10] hover:border-[#D7B56D]/70 transition-all flex flex-col justify-between p-5 shadow-xl cursor-pointer"
+      className="group relative h-[360px] sm:h-[400px] rounded-xs overflow-hidden border border-white/[0.10] hover:border-[#590907] transition-all flex flex-col justify-between p-5 shadow-xl hover:shadow-[0_12px_36px_rgba(89,9,7,0.45)] cursor-pointer"
       aria-label={`Enter Act ${act.actNumber}: ${act.title}`}
     >
       {/* Background Photographic Image with Cursor Zoom */}
@@ -588,42 +598,42 @@ function ActPosterCard({ act, reducedMotion }: { act: DocumentaryAct; reducedMot
           src={act.image}
           alt={act.imageAlt}
           fill
-          className="object-cover object-center filter brightness-[0.7] group-hover:brightness-[0.85] transition-all"
+          className="object-cover object-center filter brightness-[0.68] group-hover:brightness-[0.85] transition-all"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
 
       {/* Editorial Filmic Vignettes */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#070A10] via-[#070A10]/75 via-50% to-[#070A10]/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#07090C] via-[#07090C]/80 via-50% to-[#07090C]/30" />
       <div className="absolute inset-0 bg-contour-pattern opacity-15 mix-blend-screen pointer-events-none" />
 
       {/* Top Metadata Header */}
       <div className="relative z-10 flex items-center justify-between">
-        <span className="px-2 py-0.5 bg-[#070A10]/85 border border-[#D7B56D]/50 text-[10px] font-mono font-bold text-[#D7B56D] uppercase rounded-2xs">
+        <span className="px-2 py-0.5 bg-[#07090C]/90 border border-[#590907]/60 text-[10px] font-mono font-bold text-[#E8D2B5] uppercase rounded-2xs">
           ACT {act.actNumber}
         </span>
-        <span className="text-[10px] font-mono text-[#5FB0A8] uppercase tracking-wider px-2 py-0.5 bg-[#070A10]/80 rounded-2xs">
+        <span className="text-[10px] font-mono text-[#A5A79B] uppercase tracking-wider px-2 py-0.5 bg-[#07090C]/80 rounded-2xs border border-white/5">
           {act.categoryLabel}
         </span>
       </div>
 
       {/* Bottom Content Area */}
       <div className="relative z-10 space-y-2.5">
-        <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F5F1E8] group-hover:text-[#D7B56D] transition-colors leading-snug">
+        <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#E8D2B5] group-hover:text-[#F7EAD7] transition-colors leading-snug">
           {act.title}
         </h3>
 
-        <p className="text-xs text-[#A8B6BA] line-clamp-2 leading-relaxed">
+        <p className="text-xs text-[#A5A79B] line-clamp-2 leading-relaxed">
           {act.question}
         </p>
 
         <div className="pt-2 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono">
-          <span className="text-[#D7B56D] text-[11px] font-semibold">
+          <span className="text-[#E8D2B5] text-[11px] font-semibold">
             {act.keyMetric}
           </span>
-          <div className="flex items-center gap-1 text-[#F5F1E8] group-hover:text-[#D7B56D] transition-colors">
+          <div className="flex items-center gap-1 text-[#E8D2B5] group-hover:text-[#F7EAD7] transition-colors">
             <span>Enter</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#590907] group-hover:translate-x-1 transition-transform" />
           </div>
         </div>
       </div>

@@ -20,6 +20,7 @@ import { RESEARCH_METRICS } from "@/data/researchData";
 
 // Core Cinematic Components
 import CinematicHero from "@/components/CinematicHero";
+import PipelineFlow from "@/components/PipelineFlow";
 import CinematicDocumentaryNavigator from "@/components/CinematicDocumentaryNavigator";
 
 const CinematicIntro = dynamic(() => import("@/components/CinematicIntro"), {
@@ -64,7 +65,7 @@ export default function HomePage() {
       )}
 
       <div
-        className={`w-full bg-[#070A10] text-[#F5F1E8] min-h-screen selection:bg-[#D7B56D]/30 selection:text-[#F5F1E8] transition-opacity duration-700 ${
+        className={`w-full bg-[#07090C] text-[#E8D2B5] min-h-screen selection:bg-[#590907]/40 selection:text-[#E8D2B5] transition-opacity duration-700 ${
           introComplete && !showReplayIntro ? "opacity-100" : "max-md:opacity-100 opacity-0"
         }`}
         style={{
@@ -79,6 +80,49 @@ export default function HomePage() {
 
 
         {/* ════════════════════════════════════════════════════════════════════
+            SECTION: HOW WE TRANSFORMED THE DATA INTO THIS RESEARCH WEBSITE
+            ════════════════════════════════════════════════════════════════════ */}
+        <section
+          id="data-transformation"
+          className="py-12 sm:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0E13] border-b border-[#E8D2B5]/15 select-none"
+          aria-label="How We Transformed The Data"
+        >
+          <div className="max-w-[1360px] mx-auto space-y-8">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-5">
+              <div className="space-y-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
+                  <span className="text-[11px] font-mono font-bold tracking-[0.22em] text-[#E8D2B5] uppercase">
+                    DATA PROVENANCE & HARMONIZATION PIPELINE
+                  </span>
+                  <span className="text-white/20">|</span>
+                  <span className="text-[11px] font-mono text-[#A5A79B]">237 Bulletins → Structured Investigation</span>
+                </div>
+                <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#E8D2B5] tracking-tight">
+                  How we transformed raw government data into this website
+                </h2>
+                <p className="text-xs sm:text-sm text-[#A5A79B] max-w-2xl leading-relaxed">
+                  Raw government surveillance PDFs contain formatting inconsistencies, varying string notations, and unnormalized district listings. Here is the exact additive forensic cascade that converted 237 weekly bulletins into the 539 audited cohort records you explore below.
+                </p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/data"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-all border border-[#E8D2B5]/30 shadow-md cursor-pointer"
+                >
+                  <Database className="w-3.5 h-3.5" />
+                  <span>Explore Raw Data Archive</span>
+                </Link>
+              </div>
+            </div>
+
+            <PipelineFlow />
+          </div>
+        </section>
+
+
+        {/* ════════════════════════════════════════════════════════════════════
             INTERACTIVE DOCUMENTARY CHAPTERS PORTAL (PHOTOGRAPHIC ACT NAVIGATOR)
             ════════════════════════════════════════════════════════════════════ */}
         <CinematicDocumentaryNavigator />
@@ -89,7 +133,7 @@ export default function HomePage() {
             ════════════════════════════════════════════════════════════════════ */}
         <section
           id="study-scope"
-          className="py-10 sm:py-14 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0A1016] border-b border-white/[0.08]"
+          className="py-10 sm:py-14 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0E13] border-b border-[#E8D2B5]/15"
           aria-label="Executive Cohort Metrics"
         >
           <div className="max-w-[1360px] mx-auto space-y-8">
@@ -98,13 +142,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.08] pb-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-[#D7B56D] uppercase">
+                  <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
+                  <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-[#E8D2B5] uppercase">
                     EPIDEMIOLOGICAL COHORT METRICS
                   </span>
                   <span className="text-white/20">|</span>
-                  <span className="text-[10px] font-mono text-[#5FB0A8]">2022–2025 Audited Baseline</span>
+                  <span className="text-[10px] font-mono text-[#A5A79B]">2022–2025 Audited Baseline</span>
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F5F1E8] tracking-tight">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#E8D2B5] tracking-tight">
                   Statewide surveillance foundations
                 </h3>
               </div>
@@ -112,15 +157,15 @@ export default function HomePage() {
               <div className="flex items-center gap-3">
                 <Link
                   href="/method"
-                  className="text-xs font-mono text-[#5FB0A8] hover:text-[#F5F1E8] transition-colors flex items-center gap-1.5 px-3 py-1.5 bg-white/[0.02] border border-white/[0.08] rounded-xs"
+                  className="text-xs font-mono text-[#A5A79B] hover:text-[#E8D2B5] transition-colors flex items-center gap-1.5 px-3 py-1.5 bg-[#07090C] border border-white/[0.08] rounded-xs"
                 >
                   <span>12-Stage Methodology</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#590907]" />
                 </Link>
                 <a
                   href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
                   download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-                  className="text-xs font-mono font-bold text-[#D7B56D] hover:text-[#E8C97D] transition-colors flex items-center gap-1.5 px-3 py-1.5 bg-[#D7B56D]/10 border border-[#D7B56D]/30 rounded-xs"
+                  className="text-xs font-mono font-bold text-[#E8D2B5] hover:text-[#FFF] transition-colors flex items-center gap-1.5 px-3.5 py-1.5 bg-[#590907] hover:bg-[#7E1513] border border-[#E8D2B5]/30 rounded-xs shadow-md"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>Download Monograph (PDF)</span>
@@ -130,50 +175,50 @@ export default function HomePage() {
 
             {/* 4 Primary Verified Provenance Metrics Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              <div className="bg-[#070A10] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#D7B56D] uppercase tracking-wider block">
+              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
                   SURVEILLANCE COVERAGE
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F5F1E8]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
                   {RESEARCH_METRICS.surveillanceWeeks}
                 </div>
-                <p className="text-xs font-mono text-[#87999E]">
+                <p className="text-xs font-mono text-[#A5A79B]">
                   Weekly bulletins (203 outbreak · 34 NIL)
                 </p>
               </div>
 
-              <div className="bg-[#070A10] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#5FB0A8] uppercase tracking-wider block">
+              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#A5A79B] uppercase tracking-wider block font-bold">
                   RAW EXTRACTED ROWS
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F5F1E8]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
                   {RESEARCH_METRICS.analyticalRecords}
                 </div>
-                <p className="text-xs font-mono text-[#87999E]">
+                <p className="text-xs font-mono text-[#A5A79B]">
                   Tabular outbreak records (36 districts)
                 </p>
               </div>
 
-              <div className="bg-[#070A10] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#D7B56D] uppercase tracking-wider block">
+              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
                   BASELINE COHORT (73.5%)
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F5F1E8]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
                   {RESEARCH_METRICS.primaryCohortRecords}
                 </div>
-                <p className="text-xs font-mono text-[#87999E]">
+                <p className="text-xs font-mono text-[#A5A79B]">
                   5 disease families (20,955 cases · 266 deaths)
                 </p>
               </div>
 
-              <div className="bg-[#070A10] border border-[#5FB0A8]/30 p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#5FB0A8] uppercase tracking-wider block">
+              <div className="bg-[#07090C] border border-[#590907]/40 p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
                   PROVISIONAL 2026 WINDOW
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#5FB0A8]">
-                  45 <span className="text-sm font-sans font-normal text-[#87999E]">records</span>
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
+                  45 <span className="text-sm font-sans font-normal text-[#A5A79B]">records</span>
                 </div>
-                <p className="text-xs font-mono text-[#87999E]">
+                <p className="text-xs font-mono text-[#A5A79B]">
                   2,126 cases (W01–W32 unannualized)
                 </p>
               </div>
@@ -181,29 +226,29 @@ export default function HomePage() {
 
             {/* Quick Chapter Access Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs">
-              <div className="p-3.5 bg-[#070A10] border border-white/[0.06] rounded-xs space-y-1">
-                <span className="font-mono text-[#5FB0A8] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#07090C] border border-white/[0.06] rounded-xs space-y-1">
+                <span className="font-mono text-[#E8D2B5] uppercase tracking-wider font-bold block text-[10px]">
                   TEMPORAL SYNCHRONIZATION
                 </span>
-                <p className="text-[#A8B6BA] text-xs leading-relaxed">
+                <p className="text-[#A5A79B] text-xs leading-relaxed">
                   68.3% of baseline outbreaks occur from June to November. Acute Diarrheal Disease (W = 0.530) and Malaria (W = 0.443) achieve statistically significant annual repeatability.
                 </p>
               </div>
 
-              <div className="p-3.5 bg-[#070A10] border border-white/[0.06] rounded-xs space-y-1">
-                <span className="font-mono text-[#D7B56D] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#07090C] border border-[#590907]/30 rounded-xs space-y-1">
+                <span className="font-mono text-[#E8D2B5] uppercase tracking-wider font-bold block text-[10px]">
                   SPATIAL FOCALIZATION
                 </span>
-                <p className="text-[#A8B6BA] text-xs leading-relaxed">
+                <p className="text-[#A5A79B] text-xs leading-relaxed">
                   Universal urban transmission for Dengue (31 districts) and ADD (33 districts) contrasts with Malaria, where 61.4% of outbreaks concentrate in Gadchiroli and Chandrapur forest corridors.
                 </p>
               </div>
 
-              <div className="p-3.5 bg-[#070A10] border border-white/[0.06] rounded-xs space-y-1">
-                <span className="font-mono text-[#87999E] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#07090C] border border-white/[0.06] rounded-xs space-y-1">
+                <span className="font-mono text-[#A5A79B] uppercase tracking-wider font-bold block text-[10px]">
                   PRIMARY FIELDWORK TRIANGULATION
                 </span>
-                <p className="text-[#87999E] text-xs leading-relaxed">
+                <p className="text-[#A5A79B] text-xs leading-relaxed">
                   Field visit at Nallasopara West Urban Health Post (Palghar) confirmed the 2–3 week paper-to-digital transcription latency between clinical cluster onset and central NCDC bulletin publication.
                 </p>
               </div>
@@ -216,31 +261,31 @@ export default function HomePage() {
         {/* ════════════════════════════════════════════════════════════════════
             SITE FOOTER
             ════════════════════════════════════════════════════════════════════ */}
-        <footer className="py-8 px-6 sm:px-8 border-t border-white/[0.08] bg-[#070A10] lg:pr-24 xl:pr-28">
-          <div className="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#87999E]">
+        <footer className="py-8 px-6 sm:px-8 border-t border-[#E8D2B5]/15 bg-[#07090C] lg:pr-24 xl:pr-28">
+          <div className="max-w-[1360px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#A5A79B]">
             <div>
-              <span className="text-[#F5F1E8]">Analysis of Seasonal Disease Patterns Using Government Health Data</span>
+              <span className="text-[#E8D2B5]">Analysis of Seasonal Disease Patterns Using Government Health Data</span>
               <span className="text-white/20 mx-2">|</span>
               <span>Khan Umar · RP Institute, University of Mumbai</span>
             </div>
 
             <div className="flex items-center gap-4 text-xs">
-              <Link href="/method" className="hover:text-[#5FB0A8] transition-colors">
+              <Link href="/method" className="hover:text-[#E8D2B5] transition-colors">
                 Methodology
               </Link>
               <span>·</span>
-              <Link href="/sources" className="hover:text-[#5FB0A8] transition-colors">
+              <Link href="/sources" className="hover:text-[#E8D2B5] transition-colors">
                 Data Sources
               </Link>
               <span>·</span>
-              <Link href="/stability" className="hover:text-[#5FB0A8] transition-colors">
+              <Link href="/stability" className="hover:text-[#E8D2B5] transition-colors">
                 Stability Analysis
               </Link>
               <span>·</span>
               <a
                 href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
                 download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-                className="hover:text-[#D7B56D] transition-colors"
+                className="hover:text-[#FFF] text-[#E8D2B5] transition-colors"
               >
                 Academic PDF
               </a>

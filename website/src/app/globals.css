@@ -2,27 +2,40 @@
 
 @layer base {
   :root {
-    /* ── Editorial Ink & Paper Palette ── */
-    --bg-ink: #070A10;
-    --bg-section: #0A1016;
-    --bg-card: #0E1420;
-    --color-cream: #F5F1E8;
-    --color-secondary: #A8B6BA;
-    --color-muted: #87999E;
-    --color-brass: #D7B56D;
-    --color-brass-bright: #E8C97D;
-    --color-brass-dim: #A8904F;
-    --color-teal: #5FB0A8;
-    --color-teal-dim: #4A8F88;
-    --color-hairline: rgba(255, 255, 255, 0.10);
-    --color-hairline-warm: rgba(215, 181, 109, 0.14);
+    /* ── Editorial Luxury Palette: Muted Sage Grey, Warm Cream Beige, Deep Burgundy ── */
+    --color-burgundy: #590907;
+    --color-burgundy-light: #7E1513;
+    --color-burgundy-glow: rgba(89, 9, 7, 0.45);
+
+    --color-cream: #E8D2B5;
+    --color-cream-bright: #F7EAD7;
+    --color-cream-dim: #C5AF94;
+
+    --color-sage: #A5A79B;
+    --color-sage-light: #C2C4B8;
+    --color-sage-dim: #7C7E72;
+
+    --bg-ink: #07090C;
+    --bg-section: #0B0E13;
+    --bg-card: #0F131A;
+    --color-secondary: #A5A79B;
+    --color-muted: #85877B;
+
+    /* Theme Harmonization Aliases */
+    --color-brass: #E8D2B5;
+    --color-brass-bright: #F7EAD7;
+    --color-brass-dim: #C5AF94;
+    --color-teal: #A5A79B;
+    --color-teal-dim: #7C7E72;
+    --color-hairline: rgba(232, 210, 181, 0.12);
+    --color-hairline-warm: rgba(89, 9, 7, 0.25);
 
     /* Disease-Specific Analytical Colors */
-    --dengue: #4DA8D6;
-    --add: #3DA88A;
-    --malaria: #D4943A;
-    --food-poisoning: #C4565C;
-    --chikungunya: #9B7DC9;
+    --dengue: #590907;
+    --add: #A5A79B;
+    --malaria: #E8D2B5;
+    --food-poisoning: #9B2220;
+    --chikungunya: #7C7E72;
   }
 
   *, *::before, *::after {
@@ -60,14 +73,14 @@
 }
 
 /* ─── SCROLLBAR ─── */
-::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-ink); }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brass-dim);
+  background: var(--color-burgundy);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brass);
+  background: var(--color-burgundy-light);
 }
 
 /* ─── EDITORIAL LAYOUT UTILITIES ─── */
@@ -301,17 +314,21 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  background-color: var(--color-brass);
-  color: var(--bg-ink);
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
   font-weight: 600;
   font-size: 0.875rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px solid rgba(232, 210, 181, 0.2);
   border-radius: 2px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 4px 18px rgba(89, 9, 7, 0.4);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-brass-bright);
+  background-color: var(--color-burgundy-light);
+  box-shadow: 0 6px 24px rgba(89, 9, 7, 0.6);
   transform: translateY(-1px);
 }
 
@@ -324,15 +341,16 @@
   color: var(--color-cream);
   font-weight: 500;
   font-size: 0.875rem;
-  letter-spacing: 0.02em;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(232, 210, 181, 0.35);
   border-radius: 2px;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-brass);
-  background-color: rgba(215, 181, 109, 0.08);
+  border-color: var(--color-cream);
+  background-color: rgba(232, 210, 181, 0.08);
+  color: var(--color-cream-bright);
 }
 
 /* ─── REDUCED MOTION ─── */

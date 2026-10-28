@@ -93,33 +93,33 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
         
         {/* Top Eyebrow / Subject Bar */}
         <div className="flex items-center gap-3 animate-fade-in">
-          <span className="w-2 h-2 bg-[#5FB0A8] rotate-45 shrink-0" />
-          <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-[#D7B56D] uppercase">
+          <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
+          <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-[#E8D2B5] uppercase">
             SEASONAL DISEASE SURVEILLANCE / MAHARASHTRA
           </span>
-          <div className="h-px bg-white/15 w-16 sm:w-28 hidden sm:block" />
-          <span className="hidden md:inline text-[10px] font-mono text-[#87999E] uppercase tracking-wider">
+          <div className="h-px bg-[#A5A79B]/25 w-16 sm:w-28 hidden sm:block" />
+          <span className="hidden md:inline text-[10px] font-mono text-[#A5A79B] uppercase tracking-wider">
             NCDC · IDSP 2022–2025 BASELINE
           </span>
         </div>
 
         {/* Central Display Typography (Composed Directly Over Image) */}
         <div className="my-auto py-8 sm:py-12 max-w-4xl space-y-6">
-          <h1 className="font-serif text-[clamp(2.75rem,5.6vw,5.5rem)] font-bold text-[#F5F1E8] leading-[1.08] tracking-tight drop-shadow-[0_8px_32px_rgba(0,0,0,0.9)]">
+          <h1 className="font-serif text-[clamp(2.75rem,5.6vw,5.5rem)] font-bold text-[#E8D2B5] leading-[1.08] tracking-tight drop-shadow-[0_8px_32px_rgba(0,0,0,0.9)]">
             Do disease outbreaks<br />
             follow the seasons—<br />
-            <span className="text-[#D7B56D] italic font-light font-serif">and do those rhythms repeat?</span>
+            <span className="text-[#E8D2B5] italic font-light font-serif">and do those rhythms repeat?</span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-[#A8B6BA] max-w-2xl leading-relaxed drop-shadow-md">
+          <p className="text-base sm:text-lg lg:text-xl text-[#A5A79B] max-w-2xl leading-relaxed drop-shadow-md">
             A quantitative investigation of NCDC / IDSP weekly outbreak-surveillance reports in Maharashtra (2022–2025), grounded by primary fieldwork in Palghar.
           </p>
 
           {/* Action Triggers */}
           <div className="flex flex-wrap items-center gap-4 pt-3">
             <a
-              href="#study-scope"
-              className="px-7 py-3.5 bg-[#D7B56D] hover:bg-[#E8C97D] text-[#070A10] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_8px_24px_rgba(215,181,109,0.3)] hover:shadow-[0_12px_32px_rgba(215,181,109,0.45)] hover:-translate-y-0.5 flex items-center gap-2 active:translate-y-0 cursor-pointer"
+              href="#data-transformation"
+              className="px-7 py-3.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs uppercase tracking-wider rounded-xs transition-all shadow-[0_8px_24px_rgba(89,9,7,0.55)] hover:shadow-[0_12px_32px_rgba(89,9,7,0.8)] hover:-translate-y-0.5 flex items-center gap-2 active:translate-y-0 cursor-pointer border border-[#E8D2B5]/30"
             >
               <span>Begin the Investigation ↓</span>
             </a>
@@ -127,55 +127,55 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
             <a
               href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
               download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-              className="px-6 py-3.5 bg-[#070A10]/70 hover:bg-[#070A10] border border-white/25 hover:border-[#D7B56D] text-[#F5F1E8] hover:text-[#D7B56D] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
+              className="px-6 py-3.5 bg-[#07090C]/80 hover:bg-[#07090C] border border-[#E8D2B5]/30 hover:border-[#E8D2B5] text-[#E8D2B5] hover:text-[#F7EAD7] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
             >
-              <FileText className="w-4 h-4 text-[#D7B56D]" />
+              <FileText className="w-4 h-4 text-[#E8D2B5]" />
               <span>View Full Report</span>
             </a>
 
             {onReplayIntro && (
               <button
                 onClick={onReplayIntro}
-                className="px-5 py-3.5 bg-[#070A10]/70 hover:bg-[#070A10] border border-[#D7B56D]/40 hover:border-[#D7B56D] text-[#D7B56D] hover:text-[#FFF] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
+                className="px-5 py-3.5 bg-[#07090C]/80 hover:bg-[#07090C] border border-[#590907]/60 hover:border-[#590907] text-[#E8D2B5] hover:text-[#FFF] font-medium text-xs font-mono uppercase tracking-wider rounded-xs transition-all flex items-center gap-2 backdrop-blur-md cursor-pointer"
                 title="Replay the cinematic audio-visual documentary prologue"
               >
-                <Play className="w-3.5 h-3.5 fill-[#D7B56D]" />
+                <Play className="w-3.5 h-3.5 fill-[#590907]" />
                 <span>Replay Film Intro</span>
               </button>
             )}
           </div>
 
           {/* Rapid Provenance Strip */}
-          <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono text-[#87999E]">
+          <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-[11px] font-mono text-[#A5A79B]">
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#F5F1E8]">539</strong> Outbreak Records
+              <strong className="text-[#E8D2B5]">539</strong> Outbreak Records
             </span>
-            <span className="text-white/20">•</span>
+            <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#F5F1E8]">20,955</strong> Reported Cases
+              <strong className="text-[#E8D2B5]">20,955</strong> Reported Cases
             </span>
-            <span className="text-white/20">•</span>
+            <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#F5F1E8]">266</strong> Deaths
+              <strong className="text-[#E8D2B5]">266</strong> Deaths
             </span>
-            <span className="text-white/20">•</span>
+            <span className="text-[#A5A79B]/40">•</span>
             <span className="flex items-center gap-1.5">
-              <strong className="text-[#5FB0A8]">36</strong> Districts Covered
+              <strong className="text-[#E8D2B5]">36</strong> Districts Covered
             </span>
           </div>
         </div>
 
         {/* Bottom Exploration Cue Bar: Points to the Study Scope */}
-        <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono text-[#87999E]">
+        <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-[11px] font-mono text-[#A5A79B]">
           <a
-            href="#study-scope"
-            className="flex items-center gap-2 hover:text-[#D7B56D] transition-colors group/scroll uppercase tracking-wider font-semibold"
+            href="#data-transformation"
+            className="flex items-center gap-2 hover:text-[#E8D2B5] transition-colors group/scroll uppercase tracking-wider font-semibold"
           >
-            <ChevronDown className="w-3.5 h-3.5 text-[#D7B56D] animate-bounce" />
+            <ChevronDown className="w-3.5 h-3.5 text-[#590907] animate-bounce" />
             <span>Begin Investigation ↓ · Explore the Evidence</span>
           </a>
 
-          <span className="hidden sm:inline tracking-wider uppercase text-white/40">
+          <span className="hidden sm:inline tracking-wider uppercase text-[#A5A79B]/60">
             Hover to explore photograph · Cursor responsive zoom
           </span>
         </div>
@@ -184,19 +184,19 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
 
       {/* ── Layer 4: Integrated Vertical Topic Rail on the Right Edge ── */}
       <aside
-        className="hidden lg:flex absolute top-24 right-6 bottom-20 z-10 flex-col justify-between items-end text-[10px] font-mono tracking-[0.28em] text-[#F5F1E8]/60 pointer-events-none uppercase select-none"
+        className="hidden lg:flex absolute top-24 right-6 bottom-20 z-10 flex-col justify-between items-end text-[10px] font-mono tracking-[0.28em] text-[#A5A79B]/60 pointer-events-none uppercase select-none"
         aria-hidden="true"
       >
-        <span className="hover:text-[#D7B56D] transition-colors">DATA</span>
-        <span className="hover:text-[#D7B56D] transition-colors">ANALYSIS</span>
-        <span className="hover:text-[#D7B56D] transition-colors">FIELD EVIDENCE</span>
-        <span className="hover:text-[#D7B56D] transition-colors">PUBLIC HEALTH</span>
-        <span className="text-[#D7B56D] font-bold">MAHARASHTRA</span>
+        <span className="hover:text-[#E8D2B5] transition-colors">DATA</span>
+        <span className="hover:text-[#E8D2B5] transition-colors">ANALYSIS</span>
+        <span className="hover:text-[#E8D2B5] transition-colors">FIELD EVIDENCE</span>
+        <span className="hover:text-[#E8D2B5] transition-colors">PUBLIC HEALTH</span>
+        <span className="text-[#590907] font-bold">MAHARASHTRA</span>
       </aside>
 
       {/* Subtle corner hairline accents */}
-      <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#D7B56D]/60 pointer-events-none z-10" />
-      <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-[#D7B56D]/60 pointer-events-none z-10" />
+      <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-[#590907] pointer-events-none z-10" />
+      <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-[#590907] pointer-events-none z-10" />
     </section>
   );
 }
