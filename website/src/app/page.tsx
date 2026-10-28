@@ -86,6 +86,8 @@ export default function HomePage() {
           id="data-transformation"
           className="py-12 sm:py-16 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-[#0B0F15] border-b border-[#F0DECE]/12 text-[#F0DECE] select-none"
           aria-label="How We Transformed The Data"
+          data-aos="fade-up"
+          data-aos-duration="850"
         >
           <div className="max-w-[1360px] mx-auto space-y-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-white/[0.08] pb-5">
@@ -135,6 +137,8 @@ export default function HomePage() {
           id="study-scope"
           className="py-10 sm:py-14 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 bg-gradient-to-b from-[#180505] to-[#110303] border-b border-[#F0DECE]/12 text-[#F0DECE]"
           aria-label="Executive Cohort Metrics"
+          data-aos="fade-up"
+          data-aos-duration="900"
         >
           <div className="max-w-[1360px] mx-auto space-y-8">
             

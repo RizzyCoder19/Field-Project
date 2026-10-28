@@ -407,3 +407,50 @@
     height: auto !important;
   }
 }
+
+/* ─── CINEMATIC FILM TAPE SELF-SCROLLING MARQUEE ─── */
+@keyframes filmTapeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-film-tape {
+  display: flex;
+  width: max-content;
+  animation: filmTapeScroll 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-film-tape:hover,
+.pause-film-tape {
+  animation-play-state: paused !important;
+}
+
+.animate-film-tape-fast {
+  animation-duration: 22s !important;
+}
+
+/* 35mm Film Sprocket Perforations */
+.film-sprockets {
+  background-image: radial-gradient(circle, rgba(240, 222, 206, 0.40) 28%, transparent 32%);
+  background-size: 18px 10px;
+  background-repeat: repeat-x;
+}
+
+/* ─── SITE SELF-CONSTRUCTION UTILITIES (AOS & GSAP) ─── */
+[data-aos] {
+  pointer-events: auto !important;
+}
+
+.construct-pulse {
+  animation: constructPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes constructPulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(139, 20, 20, 0.45)); }
+}

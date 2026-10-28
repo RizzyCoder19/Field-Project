@@ -21,7 +21,11 @@ export default function FieldworkPage() {
       <ConnectedEvidenceHeader currentActNumber={8} />
 
       {/* 1. VISUAL HEADER */}
-      <section className="border-b border-[#F0DECE]/12 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-8 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28">
+      <section 
+        className="border-b border-[#F0DECE]/12 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-8 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28"
+        data-aos="fade-down"
+        data-aos-duration="800"
+      >
         <div className="max-w-[1360px] mx-auto space-y-3">
           <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
             <span className="w-2.5 h-2.5 bg-[#8B1414] rotate-45 ring-1 ring-[#F0DECE]/40" />
@@ -42,7 +46,7 @@ export default function FieldworkPage() {
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:pl-8 lg:pr-24 xl:pr-28 max-w-[1360px] mx-auto space-y-12">
         
         {/* SECTION A: CINEMATIC DOCUMENTARY FIELD INSPECTOR */}
-        <div className="space-y-4">
+        <div className="space-y-4" data-aos="fade-up" data-aos-duration="850">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/[0.08] pb-3 text-xs font-mono">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-[#8B1414]" />
@@ -58,12 +62,12 @@ export default function FieldworkPage() {
         </div>
 
         {/* SECTION B: STRUCTURED MEDICAL OFFICER QUESTIONNAIRE & TESTIMONY */}
-        <div className="space-y-4">
+        <div className="space-y-4" data-aos="fade-up" data-aos-duration="850" data-aos-delay="100">
           <MedicalOfficerQuestionnaire />
         </div>
 
         {/* SECTION C: THREE-TIER EPISTEMOLOGICAL FRAMEWORK */}
-        <div className="space-y-6 pt-4 border-t border-white/[0.08]">
+        <div className="space-y-6 pt-4 border-t border-white/[0.08]" data-aos="fade-up" data-aos-duration="900">
           <div className="space-y-1">
             <div className="flex items-center gap-2 text-xs font-mono text-[#8B1414] font-bold tracking-widest uppercase">
               <Layers className="w-4 h-4 text-[#8B1414]" />
@@ -79,7 +83,11 @@ export default function FieldworkPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Tier A: Observed */}
-            <div className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl">
+            <div 
+              className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl hover:border-[#8B1414]/40 transition-colors"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#F0DECE]">
                 <Eye className="w-4 h-4 text-[#8B1414]" />
                 <span>A. Directly Observed</span>
@@ -104,7 +112,11 @@ export default function FieldworkPage() {
             </div>
 
             {/* Tier B: Reported */}
-            <div className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl">
+            <div 
+              className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl hover:border-[#C9944A]/40 transition-colors"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#C9944A]">
                 <MessageSquare className="w-4 h-4 text-[#C9944A]" />
                 <span>B. Staff Testimony</span>
@@ -129,7 +141,11 @@ export default function FieldworkPage() {
             </div>
 
             {/* Tier C: Inferred */}
-            <div className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl">
+            <div 
+              className="bg-[#0B0F15] border border-white/[0.08] rounded-xs p-6 space-y-4 shadow-xl hover:border-[#8B1414]/40 transition-colors"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#8B1414]">
                 <Lightbulb className="w-4 h-4 text-[#8B1414]" />
                 <span>C. Researcher Inference</span>
@@ -156,7 +172,11 @@ export default function FieldworkPage() {
         </div>
 
         {/* SECTION D: SCIENTIFIC SYNTHESIS CALLOUT */}
-        <div className="p-5 sm:p-6 bg-gradient-to-r from-[#180505] to-[#0E141D] border border-[#8B1414]/50 rounded-xs flex items-start gap-4 text-xs sm:text-sm text-[#BAC0B8] leading-relaxed shadow-xl">
+        <div 
+          className="p-5 sm:p-6 bg-gradient-to-r from-[#180505] to-[#0E141D] border border-[#8B1414]/50 rounded-xs flex items-start gap-4 text-xs sm:text-sm text-[#BAC0B8] leading-relaxed shadow-xl"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
           <CheckCircle2 className="w-5 h-5 text-[#8B1414] shrink-0 mt-0.5" />
           <div className="space-y-1">
             <div className="text-[#F0DECE] font-bold font-serif text-sm sm:text-base">
@@ -172,7 +192,7 @@ export default function FieldworkPage() {
         </div>
 
         {/* SECTION E: EXPANDABLE METHODOLOGY & ETHICS DRAWER */}
-        <div className="pt-2 border-t border-white/[0.08]">
+        <div className="pt-2 border-t border-white/[0.08]" data-aos="fade-up">
           <button
             onClick={() => setShowMethodologyDrawer(!showMethodologyDrawer)}
             className="w-full p-4 bg-[#0B0F15] hover:bg-[#8B1414]/20 border border-[#F0DECE]/20 rounded-xs transition-all flex items-center justify-between text-xs font-mono uppercase tracking-wider text-[#F0DECE] font-bold cursor-pointer"

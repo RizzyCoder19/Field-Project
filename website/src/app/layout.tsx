@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader, JetBrains_Mono } from "next/font/google";
 import PresentationNav from "@/components/PresentationNav";
+import SiteConstructionProvider from "@/components/SiteConstructionProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,8 +40,10 @@ export default function RootLayout({
       className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#070A0F] text-[#F0DECE] selection:bg-[#8B1414] selection:text-[#F0DECE]">
-        <PresentationNav />
-        <main className="flex-1 w-full">{children}</main>
+        <SiteConstructionProvider>
+          <PresentationNav />
+          <main className="flex-1 w-full">{children}</main>
+        </SiteConstructionProvider>
       </body>
     </html>
   );
