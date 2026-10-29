@@ -27,9 +27,9 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     id: "add",
     num: "01",
     evidenceTitle: "ADD July Monsoon Peak (W = 0.530, p = 0.016)",
-    evidenceData: "144 outbreak records, 5,660 cases, 33 districts. The ONLY disease group with statistically significant annual repeating rank order.",
+    evidenceData: "153 outbreak records, 9,050 cases, 33 districts. The ONLY disease group with statistically significant annual repeating rank order.",
     evidenceCategory: "Temporal Stability",
-    color: "#10B981",
+    color: "#5A7A72",
     certainty: "High (Statistically Proven)",
     actionTitle: "Pre-Monsoon Pipeline Superchlorination & Reservoir Flushing",
     actionTiming: "Annual Target: May 15 – June 15",
@@ -39,9 +39,9 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     id: "dengue",
     num: "02",
     evidenceTitle: "Dengue October Surge + Household Water Drums",
-    evidenceData: "153 outbreak records, 4,500 cases. Fieldwork in Palghar proves intermittent tap water forces 200L domestic plastic drum storage.",
+    evidenceData: "204 outbreak records, 3,144 cases, 31 districts. Fieldwork in Palghar proves intermittent tap water forces 200L domestic plastic drum storage.",
     evidenceCategory: "Temporal & Fieldwork",
-    color: "#38BDF8",
+    color: "#8B1414",
     certainty: "Strong (Empirically Documented)",
     actionTitle: "Targeted Peri-Domestic Container Abatement",
     actionTiming: "Annual Target: August 15 – September 30",
@@ -53,7 +53,7 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     evidenceTitle: "Eastern Forest Malaria Cluster (61.4% of Events)",
     evidenceData: "Gadchiroli (29 events) & Chandrapur (14 events) capture 43 of 70 statewide malaria records (61.4%).",
     evidenceCategory: "Spatial Concentration",
-    color: "#F59E0B",
+    color: "#C9944A",
     certainty: "Targeted (Spatial Cluster)",
     actionTitle: "Spatial Reallocation of Diagnostic & Vector Supplies",
     actionTiming: "Annual Target: June 01 – July 15",
@@ -65,7 +65,7 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     evidenceTitle: "Food Poisoning Outlier Events (3 Events = 1,615 Cases)",
     evidenceData: "February apparent peak collapses from 2,162 down to 547 cases when three banquet clusters are isolated in sensitivity testing.",
     evidenceCategory: "Analytical Sensitivity",
-    color: "#EF4444",
+    color: "#A83C28",
     certainty: "Critical (Sensitivity Confirmed)",
     actionTitle: "Catered Mass-Banquet Food Safety Protocols",
     actionTiming: "Annual Target: Peak Wedding & Festival Months (Feb & May)",
@@ -77,7 +77,7 @@ const SYNTHESIS_NODES: SynthesisNode[] = [
     evidenceTitle: "Threshold Divergence Between Clinics & IDSP Bulletins",
     evidenceData: "Palghar UHP logs daily fevers on Form P/L, but state bulletins only aggregate formally declared outbreak investigations.",
     evidenceCategory: "Operational Systems",
-    color: "#5FB0A8",
+    color: "#7E6080",
     certainty: "Operational (Fieldwork)",
     actionTitle: "Syndromic Digital Threshold Triggers",
     actionTiming: "Continuous Year-Round System",
@@ -91,22 +91,22 @@ export default function FindingsPage() {
   const activeNode = SYNTHESIS_NODES.find(n => n.id === selectedNodeId) || SYNTHESIS_NODES[0];
 
   return (
-    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+    <div className="w-full bg-[#070A0F] text-[#F0DECE] min-h-screen">
       <ConnectedEvidenceHeader currentActNumber={10} />
 
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-[#F0DECE]/15 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
-            <span>EXHIBIT 10 · SYNTHESIS & ACTION</span>
+          <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#8B1414] ring-1 ring-[#F0DECE]/40 animate-pulse" />
+            <span>ACT 10 · PUBLIC HEALTH FINDINGS & POLICY INTERVENTIONS</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F0DECE] leading-[1.12]">
             Synthesis of Evidence & Recommendations
           </h1>
 
-          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#BAC0B8] max-w-3xl leading-relaxed pt-1">
             Connecting temporal cycles, spatial clustering, stability analysis, and fieldwork into actionable public health intelligence.
           </p>
         </div>
@@ -115,8 +115,8 @@ export default function FindingsPage() {
       {/* 2. DOMINANT EVIDENCE-TO-ACTION VISUAL SYNTHESIS MATRIX (80% VIEWPORT) */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-6">
         {/* Node Switcher Tabs */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#F8FAFC]/12 pb-3">
-          <span className="text-xs font-mono text-[#94A3B8] uppercase tracking-wider">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.08] pb-3">
+          <span className="text-xs font-mono text-[#BAC0B8] uppercase tracking-wider font-semibold">
             Explore 5 Evidence-to-Action Pathways:
           </span>
 
@@ -127,11 +127,11 @@ export default function FindingsPage() {
                 <button
                   key={node.id}
                   onClick={() => setSelectedNodeId(node.id)}
-                  className="px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm transition-all border flex items-center gap-2"
+                  className="px-3.5 py-1.5 font-mono text-xs uppercase tracking-wider rounded-xs transition-all border flex items-center gap-2 cursor-pointer shadow-sm"
                   style={{
-                    borderColor: isSelected ? node.color : "rgba(212, 175, 55, 0.18)",
-                    backgroundColor: isSelected ? `${node.color}25` : "#06080F",
-                    color: isSelected ? node.color : "rgba(248, 250, 252, 0.7)",
+                    borderColor: isSelected ? "#8B1414" : "rgba(240, 222, 206, 0.2)",
+                    backgroundColor: isSelected ? "#8B1414" : "#0B0F15",
+                    color: isSelected ? "#F0DECE" : "#BAC0B8",
                     fontWeight: isSelected ? "bold" : "normal",
                   }}
                 >
@@ -144,106 +144,106 @@ export default function FindingsPage() {
         </div>
 
         {/* Central Visual Synthesis Display */}
-        <div className="bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm p-6 sm:p-8 shadow-2xl space-y-8">
+        <div className="bg-[#0B0F15] border border-[#F0DECE]/15 rounded-xs p-6 sm:p-8 shadow-2xl space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Left: The Evidence Stream (6 cols) */}
-            <div className="lg:col-span-6 p-6 bg-[#06080F] border rounded-sm flex flex-col justify-between space-y-4" style={{ borderColor: `${activeNode.color}40` }}>
+            <div className="lg:col-span-6 p-6 bg-[#0E141D] border rounded-xs flex flex-col justify-between space-y-4" style={{ borderColor: `${activeNode.color}60` }}>
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono">
                   <span className="font-bold uppercase tracking-wider" style={{ color: activeNode.color }}>
                     THE EMPIRICAL EVIDENCE
                   </span>
-                  <span className="text-[10px] text-[#94A3B8]">{activeNode.evidenceCategory}</span>
+                  <span className="text-[10px] text-[#BAC0B8]">{activeNode.evidenceCategory}</span>
                 </div>
 
-                <h3 className="font-serif text-2xl font-bold text-[#F8FAFC]">
+                <h3 className="font-serif text-2xl font-bold text-[#F0DECE]">
                   {activeNode.evidenceTitle}
                 </h3>
 
-                <p className="text-sm font-mono text-[#F8FAFC]/90 leading-relaxed pt-1">
+                <p className="text-sm font-mono text-[#F0DECE]/90 leading-relaxed pt-1">
                   {activeNode.evidenceData}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between text-xs font-mono">
-                <span className="text-[#94A3B8]">Evidence Certainty:</span>
-                <span className="font-bold text-[#F8FAFC]" style={{ color: activeNode.color }}>
+              <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono">
+                <span className="text-[#BAC0B8]">Evidence Certainty:</span>
+                <span className="font-bold" style={{ color: activeNode.color }}>
                   {activeNode.certainty}
                 </span>
               </div>
             </div>
 
             {/* Right: The Recommended Public Health Action (6 cols) */}
-            <div className="lg:col-span-6 p-6 bg-[#06080F] border border-[#5FB0A8]/30 rounded-sm flex flex-col justify-between space-y-4">
+            <div className="lg:col-span-6 p-6 bg-[#0E141D] border border-[#8B1414]/50 rounded-xs flex flex-col justify-between space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="font-bold text-[#5FB0A8] uppercase tracking-wider">
+                  <span className="font-bold text-[#8B1414] uppercase tracking-wider">
                     TARGETED INTERVENTION
                   </span>
-                  <span className="text-[10px] text-[#10B981] font-bold">{activeNode.actionTiming}</span>
+                  <span className="text-[10px] text-[#F0DECE] font-bold px-2 py-0.5 bg-[#8B1414]/30 rounded-2xs border border-[#8B1414]/50">{activeNode.actionTiming}</span>
                 </div>
 
-                <h3 className="font-serif text-2xl font-bold text-[#F8FAFC]">
+                <h3 className="font-serif text-2xl font-bold text-[#F0DECE]">
                   {activeNode.actionTitle}
                 </h3>
 
-                <p className="text-sm text-[#94A3B8] leading-relaxed pt-1">
+                <p className="text-sm text-[#BAC0B8] leading-relaxed pt-1">
                   {activeNode.actionDetails}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between text-xs font-mono text-[#5FB0A8]">
+              <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono text-[#F0DECE]">
                 <span>Operational Priority #{activeNode.num}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-[#8B1414]" />
               </div>
             </div>
           </div>
 
           {/* Quick Evidence-to-Action Strip Below */}
-          <div className="pt-4 border-t border-[#F8FAFC]/10 grid grid-cols-2 sm:grid-cols-5 gap-2 font-mono text-[10px]">
+          <div className="pt-4 border-t border-white/[0.08] grid grid-cols-2 sm:grid-cols-5 gap-2 font-mono text-[10px]">
             {SYNTHESIS_NODES.map((n) => (
               <button
                 key={n.id}
                 onClick={() => setSelectedNodeId(n.id)}
-                className={`p-2.5 rounded-sm border text-left transition-all ${
+                className={`p-2.5 rounded-xs border text-left transition-all cursor-pointer ${
                   selectedNodeId === n.id
-                    ? "bg-[#06080F] border-[#5FB0A8] text-[#F8FAFC]"
-                    : "bg-[#06080F]/40 border-[#F8FAFC]/10 text-[#94A3B8]/70 hover:text-[#F8FAFC]"
+                    ? "bg-[#180505] border-[#8B1414] text-[#F0DECE] shadow-sm"
+                    : "bg-[#0E141D]/60 border-white/[0.06] text-[#BAC0B8]/70 hover:text-[#F0DECE]"
                 }`}
               >
                 <div className="font-bold uppercase" style={{ color: n.color }}>#{n.num} · {n.id.toUpperCase()}</div>
-                <div className="text-[9px] text-[#94A3B8] truncate mt-0.5">{n.actionTitle}</div>
+                <div className="text-[9px] text-[#BAC0B8] truncate mt-0.5">{n.actionTitle}</div>
               </button>
             ))}
           </div>
         </div>
 
         {/* 3. SCIENTIFIC RESTRAINT & LIMITATIONS OF EVIDENCE */}
-        <div className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-3 font-mono text-xs text-[#94A3B8]">
-          <div className="flex items-center gap-2 text-[#5FB0A8] font-bold uppercase text-[11px]">
-            <ShieldCheck className="w-4 h-4" />
-            <span>Research Restraint & Boundaries of Interpretation</span>
+        <div className="p-6 bg-[#0B0F15] border border-[#F0DECE]/15 rounded-xs space-y-3 font-mono text-xs text-[#BAC0B8]">
+          <div className="flex items-center gap-2 text-[#8B1414] font-bold uppercase text-[11px]">
+            <ShieldCheck className="w-4 h-4 text-[#8B1414]" />
+            <span className="text-[#F0DECE]">Research Restraint & Boundaries of Interpretation</span>
           </div>
           <p className="leading-relaxed">
             Public health decisions must respect what observational surveillance data can and cannot prove:
           </p>
           <ul className="space-y-1.5 leading-relaxed pl-2">
-            <li>• <strong className="text-[#F8FAFC]">Correlation vs Causation:</strong> Seasonal outbreak peaks reflect environmental and behavioral concentration; they do not prove weather alone caused the disease.</li>
-            <li>• <strong className="text-[#F8FAFC]">Reporting Sensitivity:</strong> Absence of reported outbreaks in a district indicates absence of investigated notifications, not guaranteed zero biological cases.</li>
-            <li>• <strong className="text-[#F8FAFC]">Outlier Sensitivity:</strong> Removing large banquet events for sensitivity analysis tests mathematical stability; it does not imply the original events were errors.</li>
+            <li>• <strong className="text-[#F0DECE]">Correlation vs Causation:</strong> Seasonal outbreak peaks reflect environmental and behavioral concentration; they do not prove weather alone caused the disease.</li>
+            <li>• <strong className="text-[#F0DECE]">Reporting Sensitivity:</strong> Absence of reported outbreaks in a district indicates absence of investigated notifications, not guaranteed zero biological cases.</li>
+            <li>• <strong className="text-[#F0DECE]">Outlier Sensitivity:</strong> Removing large banquet events for sensitivity analysis tests mathematical stability; it does not imply the original events were errors.</li>
           </ul>
         </div>
 
         {/* 4. DIRECT ACADEMIC REPORT ACCESS */}
-        <div className="p-6 bg-gradient-to-r from-[#0B111E] to-[#1A2234] border border-[#5FB0A8]/40 rounded-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-6 bg-gradient-to-r from-[#180505] to-[#0E141D] border border-[#8B1414]/50 rounded-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold tracking-wider">
+            <span className="text-[10px] font-mono uppercase text-[#F0DECE]/80 font-bold tracking-wider">
               Comprehensive Academic Documentation
             </span>
-            <h4 className="font-serif text-xl font-bold text-[#F8FAFC]">
+            <h4 className="font-serif text-xl font-bold text-[#F0DECE]">
               Looking for the Complete Written Research Report?
             </h4>
-            <p className="text-xs text-[#94A3B8] max-w-xl">
+            <p className="text-xs text-[#BAC0B8] max-w-xl">
               Access the complete academic paper with extended literature review, full ANOVA & Kendall tables, audit trail, and formal citations.
             </p>
           </div>
@@ -251,7 +251,7 @@ export default function FindingsPage() {
           <a
             href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
             download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-            className="px-5 py-3 bg-[#5FB0A8] hover:bg-[#38BDF8] text-[#06080F] font-mono text-xs font-bold uppercase tracking-wider rounded-sm transition-all shadow-lg flex items-center justify-center gap-2 shrink-0"
+            className="px-5 py-3 bg-[#8B1414] hover:bg-[#7E1513] text-[#F0DECE] font-mono text-xs font-bold uppercase tracking-wider rounded-xs transition-all shadow-lg flex items-center justify-center gap-2 shrink-0 border border-[#F0DECE]/30 cursor-pointer"
           >
             <FileText className="w-4 h-4" />
             <span>Open Academic Report (PDF)</span>

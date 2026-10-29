@@ -136,22 +136,22 @@ export default function MethodPage() {
   const activeStage = PIPELINE_STAGES[selectedStageIdx];
 
   return (
-    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+    <div className="w-full bg-[#070A0F] text-[#F0DECE] min-h-screen">
       <ConnectedEvidenceHeader currentActNumber={2} />
 
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-[#F0DECE]/15 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
-            <span>EXHIBIT 11 · DATA PIPELINE</span>
+          <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#8B1414] ring-1 ring-[#F0DECE]/40 animate-pulse" />
+            <span>ACT 02 · 5-PHASE ANALYTICAL PIPELINE</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F0DECE] leading-[1.12]">
             12-Stage Research Methodology
           </h1>
 
-          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#BAC0B8] max-w-3xl leading-relaxed pt-1">
             An auditable, reproducible data pipeline transforming raw government surveillance PDFs into verified findings.
           </p>
         </div>
@@ -168,26 +168,26 @@ export default function MethodPage() {
                 <button
                   key={stg.num}
                   onClick={() => setSelectedStageIdx(idx)}
-                  className={`w-full p-3 rounded-sm border text-left transition-all flex items-center justify-between ${
+                  className={`w-full p-3 rounded-xs border text-left transition-all flex items-center justify-between cursor-pointer ${
                     isSelected
-                      ? "bg-[#0B111E] border-[#5FB0A8] shadow-md"
-                      : "bg-[#06080F] border-[#F8FAFC]/10 hover:border-[#F8FAFC]/25"
+                      ? "bg-[#8B1414]/30 border-[#8B1414] shadow-md ring-1 ring-[#8B1414]/50"
+                      : "bg-[#0B0F15] border-white/[0.08] hover:border-white/[0.20]"
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded-xs ${
-                      isSelected ? "bg-[#5FB0A8] text-[#06080F]" : "bg-[#0B111E] text-[#94A3B8]"
+                    <span className={`font-mono text-xs font-bold px-1.5 py-0.5 rounded-2xs ${
+                      isSelected ? "bg-[#8B1414] text-[#F0DECE]" : "bg-[#0E141D] text-[#BAC0B8]"
                     }`}>
                       {stg.num}
                     </span>
                     <span className={`font-serif text-sm font-bold ${
-                      isSelected ? "text-[#F8FAFC]" : "text-[#94A3B8]"
+                      isSelected ? "text-[#F0DECE]" : "text-[#BAC0B8]"
                     }`}>
                       {stg.title}
                     </span>
                   </div>
                   <ChevronRight className={`w-4 h-4 transition-transform ${
-                    isSelected ? "text-[#5FB0A8] translate-x-0.5" : "text-[#94A3B8]/40"
+                    isSelected ? "text-[#8B1414] translate-x-0.5" : "text-[#BAC0B8]/40"
                   }`} />
                 </button>
               );
@@ -195,47 +195,47 @@ export default function MethodPage() {
           </div>
 
           {/* Right Column: Stage Inspector Card (7 cols) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 bg-[#0B111E] border border-[#F8FAFC]/15 rounded-sm shadow-2xl space-y-6">
-            <div className="flex items-center justify-between border-b border-[#F8FAFC]/10 pb-4">
+          <div className="lg:col-span-7 p-6 sm:p-8 bg-[#0B0F15] border border-[#F0DECE]/15 rounded-xs shadow-2xl space-y-6">
+            <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono uppercase text-[#5FB0A8] font-bold tracking-widest">
+                <span className="text-[10px] font-mono uppercase text-[#8B1414] font-bold tracking-widest">
                   PIPELINE STAGE {activeStage.num} OF 12
                 </span>
-                <h3 className="font-serif text-2xl font-bold text-[#F8FAFC]">
+                <h3 className="font-serif text-2xl font-bold text-[#F0DECE]">
                   {activeStage.title}
                 </h3>
               </div>
-              <span className="text-xs font-mono px-2.5 py-1 bg-[#06080F] border border-[#10B981]/40 text-[#10B981] rounded-sm">
+              <span className="text-xs font-mono px-2.5 py-1 bg-[#070A0F] border border-[#5A7A72]/40 text-[#5A7A72] rounded-xs font-semibold">
                 Deterministic
               </span>
             </div>
 
-            <p className="text-sm font-mono text-[#F8FAFC]/90 leading-relaxed">
+            <p className="text-sm font-mono text-[#F0DECE]/90 leading-relaxed">
               {activeStage.shortDesc}
             </p>
 
             {/* Inputs -> Transform -> Output Flow */}
             <div className="space-y-4 font-mono text-xs">
-              <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm space-y-1">
-                <span className="text-[10px] text-[#38BDF8] uppercase font-bold">Inputs & Data Sources:</span>
-                <p className="text-[#94A3B8]">{activeStage.inputs}</p>
+              <div className="p-3.5 bg-[#0E141D] border border-white/[0.08] rounded-xs space-y-1">
+                <span className="text-[10px] text-[#C9944A] uppercase font-bold">Inputs & Data Sources:</span>
+                <p className="text-[#BAC0B8]">{activeStage.inputs}</p>
               </div>
 
-              <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm space-y-1">
-                <span className="text-[10px] text-[#5FB0A8] uppercase font-bold">Transformation Procedure:</span>
-                <p className="text-[#94A3B8]">{activeStage.transform}</p>
+              <div className="p-3.5 bg-[#0E141D] border border-white/[0.08] rounded-xs space-y-1">
+                <span className="text-[10px] text-[#8B1414] uppercase font-bold">Transformation Procedure:</span>
+                <p className="text-[#BAC0B8]">{activeStage.transform}</p>
               </div>
 
-              <div className="p-3.5 bg-[#06080F] border border-[#F8FAFC]/10 rounded-sm space-y-1">
-                <span className="text-[10px] text-[#10B981] uppercase font-bold">Generated Outputs:</span>
-                <p className="text-[#94A3B8]">{activeStage.outputs}</p>
+              <div className="p-3.5 bg-[#0E141D] border border-white/[0.08] rounded-xs space-y-1">
+                <span className="text-[10px] text-[#5A7A72] uppercase font-bold">Generated Outputs:</span>
+                <p className="text-[#BAC0B8]">{activeStage.outputs}</p>
               </div>
             </div>
 
             {/* Verification Artifact Pointer */}
-            <div className="pt-4 border-t border-[#F8FAFC]/10 flex items-center justify-between font-mono text-xs">
-              <span className="text-[#94A3B8]">Verification Artifact:</span>
-              <span className="text-[#5FB0A8] font-semibold">{activeStage.artifact}</span>
+            <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between font-mono text-xs">
+              <span className="text-[#BAC0B8]">Verification Artifact:</span>
+              <span className="text-[#8B1414] font-semibold">{activeStage.artifact}</span>
             </div>
           </div>
         </div>

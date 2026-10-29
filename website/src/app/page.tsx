@@ -65,7 +65,7 @@ export default function HomePage() {
       )}
 
       <div
-        className={`w-full bg-[#07090C] text-[#E8D2B5] min-h-screen selection:bg-[#590907]/40 selection:text-[#E8D2B5] transition-opacity duration-700 ${
+        className={`w-full bg-[#070A0F] text-[#F0DECE] min-h-screen selection:bg-[#8B1414]/40 selection:text-[#F0DECE] transition-opacity duration-700 ${
           introComplete && !showReplayIntro ? "opacity-100" : "max-md:opacity-100 opacity-0"
         }`}
         style={{
@@ -146,14 +146,14 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.08] pb-4">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#590907] rotate-45 shrink-0 ring-1 ring-[#E8D2B5]/40" />
-                  <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-[#E8D2B5] uppercase">
+                  <span className="w-2 h-2 bg-[#8B1414] rotate-45 shrink-0 ring-1 ring-[#F0DECE]/40" />
+                  <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-[#F0DECE] uppercase">
                     EPIDEMIOLOGICAL COHORT METRICS
                   </span>
                   <span className="text-white/20">|</span>
-                  <span className="text-[10px] font-mono text-[#A5A79B]">2022–2025 Audited Baseline</span>
+                  <span className="text-[10px] font-mono text-[#BAC0B8]">2022–2025 Audited Baseline</span>
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#E8D2B5] tracking-tight">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F0DECE] tracking-tight">
                   Statewide surveillance foundations
                 </h3>
               </div>
@@ -161,15 +161,15 @@ export default function HomePage() {
               <div className="flex items-center gap-3">
                 <Link
                   href="/method"
-                  className="text-xs font-mono text-[#A5A79B] hover:text-[#E8D2B5] transition-colors flex items-center gap-1.5 px-3 py-1.5 bg-[#07090C] border border-white/[0.08] rounded-xs"
+                  className="text-xs font-mono text-[#BAC0B8] hover:text-[#F0DECE] transition-colors flex items-center gap-1.5 px-3 py-1.5 bg-[#070A0F] border border-white/[0.08] rounded-xs cursor-pointer"
                 >
                   <span>12-Stage Methodology</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#590907]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#8B1414]" />
                 </Link>
                 <a
                   href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
                   download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-                  className="text-xs font-mono font-bold text-[#E8D2B5] hover:text-[#FFF] transition-colors flex items-center gap-1.5 px-3.5 py-1.5 bg-[#8B1414] hover:bg-[#A31818] border border-[#F0DECE]/30 rounded-xs shadow-md"
+                  className="text-xs font-mono font-bold text-[#F0DECE] hover:text-white transition-colors flex items-center gap-1.5 px-3.5 py-1.5 bg-[#8B1414] hover:bg-[#A31818] border border-[#F0DECE]/30 rounded-xs shadow-md cursor-pointer"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span>Download Monograph (PDF)</span>
@@ -179,50 +179,50 @@ export default function HomePage() {
 
             {/* 4 Primary Verified Provenance Metrics Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              <div className="bg-[#240808] border border-[#F0DECE]/15 p-4 sm:p-5 rounded-xs space-y-1 shadow-lg">
-                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
+              <div className="bg-[#180505] border border-[#F0DECE]/15 p-4 sm:p-5 rounded-xs space-y-1 shadow-lg">
+                <span className="text-[10px] font-mono text-[#F0DECE] uppercase tracking-wider block font-bold">
                   SURVEILLANCE COVERAGE
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F0DECE]">
                   {RESEARCH_METRICS.surveillanceWeeks}
                 </div>
-                <p className="text-xs font-mono text-[#A5A79B]">
+                <p className="text-xs font-mono text-[#BAC0B8]">
                   Weekly bulletins (203 outbreak · 34 NIL)
                 </p>
               </div>
 
-              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#A5A79B] uppercase tracking-wider block font-bold">
+              <div className="bg-[#070A0F] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#BAC0B8] uppercase tracking-wider block font-bold">
                   RAW EXTRACTED ROWS
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F0DECE]">
                   {RESEARCH_METRICS.analyticalRecords}
                 </div>
-                <p className="text-xs font-mono text-[#A5A79B]">
+                <p className="text-xs font-mono text-[#BAC0B8]">
                   Tabular outbreak records (36 districts)
                 </p>
               </div>
 
-              <div className="bg-[#07090C] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
+              <div className="bg-[#070A0F] border border-white/[0.08] p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#F0DECE] uppercase tracking-wider block font-bold">
                   BASELINE COHORT (73.5%)
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F0DECE]">
                   {RESEARCH_METRICS.primaryCohortRecords}
                 </div>
-                <p className="text-xs font-mono text-[#A5A79B]">
+                <p className="text-xs font-mono text-[#BAC0B8]">
                   5 disease families (20,955 cases · 266 deaths)
                 </p>
               </div>
 
-              <div className="bg-[#07090C] border border-[#590907]/40 p-4 sm:p-5 rounded-xs space-y-1">
-                <span className="text-[10px] font-mono text-[#E8D2B5] uppercase tracking-wider block font-bold">
+              <div className="bg-[#070A0F] border border-[#8B1414]/50 p-4 sm:p-5 rounded-xs space-y-1">
+                <span className="text-[10px] font-mono text-[#F0DECE] uppercase tracking-wider block font-bold">
                   PROVISIONAL 2026 WINDOW
                 </span>
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#E8D2B5]">
-                  45 <span className="text-sm font-sans font-normal text-[#A5A79B]">records</span>
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#F0DECE]">
+                  45 <span className="text-sm font-sans font-normal text-[#BAC0B8]">records</span>
                 </div>
-                <p className="text-xs font-mono text-[#A5A79B]">
+                <p className="text-xs font-mono text-[#BAC0B8]">
                   2,126 cases (W01–W32 unannualized)
                 </p>
               </div>
@@ -230,29 +230,29 @@ export default function HomePage() {
 
             {/* Quick Chapter Access Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs">
-              <div className="p-3.5 bg-[#07090C] border border-white/[0.06] rounded-xs space-y-1">
-                <span className="font-mono text-[#E8D2B5] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#070A0F] border border-white/[0.06] rounded-xs space-y-1">
+                <span className="font-mono text-[#F0DECE] uppercase tracking-wider font-bold block text-[10px]">
                   TEMPORAL SYNCHRONIZATION
                 </span>
-                <p className="text-[#A5A79B] text-xs leading-relaxed">
-                  68.3% of baseline outbreaks occur from June to November. Acute Diarrheal Disease (W = 0.530) and Malaria (W = 0.443) achieve statistically significant annual repeatability.
+                <p className="text-[#BAC0B8] text-xs leading-relaxed">
+                  68.3% of baseline outbreaks occur from June to November. Acute Diarrhoeal Disease (W = 0.530) and Malaria (W = 0.443) achieve statistically significant annual repeatability.
                 </p>
               </div>
 
-              <div className="p-3.5 bg-[#07090C] border border-[#590907]/30 rounded-xs space-y-1">
-                <span className="font-mono text-[#E8D2B5] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#070A0F] border border-[#8B1414]/40 rounded-xs space-y-1">
+                <span className="font-mono text-[#F0DECE] uppercase tracking-wider font-bold block text-[10px]">
                   SPATIAL FOCALIZATION
                 </span>
-                <p className="text-[#A5A79B] text-xs leading-relaxed">
+                <p className="text-[#BAC0B8] text-xs leading-relaxed">
                   Universal urban transmission for Dengue (31 districts) and ADD (33 districts) contrasts with Malaria, where 61.4% of outbreaks concentrate in Gadchiroli and Chandrapur forest corridors.
                 </p>
               </div>
 
-              <div className="p-3.5 bg-[#07090C] border border-white/[0.06] rounded-xs space-y-1">
-                <span className="font-mono text-[#A5A79B] uppercase tracking-wider font-bold block text-[10px]">
+              <div className="p-3.5 bg-[#070A0F] border border-white/[0.06] rounded-xs space-y-1">
+                <span className="font-mono text-[#BAC0B8] uppercase tracking-wider font-bold block text-[10px]">
                   PRIMARY FIELDWORK TRIANGULATION
                 </span>
-                <p className="text-[#A5A79B] text-xs leading-relaxed">
+                <p className="text-[#BAC0B8] text-xs leading-relaxed">
                   Field visit at Nallasopara West Urban Health Post (Palghar) confirmed the 2–3 week paper-to-digital transcription latency between clinical cluster onset and central NCDC bulletin publication.
                 </p>
               </div>

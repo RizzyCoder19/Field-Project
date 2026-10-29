@@ -35,7 +35,7 @@ export default function GeographyPage() {
         <div className="max-w-6xl mx-auto space-y-2">
           <div className="flex items-center gap-2 text-xs font-mono text-[#A5A79B] font-bold tracking-widest uppercase">
             <span className="w-2 h-2 rounded-full bg-[#590907] ring-1 ring-[#E8D2B5]/40" />
-            <span>EXHIBIT 05 · SPATIAL EPIDEMIOLOGY</span>
+            <span>ACT 05 · GEOGRAPHIC HYPER-CLUSTERING & CONCORDANCE</span>
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#E8D2B5] leading-[1.12]">
@@ -81,7 +81,7 @@ export default function GeographyPage() {
         </div>
 
         {/* Dominant Map Container with Integrated Live HUD */}
-        <div className="relative bg-[#0B0E13] border border-[#E8D2B5]/15 rounded-xs p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[580px] flex flex-col justify-between">
+        <div className="relative bg-[#0B0E13] border border-[#E8D2B5]/15 rounded-xs p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[420px] sm:min-h-[580px] flex flex-col justify-between">
           {/* Top Floating Focal Finding Badge */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-white/[0.08] z-10 relative">
             <div className="space-y-0.5">
@@ -105,7 +105,7 @@ export default function GeographyPage() {
               activeDisease={selectedDisease}
               showLegend={false}
               showControls={false}
-              className="w-full h-[min(68vh,680px)] min-h-[480px] border-none shadow-none bg-transparent p-0"
+              className="w-full h-[min(60vh,680px)] min-h-[320px] sm:min-h-[480px] border-none shadow-none bg-transparent p-0"
               onDistrictSelect={(name) => setSelectedDistrictName(name)}
             />
           </div>

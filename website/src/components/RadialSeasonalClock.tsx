@@ -216,7 +216,8 @@ export default function RadialSeasonalClock({
                   y={ly}
                   textAnchor="middle"
                   dominantBaseline="central"
-                  className="font-mono text-xs sm:text-sm tracking-wider pointer-events-none select-none transition-colors"
+                  fontSize="13"
+                  className="font-mono tracking-wider pointer-events-none select-none transition-colors"
                   fill={isHovered ? "#E8D2B5" : isMonsoon ? "#F5E8D7" : "#A5A79B"}
                   fontWeight={isHovered || isMonsoon ? "bold" : "600"}
                 >
@@ -285,7 +286,8 @@ export default function RadialSeasonalClock({
                           x={pt.x}
                           y={pt.y - 10}
                           textAnchor="middle"
-                          className="font-mono text-[11px] font-bold fill-[#E8D2B5] pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
+                          fontSize="11"
+                          className="font-mono font-bold fill-[#E8D2B5] pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
                         >
                           {pt.val}
                         </text>
@@ -376,16 +378,16 @@ export default function RadialSeasonalClock({
             strokeDasharray="2,3"
           />
 
-          {/* Center Content Typography */}
+          {/* Center Content Typography with proportional SVG fontSize */}
           {hoveredMonth !== null ? (
             <g className="pointer-events-none">
-              <text x={cx} y={cy - 30} textAnchor="middle" className="font-serif text-2xl font-bold" fill="#E8D2B5">
+              <text x={cx} y={cy - 28} textAnchor="middle" fontSize="24" className="font-serif font-bold" fill="#E8D2B5">
                 {MONTHS[hoveredMonth]}
               </text>
-              <text x={cx} y={cy - 6} textAnchor="middle" className="font-mono text-[10px] uppercase tracking-wider" fill="#A5A79B">
+              <text x={cx} y={cy - 6} textAnchor="middle" fontSize="11" className="font-mono uppercase tracking-wider" fill="#A5A79B">
                 Total Baseline {currentMetric === "events" ? "Outbreaks" : "Cases"}
               </text>
-              <text x={cx} y={cy + 24} textAnchor="middle" className="font-mono text-2xl font-bold" fill="#E8D2B5">
+              <text x={cx} y={cy + 24} textAnchor="middle" fontSize="22" className="font-mono font-bold" fill="#E8D2B5">
                 {DISEASES.reduce((acc, d) => {
                   const p = PRIMARY_DISEASES[d.id];
                   const arr = currentMetric === "events" ? p?.monthlyEvents : p?.monthlyCases;
@@ -404,16 +406,16 @@ export default function RadialSeasonalClock({
                 if (!cur || !prof) return null;
                 return (
                   <>
-                    <text x={cx} y={cy - 32} textAnchor="middle" className="font-serif text-xl font-bold" fill={cur.color}>
+                    <text x={cx} y={cy - 30} textAnchor="middle" fontSize="20" className="font-serif font-bold" fill={cur.color}>
                       {cur.label}
                     </text>
-                    <text x={cx} y={cy - 10} textAnchor="middle" className="font-mono text-[10px] uppercase tracking-wider font-semibold" fill="#A5A79B">
+                    <text x={cx} y={cy - 10} textAnchor="middle" fontSize="10.5" className="font-mono uppercase tracking-wider font-semibold" fill="#A5A79B">
                       Peak Timing
                     </text>
-                    <text x={cx} y={cy + 12} textAnchor="middle" className="font-serif text-base font-bold" fill="#E8D2B5">
+                    <text x={cx} y={cy + 12} textAnchor="middle" fontSize="16" className="font-serif font-bold" fill="#E8D2B5">
                       {cur.peak}
                     </text>
-                    <text x={cx} y={cy + 32} textAnchor="middle" className="font-mono text-[10.5px] font-bold" fill="#E8D2B5">
+                    <text x={cx} y={cy + 32} textAnchor="middle" fontSize="11" className="font-mono font-bold" fill="#E8D2B5">
                       CR3 = {cur.cr3} of events
                     </text>
                   </>
@@ -422,13 +424,13 @@ export default function RadialSeasonalClock({
             </g>
           ) : (
             <g className="pointer-events-none">
-              <text x={cx} y={cy - 20} textAnchor="middle" className="font-serif text-lg font-bold" fill="#E8D2B5">
+              <text x={cx} y={cy - 18} textAnchor="middle" fontSize="18" className="font-serif font-bold" fill="#E8D2B5">
                 12-Month Clock
               </text>
-              <text x={cx} y={cy + 4} textAnchor="middle" className="font-mono text-xs tracking-widest uppercase font-bold" fill="#590907">
+              <text x={cx} y={cy + 5} textAnchor="middle" fontSize="11.5" className="font-mono tracking-widest uppercase font-bold" fill="#590907">
                 2022–2025 BASELINE
               </text>
-              <text x={cx} y={cy + 26} textAnchor="middle" className="font-mono text-[10px] text-[#A5A79B]">
+              <text x={cx} y={cy + 26} textAnchor="middle" fontSize="10.5" className="font-mono" fill="#A5A79B">
                 Hover month or select cohort
               </text>
             </g>

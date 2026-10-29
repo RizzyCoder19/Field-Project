@@ -63,80 +63,80 @@ export default function SourcesPage() {
   ];
 
   return (
-    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+    <div className="w-full bg-[#070A0F] text-[#F0DECE] min-h-screen">
       <ConnectedEvidenceHeader currentActNumber={11} />
 
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-[#F0DECE]/15 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
-            <span>EXHIBIT 12 · PROVENANCE & AUDIT TRAIL</span>
+          <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#8B1414] ring-1 ring-[#F0DECE]/40 animate-pulse" />
+            <span>ACT 11 / ARCHIVE · SOURCES & AUDIT TRAIL</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F0DECE] leading-[1.12]">
             Sources & Auditable Archive
           </h1>
 
-          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#BAC0B8] max-w-3xl leading-relaxed pt-1">
             Official government bulletins, epidemiological literature, open-source repository, and full printable academic report.
           </p>
         </div>
       </section>
 
       {/* 2. EXPORT REPORT & GITHUB ACTIONS BANNER */}
-      <section className="border-b border-[#F8FAFC]/15 bg-[#0B111E] py-10 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-white/[0.08] bg-[#0B0F15] py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs">
           <a
             href="/reports/Finalized_Seasonal_Disease_Patterns_Report.pdf"
             download="Finalized_Seasonal_Disease_Patterns_Report.pdf"
-            className="p-6 bg-[#06080F] hover:bg-[#161F30] border border-[#5FB0A8]/50 hover:border-[#5FB0A8] rounded-sm transition-all flex items-center justify-between group shadow-lg"
+            className="p-6 bg-[#0E141D] hover:bg-[#180505] border border-[#8B1414]/50 hover:border-[#8B1414] rounded-xs transition-all flex items-center justify-between group shadow-lg cursor-pointer"
           >
             <div className="space-y-1.5">
-              <span className="text-[#5FB0A8] font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span className="text-[#8B1414] font-bold uppercase tracking-wider flex items-center gap-1.5">
                 <FileText className="w-4 h-4" />
                 <span>Export Formal Academic Report</span>
               </span>
-              <div className="font-serif text-lg font-bold text-[#F8FAFC]">
+              <div className="font-serif text-lg font-bold text-[#F0DECE]">
                 Printable PDF Report View
               </div>
-              <p className="text-[#94A3B8] text-[11px]">
+              <p className="text-[#BAC0B8] text-[11px]">
                 Clean, standardized institutional report view for submission and review.
               </p>
             </div>
-            <ArrowRight className="w-5 h-5 text-[#5FB0A8] transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-5 h-5 text-[#8B1414] transition-transform group-hover:translate-x-1" />
           </a>
 
           <a
             href="https://github.com/RizzyCoder19/Field-Project/tree/master"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-6 bg-[#06080F] hover:bg-[#161F30] border border-[#F8FAFC]/15 hover:border-[#F8FAFC]/40 rounded-sm transition-all flex items-center justify-between group shadow-lg"
+            className="p-6 bg-[#0E141D] hover:bg-[#180505] border border-white/[0.12] hover:border-white/[0.25] rounded-xs transition-all flex items-center justify-between group shadow-lg cursor-pointer"
           >
             <div className="space-y-1.5">
-              <span className="text-[#F8FAFC] font-bold uppercase tracking-wider flex items-center gap-1.5">
-                <Code className="w-4 h-4 text-[#5FB0A8]" />
+              <span className="text-[#F0DECE] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <Code className="w-4 h-4 text-[#8B1414]" />
                 <span>Source Code & Datasets</span>
               </span>
-              <div className="font-serif text-lg font-bold text-[#F8FAFC]">
+              <div className="font-serif text-lg font-bold text-[#F0DECE]">
                 GitHub Repository
               </div>
-              <p className="text-[#94A3B8] text-[11px]">
+              <p className="text-[#BAC0B8] text-[11px]">
                 Inspect Python processing scripts, clean CSV archives, and Next.js frontend code.
               </p>
             </div>
-            <ExternalLink className="w-5 h-5 text-[#94A3B8] transition-transform group-hover:translate-x-0.5" />
+            <ExternalLink className="w-5 h-5 text-[#BAC0B8] transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
       </section>
 
       {/* 3. PRIMARY GOVERNMENT SOURCES */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6">
-        <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
+        <div className="space-y-2 border-b border-white/[0.08] pb-4">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#8B1414] font-bold">
             Primary Government Provenance
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
+          <h2 className="font-serif text-3xl font-bold text-[#F0DECE]">
             Official Surveillance Data Bulletins
           </h2>
         </div>
@@ -145,19 +145,19 @@ export default function SourcesPage() {
           {governmentSources.map((src, idx) => (
             <div
               key={idx}
-              className="p-6 bg-[#0B111E] border border-[#F8FAFC]/12 rounded-sm space-y-2 shadow-md"
+              className="p-6 bg-[#0B0F15] border border-white/[0.08] rounded-xs space-y-2 shadow-md"
             >
               <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-                <span className="text-[#5FB0A8] font-bold uppercase">PRIMARY SOURCE 0{idx + 1}</span>
-                <span className="text-[#94A3B8]">{src.period}</span>
+                <span className="text-[#8B1414] font-bold uppercase">PRIMARY SOURCE 0{idx + 1}</span>
+                <span className="text-[#BAC0B8]">{src.period}</span>
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#F8FAFC]">
+              <h3 className="font-serif text-xl font-bold text-[#F0DECE]">
                 {src.title}
               </h3>
-              <p className="text-xs font-mono text-[#94A3B8]">
+              <p className="text-xs font-mono text-[#BAC0B8]">
                 Author: {src.author} · Publisher: {src.publisher}
               </p>
-              <p className="text-sm text-[#F8FAFC]/90 leading-relaxed pt-1">
+              <p className="text-sm text-[#F0DECE]/90 leading-relaxed pt-1">
                 {src.notes}
               </p>
             </div>
@@ -166,13 +166,13 @@ export default function SourcesPage() {
       </section>
 
       {/* 4. SUPPORTING ACADEMIC LITERATURE */}
-      <section className="border-t border-[#F8FAFC]/15 bg-[#030407] py-16 px-4 sm:px-6 lg:px-8">
+      <section className="border-t border-white/[0.08] bg-[#070A0F] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-6">
-          <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
+          <div className="space-y-2 border-b border-white/[0.08] pb-4">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#8B1414] font-bold">
               Epidemiological Literature
             </span>
-            <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
+            <h2 className="font-serif text-3xl font-bold text-[#F0DECE]">
               Supporting Academic Citations
             </h2>
           </div>
@@ -181,13 +181,13 @@ export default function SourcesPage() {
             {supportingLiterature.map((lit, idx) => (
               <div
                 key={idx}
-                className="p-5 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-1.5"
+                className="p-5 bg-[#0B0F15] border border-white/[0.08] rounded-xs space-y-1.5"
               >
-                <div className="text-[#5FB0A8] font-bold uppercase">Citation 0{idx + 1}</div>
-                <p className="text-[#F8FAFC] leading-relaxed font-sans text-sm font-medium">
+                <div className="text-[#8B1414] font-bold uppercase">Citation 0{idx + 1}</div>
+                <p className="text-[#F0DECE] leading-relaxed font-sans text-sm font-medium">
                   {lit.citation}
                 </p>
-                <p className="text-[#94A3B8] text-xs pt-1">
+                <p className="text-[#BAC0B8] text-xs pt-1">
                   Relevance: {lit.topic}
                 </p>
               </div>
@@ -198,11 +198,11 @@ export default function SourcesPage() {
 
       {/* 5. ACADEMIC CREDENTIAL FRAMEWORK */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto space-y-6">
-        <div className="space-y-2 border-b border-[#F8FAFC]/10 pb-4">
-          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#5FB0A8] font-bold">
+        <div className="space-y-2 border-b border-white/[0.08] pb-4">
+          <span className="text-xs font-mono uppercase tracking-[0.2em] text-[#8B1414] font-bold">
             Academic Context
           </span>
-          <h2 className="font-serif text-3xl font-bold text-[#F8FAFC]">
+          <h2 className="font-serif text-3xl font-bold text-[#F0DECE]">
             Institutional Metadata & Governance
           </h2>
         </div>
@@ -211,10 +211,10 @@ export default function SourcesPage() {
           {academicFramework.map((item, idx) => (
             <div
               key={idx}
-              className="p-4 bg-[#0B111E] border border-[#F8FAFC]/10 rounded-sm space-y-1"
+              className="p-4 bg-[#0B0F15] border border-white/[0.08] rounded-xs space-y-1"
             >
-              <span className="text-[#94A3B8] uppercase text-[10px]">{item.label}</span>
-              <div className="text-[#F8FAFC] font-semibold text-sm">{item.value}</div>
+              <span className="text-[#BAC0B8] uppercase text-[10px]">{item.label}</span>
+              <div className="text-[#F0DECE] font-semibold text-sm">{item.value}</div>
             </div>
           ))}
         </div>
@@ -222,15 +222,15 @@ export default function SourcesPage() {
 
       {/* 6. CHAPTER CONCLUDING TAKEAWAY */}
       <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="p-6 bg-[#0B111E] border border-[#5FB0A8]/40 rounded-sm space-y-2">
-          <div className="text-xs font-mono uppercase tracking-wider text-[#5FB0A8] font-bold flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4" />
-            <span>Chapter 12 Takeaway</span>
+        <div className="p-6 bg-[#0B0F15] border border-[#8B1414]/50 rounded-xs space-y-2">
+          <div className="text-xs font-mono uppercase tracking-wider text-[#8B1414] font-bold flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#8B1414]" />
+            <span className="text-[#F0DECE]">Archival Integrity</span>
           </div>
-          <p className="font-serif text-lg font-bold text-[#F8FAFC]">
+          <p className="font-serif text-lg font-bold text-[#F0DECE]">
             Every statistic, district observation, and test is auditable and open-source.
           </p>
-          <p className="text-sm text-[#94A3B8] leading-relaxed font-normal">
+          <p className="text-sm text-[#BAC0B8] leading-relaxed font-normal">
             By anchoring the research in 237 weekly NCDC bulletins, verifiable hospital documentation in Palghar, and standard non-parametric test protocols, the research provides a fully reproducible foundation for seasonal disease surveillance in Maharashtra.
           </p>
         </div>

@@ -398,7 +398,7 @@ export default function CinematicChapterNavigator() {
               onMouseMove={handleStageMouseMove}
               onMouseEnter={handleStageMouseEnter}
               onMouseLeave={handleStageMouseLeave}
-              className="relative w-full h-[500px] sm:h-[560px] lg:h-[600px] rounded-xs overflow-hidden border border-[#F0DECE]/20 shadow-[0_20px_60px_rgba(0,0,0,0.95)] group transition-all duration-300"
+              className="relative w-full min-h-[560px] sm:min-h-[540px] md:h-[580px] lg:h-[620px] rounded-xs overflow-hidden border border-[#F0DECE]/20 shadow-[0_20px_60px_rgba(0,0,0,0.95)] group transition-all duration-300 flex flex-col justify-between"
             >
               {/* Corner Accents */}
               <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#590907] z-20 pointer-events-none" />
@@ -409,7 +409,7 @@ export default function CinematicChapterNavigator() {
               {/* Background Photo with Parallax Drift */}
               <div
                 ref={stageImageRef}
-                className="absolute inset-0 will-change-transform"
+                className="absolute inset-0 will-change-transform pointer-events-none"
                 style={{
                   transform: "scale(1) translate3d(0, 0, 0)",
                   transition: reducedMotion ? "none" : "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -426,12 +426,12 @@ export default function CinematicChapterNavigator() {
               </div>
 
               {/* Vignettes & Filmic Gradient Overlays */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070A0F] via-[#070A0F]/85 via-50% to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070A0F]/95 via-[#070A0F]/65 via-42% to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070A0F] via-[#070A0F]/85 via-50% to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#070A0F]/95 via-[#070A0F]/65 via-42% to-transparent pointer-events-none" />
               <div className="absolute inset-0 bg-contour-pattern opacity-20 mix-blend-screen pointer-events-none" />
 
               {/* Top Film Metadata Bar */}
-              <div className="absolute top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-6 flex items-center justify-between z-10">
+              <div className="relative sm:absolute top-0 sm:top-6 left-0 sm:left-6 right-0 sm:right-6 p-4 sm:p-0 flex items-center justify-between z-10">
                 <div className="flex items-center gap-2 px-2.5 py-1 bg-[#07090C]/90 backdrop-blur-md border border-[#590907]/60 rounded-xs">
                   <span className="w-1.5 h-1.5 bg-[#590907] rounded-full animate-pulse" />
                   <span className="text-[10px] font-mono font-bold text-[#E8D2B5] tracking-widest uppercase">
@@ -446,7 +446,7 @@ export default function CinematicChapterNavigator() {
               </div>
 
               {/* Central Research Narrative Typography Overlay */}
-              <div className="absolute bottom-6 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-10 space-y-4 max-w-3xl">
+              <div className="relative sm:absolute bottom-0 sm:bottom-8 left-0 sm:left-8 right-0 sm:right-8 p-4 sm:p-0 z-10 space-y-3 sm:space-y-4 max-w-3xl">
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 text-xs font-mono text-[#A5A79B] uppercase tracking-wider font-semibold">
                     <span>Act {activeAct.actNumber} of 10</span>
@@ -456,34 +456,34 @@ export default function CinematicChapterNavigator() {
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#E8D2B5] tracking-tight leading-[1.08] drop-shadow-[0_6px_32px_rgba(0,0,0,0.95)]">
+                  <h3 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-[#E8D2B5] tracking-tight leading-[1.12] drop-shadow-[0_6px_32px_rgba(0,0,0,0.95)]">
                     {activeAct.title}
                   </h3>
 
-                  <p className="font-serif text-base sm:text-xl lg:text-2xl text-[#F7EAD7] italic font-light leading-relaxed max-w-3xl drop-shadow-md">
+                  <p className="font-serif text-sm sm:text-lg lg:text-xl text-[#F7EAD7] italic font-light leading-relaxed max-w-3xl drop-shadow-md">
                     {activeAct.question}
                   </p>
 
-                  <p className="text-sm sm:text-base text-[#A5A79B] line-clamp-2 max-w-3xl leading-relaxed font-sans">
+                  <p className="hidden sm:block text-xs sm:text-sm text-[#A5A79B] line-clamp-2 max-w-3xl leading-relaxed font-sans">
                     {activeAct.description}
                   </p>
                 </div>
 
                 {/* Key Empirical Metric Badge & Action Trigger */}
                 <div className="pt-2 flex flex-wrap items-center gap-3">
-                  <div className="px-4 py-2 bg-[#07090C]/90 backdrop-blur-md border border-[#E8D2B5]/30 rounded-xs flex items-center gap-3">
-                    <span className="text-sm sm:text-base font-mono font-bold text-[#E8D2B5]">
+                  <div className="px-3.5 sm:px-4 py-1.5 sm:py-2 bg-[#07090C]/90 backdrop-blur-md border border-[#E8D2B5]/30 rounded-xs flex items-center gap-2.5 sm:gap-3">
+                    <span className="text-xs sm:text-base font-mono font-bold text-[#E8D2B5]">
                       {activeAct.keyMetric}
                     </span>
                     <span className="h-3 w-px bg-white/20" />
-                    <span className="text-[10px] font-mono text-[#A5A79B] uppercase">
+                    <span className="text-[9px] sm:text-[10px] font-mono text-[#A5A79B] uppercase">
                       {activeAct.metricLabel}
                     </span>
                   </div>
 
                   <Link
                     href={activeAct.path}
-                    className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-[0_8px_32px_rgba(89,9,7,0.7)] rounded-xs transition-all shadow-[0_6px_24px_rgba(89,9,7,0.6)] hover:shadow-[0_8px_32px_rgba(89,9,7,0.85)] border border-[#E8D2B5]/30 cursor-pointer group/btn"
+                    className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-3.5 bg-[#590907] hover:bg-[#7E1513] text-[#E8D2B5] font-bold text-xs sm:text-sm uppercase tracking-wider shadow-[0_8px_32px_rgba(89,9,7,0.7)] rounded-xs transition-all hover:shadow-[0_8px_32px_rgba(89,9,7,0.85)] border border-[#E8D2B5]/30 cursor-pointer group/btn"
                   >
                     <span>Enter Act {activeAct.actNumber} Chapter</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
@@ -494,7 +494,7 @@ export default function CinematicChapterNavigator() {
               {/* Left / Right Stage Arrow Navigators */}
               <button
                 onClick={handlePrevAct}
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-30 backdrop-blur-md shadow-xl"
+                className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-30 backdrop-blur-md shadow-xl"
                 aria-label="Previous Act"
               >
                 <ChevronLeft className="w-4 h-4" />
@@ -502,7 +502,7 @@ export default function CinematicChapterNavigator() {
 
               <button
                 onClick={handleNextAct}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-30 backdrop-blur-md shadow-xl"
+                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#07090C]/85 hover:bg-[#590907] border border-[#E8D2B5]/25 hover:border-[#590907] text-[#E8D2B5] flex items-center justify-center transition-all cursor-pointer z-30 backdrop-blur-md shadow-xl"
                 aria-label="Next Act"
               >
                 <ChevronRight className="w-4 h-4" />

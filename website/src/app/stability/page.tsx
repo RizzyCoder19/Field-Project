@@ -82,22 +82,22 @@ export default function StabilityPage() {
   const activeProfile = STABILITY_PROFILES.find(p => p.id === selectedDiseaseId) || STABILITY_PROFILES[0];
 
   return (
-    <div className="w-full bg-[#070A10] text-[#F5F1E8] min-h-screen">
+    <div className="w-full bg-[#070A0F] text-[#F0DECE] min-h-screen">
       <ConnectedEvidenceHeader currentActNumber={6} />
 
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-white/[0.08] bg-gradient-to-b from-[#05070B] to-[#070A10] pt-12 pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto space-y-3">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
-            <span>EXHIBIT 06 · STATISTICAL REPEATABILITY</span>
+      <section className="border-b border-[#F0DECE]/15 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto space-y-2">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#8B1414] ring-1 ring-[#F0DECE]/40 animate-pulse" />
+            <span>ACT 06 · STATISTICAL REPEATABILITY & KENDALL'S W</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F5F1E8] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F0DECE] leading-[1.12]">
             Does the Pattern Repeat?
           </h1>
 
-          <p className="text-base sm:text-lg text-[#A8B6BA] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#BAC0B8] max-w-3xl leading-relaxed pt-1">
             Testing whether annual seasonal peaks occur at the same calendar time across four consecutive years using non-parametric Kendall&apos;s W rank concordance.
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function StabilityPage() {
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-6">
         {/* Top Disease Switcher */}
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.08] pb-3">
-          <span className="text-xs font-mono text-[#A8B6BA] uppercase tracking-wider">
+          <span className="text-xs font-mono text-[#BAC0B8] uppercase tracking-wider font-semibold">
             Select Disease Concordance Evaluation:
           </span>
 

@@ -586,7 +586,7 @@ export default function MaharashtraMap({
       )}
 
       {/* Spacious D3 SVG Map Stage */}
-      <div className="relative w-full flex-1 min-h-[420px] sm:min-h-[540px] lg:min-h-[600px] bg-[#07090C] rounded-xs overflow-hidden flex items-center justify-center">
+      <div className="relative w-full flex-1 min-h-[320px] sm:min-h-[480px] lg:min-h-[580px] bg-[#07090C] rounded-xs overflow-hidden flex items-center justify-center">
         {!loaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-[#07090C]/90 z-20">
             <div className="font-mono text-xs text-[#A5A79B] tracking-widest animate-pulse flex items-center gap-2">
@@ -598,7 +598,7 @@ export default function MaharashtraMap({
 
         <svg
           ref={svgRef}
-          className="w-full h-full min-h-[420px] sm:min-h-[540px] lg:min-h-[600px] select-none"
+          className="w-full h-full min-h-[320px] sm:min-h-[480px] lg:min-h-[580px] select-none"
           style={{ display: "block" }}
         />
 

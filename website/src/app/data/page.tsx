@@ -105,22 +105,22 @@ export default function DataPage() {
     });
 
   return (
-    <div className="w-full bg-[#06080F] text-[#F8FAFC] min-h-screen">
+    <div className="w-full bg-[#070A0F] text-[#F0DECE] min-h-screen">
       <ConnectedEvidenceHeader currentActNumber={1} />
 
       {/* 1. VISUAL HEADER: SHORT AND CONCISE */}
-      <section className="border-b border-[#F8FAFC]/15 bg-gradient-to-b from-[#030407] to-[#06080F] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="border-b border-[#F0DECE]/15 bg-gradient-to-b from-[#070A0F] to-[#0B0F15] pt-10 pb-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#5FB0A8] font-bold tracking-widest uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#5FB0A8]" />
-            <span>EXHIBIT 02 · FROM BULLETIN TO DATA</span>
+          <div className="flex items-center gap-2 text-xs font-mono text-[#BAC0B8] font-bold tracking-widest uppercase">
+            <span className="w-2 h-2 rounded-full bg-[#8B1414] ring-1 ring-[#F0DECE]/40 animate-pulse" />
+            <span>ACT 01 · SURVEILLANCE PROVENANCE & RAW DATA</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F8FAFC] leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#F0DECE] leading-[1.12]">
             From Government Bulletin to Research Data
           </h1>
 
-          <p className="text-base sm:text-lg text-[#94A3B8] max-w-3xl leading-relaxed pt-1">
+          <p className="text-base sm:text-lg text-[#BAC0B8] max-w-3xl leading-relaxed pt-1">
             How weekly outbreak notifications from district rapid response teams become verified, auditable epidemiological records.
           </p>
         </div>
@@ -129,8 +129,8 @@ export default function DataPage() {
       {/* 2. THE PRINCIPAL VISUAL EXHIBIT: INTERACTIVE EXTRACTION TRANSFORMATION (70% VIEWPORT) */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto space-y-6">
         {/* Record Selector Tabs */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#F8FAFC]/12 pb-3">
-          <span className="text-xs font-mono text-[#94A3B8] uppercase tracking-wider">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.08] pb-3">
+          <span className="text-xs font-mono text-[#BAC0B8] uppercase tracking-wider font-semibold">
             Select Authentic Government Bulletin Excerpt:
           </span>
 
@@ -139,10 +139,10 @@ export default function DataPage() {
               <button
                 key={rec.id}
                 onClick={() => setSelectedRecordIndex(idx)}
-                className={`px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-sm transition-all border flex items-center gap-2 ${
+                className={`px-3 py-1.5 font-mono text-xs uppercase tracking-wider rounded-xs transition-all border flex items-center gap-2 cursor-pointer ${
                   selectedRecordIndex === idx
-                    ? "bg-[#0B111E] border-[#5FB0A8] text-[#F8FAFC] font-bold shadow-md"
-                    : "bg-[#06080F] border-[#F8FAFC]/15 text-[#94A3B8]/70 hover:text-[#F8FAFC]"
+                    ? "bg-[#8B1414] border-[#F0DECE]/50 text-[#F0DECE] font-bold shadow-md"
+                    : "bg-[#0B0F15] border-white/[0.12] text-[#BAC0B8]/80 hover:text-[#F0DECE]"
                 }`}
               >
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: rec.color }} />

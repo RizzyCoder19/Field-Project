@@ -188,17 +188,17 @@ export default function DiseasesPage() {
                     isSelected ? "border-white/[0.12] opacity-100" : "border-transparent opacity-40"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full" style={{ backgroundColor: d.color }} />
+                      <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: d.color }} />
                       <span className="font-serif font-bold text-sm text-[#F0DECE]">{d.name}</span>
                       <span className="text-xs font-mono text-[#BAC0B8]">({d.category})</span>
                     </div>
-                    <div className="flex items-center gap-4 text-xs font-mono">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs font-mono">
                       <span><strong className="text-[#F0DECE]">{d.records}</strong> records ({((d.records / 539) * 100).toFixed(1)}%)</span>
-                      <span className="text-white/20">|</span>
+                      <span className="text-white/20 hidden sm:inline">|</span>
                       <span><strong className="text-[#F0DECE]">{d.cases.toLocaleString()}</strong> cases</span>
-                      <span className="text-white/20">|</span>
+                      <span className="text-white/20 hidden sm:inline">|</span>
                       <span className="text-[#8B1414] font-bold">{d.deaths} deaths</span>
                     </div>
                   </div>

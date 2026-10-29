@@ -104,14 +104,14 @@ export default function CinematicHero({ onReplayIntro }: CinematicHeroProps = {}
         </div>
 
         {/* Central Display Typography (Composed Directly Over Image) */}
-        <div className="my-auto py-8 sm:py-12 max-w-4xl space-y-6">
-          <h1 className="font-serif text-[clamp(3.2rem,6.6vw,6.5rem)] font-bold leading-[1.03] tracking-tight drop-shadow-[0_12px_48px_rgba(0,0,0,0.95)]">
+        <div className="my-auto py-6 sm:py-12 max-w-4xl space-y-4 sm:space-y-6">
+          <h1 className="font-serif text-[clamp(2.1rem,6vw,6.2rem)] font-bold leading-[1.06] tracking-tight drop-shadow-[0_12px_48px_rgba(0,0,0,0.95)] break-words">
             <span className="text-[#F0DECE] block drop-shadow-lg">Do disease outbreaks</span>
             <span className="text-[#E8D2B5] block drop-shadow-[0_6px_24px_rgba(139,20,20,0.6)]">follow the seasons—</span>
-            <span className="text-[#F0DECE] italic font-light font-serif block text-[clamp(2.4rem,5vw,4.8rem)]">and do those rhythms repeat?</span>
+            <span className="text-[#F0DECE] italic font-light font-serif block text-[clamp(1.6rem,4.8vw,4.5rem)] mt-1">and do those rhythms repeat?</span>
           </h1>
 
-          <p className="text-lg sm:text-xl lg:text-2xl text-[#BAC0B8] max-w-3xl leading-relaxed drop-shadow-md font-sans">
+          <p className="text-base sm:text-xl lg:text-2xl text-[#BAC0B8] max-w-3xl leading-relaxed drop-shadow-md font-sans">
             A quantitative investigation of NCDC / IDSP weekly outbreak-surveillance reports in Maharashtra (2022–2025), grounded by primary fieldwork in Palghar.
           </p>
 
